@@ -1,0 +1,1366 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <act name="convention">
+    <meta>
+      <identification source="#wipo">
+        <FRBRWork>
+          <FRBRthis value="/akn/un/act/convention/wipo/1967-07-14/wipo-convention/!main"/>
+          <FRBRuri value="/akn/un/act/convention/wipo/1967-07-14/wipo-convention"/>
+          <FRBRdate date="1967-07-14" name="adoption"/>
+          <FRBRauthor href="#wipo" as="#author"/>
+          <FRBRcountry value="un"/>
+          <FRBRsubtype value="convention"/>
+          <FRBRnumber value="wipo-convention" showAs="wipo-convention"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/un/act/convention/wipo/1967-07-14/wipo-convention/eng@1967-07-14/!main"/>
+          <FRBRuri value="/akn/un/act/convention/wipo/1967-07-14/wipo-convention/eng@1967-07-14"/>
+          <FRBRdate date="1967-07-14" name="adoption"/>
+          <FRBRauthor href="#wipo" as="#author"/>
+          <FRBRlanguage language="eng"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/un/act/convention/wipo/1967-07-14/wipo-convention/eng@1967-07-14.xml/!main"/>
+          <FRBRuri value="/akn/un/act/convention/wipo/1967-07-14/wipo-convention/eng@1967-07-14.xml"/>
+          <FRBRdate date="2026-03-18" name="generation"/>
+          <FRBRauthor href="#johnbruene" as="#editor"/>
+        </FRBRManifestation>
+      </identification>
+      <publication date="1967-07-14" name="officialPublication" showAs="WIPO publication"/>
+      <references source="#wipo">
+        <TLCOrganization eId="wipo" href="/ontology/organization/un/wipo" showAs="World Intellectual Property Organization"/>
+        <TLCPerson eId="johnbruene" href="/ontology/person/john-bruene" showAs="John Bruene"/>
+      <TLCTerm eId="term_organization" href="/ontology/term/organization" showAs="Organization"/><TLCTerm eId="term_international-bureau" href="/ontology/term/international-bureau" showAs="International Bureau"/><TLCTerm eId="term_paris-convention" href="/ontology/term/paris-convention" showAs="Paris Convention"/><TLCTerm eId="term_berne-convention" href="/ontology/term/berne-convention" showAs="Berne Convention"/><TLCTerm eId="term_paris-union" href="/ontology/term/paris-union" showAs="Paris Union"/><TLCTerm eId="term_berne-union" href="/ontology/term/berne-union" showAs="Berne Union"/><TLCTerm eId="term_unions" href="/ontology/term/unions" showAs="Unions"/></references>
+    </meta>
+    <preface>
+      <p>
+        <docTitle>Convention Establishing the World Intellectual Property Organization</docTitle>
+      </p>
+    </preface>
+    <preamble>
+      <p eId="preamble__p_1">The Contracting Parties,</p>
+      <p eId="preamble__p_2">Desiring to contribute to better understanding and co-operation among States for their mutual benefit on the basis of respect for their sovereignty and equality,</p>
+      <p eId="preamble__p_3">Desiring, in order to encourage creative activity, to promote the protection of intellectual property throughout the world,</p>
+      <p eId="preamble__p_4">Desiring to modernize and render more efficient the administration of the Unions established in the fields of the protection of industrial property and the protection of literary and artistic works, while fully respecting the independence of each of the Unions,</p>
+      <p eId="preamble__p_5">Agree as follows:</p>
+    </preamble>
+    <body>
+      <article eId="art_1">
+        <num>Article 1</num>
+        <heading>Establishment of the Organization</heading>
+        <paragraph eId="art_1__para_1">
+          <content>
+            <p>The World Intellectual Property Organization is hereby established.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_2">
+        <num>Article 2</num>
+        <heading>Definitions</heading>
+        <paragraph eId="art_2__para_1">
+          <intro>
+            <p>For the purposes of this Convention:</p>
+          </intro>
+          <list eId="art_2__para_1__list_1">
+            <point eId="art_2__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>“<def eId="def_term_organization_1" refersTo="#term_organization">Organization</def>” shall mean the World Intellectual Property Organization (WIPO);</p>
+              </content>
+            </point>
+            <point eId="art_2__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>“<def eId="def_term_international-bureau_1" refersTo="#term_international-bureau">International Bureau</def>” shall mean the International Bureau of Intellectual Property;</p>
+              </content>
+            </point>
+            <point eId="art_2__para_1__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>“<def eId="def_term_paris-convention_1" refersTo="#term_paris-convention">Paris Convention</def>” shall mean the Convention for the Protection of Industrial Property signed on March 20, 1883, including any of its revisions;</p>
+              </content>
+            </point>
+            <point eId="art_2__para_1__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>“<def eId="def_term_berne-convention_1" refersTo="#term_berne-convention">Berne Convention</def>” shall mean the Convention for the Protection of Literary and Artistic Works signed on September 9, 1886, including any of its revisions;</p>
+              </content>
+            </point>
+            <point eId="art_2__para_1__list_1__point_v">
+              <num>(v)</num>
+              <content>
+                <p>“<def eId="def_term_paris-union_1" refersTo="#term_paris-union">Paris Union</def>” shall mean the International Union established by the <ref href="/akn/un/act/convention/wipo/1883-03-20/paris">Paris Convention</ref>;</p>
+              </content>
+            </point>
+            <point eId="art_2__para_1__list_1__point_vi">
+              <num>(vi)</num>
+              <content>
+                <p>“<def eId="def_term_berne-union_1" refersTo="#term_berne-union">Berne Union</def>” shall mean the International Union established by the <ref href="/akn/un/act/convention/wipo/1886-09-09/berne">Berne Convention</ref>;</p>
+              </content>
+            </point>
+            <point eId="art_2__para_1__list_1__point_vii">
+              <num>(vii)</num>
+              <content>
+                <p>“<def eId="def_term_unions_1" refersTo="#term_unions">Unions</def>” shall mean the Paris Union, the Special Unions and Agreements established in relation with that Union, the Berne Union, and any other international agreement designed to promote the protection of intellectual property whose administration is assumed by the Organization according to <ref href="#art_4">Article 4(iii)</ref> ;</p>
+              </content>
+            </point>
+            <point eId="art_2__para_1__list_1__point_viii">
+              <num>(viii)</num>
+              <intro>
+                <p>“intellectual property” shall include the rights relating to:</p>
+              </intro>
+              <list eId="art_2__para_1__list_1__point_viii__list_1">
+                <point eId="art_2__para_1__list_1__point_viii__list_1__point_1">
+                  <num>-</num>
+                  <content>
+                    <p>literary, artistic and scientific works,</p>
+                  </content>
+                </point>
+                <point eId="art_2__para_1__list_1__point_viii__list_1__point_2">
+                  <num>-</num>
+                  <content>
+                    <p>performances of performing artists, phonograms, and broadcasts,</p>
+                  </content>
+                </point>
+                <point eId="art_2__para_1__list_1__point_viii__list_1__point_3">
+                  <num>-</num>
+                  <content>
+                    <p>inventions in all fields of human endeavor,</p>
+                  </content>
+                </point>
+                <point eId="art_2__para_1__list_1__point_viii__list_1__point_4">
+                  <num>-</num>
+                  <content>
+                    <p>scientific discoveries,</p>
+                  </content>
+                </point>
+                <point eId="art_2__para_1__list_1__point_viii__list_1__point_5">
+                  <num>-</num>
+                  <content>
+                    <p>industrial designs,</p>
+                  </content>
+                </point>
+                <point eId="art_2__para_1__list_1__point_viii__list_1__point_6">
+                  <num>-</num>
+                  <content>
+                    <p>trademarks, service marks, and commercial names and designations,</p>
+                  </content>
+                </point>
+                <point eId="art_2__para_1__list_1__point_viii__list_1__point_7">
+                  <num>-</num>
+                  <content>
+                    <p>protection against unfair competition,</p>
+                  </content>
+                </point>
+              </list>
+            </point>
+            <point eId="art_2__para_1__list_1__point_1">
+              <content>
+                <p>and all other rights resulting from intellectual activity in the industrial, scientific, literary or artistic fields.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+      </article>
+      <article eId="art_3">
+        <num>Article 3</num>
+        <heading>Objectives of the Organization</heading>
+        <paragraph eId="art_3__para_1">
+          <intro>
+            <p>The objectives of the Organization are:</p>
+          </intro>
+          <list eId="art_3__para_1__list_1">
+            <point eId="art_3__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>to promote the protection of intellectual property throughout the world through cooperation among States and, where appropriate, in collaboration with any other international organization,</p>
+              </content>
+            </point>
+            <point eId="art_3__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>to ensure administrative cooperation among the Unions.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+      </article>
+      <article eId="art_4">
+        <num>Article 4</num>
+        <heading>Functions</heading>
+        <paragraph eId="art_4__para_1">
+          <intro>
+            <p>In order to attain the objectives described in <ref href="#art_3">Article 3</ref> , the Organization, through its appropriate organs, and subject to the competence of each of the Unions:</p>
+          </intro>
+          <list eId="art_4__para_1__list_1">
+            <point eId="art_4__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>shall promote the development of measures designed to facilitate the efficient protection of intellectual property throughout the world and to harmonize national legislation in this field;</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>shall perform the administrative tasks of the Paris Union, the Special Unions established in relation with that Union, and the Berne Union;</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>may agree to assume, or participate in, the administration of any other international agreement designed to promote the protection of intellectual property;</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>shall encourage the conclusion of international agreements designed to promote the protection of intellectual property;</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_v">
+              <num>(v)</num>
+              <content>
+                <p>shall offer its cooperation to States requesting legal-technical assistance in the field of intellectual property;</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_vi">
+              <num>(vi)</num>
+              <content>
+                <p>shall assemble and disseminate information concerning the protection of intellectual property, carry out and promote studies in this field, and publish the results of such studies;</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_vii">
+              <num>(vii)</num>
+              <content>
+                <p>shall maintain services facilitating the international protection of intellectual property and, where appropriate, provide for registration in this field and the publication of the data concerning the registrations;</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_viii">
+              <num>(viii)</num>
+              <content>
+                <p>shall take all other appropriate action.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+      </article>
+      <article eId="art_5">
+        <num>Article 5</num>
+        <heading>Membership</heading>
+        <paragraph eId="art_5__para_1">
+          <num>(1)</num>
+          <content>
+            <p>Membership in the Organization shall be open to any State which is a member of any of the Unions as defined in <ref href="#art_2">Article 2(vii)</ref> .</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_5__para_2">
+          <num>(2)</num>
+          <intro>
+            <p>Membership in the Organization shall be equally open to any State not a member of any of the Unions, provided that:</p>
+          </intro>
+          <list eId="art_5__para_2__list_1">
+            <point eId="art_5__para_2__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>it is a member of the United Nations, any of the Specialized Agencies brought into relationship with the United Nations, or the International Atomic Energy Agency, or is a party to the Statute of the International Court of Justice, or</p>
+              </content>
+            </point>
+            <point eId="art_5__para_2__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>it is invited by the General Assembly to become a party to this Convention.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+      </article>
+      <article eId="art_6">
+        <num>Article 6</num>
+        <heading>General Assembly</heading>
+        <paragraph eId="art_6__para_1">
+          <num>(1)</num>
+          <list eId="art_6__para_1__list_1">
+            <point eId="art_6__para_1__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>There shall be a General Assembly consisting of the States party to this Convention which are members of any of the Unions.</p>
+              </content>
+            </point>
+            <point eId="art_6__para_1__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>The Government of each State shall be represented by one delegate, who may be assisted by alternate delegates, advisors, and experts.</p>
+              </content>
+            </point>
+            <point eId="art_6__para_1__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>The expenses of each delegation shall be borne by the Government which has appointed it.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_6__para_2">
+          <num>(2)</num>
+          <intro>
+            <p>The General Assembly shall:</p>
+          </intro>
+          <list eId="art_6__para_2__list_1">
+            <point eId="art_6__para_2__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>appoint the Director General upon nomination by the Coordination Committee;</p>
+              </content>
+            </point>
+            <point eId="art_6__para_2__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>review and approve reports of the Director General concerning the Organization and give him all necessary instructions;</p>
+              </content>
+            </point>
+            <point eId="art_6__para_2__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>review and approve the reports and activities of the Coordination Committee and give instructions to such Committee;</p>
+              </content>
+            </point>
+            <point eId="art_6__para_2__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>adopt the biennial budget of expenses common to the Unions;</p>
+              </content>
+            </point>
+            <point eId="art_6__para_2__list_1__point_v">
+              <num>(v)</num>
+              <content>
+                <p>approve the measures proposed by the Director General concerning the administration of the international agreements referred to in <ref href="#art_4">Article 4(iii)</ref> ;</p>
+              </content>
+            </point>
+            <point eId="art_6__para_2__list_1__point_vi">
+              <num>(vi)</num>
+              <content>
+                <p>adopt the financial regulations of the Organization;</p>
+              </content>
+            </point>
+            <point eId="art_6__para_2__list_1__point_vii">
+              <num>(vii)</num>
+              <content>
+                <p>determine the working languages of the Secretariat, taking into consideration the practice of the United Nations;</p>
+              </content>
+            </point>
+            <point eId="art_6__para_2__list_1__point_viii">
+              <num>(viii)</num>
+              <content>
+                <p>invite States referred to under <ref href="#art_5__para_2">Article 5(2)</ref>(ii) to become party to this Convention;</p>
+              </content>
+            </point>
+            <point eId="art_6__para_2__list_1__point_ix">
+              <num>(ix)</num>
+              <content>
+                <p>determine which States not Members of the Organization and which intergovernmental and international non-governmental organizations shall be admitted to its meetings as observers;</p>
+              </content>
+            </point>
+            <point eId="art_6__para_2__list_1__point_x">
+              <num>(x)</num>
+              <content>
+                <p>exercise such other functions as are appropriate under this Convention.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_6__para_3">
+          <num>(3)</num>
+          <list eId="art_6__para_3__list_1">
+            <point eId="art_6__para_3__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>Each State, whether member of one or more Unions, shall have one vote in the General Assembly.</p>
+              </content>
+            </point>
+            <point eId="art_6__para_3__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>One-half of the States members of the General Assembly shall constitute a quorum.</p>
+              </content>
+            </point>
+            <point eId="art_6__para_3__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>Notwithstanding the provisions of subparagraph (b) , if, in any session, the number of States represented is less than one-half but equal to or more than one-third of the States members of the General Assembly, the General Assembly may make decisions but, with the exception of decisions concerning its own procedure, all such decisions shall take effect only if the following conditions are fulfilled. The International Bureau shall communicate the said decisions to the States members of the General Assembly which were not represented and shall invite them to express in writing their vote or abstention within a period of three months from the date of the communication. If, at the expiration of this period, the number of States having thus expressed their vote or abstention attains the number of States which was lacking for attaining the quorum in the session itself, such decisions shall take effect provided that at the same time the required majority still obtains.</p>
+              </content>
+            </point>
+            <point eId="art_6__para_3__list_1__point_d">
+              <num>(d)</num>
+              <content>
+                <p>Subject to the provisions of subparagraphs (e) and (f) , the General Assembly shall make its decisions by a majority of two-thirds of the votes cast.</p>
+              </content>
+            </point>
+            <point eId="art_6__para_3__list_1__point_e">
+              <num>(e)</num>
+              <content>
+                <p>The approval of measures concerning the administration of international agreements referred to in <ref href="#art_4">Article 4(iii)</ref> shall require a majority of three-fourths of the votes cast.</p>
+              </content>
+            </point>
+            <point eId="art_6__para_3__list_1__point_f">
+              <num>(f)</num>
+              <content>
+                <p>The approval of an agreement with the United Nations under Articles 57 and 63 of the Charter of the United Nations shall require a majority of nine-tenths of the votes cast.</p>
+              </content>
+            </point>
+            <point eId="art_6__para_3__list_1__point_g">
+              <num>(g)</num>
+              <content>
+                <p>For the appointment of the Director General ( paragraph (2)(i) ), the approval of measures proposed by the Director General concerning the administration of international agreements ( paragraph (2)(v) ), and the transfer of headquarters ( <ref href="#art_10">Article 10</ref> ), the required majority must be attained not only in the General Assembly but also in the Assembly of the Paris Union and the Assembly of the Berne Union.</p>
+              </content>
+            </point>
+            <point eId="art_6__para_3__list_1__point_h">
+              <num>(h)</num>
+              <content>
+                <p>Abstentions shall not be considered as votes.</p>
+              </content>
+            </point>
+            <point eId="art_6__para_3__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>A delegate may represent, and vote in the name of, one State only.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_6__para_4">
+          <num>(4)</num>
+          <list eId="art_6__para_4__list_1">
+            <point eId="art_6__para_4__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>The General Assembly shall meet once in every second calendar year in ordinary session, upon convocation by the Director General.</p>
+              </content>
+            </point>
+            <point eId="art_6__para_4__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>The General Assembly shall meet in extraordinary session upon convocation by the Director General either at the request of the Coordination Committee or at the request of one-fourth of the States members of the General Assembly.</p>
+              </content>
+            </point>
+            <point eId="art_6__para_4__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>Meetings shall be held at the headquarters of the Organization.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_6__para_5">
+          <num>(5)</num>
+          <content>
+            <p>States party to this Convention which are not members of any of the Unions shall be admitted to the meetings of the General Assembly as observers.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_6__para_6">
+          <num>(6)</num>
+          <content>
+            <p>The General Assembly shall adopt its own rules of procedure.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_7">
+        <num>Article 7</num>
+        <heading>Conference</heading>
+        <paragraph eId="art_7__para_1">
+          <num>(1)</num>
+          <list eId="art_7__para_1__list_1">
+            <point eId="art_7__para_1__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>There shall be a Conference consisting of the States party to this Convention whether or not they are members of any of the Unions.</p>
+              </content>
+            </point>
+            <point eId="art_7__para_1__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>The Government of each State shall be represented by one delegate, who may be assisted by alternate delegates, advisors, and experts.</p>
+              </content>
+            </point>
+            <point eId="art_7__para_1__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>The expenses of each delegation shall be borne by the Government which has appointed it.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_7__para_2">
+          <num>(2)</num>
+          <intro>
+            <p>The Conference shall:</p>
+          </intro>
+          <list eId="art_7__para_2__list_1">
+            <point eId="art_7__para_2__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>discuss matters of general interest in the field of intellectual property and may adopt recommendations relating to such matters, having regard for the competence and autonomy of the Unions;</p>
+              </content>
+            </point>
+            <point eId="art_7__para_2__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>adopt the biennial budget of the Conference;</p>
+              </content>
+            </point>
+            <point eId="art_7__para_2__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>within the limits of the budget of the Conference, establish the biennial program of legal-technical assistance;</p>
+              </content>
+            </point>
+            <point eId="art_7__para_2__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>adopt amendments to this Convention as provided in <ref href="#art_17">Article 17</ref> ;</p>
+              </content>
+            </point>
+            <point eId="art_7__para_2__list_1__point_v">
+              <num>(v)</num>
+              <content>
+                <p>determine which States not Members of the Organization and which intergovernmental and international non-governmental organizations shall be admitted to its meetings as observers;</p>
+              </content>
+            </point>
+            <point eId="art_7__para_2__list_1__point_vi">
+              <num>(vi)</num>
+              <content>
+                <p>exercise such other functions as are appropriate under this Convention.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_7__para_3">
+          <num>(3)</num>
+          <list eId="art_7__para_3__list_1">
+            <point eId="art_7__para_3__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>Each Member State shall have one vote in the Conference.</p>
+              </content>
+            </point>
+            <point eId="art_7__para_3__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>One-third of the Member States shall constitute a quorum.</p>
+              </content>
+            </point>
+            <point eId="art_7__para_3__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>Subject to the provisions of <ref href="#art_17">Article 17</ref> , the Conference shall make its decisions by a majority of two-thirds of the votes cast.</p>
+              </content>
+            </point>
+            <point eId="art_7__para_3__list_1__point_d">
+              <num>(d)</num>
+              <content>
+                <p>The amounts of the contributions of States party to this Convention not members of any of the Unions shall be fixed by a vote in which only the delegates of such States shall have the right to vote.</p>
+              </content>
+            </point>
+            <point eId="art_7__para_3__list_1__point_e">
+              <num>(e)</num>
+              <content>
+                <p>Abstentions shall not be considered as votes.</p>
+              </content>
+            </point>
+            <point eId="art_7__para_3__list_1__point_f">
+              <num>(f)</num>
+              <content>
+                <p>A delegate may represent, and vote in the name of, one State only.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_7__para_4">
+          <num>(4)</num>
+          <list eId="art_7__para_4__list_1">
+            <point eId="art_7__para_4__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>The Conference shall meet in ordinary session, upon convocation by the Director General, during the same period and at the same place as the General Assembly.</p>
+              </content>
+            </point>
+            <point eId="art_7__para_4__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>The Conference shall meet in extraordinary session, upon convocation by the Director General, at the request of the majority of the Member States.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_7__para_5">
+          <num>(5)</num>
+          <content>
+            <p>The Conference shall adopt its own rules of procedure.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_8">
+        <num>Article 8</num>
+        <heading>Coordination Committee</heading>
+        <paragraph eId="art_8__para_1">
+          <num>(1)</num>
+          <list eId="art_8__para_1__list_1">
+            <point eId="art_8__para_1__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>There shall be a Coordination Committee consisting of the States party to this Convention which are members of the Executive Committee of the Paris Union, or the Executive Committee of the Berne Union, or both. However, if either of these Executive Committees is composed of more than one-fourth of the number of the countries members of the Assembly which elected it, then such Executive Committee shall designate from among its members the States which will be members of the Coordination Committee, in such a way that their number shall not exceed the one-fourth referred to above, it being understood that the country on the territory of which the Organization has its headquarters shall not be included in the computation of the said one-fourth.</p>
+              </content>
+            </point>
+            <point eId="art_8__para_1__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>The Government of each State member of the Coordination Committee shall be represented by one delegate, who may be assisted by alternate delegates, advisors, and experts.</p>
+              </content>
+            </point>
+            <point eId="art_8__para_1__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>Whenever the Coordination Committee considers either matters of direct interest to the program or budget of the Conference and its agenda, or proposals for the amendment of this Convention which would affect the rights or obligations of States party to this Convention not members of any of the Unions, one-fourth of such States shall participate in the meetings of the Coordination Committee with the same rights as members of that Committee. The Conference shall, at each of its ordinary sessions, designate these States.</p>
+              </content>
+            </point>
+            <point eId="art_8__para_1__list_1__point_d">
+              <num>(d)</num>
+              <content>
+                <p>The expenses of each delegation shall be borne by the Government which has appointed it.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_8__para_2">
+          <num>(2)</num>
+          <content>
+            <p>If the other Unions administered by the Organization wish to be represented as such in the Coordination Committee, their representatives must be appointed from among the States members of the Coordination Committee.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_8__para_3">
+          <num>(3)</num>
+          <intro>
+            <p>The Coordination Committee shall:</p>
+          </intro>
+          <list eId="art_8__para_3__list_1">
+            <point eId="art_8__para_3__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>give advice to the organs of the Unions, the General Assembly, the Conference, and the Director General, on all administrative, financial and other matters of common interest either to two or more of the Unions, or to one or more of the Unions and the Organization, and in particular on the budget of expenses common to the Unions;</p>
+              </content>
+            </point>
+            <point eId="art_8__para_3__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>prepare the draft agenda of the General Assembly;</p>
+              </content>
+            </point>
+            <point eId="art_8__para_3__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>prepare the draft agenda and the draft program and budget of the Conference;</p>
+              </content>
+            </point>
+            <point eId="art_8__para_3__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>[deleted]</p>
+              </content>
+            </point>
+            <point eId="art_8__para_3__list_1__point_v">
+              <num>(v)</num>
+              <content>
+                <p>when the term of office of the Director General is about to expire, or when there is a vacancy in the post of the Director General, nominate a candidate for appointment to such position by the General Assembly; if the General Assembly does not appoint its nominee, the Coordination Committee shall nominate another candidate; this procedure shall be repeated until the latest nominee is appointed by the General Assembly;</p>
+              </content>
+            </point>
+            <point eId="art_8__para_3__list_1__point_vi">
+              <num>(vi)</num>
+              <content>
+                <p>if the post of the Director General becomes vacant between two sessions of the General Assembly, appoint an Acting Director General for the term preceding the assuming of office by the new Director General;</p>
+              </content>
+            </point>
+            <point eId="art_8__para_3__list_1__point_vii">
+              <num>(vii)</num>
+              <content>
+                <p>perform such other functions as are allocated to it under this Convention.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_8__para_4">
+          <num>(4)</num>
+          <list eId="art_8__para_4__list_1">
+            <point eId="art_8__para_4__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>The Coordination Committee shall meet once every year in ordinary session, upon convocation by the Director General. It shall normally meet at the headquarters of the Organization.</p>
+              </content>
+            </point>
+            <point eId="art_8__para_4__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>The Coordination Committee shall meet in extraordinary session, upon convocation by the Director General, either on his own initiative, or at the request of its Chairman or one-fourth of its members.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_8__para_5">
+          <num>(5)</num>
+          <list eId="art_8__para_5__list_1">
+            <point eId="art_8__para_5__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>Each State whether a member of one or both of the Executive Committees referred to in paragraph (1) (a) , shall have one vote in the Coordination Committee.</p>
+              </content>
+            </point>
+            <point eId="art_8__para_5__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>One-half of the members of the Coordination Committee shall constitute a quorum.</p>
+              </content>
+            </point>
+            <point eId="art_8__para_5__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>A delegate may represent, and vote in the name of, one State only.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_8__para_6">
+          <num>(6)</num>
+          <list eId="art_8__para_6__list_1">
+            <point eId="art_8__para_6__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>The Coordination Committee shall express its opinions and make its decisions by a simple majority of the votes cast. Abstentions shall not be considered as votes.</p>
+              </content>
+            </point>
+            <point eId="art_8__para_6__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>Even if a simple majority is obtained, any member of the Coordination Committee may, immediately after the vote, request that the votes be the subject of a special recount in the following manner: two separate lists shall be prepared, one containing the names of the States members of the Executive Committee of the Paris Union and the other the names of the States members of the Executive Committee of the Berne Union; the vote of each State shall be inscribed opposite its name in each list in which it appears. Should this special recount indicate that a simple majority has not been obtained in each of those lists, the proposal shall not be considered as carried.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_8__para_7">
+          <num>(7)</num>
+          <content>
+            <p>Any State Member of the Organization which is not a member of the Coordination Committee may be represented at the meetings of the Committee by observers having the right to take part in the debates but without the right to vote.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_8__para_8">
+          <num>(8)</num>
+          <content>
+            <p>The Coordination Committee shall establish its own rules of procedure.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_9">
+        <num>Article 9</num>
+        <heading>International Bureau</heading>
+        <paragraph eId="art_9__para_1">
+          <num>(1)</num>
+          <content>
+            <p>The International Bureau shall be the Secretariat of the Organization.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_9__para_2">
+          <num>(2)</num>
+          <content>
+            <p>The International Bureau shall be directed by the Director General, assisted by two or more Deputy Directors General.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_9__para_3">
+          <num>(3)</num>
+          <content>
+            <p>The Director General shall be appointed for a fixed term, which shall be not less than six years. He shall be eligible for reappointment for fixed terms. The periods of the initial appointment and possible subsequent appointments, as well as all other conditions of the appointment, shall be fixed by the General Assembly.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_9__para_4">
+          <num>(4)</num>
+          <list eId="art_9__para_4__list_1">
+            <point eId="art_9__para_4__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>The Director General shall be the chief executive of the Organization.</p>
+              </content>
+            </point>
+            <point eId="art_9__para_4__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>He shall represent the Organization.</p>
+              </content>
+            </point>
+            <point eId="art_9__para_4__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>He shall report to, and conform to the instructions of, the General Assembly as to the internal and external affairs of the Organization.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_9__para_5">
+          <num>(5)</num>
+          <content>
+            <p>The Director General shall prepare the draft programs and budgets and periodical reports on activities. He shall transmit them to the Governments of the interested States and to the competent organs of the Unions and the Organization.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_9__para_6">
+          <num>(6)</num>
+          <content>
+            <p>The Director General and any staff member designated by him shall participate, without the right to vote, in all meetings of the General Assembly, the Conference, the Coordination Committee, and any other committee or working group. The Director General or a staff member designated by him shall be ex officio secretary of these bodies.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_9__para_7">
+          <num>(7)</num>
+          <content>
+            <p>The Director General shall appoint the staff necessary for the efficient performance of the tasks of the International Bureau. He shall appoint the Deputy Directors General after approval by the Coordination Committee. The conditions of employment shall be fixed by the staff regulations to be approved by the Coordination Committee on the proposal of the Director General. The paramount consideration in the employment of the staff and in the determination of the conditions of service shall be the necessity of securing the highest standards of efficiency, competence, and integrity. Due regard shall be paid to the importance of recruiting the staff on as wide a geographical basis as possible.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_9__para_8">
+          <num>(8)</num>
+          <content>
+            <p>The nature of the responsibilities of the Director General and of the staff shall be exclusively international. In the discharge of their duties they shall not seek or receive instructions from any Government or from any authority external to the Organization. They shall refrain from any action which might prejudice their position as international officials. Each Member State undertakes to respect the exclusively international character of the responsibilities of the Director General and the staff, and not to seek to influence them in the discharge of their duties.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_10">
+        <num>Article 10</num>
+        <heading>Headquarters</heading>
+        <paragraph eId="art_10__para_1">
+          <num>(1)</num>
+          <content>
+            <p>The headquarters of the Organization shall be at Geneva.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_10__para_2">
+          <num>(2)</num>
+          <content>
+            <p>Its transfer may be decided as provided for in <ref href="#art_6__para_3">Article 6(3)</ref> (d) and (g) .</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_11">
+        <num>Article 11</num>
+        <heading>Finances</heading>
+        <paragraph eId="art_11__para_1">
+          <num>(1)</num>
+          <content>
+            <p>The Organization shall have two separate budgets: the budget of expenses common to the Unions, and the budget of the Conference.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_11__para_2">
+          <num>(2)</num>
+          <list eId="art_11__para_2__list_1">
+            <point eId="art_11__para_2__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>The budget of expenses common to the Unions shall include provision for expenses of interest to several Unions.</p>
+              </content>
+            </point>
+            <point eId="art_11__para_2__list_1__point_b">
+              <num>(b)</num>
+              <intro>
+                <p>This budget shall be financed from the following sources:</p>
+              </intro>
+              <list eId="art_11__para_2__list_1__point_b__list_1">
+                <point eId="art_11__para_2__list_1__point_b__list_1__point_i">
+                  <num>(i)</num>
+                  <content>
+                    <p>contributions of the Unions, provided that the amount of the contribution of each Union shall be fixed by the Assembly of that Union, having regard to the interest the Union has in the common expenses;</p>
+                  </content>
+                </point>
+                <point eId="art_11__para_2__list_1__point_b__list_1__point_ii">
+                  <num>(ii)</num>
+                  <content>
+                    <p>charges due for services performed by the International Bureau not in direct relation with any of the Unions or not received for services rendered by the International Bureau in the field of legal-technical assistance;</p>
+                  </content>
+                </point>
+                <point eId="art_11__para_2__list_1__point_b__list_1__point_iii">
+                  <num>(iii)</num>
+                  <content>
+                    <p>sale of, or royalties on, the publications of the International Bureau not directly concerning any of the Unions;</p>
+                  </content>
+                </point>
+                <point eId="art_11__para_2__list_1__point_b__list_1__point_iv">
+                  <num>(iv)</num>
+                  <content>
+                    <p>gifts, bequests, and subventions, given to the Organization, except those referred to in paragraph (3) (b) (iv) ;</p>
+                  </content>
+                </point>
+                <point eId="art_11__para_2__list_1__point_b__list_1__point_v">
+                  <num>(v)</num>
+                  <content>
+                    <p>rents, interests, and other miscellaneous income, of the Organization.</p>
+                  </content>
+                </point>
+              </list>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_11__para_3">
+          <num>(3)</num>
+          <list eId="art_11__para_3__list_1">
+            <point eId="art_11__para_3__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>The budget of the Conference shall include provision for the expenses of holding sessions of the Conference and for the cost of the legal-technical assistance program.</p>
+              </content>
+            </point>
+            <point eId="art_11__para_3__list_1__point_b">
+              <num>(b)</num>
+              <intro>
+                <p>This budget shall be financed from the following sources:</p>
+              </intro>
+              <list eId="art_11__para_3__list_1__point_b__list_1">
+                <point eId="art_11__para_3__list_1__point_b__list_1__point_i">
+                  <num>(i)</num>
+                  <content>
+                    <p>contributions of States party to this Convention not members of any of the Unions;</p>
+                  </content>
+                </point>
+                <point eId="art_11__para_3__list_1__point_b__list_1__point_ii">
+                  <num>(ii)</num>
+                  <content>
+                    <p>any sums made available to this budget by the Unions, provided that the amount of the sum made available by each Union shall be fixed by the Assembly of that Union and that each Union shall be free to abstain from contributing to the said budget;</p>
+                  </content>
+                </point>
+                <point eId="art_11__para_3__list_1__point_b__list_1__point_iii">
+                  <num>(iii)</num>
+                  <content>
+                    <p>sums received for services rendered by the International Bureau in the field of legal-technical assistance;</p>
+                  </content>
+                </point>
+                <point eId="art_11__para_3__list_1__point_b__list_1__point_iv">
+                  <num>(iv)</num>
+                  <content>
+                    <p>gifts, bequests, and subventions, given to the Organization for the purposes referred to in subparagraph (a) .</p>
+                  </content>
+                </point>
+              </list>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_11__para_4">
+          <num>(4)</num>
+          <list eId="art_11__para_4__list_1">
+            <point eId="art_11__para_4__list_1__point_a">
+              <num>(a)</num>
+              <intro>
+                <p>For the purpose of establishing its contribution towards the budget of the Conference, each State party to this Convention not member of any of the Unions shall belong to a class, and shall pay its annual contributions on the basis of a number of units fixed as follows 2 :</p>
+              </intro>
+              <list eId="art_11__para_4__list_1__point_a__list_1">
+                <point eId="art_11__para_4__list_1__point_a__list_1__point_1">
+                  <content>
+                    <p>Class A .......... 10</p>
+                  </content>
+                </point>
+                <point eId="art_11__para_4__list_1__point_a__list_1__point_2">
+                  <content>
+                    <p>Class B ............ 3</p>
+                  </content>
+                </point>
+                <point eId="art_11__para_4__list_1__point_a__list_1__point_3">
+                  <content>
+                    <p>Class C ............ 1</p>
+                  </content>
+                </point>
+              </list>
+            </point>
+            <point eId="art_11__para_4__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>Each such State shall, concurrently with taking action as provided in <ref href="#art_14__para_1">Article 14(1)</ref> , indicate the class to which it wishes to belong. Any such State may change class. If it chooses a lower class, the State must announce it to the Conference at one of its ordinary sessions. Any such change shall take effect at the beginning of the calendar year following the session.</p>
+              </content>
+            </point>
+            <point eId="art_11__para_4__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>The annual contribution of each such State shall be an amount in the same proportion to the total sum to be contributed to the budget of the Conference by all such States as the number of its units is to the total of the units of all the said States.</p>
+              </content>
+            </point>
+            <point eId="art_11__para_4__list_1__point_d">
+              <num>(d)</num>
+              <content>
+                <p>Contributions shall become due on the first of January of each year.</p>
+              </content>
+            </point>
+            <point eId="art_11__para_4__list_1__point_e">
+              <num>(e)</num>
+              <content>
+                <p>If the budget is not adopted before the beginning of a new financial period, the budget shall be at the same level as the budget of the previous year, in accordance with the financial regulations.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_11__para_5">
+          <num>(5)</num>
+          <content>
+            <p>Any State party to this Convention not member of any of the Unions which is in arrears in the payment of its financial contributions under the present Article, and any State party to this Convention member of any of the Unions which is in arrears in the payment of its contributions to any of the Unions, shall have no vote in any of the bodies of the Organization of which it is a member, if the amount of its arrears equals or exceeds the amount of the contributions due from it for the preceding two full years. However, any of these bodies may allow such a State to continue to exercise its vote in that body if, and as long as, it is satisfied that the delay in payment arises from exceptional and unavoidable circumstances.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_11__para_6">
+          <num>(6)</num>
+          <content>
+            <p>The amount of the fees and charges due for services rendered by the International Bureau in the field of legal-technical assistance shall be established, and shall be reported to the Coordination Committee, by the Director General.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_11__para_7">
+          <num>(7)</num>
+          <content>
+            <p>The Organization, with the approval of the Coordination Committee, may receive gifts, bequests, and subventions, directly from Governments, public or private institutions, associations or private persons.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_11__para_8">
+          <num>(8)</num>
+          <list eId="art_11__para_8__list_1">
+            <point eId="art_11__para_8__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>The Organization shall have a working capital fund which shall be constituted by a single payment made by the Unions and by each State party to this Convention not member of any Union. If the fund becomes insufficient, it shall be increased.</p>
+              </content>
+            </point>
+            <point eId="art_11__para_8__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>The amount of the single payment of each Union and its possible participation in any increase shall be decided by its Assembly.</p>
+              </content>
+            </point>
+            <point eId="art_11__para_8__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>The amount of the single payment of each State party to this Convention not member of any Union and its part in any increase shall be a proportion of the contribution of that State for the year in which the fund is established or the increase decided. The proportion and the terms of payment shall be fixed by the Conference on the proposal of the Director General and after it has heard the advice of the Coordination Committee.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_11__para_9">
+          <num>(9)</num>
+          <list eId="art_11__para_9__list_1">
+            <point eId="art_11__para_9__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>In the headquarters agreement concluded with the State on the territory of which the Organization has its headquarters, it shall be provided that, whenever the working capital fund is insufficient, such State shall grant advances. The amount of these advances and the conditions on which they are granted shall be the subject of separate agreements, in each case, between such State and the Organization. As long as it remains under the obligation to grant advances, such State shall have an ex officio seat on the Coordination Committee.</p>
+              </content>
+            </point>
+            <point eId="art_11__para_9__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>The State referred to in subparagraph (a) and the Organization shall each have the right to denounce the obligation to grant advances, by written notification. Denunciation shall take effect three years after the end of the year in which it has been notified.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_11__para_10">
+          <num>(10)</num>
+          <content>
+            <p>The auditing of the accounts shall be effected by one or more Member States, or by external auditors, as provided in the financial regulations. They shall be designated, with their agreement, by the General Assembly.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_12">
+        <num>Article 12</num>
+        <heading>Legal Capacity; Privileges and Immunities</heading>
+        <paragraph eId="art_12__para_1">
+          <num>(1)</num>
+          <content>
+            <p>The Organization shall enjoy on the territory of each Member State, in conformity with the laws of that State, such legal capacity as may be necessary for the fulfilment of the Organization’s objectives and for the exercise of its functions.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_12__para_2">
+          <num>(2)</num>
+          <content>
+            <p>The Organization shall conclude a headquarters agreement with the Swiss Confederation and with any other State in which the headquarters may subsequently be located.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_12__para_3">
+          <num>(3)</num>
+          <content>
+            <p>The Organization may conclude bilateral or multilateral agreements with the other Member States with a view to the enjoyment by the Organization, its officials, and representatives of all Member States, of such privileges and immunities as may be necessary for the fulfilment of its objectives and for the exercise of its functions.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_12__para_4">
+          <num>(4)</num>
+          <content>
+            <p>The Director General may negotiate and, after approval by the Coordination Committee, shall conclude and sign on behalf of the Organization the agreements referred to in paragraphs (2) and (3) .</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_13">
+        <num>Article 13</num>
+        <heading>Relations with Other Organizations</heading>
+        <paragraph eId="art_13__para_1">
+          <num>(1)</num>
+          <content>
+            <p>The Organization shall, where appropriate, establish working relations and cooperate with other intergovernmental organizations. Any general agreement to such effect entered into with such organizations shall be concluded by the Director General after approval by the Coordination Committee.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_13__para_2">
+          <num>(2)</num>
+          <content>
+            <p>The Organization may, on matters within its competence, make suitable arrangements for consultation and cooperation with international non-governmental organizations and, with the consent of the Governments concerned, with national organizations, governmental or non-governmental. Such arrangements shall be made by the Director General after approval by the Coordination Committee.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_14">
+        <num>Article 14</num>
+        <heading>Becoming Party to the Convention</heading>
+        <paragraph eId="art_14__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>States referred to in <ref href="#art_5">Article 5</ref> may become party to this Convention and Member of the Organization by:</p>
+          </intro>
+          <list eId="art_14__para_1__list_1">
+            <point eId="art_14__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>signature without reservation as to ratification, or</p>
+              </content>
+            </point>
+            <point eId="art_14__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>signature subject to ratification followed by the deposit of an instrument of ratification, or</p>
+              </content>
+            </point>
+            <point eId="art_14__para_1__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>deposit of an instrument of accession.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_14__para_2">
+          <num>(2)</num>
+          <intro>
+            <p>Notwithstanding any other provision of this Convention, a State party to the <ref href="/akn/un/act/convention/wipo/1883-03-20/paris">Paris Convention</ref>, the <ref href="/akn/un/act/convention/wipo/1886-09-09/berne">Berne Convention</ref>, or both Conventions, may become party to this Convention only if it concurrently ratifies or accedes to, or only after it has ratified or acceded to:</p>
+          </intro>
+          <list eId="art_14__para_2__list_1">
+            <point eId="art_14__para_2__list_1__point_1">
+              <content>
+                <p>either the Stockholm Act of the <ref href="/akn/un/act/convention/wipo/1883-03-20/paris">Paris Convention</ref> in its entirety or with only the limitation set forth in <ref href="#art_20__para_1">Article 20(1)</ref>(b)(i) thereof,</p>
+              </content>
+            </point>
+            <point eId="art_14__para_2__list_1__point_2">
+              <content>
+                <p>or the Stockholm Act of the <ref href="/akn/un/act/convention/wipo/1886-09-09/berne">Berne Convention</ref> in its entirety or with only the limitation set forth in Article 28(1)(b)(i) thereof.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_14__para_3">
+          <num>(3)</num>
+          <content>
+            <p>Instruments of ratification or accession shall be deposited with the Director General.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_15">
+        <num>Article 15</num>
+        <heading>Entry into Force of the Convention</heading>
+        <paragraph eId="art_15__para_1">
+          <num>(1)</num>
+          <content>
+            <p>This Convention shall enter into force three months after ten States members of the Paris Union and seven States members of the Berne Union have taken action as provided in <ref href="#art_14__para_1">Article 14(1)</ref> , it being understood that, if a State is a member of both Unions, it will be counted in both groups. On that date, this Convention shall enter into force also in respect of States which, not being members of either of the two Unions, have taken action as provided in <ref href="#art_14__para_1">Article 14(1)</ref> three months or more prior to that date.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_15__para_2">
+          <num>(2)</num>
+          <content>
+            <p>In respect to any other State, this Convention shall enter into force three months after the date on which such State takes action as provided in <ref href="#art_14__para_1">Article 14(1)</ref> .</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_16">
+        <num>Article 16</num>
+        <heading>Reservations</heading>
+        <paragraph eId="art_16__para_1">
+          <content>
+            <p>No reservations to this Convention are permitted.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_17">
+        <num>Article 17</num>
+        <heading>Amendments</heading>
+        <paragraph eId="art_17__para_1">
+          <num>(1)</num>
+          <content>
+            <p>Proposals for the amendment of this Convention may be initiated by any Member State, by the Coordination Committee, or by the Director General. Such proposals shall be communicated by the Director General to the Member States at least six months in advance of their consideration by the Conference.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_17__para_2">
+          <num>(2)</num>
+          <content>
+            <p>Amendments shall be adopted by the Conference. Whenever amendments would affect the rights and obligations of States party to this Convention not members of any of the Unions, such States shall also vote. On all other amendments proposed, only States party to this Convention members of any Union shall vote. Amendments shall be adopted by a simple majority of the votes cast, provided that the Conference shall vote only on such proposals for amendments as have previously been adopted by the Assembly of the Paris Union and the Assembly of the Berne Union according to the rules applicable in each of them regarding the adoption of amendments to the administrative provisions of their respective Conventions.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_17__para_3">
+          <num>(3)</num>
+          <content>
+            <p>Any amendment shall enter into force one month after written notifications of acceptance, effected in accordance with their respective constitutional processes, have been received by the Director General from three-fourths of the States Members of the Organization, entitled to vote on the proposal for amendment pursuant to paragraph (2) , at the time the Conference adopted the amendment. Any amendment thus accepted shall bind all the States which are Members of the Organization at the time the amendment enters into force or which become Members at a subsequent date, provided that any amendment increasing the financial obligations of Member States shall bind only those States which have notified their acceptance of such amendment.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_18">
+        <num>Article 18</num>
+        <heading>Denunciation</heading>
+        <paragraph eId="art_18__para_1">
+          <num>(1)</num>
+          <content>
+            <p>Any Member State may denounce this Convention by notification addressed to the Director General.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_18__para_2">
+          <num>(2)</num>
+          <content>
+            <p>Denunciation shall take effect six months after the day on which the Director General has received the notification.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_19">
+        <num>Article 19</num>
+        <heading>Notifications</heading>
+        <paragraph eId="art_19__para_1">
+          <intro>
+            <p>The Director General shall notify the Governments of all Member States of:</p>
+          </intro>
+          <list eId="art_19__para_1__list_1">
+            <point eId="art_19__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>the date of entry into force of the Convention,</p>
+              </content>
+            </point>
+            <point eId="art_19__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>signatures and deposits of instruments of ratification or accession,</p>
+              </content>
+            </point>
+            <point eId="art_19__para_1__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>acceptances of an amendment to this Convention, and the date upon which the amendment enters into force,</p>
+              </content>
+            </point>
+            <point eId="art_19__para_1__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>denunciations of this Convention.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+      </article>
+      <article eId="art_20">
+        <num>Article 20</num>
+        <heading>Final Provisions</heading>
+        <paragraph eId="art_20__para_1">
+          <num>(1)</num>
+          <list eId="art_20__para_1__list_1">
+            <point eId="art_20__para_1__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>This Convention shall be signed in a single copy in English, French, Russian and Spanish, all texts being equally authentic, and shall be deposited with the Government of Sweden.</p>
+              </content>
+            </point>
+            <point eId="art_20__para_1__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>This Convention shall remain open for signature at Stockholm until January 13, 1968.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_20__para_2">
+          <num>(2)</num>
+          <content>
+            <p>Official texts shall be established by the Director General, after consultation with the interested Governments, in German, Italian and Portuguese, and such other languages as the Conference may designate.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_20__para_3">
+          <num>(3)</num>
+          <content>
+            <p>The Director General shall transmit two duly certified copies of this Convention and of each amendment adopted by the Conference to the Governments of the States members of the Paris or Berne Unions, to the Government of any other State when it accedes to this Convention, and, on request, to the Government of any other State. The copies of the signed text of the Convention transmitted to the Governments shall be certified by the Government of Sweden.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_20__para_4">
+          <num>(4)</num>
+          <content>
+            <p>The Director General shall register this Convention with the Secretariat of the United Nations.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_21">
+        <num>Article 21</num>
+        <heading>Transitional Provisions</heading>
+        <paragraph eId="art_21__para_1">
+          <num>(1)</num>
+          <content>
+            <p>Until the first Director General assumes office, references in this Convention to the International Bureau or to the Director General shall be deemed to be references to the United International Bureau for the Protection of Industrial, Literary and Artistic Property (also called the United International Bureau for the Protection of Intellectual Property (BIRPI)), or its Director, respectively.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_21__para_2">
+          <num>(2)</num>
+          <list eId="art_21__para_2__list_1">
+            <point eId="art_21__para_2__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>States which are members of any of the Unions but which have not become party to this Convention may, for five years from the date of entry into force of this Convention, exercise, if they so desire, the same rights as if they had become party to this Convention. Any State desiring to exercise such rights shall give written notification to this effect to the Director General; this notification shall be effective on the date of its receipt. Such States shall be deemed to be members of the General Assembly and the Conference until the expiration of the said period.</p>
+              </content>
+            </point>
+            <point eId="art_21__para_2__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>Upon expiration of this five-year period, such States shall have no right to vote in the General Assembly, the Conference, and the Coordination Committee.</p>
+              </content>
+            </point>
+            <point eId="art_21__para_2__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>Upon becoming party to this Convention, such States shall regain such right to vote.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_21__para_3">
+          <num>(3)</num>
+          <list eId="art_21__para_3__list_1">
+            <point eId="art_21__para_3__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>As long as there are States members of the Paris or Berne Unions which have not become party to this Convention, the International Bureau and the Director General shall also function as the United International Bureau for the Protection of Industrial, Literary and Artistic Property, and its Director, respectively.</p>
+              </content>
+            </point>
+            <point eId="art_21__para_3__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>The staff in the employment of the said Bureaux on the date of entry into force of this Convention shall, during the transitional period referred to in subparagraph (a) , be considered as also employed by the International Bureau.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_21__para_4">
+          <num>(4)</num>
+          <list eId="art_21__para_4__list_1">
+            <point eId="art_21__para_4__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>Once all the States members of the Paris Union have become Members of the Organization, the rights, obligations, and property, of the Bureau of that Union shall devolve on the International Bureau of the Organization.</p>
+              </content>
+            </point>
+            <point eId="art_21__para_4__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>Once all the States members of the Berne Union have become Members of the Organization, the rights, obligations, and property, of the Bureau of that Union shall devolve on the International Bureau of the Organization.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+      </article>
+    </body>
+  </act>
+</akomaNtoso>

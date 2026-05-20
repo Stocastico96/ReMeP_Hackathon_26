@@ -1,0 +1,328 @@
+{
+  "summary": {
+    "total_files": 29,
+    "valid_files": 29,
+    "invalid_files": 0
+  },
+  "files": [
+    {
+      "file": "1883_paris_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1886_berne_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1891_madrid-marks_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1891_madrid-source_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1928_hague_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1957_nice_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1958_lisbon_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1961_rome_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1967_madrid-source-additional-act_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1967_wipo-convention_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1968_locarno_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1970_pct_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1971_phonograms_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1971_strasbourg_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1973_vienna_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1974_brussels_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1977_budapest_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1981_nairobi_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1989_madrid-protocol_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1989_washington_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1994_tlt_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1996_wct_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "1996_wppt_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "2000_plt_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "2006_singapore_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "2012_beijing_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "2013_marrakesh_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "2024_gratk_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    },
+    {
+      "file": "2024_rdlt_clean.xml",
+      "schema_valid": true,
+      "schema_errors": [],
+      "duplicate_eids": [],
+      "missing_internal_ref_targets": [],
+      "defs_missing_tlcterm": [],
+      "frbr_issues": [],
+      "para_unmarked_eids": [],
+      "overall_valid": true
+    }
+  ]
+}

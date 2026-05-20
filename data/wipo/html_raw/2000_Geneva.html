@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Improved cache headers: allow revalidation but force checks -->
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+
+  <!-- Security and referrer policy for cross-domain navigation -->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <meta name="description" content="WIPO Lex provides free of charge access to legal information on intellectual property (IP) from around the world.
+    The WIPO Lex Database is organized into three collections, consisting of IP laws and regulations, WIPO-administered treaties and IP‑related treaties, and IP judgments.">
+
+  <title>WIPO Lex</title>
+
+  <!-- DNS Prefetch and Preconnect for external resources -->
+  <link rel="dns-prefetch" href="https://webcomponents.wipo.int">
+  <link rel="dns-prefetch" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1">
+  <link rel="dns-prefetch" href="https://webcomponents.wipo.int">
+  <link rel="preconnect" href="https://webcomponents.wipo.int" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1" crossorigin>
+  <link rel="preconnect" href="https://webcomponents.wipo.int" crossorigin>
+
+  <!-- SOCIAL META -->
+  <meta property="og:title" content="WIPO Lex" />
+  <meta property="og:description" content="" />
+  <meta property="og:image"
+    content="https://www.wipo.int/export/system/modules/org.wipo.internet.rwd.templates/resources/images/logo-wipo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.wipo.int/wipolex/en/text/597000" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@WIPO">
+  <meta name="twitter:creator" content="@WIPO">
+  <meta name="twitter:title" content="WIPO Lex" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:image"
+    content="https://www.wipo.int/export/system/modules/org.wipo.internet.rwd.templates/resources/images/logo-wipo.png" />
+  <meta name="twitter:image:alt" content="WIPO Lex" />
+
+  <link rel="canonical" href="https://www.wipo.int/wipolex/en/text/597000" /> 
+
+  <!-- Resource loading error detection (load early) -->
+  <script type="application/javascript" src="/wipolex/nestjs-public/js/resource-loader.js"></script>
+
+  <script type="application/javascript" src="https://webcomponents.wipo.int/wipo-init/wipo-init.js" defer></script>
+  <script type="application/javascript" src="https://webcomponents.wipo.int/wipo-navbar/wipo-navbar.js" defer></script>
+
+  <!-- Modulepreload hints for web components (improves loading performance) -->
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wipo-footer.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-block-ui.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-bubble.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-button.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-datepicker.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-edit-panel.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-field.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-filter.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-landing.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-machine-translation-widget.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-multi-search.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-page-header.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-page-section.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-section.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-select-one.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-sidebar-section.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-sidebar.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-slot.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-step.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-sticky-bar.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-view-panel.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-input-text.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-pay-box.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-view.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-table-command.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-dropdown.js">
+  <link rel="modulepreload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-checkbox-many.js">
+
+  <!-- WIPO cdnjs webcomponents common-lf -->
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wipo-footer.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-block-ui.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-bubble.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-button.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-datepicker.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-edit-panel.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-field.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-filter.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-landing.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-machine-translation-widget.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-multi-search.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-page-header.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-page-section.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-section.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-select-one.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-sidebar-section.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-sidebar.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-slot.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-step.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-sticky-bar.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-view-panel.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-input-text.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-pay-box.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-view.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-table-command.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-dropdown.js"></script>
+  <script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/components/wu-checkbox-many.js"></script>
+
+  <link rel="preload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/style/wu-machine-translation-widget.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/style/wu-machine-translation-widget.css">
+  </noscript>
+  <link rel="preload" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/style/global-v2.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.wipo.int/universal-lf-webcomponents/2.1.1/style/global-v2.css">
+  </noscript>
+  <!-- Axios -->
+  <!-- Main JS -->
+  <script type="application/javascript" src="/wipolex/nestjs-public/js/main.js" defer></script>
+
+
+  <!-- Global WIPO Lex custom css -->
+  <link rel="preload" href="/wipolex/nestjs-public/css/wipolex-custom.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+
+
+</head>
+
+<body>
+  <!-- Loading indicator -->
+  <div id="page-loader"
+    style="position:fixed;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0093d0,#00c896);z-index:99999;">
+    <div style="width:30%;height:100%;background:rgba(255,255,255,0.3);animation:loading 1.5s ease-in-out infinite;">
+    </div>
+  </div>
+  <style>
+    @keyframes loading {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(333%);
+      }
+    }
+  </style>
+  <script>
+    // Remove loader when page is fully loaded
+    (function () {
+      function hideLoader() {
+        var loader = document.getElementById('page-loader');
+        if (loader) {
+          loader.style.display = 'none';
+        }
+      }
+
+      // Hide on load
+      window.addEventListener('load', hideLoader);
+
+      // Also hide if already loaded
+      if (document.readyState === 'complete') {
+        hideLoader();
+      }
+    })();
+  </script>
+  <div style="display: none">	
+	<a href="https://www.wipo.int/en/web/about-ip">About Intellectual Property</a>
+	<a href="https://www.wipo.int/en/web/about-ip#training">IP Training</a>
+	<a href="https://www.wipo.int/en/web/respect-for-ip">Respect for IP</a>
+	<a href="https://www.wipo.int/en/web/ip-outreach">IP Outreach</a>
+	<a href="https://www.wipo.int/en/web/about-ip#for">IP for…</a>
+	<a href="https://www.wipo.int/en/web/about-ip#and">IP and...</a>
+	<a href="https://www.wipo.int/en/web/about-ip#in">IP in...</a>
+	<a href="https://www.wipo.int/en/web/patents/patent-information">Patent & Technology Information</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#trademarks">Trademark Information</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#designs">Design Information</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#geographical-indications">Geographical Indication Information</a>
+	<a href="https://www.upov.int/">Plant Variety Information (UPOV)</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#legal">IP Laws, Treaties & Judgments</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#analysis">IP Resources</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#reports">IP Reports</a>
+	<a href="https://www.wipo.int/en/web/patents/protection">Patent Protection</a>
+	<a href="https://www.wipo.int/en/web/trademarks/protection">Trademark Protection</a>
+	<a href="https://www.wipo.int/en/web/designs/protection">Design Protection</a>
+	<a href="https://www.wipo.int/en/web/geographical-indications/protection">Geographical Indication Protection</a>
+	<a href="https://www.upov.int/portal/index.html.en">Plant Variety Protection (UPOV)</a>
+	<a href="https://www.wipo.int/amc/en/">IP Dispute Resolution</a>
+	<a href="https://www.wipo.int/en/web/ip-office-business-solutions">IP Office Business Solutions</a>
+	<a href="https://www.wipo.int/en/web/paying-for-ip-services">Paying for IP Services</a>
+	<a href="https://www.wipo.int/en/web/decision-making-and-negotiating-bodies">Negotiation & Decision-Making</a>
+	<a href="https://www.wipo.int/cooperation/en/">Development Cooperation</a>
+	<a href="https://www.wipo.int/en/web/patents#technology">Innovation Support</a>
+	<a href="https://www.wipo.int/cooperation/en/#ppp">Public-Private Partnerships</a>
+	<a href="https://www.wipo.int/en/web/ai-tools-services">AI Tools & Services</a>
+	<a href="https://www.wipo.int/about-wipo/en/">The Organization</a>
+	<a href="https://www.wipo.int/en/web/working-at-wipo">Working at WIPO</a>
+	<a href="https://www.wipo.int/about-wipo/en/#accountability">Accountability</a>
+	<a href="https://www.wipo.int/en/web/patents">Patents</a>
+	<a href="https://www.wipo.int/en/web/trademarks">Trademarks</a>
+	<a href="https://www.wipo.int/en/web/designs">Designs</a>
+	<a href="https://www.wipo.int/en/web/geographical-indications">Geographical Indications</a>
+	<a href="https://www.wipo.int/en/web/copyright">Copyright</a>
+	<a href="https://www.wipo.int/en/web/trade-secrets">Trade Secrets</a>
+	<a href="https://www.wipo.int/en/web/future-of-ip">Future of IP</a>
+	<a href="https://www.wipo.int/en/web/wipo-academy">WIPO Academy</a>
+	<a href="https://www.wipo.int/meetings/en/topic_type.jsp?group_id=242">Workshops & Seminars</a>
+	<a href="https://www.wipo.int/en/web/ip-enforcement">IP Enforcement</a>
+	<a href="https://www.wipo.int/en/web/wipo-alert">WIPO ALERT</a>
+	<a href="https://www.wipo.int/en/web/respect-for-ip/awareness-raising">Raising Awareness</a>
+	<a href="https://www.wipo.int/en/web/ipday">World IP Day</a>
+	<a href="https://www.wipo.int/en/web/wipo-magazine">WIPO Magazine</a>
+	<a href="https://www.wipo.int/en/web/ip-advantage">Case Studies & Success Stories</a>
+	<a href="https://www.wipo.int/en/web/news/explore">IP News</a>
+	<a href="https://www.wipo.int/en/web/awards">WIPO Awards</a>
+	<a href="https://www.wipo.int/en/web/business">Business</a>
+	<a href="https://www.wipo.int/en/web/universities">Universities</a>
+	<a href="https://www.wipo.int/en/web/traditional-knowledge/engagement">Indigenous Peoples</a>
+	<a href="https://www.wipo.int/en/web/judiciaries">Judiciaries</a>
+	<a href="https://www.wipo.int/en/web/youth-engagement">Youth</a>
+	<a href="https://www.wipo.int/en/web/examiners">Examiners</a>
+	<a href="https://www.wipo.int/en/web/innovation-ecosystems">Innovation Ecosystems</a>
+	<a href="https://www.wipo.int/en/web/economics">Economics</a>
+	<a href="https://www.wipo.int/en/web/ip-financing">Finance</a>
+	<a href="https://www.wipo.int/en/web/intangible-assets">Intangible Assets</a>
+	<a href="https://www.wipo.int/en/web/women">Gender Equality</a>
+	<a href="https://www.wipo.int/en/web/global-health">Global Health</a>
+	<a href="https://www.wipo.int/en/web/climate-change">Climate Change</a>
+	<a href="https://www.wipo.int/en/web/competition-policy">Competition Policy</a>
+	<a href="https://www.wipo.int/en/web/sdgs">Sustainable Development Goals</a>
+	<a href="https://www.wipo.int/en/web/traditional-knowledge">Genetic Resources, Traditional Knowledge and Traditional Cultural Expressions</a>
+	<a href="https://www.wipo.int/en/web/frontier-technologies">Frontier Technologies</a>
+	<a href="https://www.wipo.int/en/web/mobile-apps">Mobile Applications</a>
+	<a href="https://www.wipo.int/en/web/sports">Sports</a>
+	<a href="https://www.wipo.int/en/web/tourism">Tourism</a>
+	<a href="https://www.wipo.int/en/web/music">Music</a>
+	<a href="https://www.wipo.int/en/web/fashion">Fashion</a>
+	<a href="https://www.wipo.int/en/web/patentscope">PATENTSCOPE</a>
+	<a href="https://www.wipo.int/en/web/patent-analytics">Patent Analytics</a>
+	<a href="https://www.wipo.int/en/web/classification-ipc">International Patent Classification</a>
+	<a href="https://www.wipo.int/en/web/ardi">ARDI – Research for Innovation</a>
+	<a href="https://www.wipo.int/en/web/aspi">ASPI – Specialized Patent Information</a>
+	<a href="https://www.wipo.int/en/web/global-brand-database">Global Brand Database</a>
+	<a href="https://www3.wipo.int/madrid/monitor/en/">Madrid Monitor</a>
+	<a href="https://6ter.wipo.int/struct-search">Article 6ter Express Database</a>
+	<a href="https://www.wipo.int/en/web/classification-nice">Nice Classification</a>
+	<a href="https://www.wipo.int/en/web/classification-vienna">Vienna Classification</a>
+	<a href="https://www.wipo.int/en/web/global-design-database">Global Design Database</a>
+	<a href="https://www.wipo.int/haguebulletin/">International Designs Bulletin</a>
+	<a href="https://www3.wipo.int/designdb/hague/en/index.jsp">Hague Express Database</a>
+	<a href="https://www.wipo.int/en/web/classification-locarno">Locarno Classification</a>
+	<a href="https://lisbon-express.wipo.int/">Lisbon Express Database</a>
+	<a href="https://branddb.wipo.int/en/IPO-LISBON/quicksearch?by=brandName&v=&start=0&_=1676544734688">Global Brand Database for GIs</a>
+	<a href="https://pluto.upov.int/">PLUTO Plant Variety Database</a>
+	<a href="https://www.upov.int/genie/">GENIE Database</a>
+	<a href="https://www.wipo.int/en/web/treaties">WIPO-Administered Treaties</a>
+	<a href="https://www.wipo.int/en/web/wipolex">WIPO Lex - IP Laws, Treaties & Judgments</a>
+	<a href="https://www.wipo.int/en/web/standards">WIPO Standards</a>
+	<a href="https://www.wipo.int/en/web/ip-statistics">IP Statistics</a>
+	<a href="https://www.wipo.int/en/web/wipo-pearl">WIPO Pearl (Terminology)</a>
+	<a href="https://www.wipo.int/publications/en/">WIPO Publications</a>
+	<a href="https://www.wipo.int/directory/en/">Country IP Profiles</a>
+	<a href="https://www.wipo.int/en/web/wipo-knowledge-center">WIPO Knowledge Center</a>
+	<a href="https://www.wipo.int/en/web/intangible-assets/measuring-investments#highlights">World Intangible Investment Highlights</a>
+	<a href="https://www.wipo.int/en/web/technology-trends">WIPO Technology Trends</a>
+	<a href="https://www.wipo.int/en/web/global-innovation-index">Global Innovation Index</a>
+	<a href="https://www.wipo.int/en/web/world-ip-report">World Intellectual Property Report</a>
+	<a href="https://www.wipo.int/en/web/pct-system">PCT – The International Patent System</a>
+	<a href="https://pct.wipo.int/ePCT/">ePCT</a>
+	<a href="https://www.wipo.int/en/web/budapest-system">Budapest – The International Microorganism Deposit System</a>
+	<a href="https://www.wipo.int/en/web/madrid-system">Madrid – The International Trademark System</a>
+	<a href="https://madrid.wipo.int/">eMadrid</a>
+	<a href="https://www.wipo.int/en/web/article-6ter">Article 6ter (armorial bearings, flags, state emblems)</a>
+	<a href="https://www.wipo.int/en/web/hague-system">Hague – The International Design System</a>
+	<a href="https://hague.wipo.int/">eHague</a>
+	<a href="https://www.wipo.int/en/web/lisbon-system">Lisbon – The International System of Appellations of Origin and Geographical Indications</a>
+	<a href="https://lisbon-system.wipo.int/">eLisbon</a>
+	<a href="https://www3.wipo.int/upovprisma">UPOV PRISMA</a>
+	<a href="https://www.wipo.int/amc/en/#mediation">Mediation</a>
+	<a href="https://www.wipo.int/amc/en/#arbitration">Arbitration</a>
+	<a href="https://www.wipo.int/amc/en/#expert-determination">Expert Determination</a>
+	<a href="https://www.wipo.int/amc/en/domains/">Domain Name Disputes</a>
+	<a href="https://www.wipo.int/en/web/case">Centralized Access to Search and Examination (CASE)</a>
+	<a href="https://www.wipo.int/en/web/das">Digital Access Service (DAS)</a>
+	<a href="https://www.wipo.int/en/web/wipo-pay">WIPO Pay</a>
+	<a href="https://www.wipo.int/en/web/current-account-at-wipo">Current Account at WIPO</a>
+	<a href="https://www.wipo.int/en/web/assemblies">WIPO Assemblies</a>
+	<a href="https://www.wipo.int/en/web/decision-making-and-negotiating-bodies#bodies">Standing Committees</a>
+	<a href="https://www.wipo.int/meetings/en/">Calendar of Meetings</a>
+	<a href="https://webcast.wipo.int/">WIPO Webcast</a>
+	<a href="https://www.wipo.int/meetings/en/archive.jsp">WIPO Official Documents</a>
+	<a href="https://www.wipo.int/ip-development/en/agenda/">Development Agenda</a>
+	<a href="https://www.wipo.int/cooperation/en/technical_assistance/">Technical Assistance</a>
+	<a href="https://www.wipo.int/en/web/wipo-academy/programs/ip-training-institutions">IP Training Institutions</a>
+	<a href="https://www.wipo.int/en/web/ip-acceleration">Build Back Fund</a>
+	<a href="https://www.wipo.int/en/web/national-ip-strategies">National IP Strategies</a>
+	<a href="https://www.wipo.int/ip-development/en/policy_legislative_assistance/">Policy & Legislative Advice</a>
+	<a href="https://www.wipo.int/cooperation/en/south_south/">Cooperation Hub</a>
+	<a href="https://www.wipo.int/en/web/tisc">Technology and Innovation Support Centers (TISC)</a>
+	<a href="https://www.wipo.int/en/web/technology-transfer">Technology Transfer</a>
+	<a href="https://www.wipo.int/en/web/inventor-assistance-program">Inventor Assistance Program</a>
+	<a href="https://www3.wipo.int/wipogreen/en/">WIPO GREEN</a>
+	<a href="https://www.wipo.int/pat-informed/en/">WIPO's Pat-INFORMED</a>
+	<a href="https://www.accessiblebooksconsortium.org/en/web/abc/portal/index">Accessible Books Consortium</a>
+	<a href="https://www.wipo.int/en/web/wipo-for-creators">WIPO for Creators</a>
+	<a href="https://www.wipo.int/en/web/ai-tools-services/wipo-translate">WIPO Translate</a>
+	<a href="https://www.wipo.int/en/web/ai-tools-services/speech-to-text">Speech-to-Text</a>
+	<a href="https://www.wipo.int/en/web/ai-tools-services/classification-assistant">Classification Assistant</a>
+	<a href="https://www.wipo.int/members/en/">Member States</a>
+	<a href="https://www.wipo.int/about-wipo/en/observers/">Observers</a>
+	<a href="https://www.wipo.int/about-wipo/en/dg_tang/">Director General</a>
+	<a href="https://www.wipo.int/about-wipo/en/activities_by_unit/">Activities by Unit</a>
+	<a href="https://www.wipo.int/about-wipo/en/offices/">External Offices</a>
+	<a href="https://www.wipo.int/en/web/working-at-wipo#staff">Staff Positions</a>
+	<a href="https://www.wipo.int/en/web/working-at-wipo#affiliated">Affiliated Personnel Positions</a>
+	<a href="https://www.wipo.int/en/web/procurement">Procurement</a>
+	<a href="https://www.wipo.int/about-wipo/en/budget/">Results & Budget</a>
+	<a href="https://www.wipo.int/about-wipo/en/budget/financial/">Financial Reporting</a>
+	<a href="https://www.wipo.int/about-wipo/en/oversight/">Oversight</a>
+</div>
+
+  <wipo-navbar class="notranslate" appId="app-0148" pageKey="WIPO Lex"
+    applicationname="WIPO Lex" language="en"  languageOptions='[
+        {"code":"ar", "link": "/wipolex/ar/text/597000"},
+        {"code":"en", "link": "/wipolex/en/text/597000"},
+        {"code":"es", "link": "/wipolex/es/text/597000"},
+        {"code":"fr", "link": "/wipolex/fr/text/597000"},
+        {"code":"ru", "link": "/wipolex/ru/text/597000"},
+        {"code":"zh", "link": "/wipolex/zh/text/597000"}]' 
+    helpOptions='[
+        {"code":"contact", "link":"https://www3.wipo.int/contact/en/area.jsp?area=wipolex", "sameTab":false},
+        {"code":"termsOfUse", "link":"https://www.wipo.int/en/web/wipolex/terms-of-use", "sameTab":false},
+        {"code":"privacyPolicy", "link":"https://www.wipo.int/tools/en/privacy_policy-ipportal.html", "sameTab":false}]' style="background: black; height: 48px; width: 100%;">
+    <div style="background: black; height: 48px; width: 100%;"></div>
+    <div style="display:none;">
+      <a class="notranslate" href="/wipolex/ar/text/597000">Arabic</a>
+      <a class="notranslate" href="/wipolex/en/text/597000">English</a>
+      <a class="notranslate" href="/wipolex/es/text/597000">Spanish</a>
+      <a class="notranslate" href="/wipolex/fr/text/597000">French</a>
+      <a class="notranslate" href="/wipolex/ru/text/597000">Russian</a>
+      <a class="notranslate" href="/wipolex/zh/text/597000">Chinese</a>
+    </div>
+  </wipo-navbar>
+
+  <wu-sticky-bar id="sticky-bar"> <!-- sticky="true" -->
+    <a href="/wipolex/en/main/legislation" slot="links" class="notranslate" >Laws</a>
+    <a href="/wipolex/en/main/treaties" slot="links" class="notranslate" >Treaties</a>
+    <a href="/wipolex/en/main/judgments" slot="links" class="notranslate" >Judgments</a>
+    <a href="/wipolex/en/members" slot="links" class="notranslate" >Browse By Jurisdiction</a>
+    
+    
+  </wu-sticky-bar>
+
+  <wu-page-header no-margin class="clf-flex-row-overlap">
+    <h1 slot="title" class="heading-text notranslate">
+      World Intellectual Property Organization (WIPO)
+    </h1>
+    <h2 slot="subtitle" class="heading-text">
+      <a class="black notranslate" href="/wipolex/en/treaties/textdetails/12642">TRT/PLT/001 </a>
+    </h2>
+      <wu-button slot="actions" id="back-btn" onclick="goToPreviousPage()">Back</wu-button>
+  </wu-page-header>
+    <wu-step no-margin >
+      <h3 slot="title" class="heading-text notranslate">Patent Law Treaty (Authentic text)</h3>
+      <span slot="info">
+        <div class="machine-translation-widget">
+          <wu-machine-translation-widget wt-hide="true" atac-widget-languages="[{&quot;id&quot;:&quot;ar&quot;,&quot;value&quot;:&quot;عربي&quot;},{&quot;id&quot;:&quot;en&quot;,&quot;value&quot;:&quot;English&quot;},{&quot;id&quot;:&quot;es&quot;,&quot;value&quot;:&quot;Español&quot;},{&quot;id&quot;:&quot;fr&quot;,&quot;value&quot;:&quot;Français&quot;},{&quot;id&quot;:&quot;ru&quot;,&quot;value&quot;:&quot;Русский&quot;},{&quot;id&quot;:&quot;zh&quot;,&quot;value&quot;:&quot;中文&quot;}]" atac-widget-pagelanguage="en" google-widget-pagelanguage="en"  atac-widget-site="wipolex" google-widget look-and-feel="ulf"></wu-machine-translation-widget>
+        </div>
+        <div id="printID" class="htmlView content needTranslation ">
+          <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Patent Law Treaty</title>
+
+
+<meta name="language" content="en">
+<meta http-equiv="Content-Language" content="en">
+<meta name="Generator" content="ocms">
+<meta name="Distribution" content="Global">
+<meta name="author" content="WIPO">
+<meta name="date" content="2012-02-15">
+
+</head>
+
+<body>
+
+
+<h1 align="center">Patent Law Treaty</h1>
+<p align="center"><strong>adopted at Geneva on June 1, 2000</strong></p>
+<p align="center">TABLE OF CONTENTS</p>
+<div class="table-02">
+<table width="100%" cellspacing="1" cellpadding="5" border="0">
+    <tbody>
+        <tr valign="top" width="100%">
+            <td width="10%"><a href="#P46_1111">Article 1</a>:</td>
+            <td width="90%">Abbreviated Expressions</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P71_4394">Article 2</a>:</td>
+            <td>General Principles</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P74_4971">Article 3</a>:</td>
+            <td>Applications and Patents to Which the Treaty Applies</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P82_6421">Article 4</a>:</td>
+            <td>Security Exception</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P84_6630">Article 5</a>:</td>
+            <td>Filing Date</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P105_12369">Article 6</a>:</td>
+            <td>Application</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P119_16125">Article 7</a>:</td>
+            <td>Representation</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P135_18968">Article 8</a>:</td>
+            <td>Communications; Addresses</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P152_22167">Article 9</a>:</td>
+            <td>Notifications</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P156_23338">Article 10</a>:</td>
+            <td>Validity of Patent; Revocation</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P160_24452">Article 11</a>:</td>
+            <td>Relief in Respect of Time Limits</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P171_26797">Article 12</a>:</td>
+            <td>Reinstatement of Rights After a Finding of Due Care or Unintentionality by the Office</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P181_28674">Article 13</a>:</td>
+            <td>Correction or Addition of Priority Claim; Restoration of Priority Right</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P199_31869">Article 14</a>:</td>
+            <td>Regulations</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P215_33564">Article 15</a>:</td>
+            <td>Relation to the Paris Convention</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P219_34062">Article 16</a>:</td>
+            <td>Effect of Revisions, Amendments and Modifications of the Patent Cooperation Treaty</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P222_35040">Article 17</a>:</td>
+            <td>Assembly</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P242_38768">Article 18</a>:</td>
+            <td>International Bureau</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P252_40394">Article 19</a>:</td>
+            <td>Revisions</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P258_41932">Article 20</a>:</td>
+            <td>Becoming Party to the Treaty</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P268_44011">Article 21</a>:</td>
+            <td>Entry into Force; Effective Dates of Ratifications and Accessions</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P275_45664">Article 22</a>:</td>
+            <td>Application of the Treaty to Existing Applications and Patents</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P278_46403">Article 23</a>:</td>
+            <td>Reservations</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P283_47160">Article 24</a>:</td>
+            <td>Denunciation of the Treaty</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P286_47710">Article 25</a>:</td>
+            <td>Languages of the Treaty</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P290_48804">Article 26</a>:</td>
+            <td>Signature of the Treaty</td>
+        </tr>
+        <tr valign="top" width="100%">
+            <td><a href="#P292_49168">Article 27</a>:</td>
+            <td>Depositary; Registration</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P46_1111" id="P46_1111"></a>Article 1<br>
+Abbreviated Expressions</strong></p>
+<p>For the purposes of this Treaty, unless expressly stated otherwise:</p>
+<ul><ul>
+<p>(i) “Office” means the authority of a Contracting Party entrusted 
+with the granting of patents or with other matters covered by this 
+Treaty;</p>
+<p>(ii) “application” means an application for the grant of a patent, as referred to in <a href="#P74_4971">Article 3</a>;</p>
+<p>(iii) “patent” means a patent as referred to in <a href="#P74_4971">Article 3</a>;</p>
+<p>(iv) references to a “person” shall be construed as including, in particular, a natural person and a legal entity;</p>
+<p>(v) “communication” means any application, or any request, 
+declaration, document, correspondence or other information relating to 
+an application or patent, whether relating to a procedure under this 
+Treaty or not, which is filed with the Office;</p>
+<p>(vi) “records of the Office” means the collection of information 
+maintained by the Office, relating to and including the applications 
+filed with, and the patents granted by, that Office or another authority
+ with effect for the Contracting Party concerned, irrespective of the 
+medium in which such information is maintained;</p>
+<p>(vii) “recordation” means any act of including information in the records of the Office;</p>
+<p>(viii) “applicant” means the person whom the records of the Office 
+show, pursuant to the applicable law, as the person who is applying for 
+the patent, or as another person who is filing or prosecuting the 
+application;</p>
+<p>(ix) “owner” means the person whom the records of the Office show as the owner of the patent;</p>
+<p>(x) “representative” means a representative under the applicable law;</p>
+<p>(xi) “signature” means any means of self-identification;</p>
+<p>(xii) “a language accepted by the Office” means any one language 
+accepted by the Office for the relevant procedure before the Office;</p>
+<p>(xiii) “translation” means a translation into a language or, where 
+appropriate, a transliteration into an alphabet or character set, 
+accepted by the Office;</p>
+<p><a name="P61_3037"></a>(xiv) “procedure before the Office” means any 
+procedure in proceedings before the Office with respect to an 
+application or patent;</p>
+<p>(xv) except where the context indicates otherwise, words in the singular include the plural, and <em>vice versa</em>, and masculine personal pronouns include the feminine;</p>
+<p>(xvi) “Paris Convention” means the Paris Convention for the 
+Protection of Industrial Property, signed on March 20, 1883, as revised 
+and amended;</p>
+<p><a name="P64_3478"></a>(xvii) “Patent Cooperation Treaty” means the 
+Patent Cooperation Treaty, signed on June 19, 1970, together with the 
+Regulations and the Administrative Instructions under that Treaty, as 
+revised, amended and modified;</p>
+<p>(xviii) “Contracting Party” means any State or inter-governmental organization that is party to this Treaty;</p>
+<p>(xix) “applicable law” means, where the Contracting Party is a State,
+ the law of that State and, where the Contracting Party is an 
+intergovernmental organization, the legal enactments under which that 
+intergovernmental organization operates;</p>
+<p>(xx) “instrument of ratification” shall be construed as including instruments of acceptance or approval;</p>
+<p>(xxi) “Organization” means the World Intellectual Property Organization;</p>
+<p>(xxii) “International Bureau” means the International Bureau of the Organization;</p>
+<p>(xxiii) “Director General” means the Director General of the Organization.</p>
+</ul></ul>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P71_4394" id="P71_4394"></a>Article 2<br>
+General Principles</strong></p>
+<p>(1) [<em>More Favorable Requirements</em>] A Contracting Party shall 
+be free to provide for requirements which, from the viewpoint of 
+applicants and owners, are more favorable than the requirements referred
+ to in this Treaty and the Regulations, other than <a href="#P84_6630">Article 5</a>.</p>
+<p>(2) [<em>No Regulation of Substantive Patent Law</em>] Nothing in 
+this Treaty or the Regulations is intended to be construed as 
+prescribing anything that would limit the freedom of a Contracting Party
+ to prescribe such requirements of the applicable substantive law 
+relating to patents as it desires.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P74_4971" id="P74_4971"></a>Article 3<br>
+Applications and Patents to Which the Treaty Applies</strong></p>
+<p>(1) [<em>Applications</em>]</p>
+<ul>
+<p>(a) The provisions of this Treaty and the Regulations shall apply to 
+national and regional applications for patents for invention and for patents of addition, which are filed with or for the 
+Office of a Contracting Party, and which are:</p>
+<ul>
+<p><a name="P76_5306" id="P76_5306"></a>(i) types of applications permitted to be filed as international applications under the Patent Cooperation Treaty;</p>
+<p>(ii) divisional applications of the types of applications referred to in <a href="#P76_5306">item (i)</a>, for patents for invention or for patents of addition, as referred to in Article 4G(1) or (2) of the Paris Convention.</p>
+</ul>
+<p>(b) Subject to the provisions of the Patent Cooperation Treaty, the 
+provisions of this Treaty and the Regulations shall apply to 
+international applications, for patents for invention and for patents of
+ addition, under the Patent Cooperation Treaty:</p>
+<ul>
+<p>(i) in respect of the time limits applicable under Articles 22 and 
+39(1) of the Patent Cooperation Treaty in the Office of a Contracting 
+Party;</p>
+<p>(ii) in respect of any procedure commenced on or after the date on 
+which processing or examination of the international application may 
+start under Article 23 or 40 of that Treaty.</p>
+</ul></ul>
+<p>(2) [<em>Patents</em>] The provisions of this Treaty and the 
+Regulations shall apply to national and regional patents for invention, 
+and to national and regional patents of addition, which have been 
+granted with effect for a Contracting Party.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P82_6421" id="P82_6421"></a>Article 4<br>
+Security Exception</strong></p>
+<p>Nothing in this Treaty and the Regulations shall limit the freedom of
+ a Contracting Party to take any action it deems necessary for the 
+preservation of essential security interests.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P84_6630" id="P84_6630"></a>Article 5<br>
+Filing Date</strong></p>
+<p><a name="P85_6651" id="P85_6651"></a>(1) [<em>Elements of Application</em>]</p>
+<ul>
+<p>(a) Except as otherwise prescribed in the Regulations, and subject to <a href="#P91_7892">paragraphs (2) to (8)</a>,
+ a Contracting Party shall provide that the filing date of an 
+application shall be the date on which its Office has received all of 
+the following elements, filed, at the option of the applicant, on paper 
+or as otherwise permitted by the Office for the purposes of the filing 
+date:</p>
+<ul>
+<p><a name="P86_7053" id="P86_7053"></a>(i) an express or implicit indication to the effect that the elements are intended to be an application;</p>
+<p><a name="P87_7156" id="P87_7156"></a>(ii) indications allowing the 
+identity of the applicant to be established or allowing the applicant to
+ be contacted by the Office;</p>
+<p><a name="P88_7285" id="P88_7285"></a>(iii) a part which on the face of it appears to be a description.</p>
+</ul>
+<p>(b) A Contracting Party may, for the purposes of the filing date, accept a drawing as the element referred to in <a href="#P88_7285">subparagraph (a)(iii)</a>.</p>
+<p>(c) For the purposes of the filing date, a Contracting Party may 
+require both information allowing the identity of the applicant to be 
+established and information allowing the applicant to be contacted by 
+the Office, or it may accept evidence allowing the identity of the 
+applicant to be established or allowing the applicant to be contacted by
+ the Office, as the element referred to in <a href="#P87_7156">subparagraph (a)(ii)</a>.</p>
+</ul>
+<p><a name="P91_7892" id="P91_7892"></a>(2) [<em>Language</em>]</p>
+<ul>
+<p>(a) A Contracting Party may require that the indications referred to in <a href="#P86_7053">paragraph (1)(a)(i)</a> and <a href="#P87_7156">(ii)</a> be in a language accepted by the Office.</p>
+<p>(b) The part referred to in <a href="#P88_7285">paragraph (1)(a)(iii)</a> may, for the purposes of the filing date, be filed in any language.</p>
+</ul>
+<p><a name="P93_8165" id="P93_8165"></a>(3) [<em>Notification</em>] Where the application does not comply with one or more of the requirements applied by the Contracting Party under <a href="#P85_6651">paragraphs (1)</a> and <a href="#P91_7892">(2)</a>,
+ the Office shall, as soon as practicable, notify the applicant, giving 
+the opportunity to comply with any such requirement, and to make 
+observations, within the time limit prescribed in the Regulations.</p>
+<p><a name="P94_8524" id="P94_8524"></a>(4) [<em>Subsequent Compliance with Requirements</em>]</p>
+<ul>
+<p>(a) Where one or more of the requirements applied by the Contracting Party under <a href="#P85_6651">paragraphs (1)</a> and <a href="#P91_7892">(2)</a> are not complied with in the application as initially filed, the filing date shall, subject to <a href="#P95_8943">subparagraph (b)</a> and <a href="#P97_9679">paragraph (6)</a>, be the date on which all of the requirements applied by the Contracting Party under <a href="#P85_6651">paragraphs (1)</a> and <a href="#P91_7892">(2)</a> are subsequently complied with.</p>
+<p><a name="P95_8943" id="P95_8943"></a>(b) A Contracting Party may provide that, where one or more of the requirements referred to in <a href="#P94_8524">subparagraph (a)</a>
+ are not complied with within the time limit prescribed in the 
+Regulations, the application shall be deemed not to have been filed. 
+Where the application is deemed not to have been filed, the Office shall
+ notify the applicant accordingly, indicating the reasons therefor.</p>
+</ul>
+<p><a name="P96_9325" id="P96_9325"></a>(5) [<em>Notification Concerning Missing Part of Description or Drawing</em>]
+ Where, in establishing the filing date, the Office finds that a part of
+ the description appears to be missing from the application, or that the
+ application refers to a drawing which appears to be missing from the 
+application, the Office shall promptly notify the applicant accordingly.</p>
+<p><a name="P97_9679" id="P97_9679"></a>(6) [<em>Filing Date Where Missing Part of Description or Drawing Is Filed</em>]</p>
+<ul>
+<p>(a) Where a missing part of the description or a missing drawing is 
+filed with the Office within the time limit prescribed in the 
+Regulations, that part of the description or drawing shall be included 
+in the application, and, subject to <a href="#P98_10273">subparagraphs (b)</a> and <a href="#P99_10880">(c)</a>,
+ the filing date shall be the date on which the Office has received that
+ part of the description or that drawing, or the date on which all of 
+the requirements applied by the Contracting Party under <a href="#P85_6651">paragraphs (1)</a> and <a href="#P91_7892">(2)</a> are complied with, whichever is later.</p>
+<p><a name="P98_10273" id="P98_10273"></a>(b) Where the missing part of the description or the missing drawing is filed under <a href="#P97_9679">subparagraph (a)</a> to rectify its omission from an application which, at the date on which one or more elements referred to in <a href="#P85_6651">paragraph (1)(a)</a>
+ were first received by the Office, claims the priority of an earlier 
+application, the filing date shall, upon the request of the applicant 
+filed within a time limit prescribed in the Regulations, and subject to 
+the requirements prescribed in the Regulations, be the date on which all
+ the requirements applied by the Contracting Party under <a href="#P85_6651">paragraphs (1)</a> and <a href="#P91_7892">(2)</a> are complied with.</p>
+<p><a name="P99_10880" id="P99_10880"></a>(c) Where the missing part of the description or the missing drawing filed under <a href="#P97_9679">subparagraph (a)</a>
+ is withdrawn within a time limit fixed by the Contracting Party, the 
+filing date shall be the date on which the requirements applied by the 
+Contracting Party under <a href="#P85_6651">paragraphs (1)</a> and <a href="#P91_7892">(2)</a> are complied with.</p>
+</ul>
+<p>(7) [<em>Replacing Description and Drawings by Reference to a Previously Filed Application</em>]</p>
+<ul>
+<p><a name="P100_11183" id="P100_11183"></a>(a) Subject to the 
+requirements prescribed in the Regulations, a reference, made upon the 
+filing of the application, in a language accepted by the Office, to a 
+previously filed application shall, for the purposes of the filing date 
+of the application, replace the description and any drawings.</p>
+<p><a name="P101_11564" id="P101_11564"></a>(b) Where the requirements referred to in <a href="#P100_11183">subparagraph (a)</a>
+ are not complied with, the application may be deemed not to have been 
+filed. Where the application is deemed not to have been filed, the 
+Office shall notify the applicant accordingly, indicating the reasons 
+therefor.</p>
+</ul>
+<p>(8) [<em>Exceptions</em>] Nothing in this Article shall limit:</p>
+<ul><ul>
+<p>(i) the right of an applicant under Article 4G(1) or (2) of the Paris
+ Convention to preserve, as the date of a divisional application 
+referred to in that Article, the date of the initial application 
+referred to in that Article and the benefit of the right of priority, if
+ any;</p>
+<p><a name="P104_12167" id="P104_12167"></a>(ii) the freedom of a 
+Contracting Party to apply any requirements necessary to accord the 
+benefit of the filing date of an earlier application to an application 
+of any type prescribed in the Regulations.</p>
+</ul></ul>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P105_12369" id="P105_12369"></a>Article 6<br>
+Application</strong></p>
+<p><a name="P106_12390" id="P106_12390"></a>(1) [<em>Form or Contents of Application</em>]
+ Except where otherwise provided for by this Treaty, no Contracting 
+Party shall require compliance with any requirement relating to the form
+ or contents of an application different from or additional to:</p>
+<ul><ul>
+<p><a name="P107_12630" id="P107_12630"></a>(i) the requirements 
+relating to form or contents which are provided for in respect of 
+international applications under the Patent Cooperation Treaty;</p>
+<p><a name="P108_12779" id="P108_12779"></a>(ii) the requirements 
+relating to form or contents compliance with which, under the Patent 
+Cooperation Treaty, may be required by the Office of, or acting for, any
+ State party to that Treaty once the processing or examination of an 
+international application, as referred to in Article 23 or 40 of the 
+said Treaty, has started;</p>
+<p><a name="P109_13104" id="P109_13104"></a>(iii) any further requirements prescribed in the Regulations.</p>
+</ul></ul>
+<p><a name="P110_13164" id="P110_13164"></a>(2) [<em>Request Form</em>]</p>
+<ul>
+<p>(a) A Contracting Party may require that the contents of an 
+application which correspond to the contents of the request of an 
+international application under the Patent Cooperation Treaty be 
+presented on a request Form prescribed by that Contracting Party. A 
+Contracting Party may also require that any further contents allowed 
+under <a href="#P108_12779">paragraph (1)(ii)</a> or prescribed in the Regulations pursuant to <a href="#P109_13104">paragraph (1)(iii)</a> be contained in that request Form.</p>
+<p><a name="P111_13633" id="P111_13633"></a>(b) Notwithstanding <a href="#P110_13164">subparagraph (a)</a>, and subject to <a href="#P136_19003">Article 8(1)</a>, a Contracting Party shall accept the presentation of the contents referred to in <a href="#P110_13164">subparagraph (a)</a> on a request Form provided for in the Regulations.</p>
+</ul>
+<p><a name="P112_13848" id="P112_13848"></a>(3) [<em>Translation</em>] A
+ Contracting Party may require a translation of any part of the 
+application that is not in a language accepted by its Office. A 
+Contracting Party may also require a translation of the parts of the 
+application, as prescribed in the Regulations, that are in a language 
+accepted by the Office, into any other languages accepted by that 
+Office.</p>
+<p><a name="P113_14207" id="P113_14207"></a>(4) [<em>Fees</em>] A 
+Contracting Party may require that fees be paid in respect of the 
+application. A Contracting Party may apply the provisions of the Patent 
+Cooperation Treaty relating to payment of application fees.</p>
+<p><a name="P114_14417" id="P114_14417"></a>(5)<a name="a6_5" id="a6_5"></a> [<em>Priority Document</em>]
+ Where the priority of an earlier application is claimed, a Contracting 
+Party may require that a copy of the earlier application, and a 
+translation where the earlier application is not in a language accepted 
+by the Office, be filed in accordance with the requirements prescribed 
+in the Regulations.</p>
+<p><a name="P115_14738" id="P115_14738"></a>(6) [<em>Evidence</em>] A Contracting Party may require that evidence in respect of any matter referred to in <a href="#P106_12390">paragraph (1)</a> or <a href="#P110_13164">(2)</a> or in a declaration of priority, or any translation referred to in <a href="#P112_13848">paragraph (3)</a> or <a href="#P114_14417">(5)</a>,
+ be filed with its Office in the course of the processing of the 
+application only where that Office may reasonably doubt the veracity of 
+that matter or the accuracy of that translation.</p>
+<p><a name="P116_15133" id="P116_15133"></a>(7) [<em>Notification</em>] Where one or more of the requirements applied by the Contracting Party under <a href="#P106_12390">paragraphs (1) to (6)</a>
+ are not complied with, the Office shall notify the applicant, giving 
+the opportunity to comply with any such requirement, and to make 
+observations, within the time limit prescribed in the Regulations.</p>
+<p><a name="P117_15451" id="P117_15451"></a>(8) [<em>Non-Compliance with Requirements</em>]</p>
+<ul>
+<p>(a) Where one or more of the requirements applied by the Contracting Party under <a href="#P106_12390">paragraphs (1) to (6)</a> are not complied with within the time limit prescribed in the Regulations, the Contracting Party may, subject to <a href="#P118_15796">subparagraph (b)</a> and <a href="#P84_6630">Articles 5</a> and <a href="#P156_23338">10</a>, apply such sanction as is provided for in its law.</p>
+<p><a name="P118_15796" id="P118_15796"></a>(b) Where any requirement applied by the Contracting Party under <a href="#P106_12390">paragraph (1)</a>, <a href="#P114_14417">(5)</a> or <a href="#P115_14738">(6)</a>
+ in respect of a priority claim is not complied with within the time 
+limit prescribed in the Regulations, the priority claim may, subject to <a href="#P181_28674">Article 13</a>, be deemed non-existent. Subject to <a href="#P101_11564">Article 5(7)(b)</a>, no other sanctions may be applied.</p>
+</ul>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P119_16125" id="P119_16125"></a>Article 7<br>
+Representation</strong></p>
+<p><a name="P120_16149" id="P120_16149"></a>(1) [<em>Representatives</em>]</p>
+<ul>
+<p>(a) A Contracting Party may require that a representative appointed for the purposes of any procedure before the Office:</p>
+<ul>
+<p>(i) have the right, under the applicable law, to practice before the Office in respect of applications and patents;</p>
+<p>(ii) provide, as his address, an address on a territory prescribed by the Contracting Party.</p>
+</ul>
+<p><a name="P123_16496" id="P123_16496"></a>(b) Subject to <a href="#P124_16851">subparagraph (c)</a>,
+ an act, with respect to any procedure before the Office, by or in 
+relation to a representative who complies with the requirements applied 
+by the Contracting Party under <a href="#P120_16149">subparagraph (a)</a>,
+ shall have the effect of an act by or in relation to the applicant, 
+owner or other interested person who appointed that representative.</p>
+<p><a name="P124_16851" id="P124_16851"></a>(c) A Contracting Party may 
+provide that, in the case of an oath or declaration or the revocation of
+ a power of attorney, the signature of a representative shall not have 
+the effect of the signature of the applicant, owner or other interested 
+person who appointed that representative.</p>
+</ul>
+<p>(2) [<em>Mandatory Representation</em>]</p>
+<ul>
+<p>(a) A Contracting Party may require that an applicant, owner or other
+ interested person appoint a representative for the purposes of any 
+procedure before the Office, except that an assignee of an application, 
+an applicant, owner or other interested person may act himself before 
+the Office for the following procedures:</p>
+<ul>
+<p><a name="P126_17485" id="P126_17485"></a>(i) the filing of an application for the purposes of the filing date;</p>
+<p>(ii) the mere payment of a fee;</p>
+<p><a name="P128_17583" id="P128_17583"></a>(iii) any other procedure as prescribed in the Regulations;</p>
+<p>(iv) the issue of a receipt or notification by the Office in respect of any procedure referred to in <a href="#P126_17485">items (i) to (iii)</a>.</p>
+</ul>
+<p>(b) A maintenance fee may be paid by any person.</p>
+</ul>
+<p>(3) [<em>Appointment of Representative</em>] A Contracting Party 
+shall accept that the appointment of the representative be filed with 
+the Office in a manner prescribed in the Regulations.</p>
+<p>(4) [<em>Prohibition of Other Requirements</em>] No Contracting Party may require that formal requirements other than those referred to in <a href="#P120_16149">paragraphs (1) to (3)</a>
+ be complied with in respect of the matters dealt with in those 
+paragraphs, except where otherwise provided for by this Treaty or 
+prescribed in the Regulations.</p>
+<p><a name="P133_18298" id="P133_18298"></a>(5) [<em>Notification</em>] Where one or more of the requirements applied by the Contracting Party under <a href="#P120_16149">paragraphs (1) to (3)</a>
+ are not complied with, the Office shall notify the assignee of the 
+application, applicant, owner or other interested person, giving the 
+opportunity to comply with any such requirement, and to make 
+observations, within the time limit prescribed in the Regulations.</p>
+<p><a name="P134_18679" id="P134_18679"></a>(6) [<em>Non-Compliance with Requirements</em>] Where one or more of the requirements applied by the Contracting Party under <a href="#P120_16149">paragraphs (1) to (3)</a>
+ are not complied with within the time limit prescribed in the 
+Regulations, the Contracting Party may apply such sanction as is 
+provided for in its law.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P135_18968" id="P135_18968"></a>Article 8<br>
+Communications; Addresses</strong></p>
+<p><a name="P136_19003" id="P136_19003"></a>(1) [<em>Form and Means of Transmittal of Communications</em>]</p>
+<ul>
+<p>(a) Except for the establishment of a filing date under <a href="#P85_6651">Article 5(1)</a>, and subject to <a href="#P106_12390">Article 6(1)</a>, the Regulations shall, subject to <a href="#P137_19358">subparagraphs (b) to (d)</a>,
+ set out the requirements which a Contracting Party shall be permitted 
+to apply as regards the form and means of transmittal of communications.</p>
+<p><a name="P137_19358" id="P137_19358"></a>(b) No Contracting Party shall be obliged to accept the filing of communications other than on paper.</p>
+<p>(c) No Contracting Party shall be obliged to exclude the filing of communications on paper.</p>
+<p><a name="P139_19550" id="P139_19550"></a>(d) A Contracting Party shall accept the filing of communications on paper for the purpose of complying with a time limit.</p>
+</ul>
+<p>(2) [<em>Language of Communications</em>] A Contracting Party may, 
+except where otherwise provided for by this Treaty or the Regulations, 
+require that a communication be in a language accepted by the Office.</p>
+<p><a name="P141_19870" id="P141_19870"></a>(3) [<em>Model International Forms</em>] Notwithstanding <a href="#P136_19003">paragraph (1)(a)</a>, and subject to <a href="#P137_19358">paragraph (1)(b)</a> and <a href="#P111_13633">Article 6(2)(b)</a>,
+ a Contracting Party shall accept the presentation of the contents of a 
+communication on a Form which corresponds to a Model International Form 
+in respect of such a communication provided for in the Regulations, if 
+any.</p>
+<p>(4) [<em>Signature of Communications</em>]</p>
+<ul>
+<p>(a) Where a Contracting Party requires a signature for the purposes 
+of any communication, that Contracting Party shall accept any signature 
+that complies with the requirements prescribed in the Regulations.</p>
+<p><a name="P143_20447" id="P143_20447"></a>(b) No Contracting Party may
+ require the attestation, notarization, authentication, legalization or 
+other certification of any signature which is communicated to its 
+Office, except in respect of any quasi-judicial proceedings or as 
+prescribed in the Regulations.</p>
+<p><a name="P144_20709" id="P144_20709"></a>(c) Subject to <a href="#P143_20447">subparagraph (b)</a>,
+ a Contracting Party may require that evidence be filed with the Office 
+only where the Office may reasonably doubt the authenticity of any 
+signature.</p>
+</ul>
+<p>(5) [<em>Indications in Communications</em>] A Contracting Party may require that any communication contain one or more indications prescribed in the Regulations.</p>
+<p><a name="P146_21043" id="P146_21043"></a>(6) [<em>Address for Correspondence, Address for Legal Service and Other Address</em>]
+ A Contracting Party may, subject to any provisions prescribed in the 
+Regulations, require that an applicant, owner or other interested person
+ indicate in any communication:</p>
+<ul><ul>
+<p><a name="P147_21293" id="P147_21293"></a>(i) an address for correspondence;</p>
+<p><a name="P148_21326" id="P148_21326"></a>(ii) an address for legal service;</p>
+<p><a name="P149_21359" id="P149_21359"></a>(iii) any other address provided for in the Regulations.</p>
+</ul></ul>
+<p><a name="P150_21414" id="P150_21414"></a>(7) [<em>Notification</em>] Where one or more of the requirements applied by the Contracting Party under <a href="#P136_19003">paragraphs (1) to (6)</a>
+ are not complied with in respect of communications, the Office shall 
+notify the applicant, owner or other interested person, giving the 
+opportunity to comply with any such requirement, and to make 
+observations, within the time limit prescribed in the Regulations.</p>
+<p><a name="P151_21795" id="P151_21795"></a>(8) [<em>Non-Compliance with Requirements</em>] Where one or more of the requirements applied by the Contracting Party under <a href="#P136_19003">paragraphs (1) to (6)</a> are not complied with within the time limit prescribed in the Regulations, the Contracting Party may, subject to <a href="#P84_6630">Articles 5</a> and <a href="#P156_23338">10</a> and to any exceptions prescribed in the Regulations, apply such sanction as is provided for in its law.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P152_22167" id="P152_22167"></a>Article 9<br>
+Notifications</strong></p>
+<p>(1) [<em>Sufficient Notification</em>] Any notification under this 
+Treaty or the Regulations which is sent by the Office to an address for 
+correspondence or address for legal service indicated under <a href="#P146_21043">Article 8(6)</a>,
+ or any other address provided for in the Regulations for the purpose of
+ this provision, and which complies with the provisions with respect to 
+that notification, shall constitute a sufficient notification for the 
+purposes of this Treaty and the Regulations.</p>
+<p>(2) [<em>If Indications Allowing Contact Were Not Filed</em>] Nothing
+ in this Treaty and in the Regulations shall oblige a Contracting Party 
+to send a notification to an applicant, owner or other interested 
+person, if indications allowing that applicant, owner or other 
+interested person to be contacted have not been filed with the Office.</p>
+<p>(3) [<em>Failure to Notify</em>] Subject to <a href="#P157_23379">Article 10(1)</a>,
+ where an Office does not notify an applicant, owner or other interested
+ person of a failure to comply with any requirement under this Treaty or
+ the Regulations, that absence of notification does not relieve that 
+applicant, owner or other interested person of the obligation to comply 
+with that requirement.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P156_23338" id="P156_23338"></a>Article 10<br>
+Validity of Patent; Revocation</strong></p>
+<p><a name="P157_23379" id="P157_23379"></a>(1) [<em>Validity of Patent Not Affected by Non-Compliance with Certain Formal Requirements</em>] Non-compliance with one or more of the formal requirements referred to in <a href="#P106_12390">Articles 6(1)</a>, <a href="#P110_13164">(2)</a>, <a href="#P113_14207">(4)</a> and <a href="#P114_14417">(5)</a> and <a href="#P136_19003">8(1) to (4)</a>
+ with respect to an application may not be a ground for revocation or 
+invalidation of a patent, either totally or in part, except where the 
+non-compliance with the formal requirement occurred as a result of a 
+fraudulent intention.</p>
+<p><a name="P158_23819" id="P158_23819"></a>(2) [<em>Opportunity to Make Observations, Amendments or Corrections in Case of Intended Revocation or Invalidation</em>]
+ A patent may not be revoked or invalidated, either totally or in part, 
+without the owner being given the opportunity to make observations on 
+the intended revocation or invalidation, and to make amendments and 
+corrections where permitted under the applicable law, within a 
+reasonable time limit.</p>
+<p>(3) [<em>No Obligation for Special Procedures</em>] <a href="#P157_23379">Paragraphs (1)</a> and <a href="#P158_23819">(2)</a>
+ do not create any obligation to put in place judicial procedures for 
+the enforcement of patent rights distinct from those for the enforcement
+ of law in general.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P160_24452" id="P160_24452"></a>Article 11<br>
+Relief in Respect of Time Limits</strong></p>
+<p><a name="P161_24495" id="P161_24495"></a>(1) [<em>Extension of Time Limits</em>]
+ A Contracting Party may provide for the extension, for the period 
+prescribed in the Regulations, of a time limit fixed by the Office for 
+an action in a procedure before the Office in respect of an application 
+or a patent, if a request to that effect is made to the Office in 
+accordance with the requirements prescribed in the Regulations, and the 
+request is filed, at the option of the Contracting Party:</p>
+<ul><ul>
+<p>(i) prior to the expiration of the time limit; or</p>
+<p><a name="P163_24978" id="P163_24978"></a>(ii) after the expiration of the time limit, and within the time limit prescribed in the Regulations.</p>
+</ul></ul>
+<p><a name="P164_25078" id="P164_25078"></a>(2) [<em>Continued Processing</em>]
+ Where an applicant or owner has failed to comply with a time limit 
+fixed by the Office of a Contracting Party for an action in a procedure 
+before the Office in respect of an application or a patent, and that 
+Contracting Party does not provide for extension of a time limit under <a href="#P163_24978">paragraph (1)(ii)</a>,
+ the Contracting Party shall provide for continued processing with 
+respect to the application or patent and, if necessary, reinstatement of
+ the rights of the applicant or owner with respect to that application 
+or patent, if:</p>
+<ul><ul>
+<p>(i) a request to that effect is made to the Office in accordance with the requirements prescribed in the Regulations;</p>
+<p><a name="P166_25742" id="P166_25742"></a>(ii) the request is filed, 
+and all of the requirements in respect of which the time limit for the 
+action concerned applied are complied with, within the time limit 
+prescribed in the Regulations.</p>
+</ul></ul>
+<p>(3) [<em>Exceptions</em>] No Contracting Party shall be required to provide for the relief referred to in <a href="#P161_24495">paragraph (1)</a> or <a href="#P164_25078">(2)</a> with respect to the exceptions prescribed in the Regulations.</p>
+<p>(4) [<em>Fees</em>] A Contracting Party may require that a fee be paid in respect of a request under <a href="#P161_24495">paragraph (1)</a> or <a href="#P164_25078">(2)</a>.</p>
+<p>(5) [<em>Prohibition of Other Requirements</em>] No Contracting Party may require that requirements other than those referred to in <a href="#P161_24495">paragraphs (1) to (4)</a> be complied with in respect of the relief provided for under <a href="#P161_24495">paragraph (1)</a> or <a href="#P164_25078">(2)</a>, except where otherwise provided for by this Treaty or prescribed in the Regulations.</p>
+<p>(6) [<em>Opportunity to Make Observations in Case of Intended Refusal</em>] A request under <a href="#P161_24495">paragraph (1)</a> or <a href="#P164_25078">(2)</a>
+ may not be refused without the applicant or owner being given the 
+opportunity to make observations on the intended refusal within a 
+reasonable time limit.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P171_26797" id="P171_26797"></a>Article 12<br>
+Reinstatement of Rights After a Finding of Due Care<br>
+or Unintentionality by the Office</strong></p>
+<p><a name="P172_26893" id="P172_26893"></a>(1) [<em>Request</em>] A 
+Contracting Party shall provide that, where an applicant or owner has 
+failed to comply with a time limit for an action in a procedure before 
+the Office, and that failure has the direct consequence of causing a 
+loss of rights with respect to an application or patent, the Office 
+shall reinstate the rights of the applicant or owner with respect to the
+ application or patent concerned, if:</p>
+<ul><ul>
+<p><a name="P173_27296" id="P173_27296"></a>(i) a request to that effect is made to the Office in accordance with the requirements prescribed in the Regulations;</p>
+<p><a name="P174_27412" id="P174_27412"></a>(ii) the request is filed, 
+and all of the requirements in respect of which the time limit for the 
+said action applied are complied with, within the time limit prescribed 
+in the Regulations;</p>
+<p><a name="P175_27600" id="P175_27600"></a>(iii) the request states the reasons for the failure to comply with the time limit; and</p>
+<p>(iv) the Office finds that the failure to comply with the time limit 
+occurred in spite of due care required by the circumstances having been 
+taken or, at the option of the Contracting Party, that any delay was 
+unintentional.</p>
+</ul></ul>
+<p><a name="P177_27909" id="P177_27909"></a>(2) [<em>Exceptions</em>] No Contracting Party shall be required to provide for the reinstatement of rights under <a href="#P172_26893">paragraph (1)</a> with respect to the exceptions prescribed in the Regulations.</p>
+<p>(3) [<em>Fees</em>] A Contracting Party may require that a fee be paid in respect of a request under <a href="#P172_26893">paragraph (1)</a>.</p>
+<p>(4) [<em>Evidence</em>] A Contracting Party may require that a declaration or other evidence in support of the reasons referred to in <a href="#P175_27600">paragraph (1)(iii)</a> be filed with the Office within a time limit fixed by the Office.</p>
+<p>(5) [<em>Opportunity to Make Observations in Case of Intended Refusal</em>] A request under <a href="#P172_26893">paragraph (1)</a>
+ may not be refused, totally or in part, without the requesting party 
+being given the opportunity to make observations on the intended refusal
+ within a reasonable time limit.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P181_28674" id="P181_28674"></a>Article 13<br>
+Correction or Addition of Priority Claim;<br>
+Restoration of Priority Right</strong></p>
+<p><a name="P182_28756" id="P182_28756"></a>(1) [<em>Correction or Addition of Priority Claim</em>]
+ Except where otherwise prescribed in the Regulations, a Contracting 
+Party shall provide for the correction or addition of a priority claim 
+with respect to an application (“the subsequent application”), if:</p>
+<ul><ul>
+<p><a name="P183_29012" id="P183_29012"></a>(i) a request to that effect is made to the Office in accordance with the requirements prescribed in the Regulations;</p>
+<p><a name="P184_29128" id="P184_29128"></a>(ii) the request is filed within the time limit prescribed in the Regulations; and</p>
+<p>(iii) the filing date of the subsequent application is not later than
+ the date of the expiration of the priority period calculated from the 
+filing date of the earliest application whose priority is claimed.</p>
+</ul></ul>
+<p><a name="P186_29414" id="P186_29414"></a>(2) [<em>Delayed Filing of the Subsequent Application</em>] Taking into consideration <a href="#P215_33564">Article 15</a>,
+ a Contracting Party shall provide that, where an application (“the 
+subsequent application”) which claims or could have claimed the priority
+ of an earlier application has a filing date which is later than the 
+date on which the priority period expired, but within the time limit 
+prescribed in the Regulations, the Office shall restore the right of 
+priority, if:</p>
+<ul><ul>
+<p><a name="P187_29866" id="P187_29866"></a>(i) a request to that effect is made to the Office in accordance with the requirements prescribed in the Regulations;</p>
+<p><a name="P188_29982" id="P188_29982"></a>(ii) the request is filed within the time limit prescribed in the Regulations;</p>
+<p><a name="P189_30059" id="P189_30059"></a>(iii) the request states the reasons for the failure to comply with the priority period; and</p>
+<p>(iv) the Office finds that the failure to file the subsequent 
+application within the priority period occurred in spite of due care 
+required by the circumstances having been taken or, at the option of the
+ Contracting Party, was unintentional.</p>
+</ul></ul>
+<p><a name="P191_30390" id="P191_30390"></a>(3)<a name="a13_3" id="a13_3"></a> [<em>Failure to File a Copy of Earlier Application</em>] A Contracting Party shall provide that, where a copy of an earlier application required under <a href="#P114_14417">Article 6(5)</a> is not filed with the Office within the time limit prescribed in the Regulations pursuant to <a href="#P105_12369">Article 6</a>, the Office shall restore the right of priority, if:</p>
+<ul><ul>
+<p><a name="P192_30704" id="P192_30704"></a>(i) a request to that effect is made to the Office in accordance with the requirements prescribed in the Regulations;</p>
+<p>(ii) the request is filed within the time limit for filing the copy 
+of the earlier application prescribed in the Regulations pursuant to <a href="#P114_14417">Article 6(5)</a>;</p>
+<p><a name="P194_30969" id="P194_30969"></a>(iii) the Office finds that 
+the request for the copy to be provided had been filed with the Office 
+with which the earlier application was filed, within the time limit 
+prescribed in the Regulations; and</p>
+<p><a name="P195_31169" id="P195_31169"></a>(iv) a copy of the earlier application is filed within the time limit prescribed in the Regulations.</p>
+</ul></ul>
+<p>(4) [<em>Fees</em>] A Contracting Party may require that a fee be paid in respect of a request under <a href="#P182_28756">paragraphs (1) to (3)</a>.</p>
+<p>(5) [<em>Evidence</em>] A Contracting Party may require that a declaration or other evidence in support of the reasons referred to in <a href="#P189_30059">paragraph (2)(iii)</a> be filed with the Office within a time limit fixed by the Office.</p>
+<p>(6) [<em>Opportunity to Make Observations in Case of Intended Refusal</em>] A request under <a href="#P182_28756">paragraphs (1) to (3)</a>
+ may not be refused, totally or in part, without the requesting party 
+being given the opportunity to make observations on the intended refusal
+ within a reasonable time limit.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P199_31869" id="P199_31869"></a>Article 14<br>
+Regulations</strong></p>
+<p><a name="P200_31891" id="P200_31891"></a>(1) [<em>Content</em>]</p>
+<ul>
+<p>(a) The Regulations annexed to this Treaty provide rules concerning:</p>
+<ul>
+<p>(i) matters which this Treaty expressly provides are to be “prescribed in the Regulations”;</p>
+<p>(ii) details useful in the implementation of the provisions of this Treaty;</p>
+<p>(iii) administrative requirements, matters or procedures.</p>
+</ul>
+<p>(b) The Regulations also provide rules concerning the formal 
+requirements which a Contracting Party shall be permitted to apply in 
+respect of requests for:</p>
+<ul>
+<p>(i) recordation of change in name or address;</p>
+<p>(ii) recordation of change in applicant or owner;</p>
+<p>(iii) recordation of a license or a security interest;</p>
+<p>(iv) correction of a mistake.</p>
+</ul>
+<p><a name="P209_32525" id="P209_32525"></a>(c) The Regulations also 
+provide for the establishment of Model International Forms, and for the 
+establishment of a request Form for the purposes of <a href="#P111_13633">Article 6(2)(b)</a>, by the Assembly, with the assistance of the International Bureau.</p>
+</ul>
+<p><a name="P210_32756" id="P210_32756"></a>(2) [<em>Amending the Regulations</em>] Subject to <a href="#P211_32892">paragraph (3)</a>, any amendment of the Regulations shall require three-fourths of the votes cast.</p>
+<p><a name="P211_32892" id="P211_32892"></a>(3) [<em>Requirement of Unanimity</em>]</p>
+<ul>
+<p>(a) The Regulations may specify provisions of the Regulations which may be amended only by unanimity.</p>
+<p>(b) Any amendment of the Regulations resulting in the addition of 
+provisions to, or the deletion of provisions from, the provisions 
+specified in the Regulations pursuant to <a href="#P211_32892">subparagraph (a)</a> shall require unanimity.</p>
+<p>(c) In determining whether unanimity is attained, only votes actually
+ cast shall be taken into consideration. Abstentions shall not be 
+considered as votes.</p>
+</ul>
+<p>(4) [<em>Conflict Between the Treaty and the Regulations</em>] In the case of conflict between the provisions of this Treaty and those of the Regulations, the former shall prevail.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P215_33564" id="P215_33564"></a>Article 15<br>
+Relation to the Paris Convention</strong></p>
+<p>(1) [<em>Obligation to Comply with the Paris Convention</em>] Each Contracting Party shall comply with the provisions of the Paris Convention which concern patents.</p>
+<p>(2) [<em>Obligations and Rights Under the Paris Convention</em>]</p>
+<ul>
+<p>(a) Nothing in this Treaty shall derogate from obligations that 
+Contracting Parties have to each other under the Paris Convention.</p>
+<p>(b) Nothing in this Treaty shall derogate from rights that applicants and owners enjoy under the Paris Convention.</p>
+</ul>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P219_34062" id="P219_34062"></a>Article 16<br>
+Effect of Revisions, Amendments and Modifications<br>
+of the Patent Cooperation Treaty</strong></p>
+<p><a name="P220_34155" id="P220_34155"></a>(1) [<em>Applicability of Revisions, Amendments and Modifications of the Patent Cooperation Treaty</em>] Subject to <a href="#P221_34580">paragraph (2)</a>,
+ any revision, amendment or modification of the Patent Cooperation 
+Treaty made after June 2, 2000, which is consistent with the Articles of
+ this Treaty, shall apply for the purposes of this Treaty and the 
+Regulations if the Assembly so decides, in the particular case, by 
+three-fourths of the votes cast.</p>
+<p><a name="P221_34580" id="P221_34580"></a>(2) [<em>Non-Applicability of Transitional Provisions of the Patent Cooperation Treaty</em>]
+ Any provision of the Patent Cooperation Treaty, by virtue of which a 
+revised, amended or modified provision of that Treaty does not apply to a
+ State party to it, or to the Office of or acting for such a State, for 
+as long as the latter provision is incompatible with the law applied by 
+that State or Office, shall not apply for the purposes of this Treaty 
+and the Regulations.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P222_35040" id="P222_35040"></a>Article 17<br>
+Assembly</strong></p>
+<p><a name="P223_35059" id="P223_35059"></a>(1) [<em>Composition</em>]</p>
+<ul>
+<p>(a) The Contracting Parties shall have an Assembly.</p>
+<p>(b) Each Contracting Party shall be represented in the Assembly by 
+one delegate, who may be assisted by alternate delegates, advisors and 
+experts. Each delegate may represent only one Contracting Party.</p>
+</ul>
+<p><a name="P225_35330" id="P225_35330"></a>(2) [<em>Tasks</em>] The Assembly shall:</p>
+<ul><ul>
+<p><a name="P226_35361" id="P226_35361"></a>(i) deal with matters 
+concerning the maintenance and development of this Treaty and the 
+application and operation of this Treaty;</p>
+<p><a name="P227_35489" id="P227_35489"></a>(ii) establish Model International Forms, and the request Form, referred to in <a href="#P209_32525">Article 14(1)(c)</a>, with the assistance of the International Bureau;</p>
+<p><a name="P228_35633" id="P228_35633"></a>(iii) amend the Regulations;</p>
+<p>(iv) determine the conditions for the date of application of each 
+Model International Form, and the request Form, referred to in <a href="#P227_35489">item (ii)</a>, and each amendment referred to in <a href="#P228_35633">item (iii)</a>;</p>
+<p><a name="P230_35844" id="P230_35844"></a>(v) decide, pursuant to <a href="#P220_34155">Article 16(1)</a>,
+ whether any revision, amendment or modification of the Patent 
+Cooperation Treaty shall apply for the purposes of this Treaty and the 
+Regulations;</p>
+<p>(vi) perform such other functions as are appropriate under this Treaty.</p>
+</ul></ul>
+<p><a name="P232_36097" id="P232_36097"></a>(3) [<em>Quorum</em>]</p>
+<ul>
+<p>(a) One-half of the members of the Assembly which are States shall constitute a quorum.</p>
+<p>(b) Notwithstanding <a href="#P232_36097">subparagraph (a)</a>, if, 
+in any session, the number of the members of the Assembly which are 
+States and are represented is less than one-half but equal to or more 
+than one-third of the members of the Assembly which are States, the 
+Assembly may make decisions but, with the exception of decisions 
+concerning its own procedure, all such decisions shall take effect only 
+if the conditions set forth hereinafter are fulfilled. The International
+ Bureau shall communicate the said decisions to the members of the 
+Assembly which are States and were not represented and shall invite them
+ to express in writing their vote or abstention within a period of three
+ months from the date of the communication. If, at the expiration of 
+this period, the number of such members having thus expressed their vote
+ or abstention attains the number of the members which was lacking for 
+attaining the quorum in the session itself, such decisions shall take 
+effect, provided that at the same time the required majority still 
+obtains.</p>
+</ul>
+<p>(4) [<em>Taking Decisions in the Assembly</em>]</p>
+<ul>
+<p>(a) The Assembly shall endeavor to take its decisions by consensus.</p>
+<p>(b) Where a decision cannot be arrived at by consensus, the matter at issue shall be decided by voting. In such a case:</p>
+<ul>
+<p>(i) each Contracting Party that is a State shall have one vote and shall vote only in its own name; and</p>
+<p>(ii) any Contracting Party that is an intergovernmental organization 
+may participate in the vote, in place of its Member States, with a 
+number of votes equal to the number of its Member States which are party
+ to this Treaty. No such intergovernmental organization shall 
+participate in the vote if any one of its Member States exercises its 
+right to vote and <em>vice versa</em>. In addition, no such 
+intergovernmental organization shall participate in the vote if any one 
+of its Member States party to this Treaty is a Member State of another 
+such intergovernmental organization and that other intergovernmental 
+organization participates in that vote.</p>
+</ul></ul>
+<p>(5) [<em>Majorities</em>]</p>
+<ul>
+<p>(a) Subject to <a href="#P210_32756">Articles 14(2)</a> and <a href="#P211_32892">(3)</a>, <a href="#P220_34155">16(1)</a> and <a href="#P255_40814">19(3)</a>, the decisions of the Assembly shall require two-thirds of the votes cast.</p>
+<p>(b) In determining whether the required majority is attained, only 
+votes actually cast shall be taken into consideration. Abstentions shall
+ not be considered as votes.</p>
+</ul>
+<p><a name="P240_38503" id="P240_38503"></a>(6) [<em>Sessions</em>] The Assembly shall meet in ordinary session once every two years upon convocation by the Director General.</p>
+<p>(7) [<em>Rules of Procedure</em>] The Assembly shall establish its own rules of procedure, including rules for the convocation of extraordinary sessions.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P242_38768" id="P242_38768"></a>Article 18<br>
+International Bureau</strong></p>
+<p>(1) [<em>Administrative Tasks</em>]</p>
+<ul>
+<p>(a) The International Bureau shall perform the administrative tasks concerning this Treaty.</p>
+<p>(b) In particular, the International Bureau shall prepare the 
+meetings and provide the secretariat of the Assembly and of such 
+committees of experts and working groups as may be established by the 
+Assembly.</p>
+</ul>
+<p>(2) [<em>Meetings Other than Sessions of the Assembly</em>] The Director General shall convene any committee and working group established by the Assembly.</p>
+<p><a name="P246_39269" id="P246_39269"></a>(3) [<em>Role of the International Bureau in the Assembly and Other Meetings</em>]</p>
+<ul>
+<p>(a) The Director General and persons designated by the Director 
+General shall participate, without the right to vote, in all meetings of
+ the Assembly, the committees and working groups established by the 
+Assembly.</p>
+<p>(b) The Director General or a staff member designated by the Director General shall be <em>ex officio</em> secretary of the Assembly, and of the committees and working groups referred to in <a href="#P246_39269">subparagraph (a)</a>.</p>
+</ul>
+<p>(4) [<em>Conferences</em>]</p>
+<ul>
+<p>(a) The International Bureau shall, in accordance with the directions
+ of the Assembly, make the preparations for any revision conferences.</p>
+<p>(b) The International Bureau may consult with member States of the 
+Organization, intergovernmental organizations and international and 
+national non-governmental organizations concerning the said 
+preparations.</p>
+<p><a name="P250_40118" id="P250_40118"></a>(c) The Director General and
+ persons designated by the Director General shall take part, without the
+ right to vote, in the discussions at revision conferences.</p>
+</ul>
+<p>(5) [<em>Other Tasks</em>] The International Bureau shall carry out any other tasks assigned to it in relation to this Treaty.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P252_40394" id="P252_40394"></a>Article 19<br>
+Revisions</strong></p>
+<p>(1) [<em>Revision of the Treaty</em>] Subject to <a href="#P254_40616">paragraph (2)</a>,
+ this Treaty may be revised by a conference of the Contracting Parties. 
+The convocation of any revision conference shall be decided by the 
+Assembly.</p>
+<p><a name="P254_40616" id="P254_40616"></a>(2) [<em>Revision or Amendment of Certain Provisions of the Treaty</em>] <a href="#P225_35330">Article 17(2)</a> and <a href="#P240_38503">(6)</a> may be amended either by a revision conference, or by the Assembly according to the provisions of <a href="#P255_40814">paragraph (3)</a>.</p>
+<p><a name="P255_40814" id="P255_40814"></a>(3) [<em>Amendment by the Assembly of Certain Provisions of the Treaty</em>]</p>
+<ul>
+<p>(a) Proposals for the amendment by the Assembly of <a href="#P225_35330">Article 17(2)</a> and <a href="#P240_38503">(6)</a>
+ may be initiated by any Contracting Party or by the Director General. 
+Such proposals shall be communicated by the Director General to the 
+Contracting Parties at least six months in advance of their 
+consideration by the Assembly.</p>
+<p>(b) Adoption of any amendment to the provisions referred to in <a href="#P255_40814">subparagraph (a)</a> shall require three-fourths of the votes cast.</p>
+<p>(c) Any amendment to the provisions referred to in <a href="#P255_40814">subparagraph (a)</a>
+ shall enter into force one month after written notifications of 
+acceptance, effected in accordance with their respective constitutional 
+processes, have been received by the Director General from three-fourths
+ of the Contracting Parties which were members of the Assembly at the 
+time the Assembly adopted the amendment. Any amendment to the said 
+provisions thus accepted shall bind all the Contracting Parties at the 
+time the amendment enters into force, and States and intergovernmental 
+organizations which become Contracting Parties at a subsequent date.</p>
+</ul>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P258_41932" id="P258_41932"></a>Article 20<br>
+Becoming Party to the Treaty</strong></p>
+<p><a name="P259_41971" id="P259_41971"></a>(1) [<em>States</em>] Any 
+State which is party to the Paris Convention or which is a member of the
+ Organization, and in respect of which patents may be granted, either 
+through the State’s own Office or through the Office of another State or
+ intergovernmental organization, may become party to this Treaty.</p>
+<p><a name="P260_42269" id="P260_42269"></a>(2) [<em>Intergovernmental Organizations</em>]
+ Any intergovernmental organization may become party to this Treaty if 
+at least one member State of that intergovernmental organization is 
+party to the Paris Convention or a member of the Organization, and the 
+intergovernmental organization declares that it has been duly 
+authorized, in accordance with its internal procedures, to become party 
+to this Treaty, and declares that:</p>
+<ul><ul>
+<p><a name="P261_42684" id="P261_42684"></a>(i) it is competent to grant patents with effect for its member States; or</p>
+<p><a name="P262_42757" id="P262_42757"></a>(ii) it is competent in 
+respect of, and has its own legislation binding on all its member States
+ concerning, matters covered by this Treaty, and it has, or has charged,
+ a regional Office for the purpose of granting patents with effect in 
+its territory in accordance with that legislation.</p>
+</ul></ul>
+<p>Subject to <a href="#P264_43179">paragraph (3)</a>, any such declaration shall be made at the time of the deposit of the instrument of ratification or accession.</p>
+<p><a name="P264_43179" id="P264_43179"></a>(3) [<em>Regional Patent Organizations</em>]
+ The European Patent Organization, the Eurasian Patent Organization and 
+the African Regional Industrial Property Organization, having made the 
+declaration referred to in <a href="#P261_42684">paragraph (2)(i)</a> or <a href="#P262_42757">(ii)</a>
+ in the Diplomatic Conference that has adopted this Treaty, may become 
+party to this Treaty as an intergovernmental organization, if it 
+declares, at the time of the deposit of the instrument of ratification 
+or accession that it has been duly authorized, in accordance with its 
+internal procedures, to become party to this Treaty.</p>
+<p>(4) [<em>Ratification or Accession</em>] Any State or intergovernmental organization satisfying the requirements in <a href="#P259_41971">paragraph (1)</a>, <a href="#P260_42269">(2)</a> or <a href="#P264_43179">(3)</a> may deposit:</p>
+<ul><ul>
+<p>(i) an instrument of ratification if it has signed this Treaty; or</p>
+<p>(ii) an instrument of accession if it has not signed this Treaty.</p>
+</ul></ul>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P268_44011" id="P268_44011"></a>Article 21<br>
+Entry into Force; Effective Dates of Ratifications and Accessions</strong></p>
+<p><a name="P269_44087" id="P269_44087"></a>(1) [<em>Entry into Force of this Treaty</em>]
+ This Treaty shall enter into force three months after ten instruments 
+of ratification or accession by States have been deposited with the 
+Director General.</p>
+<p>(2) [<em>Effective Dates of Ratifications and Accessions</em>] This Treaty shall bind:</p>
+<ul><ul>
+<p>(i) the ten States referred to in <a href="#P269_44087">paragraph (1)</a>, from the date on which this Treaty has entered into force;</p>
+<p>(ii) each other State, from the expiration of three months after the 
+date on which the State has deposited its instrument of ratification or 
+accession with the Director General, or from any later date indicated in
+ that instrument, but no later than six months after the date of such 
+deposit;</p>
+<p>(iii) each of the European Patent Organization, the Eurasian Patent 
+Organization and the African Regional Industrial Property Organization, 
+from the expiration of three months after the deposit of its instrument 
+of ratification or accession, or from any later date indicated in that 
+instrument, but no later than six months after the date of such deposit,
+ if such instrument has been deposited after the entry into force of 
+this Treaty according to <a href="#P269_44087">paragraph (1)</a>, or 
+three months after the entry into force of this Treaty if such 
+instrument has been deposited before the entry into force of this 
+Treaty;</p>
+<p>(iv) any other intergovernmental organization that is eligible to 
+become party to this Treaty, from the expiration of three months after 
+the deposit of its instrument of ratification or accession, or from any 
+later date indicated in that instrument, but no later than six months 
+after the date of such deposit.</p>
+</ul></ul>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P275_45664" id="P275_45664"></a>Article 22<br>
+Application of the Treaty to Existing Applications and Patents</strong></p>
+<p><a name="P276_45737" id="P276_45737"></a>(1) [<em>Principle</em>] Subject to <a href="#P277_46075">paragraph (2)</a>, a Contracting Party shall apply the provisions of this Treaty and the Regulations, other than <a href="#P84_6630">Articles 5</a> and <a href="#P106_12390">6(1)</a> and <a href="#P110_13164">(2)</a>
+ and related Regulations, to applications which are pending, and to 
+patents which are in force, on the date on which this Treaty binds that 
+Contracting Party under <a href="#P268_44011">Article 21</a>.</p>
+<p><a name="P277_46075" id="P277_46075"></a>(2) [<em>Procedures</em>] No
+ Contracting Party shall be obliged to apply the provisions of this 
+Treaty and the Regulations to any procedure in proceedings with respect 
+to applications and patents referred to in <a href="#P276_45737">paragraph (1)</a>, if such procedure commenced before the date on which this Treaty binds that Contracting Party under <a href="#P268_44011">Article 21</a>.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P278_46403" id="P278_46403"></a>Article 23<br>
+Reservations</strong></p>
+<p><a name="P279_46426" id="P279_46426"></a>(1) [<em>Reservation</em>] Any State or intergovernmental organization may declare through a reservation that the provisions of <a href="#P106_12390">Article 6(1)</a>
+ shall not apply to any requirement relating to unity of invention 
+applicable under the Patent Cooperation Treaty to an international 
+application.</p>
+<p>(2) [<em>Modalities</em>] Any reservation under <a href="#P279_46426">paragraph (1)</a>
+ shall be made in a declaration accompanying the instrument of 
+ratification of, or accession to, this Treaty of the State or 
+intergovernmental organization making the reservation.</p>
+<p>(3) [<em>Withdrawal</em>] Any reservation under <a href="#P279_46426">paragraph (1)</a> may be withdrawn at any time.</p>
+<p>(4) [<em>Prohibition of Other Reservations</em>] No reservation to this Treaty other than the reservation allowed under <a href="#P279_46426">paragraph (1)</a> shall be permitted.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P283_47160" id="P283_47160"></a>Article 24<br>
+Denunciation of the Treaty</strong></p>
+<p>(1) [<em>Notification</em>] Any Contracting Party may denounce this Treaty by notification addressed to the Director General.</p>
+<p>(2) [<em>Effective Date</em>] Any denunciation shall take effect one 
+year from the date on which the Director General has received the 
+notification or at any later date indicated in the notification. It 
+shall not affect the application of this Treaty to any application 
+pending or any patent in force in respect of the denouncing Contracting 
+Party at the time of the coming into effect of the denunciation.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P286_47710" id="P286_47710"></a>Article 25<br>
+Languages of the Treaty</strong></p>
+<p><a name="P287_47744" id="P287_47744"></a>(1) [<em>Authentic Texts</em>]
+ This Treaty is signed in a single original in the English, Arabic, 
+Chinese, French, Russian and Spanish languages, all texts being equally 
+and exclusively authentic.</p>
+<p>(2) [<em>Official Texts</em>] An official text in any language other than those referred to in <a href="#P287_47744">paragraph (1)</a>
+ shall be established by the Director General, after consultation with 
+the interested parties. For the purposes of this paragraph, interested 
+party means any State which is party to the Treaty, or is eligible to 
+become party to the Treaty under <a href="#P259_41971">Article 20(1)</a>,
+ whose official language, or one of whose official languages, is 
+involved, and the European Patent Organization, the Eurasian Patent 
+Organization and the African Regional Industrial Property Organization 
+and any other intergovernmental organization that is party to the 
+Treaty, or may become party to the Treaty, if one of its official 
+languages is involved.</p>
+<p>(3) [<em>Authentic Texts to Prevail</em>] In case of differences of opinion on interpretation between authentic and official texts, the authentic texts shall prevail.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P290_48804" id="P290_48804"></a>Article 26<br>
+Signature of the Treaty</strong></p>
+<p>The Treaty shall remain open for signature by any State that is eligible for becoming party to the Treaty under <a href="#P259_41971">Article 20(1)</a>
+ and by the European Patent Organization, the Eurasian Patent 
+Organization and the African Regional Industrial Property Organization 
+at the headquarters of the Organization for one year after its adoption.</p>
+<p>&nbsp;</p>
+<p align="center"><strong><a name="P292_49168" id="P292_49168"></a>Article 27<br>
+Depositary; Registration</strong></p>
+<p>(1) [<em>Depositary</em>] The Director General is the depositary of this Treaty.</p>
+<p>(2) [<em>Registration</em>] The Director General shall register this Treaty with the Secretariat of the United Nations.</p>
+</body></html>
+        </div>
+      </div>
+      </span>
+  </wu-step>
+
+<script>
+
+  var browser = (function() {
+    var test = function(regexp) {return regexp.test(window.navigator.userAgent)}
+    switch (true) {
+        case test(/edg/i): return "Microsoft Edge";
+        case test(/trident/i): return "Microsoft Internet Explorer";
+        case test(/firefox|fxios/i): return "Mozilla Firefox";
+        case test(/opr\//i): return "Opera";
+        case test(/ucbrowser/i): return "UC Browser";
+        case test(/samsungbrowser/i): return "Samsung Browser";
+        case test(/chrome|chromium|crios/i): return "Google Chrome";
+        case test(/safari/i): return "Apple Safari";
+        default: return "Other";
+    }
+})();
+console.log('browser ----',browser)
+
+  if(browser === 'Google Chrome') {
+  document.getElementById('printID').className = 'cls-print needTranslation';
+  }
+  else {
+  document.getElementById('printID').className = 'firefox-cls-print needTranslation';
+  }
+
+  document.addEventListener("keydown", function (event) {
+    if (event.ctrlKey && event.keyCode == 80) {
+      event.stopPropagation();
+      event.preventDefault();
+
+      document.body.scrollIntoView({ behavior: "smooth" });
+      console.log("CTRL + P was pressed!");
+      setTimeout(myStopFunction, 1100);
+    }
+  });
+  function myStopFunction() {
+    window.print();
+  }
+</script>
+
+  <footer>
+    <!--Page custom footer JS-->
+    <script type="application/javascript" src="/wipolex/nestjs-public/js/stickybar.js" defer></script>
+  </footer>
+</body>
+
+</html>

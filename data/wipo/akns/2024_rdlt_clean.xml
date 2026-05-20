@@ -1,0 +1,2085 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <act name="treaty">
+    <meta>
+      <identification source="#wipo">
+        <FRBRWork>
+          <FRBRthis value="/akn/un/act/treaty/wipo/2024-11-22/rdlt/!main"/>
+          <FRBRuri value="/akn/un/act/treaty/wipo/2024-11-22/rdlt"/>
+          <FRBRdate date="2024-11-22" name="adoption"/>
+          <FRBRauthor href="#wipo" as="#author"/>
+          <FRBRcountry value="un"/>
+          <FRBRsubtype value="treaty"/>
+          <FRBRnumber value="rdlt" showAs="rdlt"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/un/act/treaty/wipo/2024-11-22/rdlt/eng@2024-11-22/!main"/>
+          <FRBRuri value="/akn/un/act/treaty/wipo/2024-11-22/rdlt/eng@2024-11-22"/>
+          <FRBRdate date="2024-11-22" name="adoption"/>
+          <FRBRauthor href="#wipo" as="#author"/>
+          <FRBRlanguage language="eng"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/un/act/treaty/wipo/2024-11-22/rdlt/eng@2024-11-22.xml/!main"/>
+          <FRBRuri value="/akn/un/act/treaty/wipo/2024-11-22/rdlt/eng@2024-11-22.xml"/>
+          <FRBRdate date="2026-03-18" name="generation"/>
+          <FRBRauthor href="#johnbruene" as="#editor"/>
+        </FRBRManifestation>
+      </identification>
+      <publication date="2024-11-22" name="officialPublication" showAs="WIPO publication"/>
+      <references source="#wipo">
+        <TLCOrganization eId="wipo" href="/ontology/organization/un/wipo" showAs="World Intellectual Property Organization"/>
+        <TLCPerson eId="johnbruene" href="/ontology/person/john-bruene" showAs="John Bruene"/>
+      </references>
+    </meta>
+    <preface>
+      <p>
+        <docTitle>Riyadh Design Law Treaty</docTitle>
+      </p>
+    </preface>
+    <body>
+      <article eId="art_1">
+        <num>Article 1</num>
+        <heading>Abbreviated Expressions</heading>
+        <paragraph eId="art_1__para_1">
+          <intro>
+            <p>For the purposes of this Treaty, unless expressly stated otherwise:</p>
+          </intro>
+          <list eId="art_1__para_1__list_1">
+            <point eId="art_1__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>"Contracting Party" means any State or intergovernmental organization party to this Treaty;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>"Office" means the agency of a Contracting Party entrusted with the registration of industrial designs;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>"registration" means the registration of an industrial design, or the grant of a patent for an industrial design, by an Office;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>"application" means an application for registration;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_v">
+              <num>(v)</num>
+              <content>
+                <p>"applicable law" means, where the Contracting Party is a State, the law of that State and, where the Contracting Party is an intergovernmental organization, the legal enactments under which that intergovernmental organization operates;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_vi">
+              <num>(vi)</num>
+              <content>
+                <p>references to "industrial design" shall be construed as references to "industrial designs", where the application or the registration includes more than one industrial design;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_vii">
+              <num>(vii)</num>
+              <content>
+                <p>references to a "person" shall be construed as references to both a natural person and a legal entity;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_viii">
+              <num>(viii)</num>
+              <content>
+                <p>"procedure before the Office" means any procedure in proceedings before the Office with respect to an application or registration;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_ix">
+              <num>(ix)</num>
+              <content>
+                <p>"communication" means any application, or any request, declaration, document, correspondence or other information, relating to an application or a registration, which is filed with the Office;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_x">
+              <num>(x)</num>
+              <content>
+                <p>"records of the Office" means the collection of information maintained by the Office, relating to, and including the contents of, applications and registrations, irrespective of the medium in which such information is stored;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_xi">
+              <num>(xi)</num>
+              <content>
+                <p>"applicant" means the person whom the records of the Office show, pursuant to the applicable law, as the person who is applying for registration, or as another person who is filing or prosecuting the application;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_xii">
+              <num>(xii)</num>
+              <content>
+                <p>"holder" means the person shown in the records of the Office as the holder of the registration;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_xiii">
+              <num>(xiii)</num>
+              <content>
+                <p>"Paris Convention" means the Paris Convention for the Protection of Industrial Property, signed on March 20, 1883, as revised and amended;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_xiv">
+              <num>(xiv)</num>
+              <content>
+                <p>"license" means a license for the use of an industrial design under the law of a Contracting Party;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_xv">
+              <num>(xv)</num>
+              <content>
+                <p>"licensee" means the person to whom a license has been granted;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_xvi">
+              <num>(xvi)</num>
+              <content>
+                <p>"Regulations" means the Regulations referred to in Article 25;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_xvii">
+              <num>(xvii)</num>
+              <content>
+                <p>"Diplomatic Conference" means the convocation of Contracting Parties for the purpose of revising the Treaty;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_xviii">
+              <num>(xviii)</num>
+              <content>
+                <p>"Assembly" means the Assembly referred to in Article 26;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_xix">
+              <num>(xix)</num>
+              <content>
+                <p>references to an "instrument of ratification" shall be construed as including references to instruments of acceptance and approval;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_xx">
+              <num>(xx)</num>
+              <content>
+                <p>"Organization" means the World Intellectual Property Organization;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_xxi">
+              <num>(xxi)</num>
+              <content>
+                <p>"International Bureau" means the International Bureau of the Organization;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_xxii">
+              <num>(xxii)</num>
+              <content>
+                <p>"Director General" means the Director General of the Organization;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_xxiii">
+              <num>(xxiii)</num>
+              <content>
+                <p>references to an "Article" or to a "paragraph", "subparagraph" or "item" of an Article shall be construed as including references to the corresponding rule(s) under the Regulations.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+      </article>
+      <article eId="art_2">
+        <num>Article 2</num>
+        <heading>General Principles</heading>
+        <paragraph eId="art_2__para_1">
+          <num>(1)</num>
+          <content>
+            <p>[No Regulation of Substantive Industrial Design Law] Nothing in this Treaty or the Regulations is intended to be construed as prescribing anything that would limit the freedom of a Contracting Party to prescribe such requirements of the applicable substantive law relating to industrial designs as it desires.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_2__para_2">
+          <num>(2)</num>
+          <content>
+            <p>[Relation to Other Treaties] Nothing in this Treaty shall derogate from any obligations that Contracting Parties have to each other under any other treaties.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_2__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[More Favorable Requirements] A Contracting Party shall be free to provide for requirements which, from the viewpoint of applicants and holders, are more favorable than the requirements referred to in this Treaty and the Regulations, other than Article 6.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_3">
+        <num>Article 3</num>
+        <heading>Applications and Industrial Designs to Which This Treaty Applies</heading>
+        <paragraph eId="art_3__para_1">
+          <num>(1)</num>
+          <content>
+            <p>[Applications] This Treaty shall apply to national and regional applications which are filed with, or for, the Office of a Contracting Party.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_3__para_2">
+          <num>(2)</num>
+          <content>
+            <p>[Industrial Designs] This Treaty shall apply to industrial designs that can be registered as industrial designs, or for which patents can be granted, under the applicable law.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_4">
+        <num>Article 4</num>
+        <heading>Application</heading>
+        <paragraph eId="art_4__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Contents of Application; Fee]</p>
+          </intro>
+          <list eId="art_4__para_1__list_1">
+            <point eId="art_4__para_1__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>A Contracting Party may require that an application contain some, or all, of the following indications or elements:</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>a request for registration;</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>the name and address of the applicant;</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>where the applicant has a representative, the name and address of that representative;</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>where an address for service or an address for correspondence is required under Article 5(3), such address;</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_v">
+              <num>(v)</num>
+              <content>
+                <p>a representation of the industrial design, as prescribed in the Regulations;</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_vi">
+              <num>(vi)</num>
+              <content>
+                <p>an indication of the product or products which incorporate the industrial design, or in relation to which the industrial design is to be used;</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_vii">
+              <num>(vii)</num>
+              <content>
+                <p>where the applicant wishes to take advantage of the priority of an earlier application, a declaration claiming the priority of that earlier application, together with indications and evidence in support of the declaration that may be required pursuant to Article 4 of the Paris Convention;</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_viii">
+              <num>(viii)</num>
+              <content>
+                <p>where the applicant wishes to take advantage of Article 11 of the Paris Convention, evidence that the product or products which incorporate the industrial design or in relation to which the industrial design is to be used have been shown at an official, or officially recognized, international exhibition;</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_ix">
+              <num>(ix)</num>
+              <content>
+                <p>any further indication or element prescribed in the Regulations.</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>In respect of the application, the payment of a fee may be required.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_4__para_2">
+          <num>(2)</num>
+          <content>
+            <p>[Indication of Information] A Contracting Party may require, where permitted under the applicable law, that an application contain an indication of any prior application or registration, or of other information, including information on traditional cultural expressions and traditional knowledge, of which the applicant is aware, that is relevant to the eligibility for registration of the industrial design.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_4__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[Prohibition of Other Requirements] No indication or element, other than those referred to in paragraphs (1) and (2) and in Article 12, may be required in respect of the application.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_4__para_4">
+          <num>(4)</num>
+          <content>
+            <p>[Several Industrial Designs in the Same Application] Subject to such conditions as may be prescribed under the applicable law, an application may include more than one industrial design.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_4__para_5">
+          <num>(5)</num>
+          <content>
+            <p>[Evidence] A Contracting Party may require that evidence be furnished to the Office where, in the course of the examination of the application, the Office may reasonably doubt the veracity of any indication or element contained in the application.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_5">
+        <num>Article 5</num>
+        <heading>Representatives; Address for Service or Address for Correspondence</heading>
+        <paragraph eId="art_5__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Representatives Admitted to Practice]</p>
+          </intro>
+          <list eId="art_5__para_1__list_1">
+            <point eId="art_5__para_1__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>A Contracting Party may require that a representative appointed for the purposes of any procedure before the Office</p>
+              </content>
+            </point>
+            <point eId="art_5__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>have the right, under the applicable law, to practice before the Office in respect of applications and registrations;</p>
+              </content>
+            </point>
+            <point eId="art_5__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>provide, as its address, an address in a territory prescribed by the Contracting Party.</p>
+              </content>
+            </point>
+            <point eId="art_5__para_1__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>An act, with respect to any procedure before the Office, by or in relation to a representative who complies with the requirements established by the Contracting Party under subparagraph (a), shall have the effect of an act by or in relation to the applicant, holder or other interested person who appointed that representative.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_5__para_2">
+          <num>(2)</num>
+          <intro>
+            <p>[Mandatory Representation]</p>
+          </intro>
+          <list eId="art_5__para_2__list_1">
+            <point eId="art_5__para_2__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>Subject to subparagraph (b), a Contracting Party may require that, for the purposes of any procedure before the Office, an applicant, holder, or other interested person who has neither a domicile nor a real and effective industrial or commercial establishment in its territory appoint a representative.</p>
+              </content>
+            </point>
+            <point eId="art_5__para_2__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>An applicant, holder, or other interested person who has neither a domicile nor a real and effective industrial or commercial establishment in the territory of the Contracting Party may act himself/herself before the Office for the filing of an application, for the purposes of the filing date, and for the mere payment of a fee.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_5__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[Address for Service or Address for Correspondence] A Contracting Party may, to the extent that it does not require representation in accordance with paragraph (2), require that, for the purposes of any procedure before the Office, an applicant, holder, or other interested person who has neither a domicile nor a real and effective industrial or commercial establishment in its territory, shall have an address for service, or an address for correspondence, in a territory prescribed by the Contracting Party.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_5__para_4">
+          <num>(4)</num>
+          <content>
+            <p>[Appointment of a Representative] A Contracting Party shall accept that the appointment of a representative be filed with the Office in a manner prescribed in the Regulations.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_5__para_5">
+          <num>(5)</num>
+          <content>
+            <p>[Prohibition of Other Requirements] Subject to the requirements of Article 12, no Contracting Party may demand that requirements, other than those referred to in paragraphs (1) to (4), be complied with in respect of the matters dealt with in those paragraphs.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_5__para_6">
+          <num>(6)</num>
+          <content>
+            <p>[Notification] Where one or more of the requirements applied by the Contracting Party under paragraphs (1) to (4) is or are not complied with, the Office shall notify the applicant, holder or other interested person, giving the opportunity to comply with any such requirement within the time limit prescribed in the Regulations.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_5__para_7">
+          <num>(7)</num>
+          <content>
+            <p>[Non-Compliance with Requirements] Where one or more of the requirements applied by the Contracting Party under paragraphs (1) to (4) is or are not complied with within the time limit prescribed in the Regulations, the Contracting Party may apply such sanction as is provided for in its law.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_6">
+        <num>Article 6</num>
+        <heading>Filing Date</heading>
+        <paragraph eId="art_6__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Permitted Requirements]</p>
+          </intro>
+          <list eId="art_6__para_1__list_1">
+            <point eId="art_6__para_1__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>Subject to subparagraph (b) and paragraph (2), a Contracting Party shall accord as the filing date of an application the date on which the Office receives the following indications and elements, in a language admitted by the Office:</p>
+              </content>
+            </point>
+            <point eId="art_6__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>an express or implicit indication to the effect that the elements are intended to be an application;</p>
+              </content>
+            </point>
+            <point eId="art_6__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>indications allowing the identity of the applicant to be established;</p>
+              </content>
+            </point>
+            <point eId="art_6__para_1__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>a sufficiently clear representation of the industrial design;</p>
+              </content>
+            </point>
+            <point eId="art_6__para_1__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>indications allowing the applicant or the applicant's representative, if any, to be contacted.</p>
+              </content>
+            </point>
+            <point eId="art_6__para_1__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>A Contracting Party may accord as the filing date of an application the date on which the Office receives, together with a sufficiently clear representation of the industrial design and indications allowing the identity of the applicant to be established or allowing the applicant or the applicant's representative, if any, to be contacted, some only, rather than all, of the other indications and elements referred to in subparagraph (a), or receives them in a language other than a language admitted by the Office.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_6__para_2">
+          <num>(2)</num>
+          <intro>
+            <p>[Permitted Additional Requirements]</p>
+          </intro>
+          <list eId="art_6__para_2__list_1">
+            <point eId="art_6__para_2__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>A Contracting Party whose law, at the time it becomes party to this Treaty, requires that an application comply with any of the requirements specified in subparagraph (b) in order for that application to be accorded a filing date may, in a declaration, notify the Director General of those requirements.</p>
+              </content>
+            </point>
+            <point eId="art_6__para_2__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>The requirements that may be notified pursuant to subparagraph (a) are the following:</p>
+              </content>
+            </point>
+            <point eId="art_6__para_2__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>an indication of the product or products which incorporate the industrial design, or in relation to which the industrial design is to be used;</p>
+              </content>
+            </point>
+            <point eId="art_6__para_2__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>a brief description of the reproduction or of the characteristic features of the industrial design;</p>
+              </content>
+            </point>
+            <point eId="art_6__para_2__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>a claim;</p>
+              </content>
+            </point>
+            <point eId="art_6__para_2__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>the payment of the required fees;</p>
+              </content>
+            </point>
+            <point eId="art_6__para_2__list_1__point_v">
+              <num>(v)</num>
+              <content>
+                <p>indications concerning the identity of the creator of the industrial design.</p>
+              </content>
+            </point>
+            <point eId="art_6__para_2__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>Any declaration notified under subparagraph (a) may be withdrawn at any time.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_6__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[Prohibition of Other Requirements] No indication or element other than those referred to in paragraphs (1)(a) and (2)(b) may be required for the purpose of according a filing date to an application.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_6__para_4">
+          <num>(4)</num>
+          <content>
+            <p>[Notification and Time Limits] Where the application does not, at the time of its receipt by the Office, comply with one or more of the applicable requirements under paragraphs (1) and (2)(b), the Office shall notify the applicant and give the opportunity to comply with such requirements within the time limit prescribed in the Regulations.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_6__para_5">
+          <num>(5)</num>
+          <content>
+            <p>[Filing Date in Case of Subsequent Compliance with Requirements] If, within the time limit referred to in paragraph (4), the applicant complies with the applicable requirements, the filing date shall be no later than the date on which all the indications and elements required by the Contracting Party under paragraphs (1) and (2)(b) are received by the Office. Otherwise, the application shall be treated as if it had not been filed.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_7">
+        <num>Article 7</num>
+        <heading>Grace Period for Filing in Case of Disclosure</heading>
+        <paragraph eId="art_7__para_1">
+          <intro>
+            <p>A disclosure of the industrial design during a period of 12 months preceding the date of filing of the application or, if priority is claimed, the date of priority, shall be without prejudice to the novelty and/or originality, and as the case may be, individual character or non-obviousness, of the industrial design, where the disclosure was made:</p>
+          </intro>
+          <list eId="art_7__para_1__list_1">
+            <point eId="art_7__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>by the creator or his/her successor in title; or</p>
+              </content>
+            </point>
+            <point eId="art_7__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>by a person who obtained the disclosed information directly or indirectly, including as a result of an abuse, from the creator or his/her successor in title.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+      </article>
+      <article eId="art_8">
+        <num>Article 8</num>
+        <heading>Requirement to File the Application in the Name of the Creator</heading>
+        <paragraph eId="art_8__para_1">
+          <num>(1)</num>
+          <content>
+            <p>[Requirement That the Application Be Filed in the Name of the Creator] A Contracting Party may require that the application be filed in the name of the creator of the industrial design.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_8__para_2">
+          <num>(2)</num>
+          <intro>
+            <p>[Formality Where There Is a Requirement to File the Application in the Name of the Creator] Where a Contracting Party requires that the application be filed in the name of the creator of the industrial design, such requirement shall be satisfied if the name of the creator of the industrial design is indicated, as such, in the application, and:</p>
+          </intro>
+          <list eId="art_8__para_2__list_1">
+            <point eId="art_8__para_2__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>that name corresponds to the name of the applicant; or</p>
+              </content>
+            </point>
+            <point eId="art_8__para_2__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>the application is accompanied by, or contains, a statement of assignment from the creator to the applicant, signed by the creator of the industrial design.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+      </article>
+      <article eId="art_9">
+        <num>Article 9</num>
+        <heading>Amendment or Division of Application Including More Than One Industrial Design</heading>
+        <paragraph eId="art_9__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Amendment or Division of Application] If an application that includes more than one industrial design (hereinafter "initial application") does not comply with the conditions prescribed by the Contracting Party concerned in accordance with Article 4(4), the Office may require the applicant, at the option of the applicant, to either:</p>
+          </intro>
+          <list eId="art_9__para_1__list_1">
+            <point eId="art_9__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>amend the initial application to comply with those conditions; or</p>
+              </content>
+            </point>
+            <point eId="art_9__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>divide the initial application into two or more divisional applications that comply with those conditions by distributing among the latter the industrial designs for which protection was claimed in the initial application.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_9__para_2">
+          <num>(2)</num>
+          <content>
+            <p>Where permitted under the applicable law, the applicant may also, on their own initiative, divide an application into two or more divisional applications.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_9__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[Filing Date and Right of Priority of Divisional Applications] Divisional applications shall preserve the filing date of the initial application and the benefit of the claim of priority, if applicable.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_9__para_4">
+          <num>(4)</num>
+          <content>
+            <p>[Fees] The division of an application may be subject to the payment of fees.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_10">
+        <num>Article 10</num>
+        <heading>Publication of the Industrial Design</heading>
+        <paragraph eId="art_10__para_1">
+          <num>(1)</num>
+          <content>
+            <p>[Maintaining the Industrial Design Unpublished] A Contracting Party shall allow the industrial design to be maintained unpublished for a period fixed by its applicable law, subject to the minimum period prescribed in the Regulations.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_10__para_2">
+          <num>(2)</num>
+          <intro>
+            <p>[Request to Maintain the Industrial Design Unpublished; Fee]</p>
+          </intro>
+          <list eId="art_10__para_2__list_1">
+            <point eId="art_10__para_2__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>A Contracting Party may require that, for the purposes of maintaining the industrial design unpublished under paragraph (1), the applicant make a request to the Office.</p>
+              </content>
+            </point>
+            <point eId="art_10__para_2__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>In respect of a request for maintaining the industrial design unpublished under subparagraph (a), the Office may require the payment of a fee.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_10__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[Request to Publish Further to a Request to Maintain Unpublished] Where a request to maintain the industrial design unpublished has been made under paragraph (2)(a), the applicant or holder, as the case may be, may, at any time during the period applicable under paragraph (1), request the publication of the industrial design.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_11">
+        <num>Article 11</num>
+        <heading>Electronic Industrial Design System</heading>
+        <paragraph eId="art_11__para_1">
+          <content>
+            <p>A Contracting Party shall, in accordance with its applicable law, endeavor to provide a system for electronic applications and is encouraged to provide for the electronic exchange of priority documents.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_12">
+        <num>Article 12</num>
+        <heading>Communications</heading>
+        <paragraph eId="art_12__para_1">
+          <num>(1)</num>
+          <content>
+            <p>[Means of Transmittal and Form of Communications] A Contracting Party may choose the means of transmittal of communications and elect whether to accept communications on paper, communications in electronic form, or any other form of communication.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_12__para_2">
+          <num>(2)</num>
+          <intro>
+            <p>[Language of Communications]</p>
+          </intro>
+          <list eId="art_12__para_2__list_1">
+            <point eId="art_12__para_2__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>A Contracting Party may require that any communication be in a language admitted by the Office.</p>
+              </content>
+            </point>
+            <point eId="art_12__para_2__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>A Contracting Party may require that, where a communication is not in a language admitted by its Office, a translation of that communication by an official translator or a representative, into a language admitted by the Office, be supplied within a reasonable time limit.</p>
+              </content>
+            </point>
+            <point eId="art_12__para_2__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>No Contracting Party may require the attestation, notarization, authentication, legalization or any other certification of any translation of a communication, except in those cases prescribed in this Treaty.</p>
+              </content>
+            </point>
+            <point eId="art_12__para_2__list_1__point_d">
+              <num>(d)</num>
+              <content>
+                <p>Notwithstanding subparagraph (c), a Contracting Party may require that any translation of a communication be accompanied by a statement that the translation is true and accurate.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_12__para_3">
+          <num>(3)</num>
+          <intro>
+            <p>[Address for Correspondence, Address for Service and Contact Details] A Contracting Party may, subject to any provisions prescribed in the Regulations, require that an applicant, holder, or other interested person, indicate in any communication:</p>
+          </intro>
+          <list eId="art_12__para_3__list_1">
+            <point eId="art_12__para_3__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>an address for correspondence;</p>
+              </content>
+            </point>
+            <point eId="art_12__para_3__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>an address for service;</p>
+              </content>
+            </point>
+            <point eId="art_12__para_3__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>any other address or contact details provided for in the Regulations.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_12__para_4">
+          <num>(4)</num>
+          <intro>
+            <p>[Signature of Communications on Paper]</p>
+          </intro>
+          <list eId="art_12__para_4__list_1">
+            <point eId="art_12__para_4__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>A Contracting Party may require that a communication on paper be signed by the applicant, holder or other interested person. Where a Contracting Party requires a communication on paper to be signed, that Contracting Party shall accept any signature that complies with the requirements prescribed in the Regulations.</p>
+              </content>
+            </point>
+            <point eId="art_12__para_4__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>No Contracting Party may require the attestation, notarization, authentication, legalization or other certification of any signature, except in respect of any quasi-judicial proceedings or in those cases prescribed in the Regulations.</p>
+              </content>
+            </point>
+            <point eId="art_12__para_4__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>Notwithstanding subparagraph (b), a Contracting Party may require that evidence be filed with the Office where the Office may reasonably doubt the authenticity of any signature of a communication on paper.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_12__para_5">
+          <num>(5)</num>
+          <content>
+            <p>[Communications Filed in Electronic Form or by Electronic Means of Transmittal] Where a Contracting Party permits the filing of communications in electronic form or by electronic means of transmittal, it may require that any such communications comply with the requirements prescribed in the Regulations.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_12__para_6">
+          <num>(6)</num>
+          <content>
+            <p>[Prohibition of Other Requirements] No Contracting Party may demand that, in respect of paragraphs (1) to (5), requirements other than those referred to in this Article be complied with.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_12__para_7">
+          <num>(7)</num>
+          <content>
+            <p>[Indications in Communications] A Contracting Party may require that any communication contain one or more indications prescribed in the Regulations.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_12__para_8">
+          <num>(8)</num>
+          <content>
+            <p>[Means of Communication with Representative] Nothing in this Article regulates the means of communication between an applicant, holder or other interested person and the representative of any such person.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_13">
+        <num>Article 13</num>
+        <heading>Renewal</heading>
+        <paragraph eId="art_13__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Request for Renewal; Fee]</p>
+          </intro>
+          <list eId="art_13__para_1__list_1">
+            <point eId="art_13__para_1__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>Where a Contracting Party provides for renewal of the term of protection, it may require that the renewal be subject to the filing of a request and that such request contain some, or all, of the following indications:</p>
+              </content>
+            </point>
+            <point eId="art_13__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>an indication that renewal is sought;</p>
+              </content>
+            </point>
+            <point eId="art_13__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>the name and address of the holder;</p>
+              </content>
+            </point>
+            <point eId="art_13__para_1__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>the number(s) of the registration(s) concerned by the renewal;</p>
+              </content>
+            </point>
+            <point eId="art_13__para_1__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>an indication of the term of protection for which renewal is requested;</p>
+              </content>
+            </point>
+            <point eId="art_13__para_1__list_1__point_v">
+              <num>(v)</num>
+              <content>
+                <p>where the holder has a representative, the name and address of that representative;</p>
+              </content>
+            </point>
+            <point eId="art_13__para_1__list_1__point_vi">
+              <num>(vi)</num>
+              <content>
+                <p>where the holder has an address for service or an address for correspondence, such address;</p>
+              </content>
+            </point>
+            <point eId="art_13__para_1__list_1__point_vii">
+              <num>(vii)</num>
+              <content>
+                <p>where it is permitted that renewal be made for some only of the industrial designs contained in the registration, and such a renewal is requested, an indication of the industrial design number(s) for which the renewal is, or is not, requested;</p>
+              </content>
+            </point>
+            <point eId="art_13__para_1__list_1__point_viii">
+              <num>(viii)</num>
+              <content>
+                <p>where it is permitted that a request for renewal may be filed by a person other than the holder or its representative, and the request is filed by such a person, the name and address of that person.</p>
+              </content>
+            </point>
+            <point eId="art_13__para_1__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>A Contracting Party may require that, in respect of the renewal, a fee be paid to the Office.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_13__para_2">
+          <num>(2)</num>
+          <content>
+            <p>[Period for Presentation of the Request for Renewal and Payment of the Fee] A Contracting Party may require that the request for renewal referred to in paragraph (1)(a) be presented, and the corresponding fee referred to in paragraph (1)(b) be paid, to the Office within a period fixed by the law of the Contracting Party, subject to the minimum periods prescribed in the Regulations.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_13__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[Prohibition of Other Requirements] No Contracting Party may demand that requirements other than those referred to in paragraphs (1) and (2) and in Article 12 be complied with in respect of the request for renewal.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_14">
+        <num>Article 14</num>
+        <heading>Relief in Respect of Time Limits</heading>
+        <paragraph eId="art_14__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Extension of Time Limits] A Contracting Party shall provide for the extension, for the period prescribed in the Regulations, of a time limit fixed by the Office for an action in a procedure before the Office, if a request to that effect is filed with the Office in accordance with the requirements prescribed in the Regulations, and the request is filed, at the option of the Contracting Party:</p>
+          </intro>
+          <list eId="art_14__para_1__list_1">
+            <point eId="art_14__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>prior to the expiry of the time limit; or</p>
+              </content>
+            </point>
+            <point eId="art_14__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>after the expiry of the time limit, and within the time limit prescribed in the Regulations.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_14__para_2">
+          <num>(2)</num>
+          <intro>
+            <p>[Continued Processing] Where an applicant or holder has failed to comply with a time limit fixed by the Office of a Contracting Party for an action in a procedure before the Office, and that Contracting Party does not provide for an extension of a time limit under paragraph (1), the Contracting Party shall provide for continued processing with respect to the application or registration and, if necessary, reinstatement of the rights of the applicant or holder with respect to that application or registration, if:</p>
+          </intro>
+          <list eId="art_14__para_2__list_1">
+            <point eId="art_14__para_2__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>a request to that effect is made to the Office in accordance with the requirements prescribed in the Regulations;</p>
+              </content>
+            </point>
+            <point eId="art_14__para_2__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>the request is filed, and all of the requirements for the said action, in respect of which the time limit applied, are complied with, within the time limit prescribed in the Regulations.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_14__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[Exceptions] There shall be no requirement to provide for the extension of time limits under paragraph (1) or continued processing under paragraph (2) with respect to the exceptions prescribed in the Regulations.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_14__para_4">
+          <num>(4)</num>
+          <content>
+            <p>[Fees] A Contracting Party may require that a fee be paid in respect of a request under paragraph (1) or (2).</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_14__para_5">
+          <num>(5)</num>
+          <content>
+            <p>[Prohibition of Other Requirements] No Contracting Party may demand that requirements other than those referred to in paragraphs (1) to (4) be complied with in respect of the relief provided for under paragraph (1) or (2), except where otherwise provided for by this Treaty or prescribed in the Regulations.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_14__para_6">
+          <num>(6)</num>
+          <content>
+            <p>[Opportunity to Make Observations in Case of Intended Refusal] A request under paragraph (1) or (2) may not be refused without the applicant or holder being given the opportunity to make observations on the intended refusal within a reasonable time limit.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_15">
+        <num>Article 15</num>
+        <heading>Reinstatement of Rights After a Finding by the Office of Due Care or Unintentionality</heading>
+        <paragraph eId="art_15__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Reinstatement of Rights] If a Contracting Party does not provide for a relief measure under Article 14(1)(ii) or 14(2), the Office shall reinstate the rights of the applicant or holder with respect to that application or registration, where an applicant or holder has failed to comply with a time limit for an action in a procedure before the Office, and that failure has the direct consequence of causing a loss of rights with respect to an application or a registration, if:</p>
+          </intro>
+          <list eId="art_15__para_1__list_1">
+            <point eId="art_15__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>a request to that effect is made to the Office in accordance with the requirements prescribed in the Regulations;</p>
+              </content>
+            </point>
+            <point eId="art_15__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>the request is filed, and all of the requirements for the said action, in respect of which the time limit applied, are complied with, within the time limit prescribed in the Regulations;</p>
+              </content>
+            </point>
+            <point eId="art_15__para_1__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>the request states the reasons for the failure to comply with the time limit; and</p>
+              </content>
+            </point>
+            <point eId="art_15__para_1__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>the Office finds that the failure to comply with the time limit occurred in spite of due care required by the circumstances having been taken or, at the option of the Contracting Party, that any delay was unintentional.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_15__para_2">
+          <num>(2)</num>
+          <content>
+            <p>[Exceptions] There shall be no requirement to provide for the reinstatement of rights under paragraph (1) with respect to the exceptions prescribed in the Regulations.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_15__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[Fees] A Contracting Party may require that a fee be paid in respect of a request under paragraph (1).</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_15__para_4">
+          <num>(4)</num>
+          <content>
+            <p>[Evidence] A Contracting Party may require that a declaration or other evidence in support of the reasons referred to in paragraph (1)(iii) be filed with the Office within a time limit fixed by the Office.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_15__para_5">
+          <num>(5)</num>
+          <content>
+            <p>[Opportunity to Make Observations in Case of Intended Refusal] A request under paragraph (1) may not be refused, totally or in part, without the requesting party being given the opportunity to make observations on the intended refusal, within a reasonable time limit.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_16">
+        <num>Article 16</num>
+        <heading>Correction or Addition of Priority Claim; Restoration of Priority Right</heading>
+        <paragraph eId="art_16__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Correction or Addition of Priority Claim] A Contracting Party shall provide for the correction or addition of a priority claim with respect to an application ("the subsequent application"), if:</p>
+          </intro>
+          <list eId="art_16__para_1__list_1">
+            <point eId="art_16__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>a request to that effect is made to the Office in accordance with the requirements prescribed in the Regulations;</p>
+              </content>
+            </point>
+            <point eId="art_16__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>the request is filed within the time limit prescribed in the Regulations; and</p>
+              </content>
+            </point>
+            <point eId="art_16__para_1__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>the filing date of the subsequent application is not later than the date of the expiration of the priority period calculated from the filing date of the earliest application whose priority is claimed.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_16__para_2">
+          <num>(2)</num>
+          <intro>
+            <p>[Delayed Filing of the Subsequent Application] A Contracting Party shall provide that, where an application ("the subsequent application") which claims or could have claimed the priority of an earlier application has a filing date which is later than the date on which the priority period expired, but within the time limit prescribed in the Regulations, the Office shall restore the right of priority, if:</p>
+          </intro>
+          <list eId="art_16__para_2__list_1">
+            <point eId="art_16__para_2__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>a request to that effect is made to the Office in accordance with the requirements prescribed in the Regulations;</p>
+              </content>
+            </point>
+            <point eId="art_16__para_2__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>the request is filed within the time limit prescribed in the Regulations;</p>
+              </content>
+            </point>
+            <point eId="art_16__para_2__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>the request states the reasons for the failure to comply with the priority period; and</p>
+              </content>
+            </point>
+            <point eId="art_16__para_2__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>the Office finds that the failure to file the subsequent application within the priority period occurred in spite of due care required by the circumstances having been taken or, at the option of the Contracting Party, was unintentional.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_16__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[Fees] A Contracting Party may require that a fee be paid in respect of a request under paragraph (1) and in respect of a request under paragraph (2).</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_16__para_4">
+          <num>(4)</num>
+          <content>
+            <p>[Evidence] A Contracting Party may require that a declaration or other evidence in support of the reasons referred to in paragraph (2)(iii) be filed with the Office within a time limit fixed by the Office.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_16__para_5">
+          <num>(5)</num>
+          <content>
+            <p>[Opportunity to Make Observations in Case of Intended Refusal] A request under paragraph (1) or (2) may not be refused, totally or in part, without the requesting party being given the opportunity to make observations on the intended refusal within a reasonable time limit.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_17">
+        <num>Article 17</num>
+        <heading>Request for Recording of a License or a Security Interest</heading>
+        <paragraph eId="art_17__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Requirements Concerning the Request for Recording of a License] Where the law of a Contracting Party provides for the recording of a license with its Office, that Contracting Party may require that the request for recording:</p>
+          </intro>
+          <list eId="art_17__para_1__list_1">
+            <point eId="art_17__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>be filed in accordance with the requirements prescribed in the Regulations; and</p>
+              </content>
+            </point>
+            <point eId="art_17__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>be accompanied by the supporting documents prescribed in the Regulations.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_17__para_2">
+          <num>(2)</num>
+          <content>
+            <p>[Fees] In respect of the recording of a license, the Office may require the payment of a fee.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_17__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[Single Request] A single request shall be sufficient even where the license relates to more than one registration, provided that the registration numbers of all registrations concerned are indicated in the request, the holder and the licensee are the same for all registrations, and the request indicates the scope of the license with respect to all registrations.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_17__para_4">
+          <num>(4)</num>
+          <intro>
+            <p>[Prohibition of Other Requirements]</p>
+          </intro>
+          <list eId="art_17__para_4__list_1">
+            <point eId="art_17__para_4__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>No requirement other than those referred to in paragraphs (1) to (3) and in Article 12 may be demanded in respect of the recording of a license with the Office. In particular, the following may not be required:</p>
+              </content>
+            </point>
+            <point eId="art_17__para_4__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>the furnishing of the registration certificate of the industrial design which is the subject of the license;</p>
+              </content>
+            </point>
+            <point eId="art_17__para_4__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>an indication of the financial terms of the license contract.</p>
+              </content>
+            </point>
+            <point eId="art_17__para_4__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>Subparagraph (a) is without prejudice to any obligations existing under the law of a Contracting Party concerning the disclosure of information for purposes other than the recording of the license.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_17__para_5">
+          <num>(5)</num>
+          <content>
+            <p>[Evidence] It may be required that evidence be furnished to the Office where the Office may reasonably doubt the veracity of any indication contained in the request, or in any supporting document.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_17__para_6">
+          <num>(6)</num>
+          <content>
+            <p>[Requests Relating to Applications] Paragraphs (1) to (5) shall apply, mutatis mutandis , to requests for recording of a license in respect of an application, where the law of a Contracting Party provides for such recording.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_17__para_7">
+          <num>(7)</num>
+          <content>
+            <p>[Request for Recording of a Security Interest] With the exception of paragraph (4)(a)(ii), paragraphs (1) to (5) shall apply, mutatis mutandis , to requests for recording of a security interest in respect of an application or registration.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_18">
+        <num>Article 18</num>
+        <heading>Request for Amendment or Cancellation of the Recording of a License or a Security Interest</heading>
+        <paragraph eId="art_18__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Requirements Concerning the Request for Amendment or Cancellation of the Recording of a License] Where the law of a Contracting Party provides for the recording of a license with its Office, that Contracting Party may require that the request for amendment or cancellation of the recording of a license:</p>
+          </intro>
+          <list eId="art_18__para_1__list_1">
+            <point eId="art_18__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>be filed in accordance with the requirements prescribed in the Regulations; and</p>
+              </content>
+            </point>
+            <point eId="art_18__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>be accompanied by the supporting documents prescribed in the Regulations.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_18__para_2">
+          <num>(2)</num>
+          <content>
+            <p>[Requirements Concerning the Request for Cancellation of the Recording of a Security Interest] Paragraph (1) shall apply, mutatis mutandis , to requests for cancellation of the recording of a security interest.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_18__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[Other Requirements] Article 17(2) to (7) shall apply, mutatis mutandis , to requests for amendment or cancellation of the recording of a license and to requests for cancellation of the recording of a security interest.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_19">
+        <num>Article 19</num>
+        <heading>Effects of the Non-Recording of a License</heading>
+        <paragraph eId="art_19__para_1">
+          <num>(1)</num>
+          <content>
+            <p>[Validity of the Registration and Protection of the Industrial Design] The non-recording of a license with the Office or with any other authority of a Contracting Party shall not affect the validity of the registration of the industrial design which is the subject of the license, nor the protection of that industrial design.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_19__para_2">
+          <num>(2)</num>
+          <content>
+            <p>[Certain Rights of the Licensee] A Contracting Party may not require the recording of a license as a condition for any right that the licensee may have under the law of that Contracting Party to join infringement proceedings initiated by the holder or to obtain, by way of such proceedings, damages resulting from an infringement of the industrial design which is the subject of the license.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_20">
+        <num>Article 20</num>
+        <heading>Indication of the License</heading>
+        <paragraph eId="art_20__para_1">
+          <content>
+            <p>Where the law of a Contracting Party requires an indication that the industrial design is used under a license, full or partial non-compliance with that requirement shall not affect the validity of the registration of the industrial design which is the subject of the license, nor the protection of that industrial design.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_21">
+        <num>Article 21</num>
+        <heading>Request for Recording of a Change in Ownership</heading>
+        <paragraph eId="art_21__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Requirements Concerning the Request for Recording]</p>
+          </intro>
+          <list eId="art_21__para_1__list_1">
+            <point eId="art_21__para_1__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>Where there is a change in the person of the holder, a Contracting Party shall accept that a request for the recording of the change be made either by the holder or by the new owner.</p>
+              </content>
+            </point>
+            <point eId="art_21__para_1__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>A Contracting Party may require that the request contain some, or all, of the indications prescribed in the Regulations.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_21__para_2">
+          <num>(2)</num>
+          <intro>
+            <p>[Requirements Concerning Supporting Documents for Recording of a Change in Ownership]</p>
+          </intro>
+          <list eId="art_21__para_2__list_1">
+            <point eId="art_21__para_2__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>Where the change in ownership results from a contract, a Contracting Party may require that the request be accompanied, at the option of the requesting party, by one of the elements prescribed in the Regulations.</p>
+              </content>
+            </point>
+            <point eId="art_21__para_2__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>Where the change in ownership results from a merger, a Contracting Party may require that the request be accompanied by a copy of a document, which originates from a competent authority and evidences the merger, such as a copy of an extract from a register of commerce, and that that copy be certified by the authority which issued the document or by a notary public or any other competent public authority, as being in conformity with the original document.</p>
+              </content>
+            </point>
+            <point eId="art_21__para_2__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>Where there is a change in one or more, but not all, of several co-holders, and such change in ownership results from a contract or a merger, a Contracting Party may require that any co-holder in respect of which there is no change in ownership give its express consent to the change in ownership, in a document signed by such co-holder.</p>
+              </content>
+            </point>
+            <point eId="art_21__para_2__list_1__point_d">
+              <num>(d)</num>
+              <content>
+                <p>Where the change in ownership does not result from a contract or a merger but from another ground, for example, by operation of law or a court decision, a Contracting Party may require that the request be accompanied by a copy of a document evidencing the change and that that copy be certified as being in conformity with the original document by the authority which issued the document, or by a notary public or any other competent public authority.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_21__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[Fees] A Contracting Party may require that, in respect of the request, a fee be paid to the Office.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_21__para_4">
+          <num>(4)</num>
+          <content>
+            <p>[Single Request] A single request shall be sufficient even where the change relates to more than one registration, provided that the holder and the new owner are the same for each registration, and that the numbers of all registrations concerned are indicated in the request.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_21__para_5">
+          <num>(5)</num>
+          <content>
+            <p>[Change in the Ownership of an Application] Paragraphs (1) to (4) shall apply, mutatis mutandis , where the change in ownership concerns an application, provided that, where the application number of the application concerned has not yet been issued or is not known to the applicant or its representative, the request identifies the application as prescribed in the Regulations.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_21__para_6">
+          <num>(6)</num>
+          <content>
+            <p>[Prohibition of Other Requirements] No Contracting Party may demand that requirements other than those referred to in paragraphs (1) to (5) and in Article 12 be complied with in respect of a request for the recording of a change in ownership.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_21__para_7">
+          <num>(7)</num>
+          <content>
+            <p>[Evidence] A Contracting Party may require that evidence, or further evidence where paragraph (2)(b) or (d) applies, be furnished to the Office where the Office reasonably doubts the veracity of any indication contained in the request or in any document referred to in the present Article.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_22">
+        <num>Article 22</num>
+        <heading>Changes in Names or Addresses</heading>
+        <paragraph eId="art_22__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Changes in the Name or Address of the Holder]</p>
+          </intro>
+          <list eId="art_22__para_1__list_1">
+            <point eId="art_22__para_1__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>Where there is no change in the person of the holder but there is a change in its name and/or address, each Contracting Party shall accept that a request for the recording of the change by the Office be made by the holder in a communication indicating the registration number of the registration concerned and the change to be recorded.</p>
+              </content>
+            </point>
+            <point eId="art_22__para_1__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>A Contracting Party may require that the request contain some, or all, of the indications prescribed in the Regulations.</p>
+              </content>
+            </point>
+            <point eId="art_22__para_1__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>A Contracting Party may require that, in respect of the request, a fee be paid to the Office.</p>
+              </content>
+            </point>
+            <point eId="art_22__para_1__list_1__point_d">
+              <num>(d)</num>
+              <content>
+                <p>A single request shall be sufficient even where the change relates to more than one registration, provided that the registration numbers of all registrations concerned are indicated in the request.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_22__para_2">
+          <num>(2)</num>
+          <content>
+            <p>[Change in the Name or Address of the Applicant] Paragraph (1) shall apply, mutatis mutandis , where the change concerns an application or applications, or both an application or applications and a registration or registrations, provided that, where the application number of any application concerned has not yet been issued or is not known to the applicant or its representative, the request otherwise identifies that application as prescribed in the Regulations.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_22__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[Change in the Name or Address of the Representative or in the Address for Service] Paragraph (1) shall apply, mutatis mutandis , to any change in the name or address of the representative, if any, and to any change relating to the address for service, if any.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_22__para_4">
+          <num>(4)</num>
+          <content>
+            <p>[Prohibition of Other Requirements] No Contracting Party may demand that requirements other than those referred to in paragraphs (1) and (2) and in Article 12 be complied with in respect of the request referred to in this Article. In particular, the furnishing of any certificate concerning the change may not be required.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_22__para_5">
+          <num>(5)</num>
+          <content>
+            <p>[Evidence] A Contracting Party may require that evidence be furnished to the Office where the Office may reasonably doubt the veracity of any indication contained in the request.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_23">
+        <num>Article 23</num>
+        <heading>Correction of a Mistake</heading>
+        <paragraph eId="art_23__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Request]</p>
+          </intro>
+          <list eId="art_23__para_1__list_1">
+            <point eId="art_23__para_1__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>Where an application, a registration or any request communicated to the Office in respect of an application or a registration contains a mistake, not related to search or substantive examination, which is correctable by the Office under the applicable law, the Office shall accept that a request for correction of that mistake in the records and publications of the Office be made in a communication to the Office signed by the applicant or holder.</p>
+              </content>
+            </point>
+            <point eId="art_23__para_1__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>A Contracting Party may require that the request be accompanied by a replacement part or part incorporating the correction or, where paragraph (3) applies, by such a replacement part or part incorporating the correction for each application and registration to which the request relates.</p>
+              </content>
+            </point>
+            <point eId="art_23__para_1__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>A Contracting Party may require that the request be subject to a declaration by the requesting party stating that the mistake was made in good faith.</p>
+              </content>
+            </point>
+            <point eId="art_23__para_1__list_1__point_d">
+              <num>(d)</num>
+              <content>
+                <p>A Contracting Party may require that the request be subject to a declaration by the requesting party stating that the said request was made without undue delay or, at the option of the Contracting Party, that it was made without intentional delay, following the discovery of the mistake.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_23__para_2">
+          <num>(2)</num>
+          <intro>
+            <p>[Fees]</p>
+          </intro>
+          <list eId="art_23__para_2__list_1">
+            <point eId="art_23__para_2__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>Subject to subparagraph (b), a Contracting Party may require that a fee be paid in respect of a request under paragraph (1).</p>
+              </content>
+            </point>
+            <point eId="art_23__para_2__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>The Office shall correct its own mistakes, ex officio or upon request, for no fee.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_23__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[Single Request] Article 21(4) shall apply, mutatis mutandis , to requests for correction of a mistake, provided that the mistake and the requested correction are the same for all applications and registrations concerned.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_23__para_4">
+          <num>(4)</num>
+          <content>
+            <p>[Evidence] A Contracting Party may only require that evidence in support of the request be filed with the Office where the Office may reasonably doubt that the alleged mistake is in fact a mistake, or where it may reasonably doubt the veracity of any matter contained in, or of any document filed in connection with, the request for correction of a mistake.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_23__para_5">
+          <num>(5)</num>
+          <content>
+            <p>[Prohibition of Other Requirements] No Contracting Party may require that formal requirements other than those referred to in paragraphs (1) to (4) be complied with in respect of the request referred to in paragraph (1), except where otherwise provided for by this Treaty or prescribed in the Regulations.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_23__para_6">
+          <num>(6)</num>
+          <content>
+            <p>[Exclusions] A Contracting Party may exclude the application of this Article in respect of any mistake which must be corrected in that Contracting Party under a procedure for reissue of the registration.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_24">
+        <num>Article 24</num>
+        <heading>Technical Assistance and Capacity Building</heading>
+        <paragraph eId="art_24__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Principles] Technical assistance shall</p>
+          </intro>
+          <list eId="art_24__para_1__list_1">
+            <point eId="art_24__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>be development-oriented, demand-driven, transparent, targeted and adequate for the strengthening of the capacity of beneficiary countries to implement the Treaty;</p>
+              </content>
+            </point>
+            <point eId="art_24__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>take into account the priorities and the specific needs of receiving countries for enabling the users to take full advantage of the provisions of the Treaty.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_24__para_2">
+          <num>(2)</num>
+          <intro>
+            <p>[Technical Assistance and Capacity Building]</p>
+          </intro>
+          <list eId="art_24__para_2__list_1">
+            <point eId="art_24__para_2__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>Technical assistance and capacity building activities provided under this Treaty shall be for the implementation of this Treaty and, where requested, include assistance with:</p>
+              </content>
+            </point>
+            <point eId="art_24__para_2__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>establishing the required legal framework and revising administrative practices and procedures of design registration authorities;</p>
+              </content>
+            </point>
+            <point eId="art_24__para_2__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>building up the necessary capacity of the Offices, including but not limited to providing training of human resources, technological support and awareness raising.</p>
+              </content>
+            </point>
+            <point eId="art_24__para_2__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>The Organization is requested to provide, subject to the WIPO Financial Regulations and Rules, financing for technical assistance and capacity building for the implementation of the Treaty in accordance with paragraphs (1), (2)(a), (3)(a) and Article 26(1)(c) and 26(2)(vi). Moreover, the Organization is encouraged to enter into agreements with international financing organizations, intergovernmental organizations and governments of receiving countries in order to provide financial support for technical assistance pursuant to this Treaty.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_24__para_3">
+          <num>(3)</num>
+          <intro>
+            <p>[Other Provisions]</p>
+          </intro>
+          <list eId="art_24__para_3__list_1">
+            <point eId="art_24__para_3__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>Contracting Parties are encouraged to participate in the Organization's digital libraries for registered designs, to which the International Bureau shall facilitate access. Contracting Parties are further encouraged to communicate published registered design information through such systems. The International Bureau shall support Contracting Parties in their efforts to exchange information through those systems. The International Bureau is requested to facilitate access to relevant digital libraries of Offices.</p>
+              </content>
+            </point>
+            <point eId="art_24__para_3__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>Contracting Parties to this Treaty may establish a fee reduction system to the benefit of applicants.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+      </article>
+      <article eId="art_25">
+        <num>Article 25</num>
+        <heading>Regulations</heading>
+        <paragraph eId="art_25__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Content]</p>
+          </intro>
+          <list eId="art_25__para_1__list_1">
+            <point eId="art_25__para_1__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>The Regulations annexed to this Treaty provide rules concerning:</p>
+              </content>
+            </point>
+            <point eId="art_25__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>matters which this Treaty expressly provides to be prescribed in the Regulations;</p>
+              </content>
+            </point>
+            <point eId="art_25__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>any details useful in the implementation of the provisions of this Treaty;</p>
+              </content>
+            </point>
+            <point eId="art_25__para_1__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>any administrative requirements, matters or procedures.</p>
+              </content>
+            </point>
+            <point eId="art_25__para_1__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>The Regulations also provide for the publication of Model International Forms to be established by the Assembly.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_25__para_2">
+          <num>(2)</num>
+          <content>
+            <p>[Amending the Regulations] Subject to paragraph (3), any amendment of the Regulations shall require three-fourths of the votes cast.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_25__para_3">
+          <num>(3)</num>
+          <intro>
+            <p>[Requirement of Unanimity]</p>
+          </intro>
+          <list eId="art_25__para_3__list_1">
+            <point eId="art_25__para_3__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>The Regulations may specify provisions of the Regulations which may be amended only by unanimity.</p>
+              </content>
+            </point>
+            <point eId="art_25__para_3__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>Any amendment of the Regulations resulting in the addition of provisions to, or the deletion of provisions from, the provisions specified in the Regulations pursuant to subparagraph (a) shall require unanimity.</p>
+              </content>
+            </point>
+            <point eId="art_25__para_3__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>In determining whether unanimity is attained, only votes actually cast shall be taken into consideration. Abstentions shall not be considered as votes.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_25__para_4">
+          <num>(4)</num>
+          <content>
+            <p>[Conflict Between the Treaty and the Regulations] In the case of conflict between the provisions of this Treaty and those of the Regulations, the former shall prevail.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_26">
+        <num>Article 26</num>
+        <heading>Assembly</heading>
+        <paragraph eId="art_26__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Composition]</p>
+          </intro>
+          <list eId="art_26__para_1__list_1">
+            <point eId="art_26__para_1__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>The Contracting Parties shall have an Assembly.</p>
+              </content>
+            </point>
+            <point eId="art_26__para_1__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>Each Contracting Party shall be represented in the Assembly by one delegate, who may be assisted by alternate delegates, advisors and experts. Each delegate may represent only one Contracting Party.</p>
+              </content>
+            </point>
+            <point eId="art_26__para_1__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>The expenses of each delegation shall be borne by the Contracting Party that has appointed the delegation. The Assembly may ask the Organization to grant financial assistance to facilitate the participation of delegations of Contracting Parties that are regarded as developing countries in conformity with the established practice of the General Assembly of the United Nations or Least Developed Countries or that are countries in transition to a market economy.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_26__para_2">
+          <num>(2)</num>
+          <intro>
+            <p>[Tasks] The Assembly shall</p>
+          </intro>
+          <list eId="art_26__para_2__list_1">
+            <point eId="art_26__para_2__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>deal with matters concerning the development of this Treaty;</p>
+              </content>
+            </point>
+            <point eId="art_26__para_2__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>establish Model International Forms, referred to in Article 25(1)(b);</p>
+              </content>
+            </point>
+            <point eId="art_26__para_2__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>amend the Regulations;</p>
+              </content>
+            </point>
+            <point eId="art_26__para_2__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>determine the conditions for the date of application of each amendment referred to in item (iii);</p>
+              </content>
+            </point>
+            <point eId="art_26__para_2__list_1__point_v">
+              <num>(v)</num>
+              <content>
+                <p>monitor, at every ordinary session, the technical assistance provided for implementation of this Treaty;</p>
+              </content>
+            </point>
+            <point eId="art_26__para_2__list_1__point_vi">
+              <num>(vi)</num>
+              <content>
+                <p>request the International Bureau, with a view to facilitating the implementation of this Treaty, to provide technical assistance, in particular to developing countries and Least Developed Countries, in accordance with Article 24;</p>
+              </content>
+            </point>
+            <point eId="art_26__para_2__list_1__point_vii">
+              <num>(vii)</num>
+              <content>
+                <p>perform such other functions as are appropriate to implementing the provisions of this Treaty.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_26__para_3">
+          <num>(3)</num>
+          <intro>
+            <p>[Quorum]</p>
+          </intro>
+          <list eId="art_26__para_3__list_1">
+            <point eId="art_26__para_3__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>One-half of the members of the Assembly which are States shall constitute a quorum.</p>
+              </content>
+            </point>
+            <point eId="art_26__para_3__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>Notwithstanding subparagraph (a), if, in any session, the number of the members of the Assembly which are States and are represented is less than one-half but equal to or more than one-third of the members of the Assembly which are States, the Assembly may make decisions but, with the exception of decisions concerning its own procedure, all such decisions shall take effect only if the conditions set forth hereinafter are fulfilled. The International Bureau shall communicate the said decisions to the members of the Assembly which are States and were not represented and shall invite them to express in writing their vote or abstention within a period of three months from the date of the communication. If, at the expiration of this period, the number of such members having thus expressed their vote or abstention attains the number of the members which was lacking for attaining the quorum in the session itself, such decisions shall take effect, provided that at the same time the required majority still obtains.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_26__para_4">
+          <num>(4)</num>
+          <intro>
+            <p>[Taking Decisions in the Assembly]</p>
+          </intro>
+          <list eId="art_26__para_4__list_1">
+            <point eId="art_26__para_4__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>The Assembly shall endeavor to take its decisions by consensus.</p>
+              </content>
+            </point>
+            <point eId="art_26__para_4__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>Where a decision cannot be arrived at by consensus, the matter at issue shall be decided by voting. In such a case,</p>
+              </content>
+            </point>
+            <point eId="art_26__para_4__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>each Contracting Party that is a State shall have one vote and shall vote only in its own name; and</p>
+              </content>
+            </point>
+            <point eId="art_26__para_4__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>any Contracting Party that is an intergovernmental organization may participate in the vote, in place of its Member States, with a number of votes equal to the number of its Member States which are party to this Treaty. No such intergovernmental organization shall participate in the vote if any one of its Member States exercises its right to vote and vice versa . In addition, no such intergovernmental organization shall participate in the vote if any one of its Member States party to this Treaty is a Member State of another such intergovernmental organization and that other intergovernmental organization participates in that vote.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_26__para_5">
+          <num>(5)</num>
+          <intro>
+            <p>[Majorities]</p>
+          </intro>
+          <list eId="art_26__para_5__list_1">
+            <point eId="art_26__para_5__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>Subject to Article 25(2) and (3), the decisions of the Assembly shall require two-thirds of the votes cast.</p>
+              </content>
+            </point>
+            <point eId="art_26__para_5__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>In determining whether the required majority is attained, only votes actually cast shall be taken into consideration. Abstentions shall not be considered as votes.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_26__para_6">
+          <num>(6)</num>
+          <content>
+            <p>[Sessions] The Assembly shall meet upon convocation by the Director General and, in the absence of exceptional circumstances, during the same period and at the same place as the General Assembly of the Organization.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_26__para_7">
+          <num>(7)</num>
+          <content>
+            <p>[Rules of Procedure] The Assembly shall establish its own rules of procedure, including rules for the convocation of extraordinary sessions.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_27">
+        <num>Article 27</num>
+        <heading>International Bureau</heading>
+        <paragraph eId="art_27__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Administrative Tasks]</p>
+          </intro>
+          <list eId="art_27__para_1__list_1">
+            <point eId="art_27__para_1__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>The International Bureau shall perform the administrative tasks concerning this Treaty.</p>
+              </content>
+            </point>
+            <point eId="art_27__para_1__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>In particular, the International Bureau shall prepare the meetings and provide the Secretariat of the Assembly and of such committees of experts and working groups as may be established by the Assembly.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_27__para_2">
+          <num>(2)</num>
+          <content>
+            <p>[Meetings Other than Sessions of the Assembly] The Director General shall convene any committee and working group established by the Assembly.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_27__para_3">
+          <num>(3)</num>
+          <intro>
+            <p>[Role of the International Bureau in the Assembly and Other Meetings]</p>
+          </intro>
+          <list eId="art_27__para_3__list_1">
+            <point eId="art_27__para_3__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>The Director General and persons designated by the Director General shall participate, without the right to vote, in all meetings of the Assembly, the committees and working groups established by the Assembly.</p>
+              </content>
+            </point>
+            <point eId="art_27__para_3__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>The Director General or a staff member designated by the Director General shall be ex officio Secretary of the Assembly, and of the committees and working groups referred to in subparagraph (a).</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_27__para_4">
+          <num>(4)</num>
+          <intro>
+            <p>[Conferences]</p>
+          </intro>
+          <list eId="art_27__para_4__list_1">
+            <point eId="art_27__para_4__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>The International Bureau shall, in accordance with the directions of the Assembly, make the preparations for any revision conferences.</p>
+              </content>
+            </point>
+            <point eId="art_27__para_4__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>The International Bureau may consult with Member States of the Organization, intergovernmental organizations and international and national non-governmental organizations concerning the said preparations.</p>
+              </content>
+            </point>
+            <point eId="art_27__para_4__list_1__point_c">
+              <num>(c)</num>
+              <content>
+                <p>The Director General and persons designated by the Director General shall take part, without the right to vote, in the discussions at revision conferences.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_27__para_5">
+          <num>(5)</num>
+          <content>
+            <p>[Other Tasks] The International Bureau shall carry out any other tasks assigned to it in relation to this Treaty.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_28">
+        <num>Article 28</num>
+        <heading>Revision</heading>
+        <paragraph eId="art_28__para_1">
+          <content>
+            <p>This Treaty may only be revised by a diplomatic conference. The convocation of any diplomatic conference shall be decided by the Assembly.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_29">
+        <num>Article 29</num>
+        <heading>Becoming Party to the Treaty</heading>
+        <paragraph eId="art_29__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Eligibility] The following entities may sign and, subject to paragraphs (2) and (3) and Article 30(1) and (3), become party to this Treaty:</p>
+          </intro>
+          <list eId="art_29__para_1__list_1">
+            <point eId="art_29__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>any State member of the Organization in respect of which industrial designs may be registered with its own Office;</p>
+              </content>
+            </point>
+            <point eId="art_29__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>any intergovernmental organization which maintains an Office in which industrial designs may be registered with effect in the territory in which the constituting treaty of the intergovernmental organization applies, in all its Member States or in those of its Member States which are designated for such purpose in the relevant application, provided that all the Member States of the intergovernmental organization are members of the Organization;</p>
+              </content>
+            </point>
+            <point eId="art_29__para_1__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>any State member of the Organization in respect of which industrial designs may be registered only through the Office of another specified State that is a member of the Organization;</p>
+              </content>
+            </point>
+            <point eId="art_29__para_1__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>any State member of the Organization in respect of which industrial designs may be registered only through the Office maintained by an intergovernmental organization of which that State is a member;</p>
+              </content>
+            </point>
+            <point eId="art_29__para_1__list_1__point_v">
+              <num>(v)</num>
+              <content>
+                <p>any State member of the Organization in respect of which industrial designs may be registered only through an Office common to a group of States members of the Organization.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_29__para_2">
+          <num>(2)</num>
+          <intro>
+            <p>[Ratification or Accession] Any entity referred to in paragraph (1) may deposit</p>
+          </intro>
+          <list eId="art_29__para_2__list_1">
+            <point eId="art_29__para_2__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>an instrument of ratification, if it has signed this Treaty;</p>
+              </content>
+            </point>
+            <point eId="art_29__para_2__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>an instrument of accession, if it has not signed this Treaty.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_29__para_3">
+          <num>(3)</num>
+          <intro>
+            <p>[Effective Date of Deposit] The effective date of the deposit of an instrument of ratification or accession shall be,</p>
+          </intro>
+          <list eId="art_29__para_3__list_1">
+            <point eId="art_29__para_3__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>in the case of a State referred to in paragraph (1)(i), the date on which the instrument of that State is deposited;</p>
+              </content>
+            </point>
+            <point eId="art_29__para_3__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>in the case of an intergovernmental organization, the date on which the instrument of that intergovernmental organization is deposited;</p>
+              </content>
+            </point>
+            <point eId="art_29__para_3__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>in the case of a State referred to in paragraph (1)(iii), the date on which the following condition is fulfilled: the instrument of that State has been deposited and the instrument of the other specified State has been deposited;</p>
+              </content>
+            </point>
+            <point eId="art_29__para_3__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>in the case of a State referred to in paragraph (1)(iv), the date applicable under item (ii), above;</p>
+              </content>
+            </point>
+            <point eId="art_29__para_3__list_1__point_v">
+              <num>(v)</num>
+              <content>
+                <p>in the case of a State member of a group of States referred to in paragraph (1)(v), the date on which the instruments of all the States members of the group have been deposited.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+      </article>
+      <article eId="art_30">
+        <num>Article 30</num>
+        <heading>Entry into Force; Effective Date of Ratifications and Accessions</heading>
+        <paragraph eId="art_30__para_1">
+          <num>(1)</num>
+          <content>
+            <p>[Instruments to Be Taken into Consideration] For the purposes of this Article, only instruments of ratification or accession that are deposited by entities referred to in Article 29(1) and that have an effective date according to Article 29(3) shall be taken into consideration.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_30__para_2">
+          <num>(2)</num>
+          <content>
+            <p>[Entry into Force of the Treaty] This Treaty shall enter into force three months after 15 States or intergovernmental organizations referred to in Article 29(1)(ii) have deposited their instruments of ratification or accession.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_30__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[Entry into Force of Ratifications and Accessions Subsequent to the Entry into Force of the Treaty] Any entity not covered by paragraph (2) shall become bound by this Treaty three months after the date on which it has deposited its instrument of ratification or accession.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_31">
+        <num>Article 31</num>
+        <heading>Reservations</heading>
+        <paragraph eId="art_31__para_1">
+          <num>(1)</num>
+          <content>
+            <p>[Reservation on Article 5(2)(b)] Any State or intergovernmental organization may declare through a reservation that, notwithstanding Article 5(2)(b), its applicable law at the date it becomes a party to this Treaty does not allow the applicant or other interested person who has neither a domicile nor a real and effective industrial or commercial establishment in the territory of that State or intergovernmental organization to act for himself/herself before the Office for the filing of an application, for the purposes of the filing date.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_31__para_2">
+          <num>(2)</num>
+          <content>
+            <p>[Reservations on Articles 7, 10(1), 16(2) and/or 19(2)] Any State or intergovernmental organization whose applicable law at the date it becomes a party to this Treaty does not comply with Articles 7, 10(1), 16(2) and/or 19(2) may declare through a reservation that it shall not be bound by Articles 7, 10(1), 16(2), and/or 19(2).</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_31__para_3">
+          <num>(3)</num>
+          <content>
+            <p>[Modalities] Any reservation under paragraphs (1) or (2) shall be made in a declaration accompanying the instrument of ratification of, or accession to, this Treaty of the State or intergovernmental organization making the reservation.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_31__para_4">
+          <num>(4)</num>
+          <content>
+            <p>[Withdrawal] Any reservation under paragraphs (1) or (2) may be withdrawn at any time.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_31__para_5">
+          <num>(5)</num>
+          <content>
+            <p>[Prohibition of Other Reservations] No reservation to this Treaty other than the reservations allowed under paragraphs (1) or (2) shall be permitted.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_32">
+        <num>Article 32</num>
+        <heading>Denunciation of the Treaty</heading>
+        <paragraph eId="art_32__para_1">
+          <num>(1)</num>
+          <content>
+            <p>[Notification] Any Contracting Party may denounce this Treaty by notification addressed to the Director General.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_32__para_2">
+          <num>(2)</num>
+          <content>
+            <p>[Effective Date] Denunciation shall take effect one year from the date on which the Director General has received the notification. It shall not affect the application of this Treaty to any application pending or any industrial design registered in respect of the denouncing Contracting Party at the time of the expiration of the said one-year period, provided that the denouncing Contracting Party may, after the expiration of the said one-year period, discontinue applying this Treaty to any registration as from the date on which that registration is due for renewal.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_33">
+        <num>Article 33</num>
+        <heading>Languages of the Treaty; Signature</heading>
+        <paragraph eId="art_33__para_1">
+          <num>(1)</num>
+          <intro>
+            <p>[Original Texts; Official Texts]</p>
+          </intro>
+          <list eId="art_33__para_1__list_1">
+            <point eId="art_33__para_1__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>This Treaty shall be signed in a single original in the English, Arabic, Chinese, French, Russian and Spanish languages, all texts being equally authentic.</p>
+              </content>
+            </point>
+            <point eId="art_33__para_1__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>An official text in a language not referred to in subparagraph (a) that is an official language of a Contracting Party shall be established by the Director General after consultation with the said Contracting Party and any other interested Contracting Party.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_33__para_2">
+          <num>(2)</num>
+          <content>
+            <p>[Time Limit for Signature] This Treaty shall remain open for signature at the headquarters of the Organization for one year after its adoption.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_34">
+        <num>Article 34</num>
+        <heading>Depositary</heading>
+        <paragraph eId="art_34__para_1">
+          <content>
+            <p>The Director General shall be the depositary of this Treaty.</p>
+          </content>
+        </paragraph>
+      </article>
+    </body>
+  </act>
+</akomaNtoso>

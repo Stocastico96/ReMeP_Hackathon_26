@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <act name="convention">
+    <meta>
+      <identification source="#wipo">
+        <FRBRWork>
+          <FRBRthis value="/akn/un/act/convention/wipo/1974-05-21/brussels/!main"/>
+          <FRBRuri value="/akn/un/act/convention/wipo/1974-05-21/brussels"/>
+          <FRBRdate date="1974-05-21" name="adoption"/>
+          <FRBRauthor href="#wipo" as="#author"/>
+          <FRBRcountry value="un"/>
+          <FRBRsubtype value="convention"/>
+          <FRBRnumber value="brussels" showAs="brussels"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/un/act/convention/wipo/1974-05-21/brussels/eng@1974-05-21/!main"/>
+          <FRBRuri value="/akn/un/act/convention/wipo/1974-05-21/brussels/eng@1974-05-21"/>
+          <FRBRdate date="1974-05-21" name="adoption"/>
+          <FRBRauthor href="#wipo" as="#author"/>
+          <FRBRlanguage language="eng"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/un/act/convention/wipo/1974-05-21/brussels/eng@1974-05-21.xml/!main"/>
+          <FRBRuri value="/akn/un/act/convention/wipo/1974-05-21/brussels/eng@1974-05-21.xml"/>
+          <FRBRdate date="2026-03-18" name="generation"/>
+          <FRBRauthor href="#johnbruene" as="#editor"/>
+        </FRBRManifestation>
+      </identification>
+      <publication date="1974-05-21" name="officialPublication" showAs="WIPO publication"/>
+      <references source="#wipo">
+        <TLCOrganization eId="wipo" href="/ontology/organization/un/wipo" showAs="World Intellectual Property Organization"/>
+        <TLCPerson eId="johnbruene" href="/ontology/person/john-bruene" showAs="John Bruene"/>
+      </references>
+    </meta>
+    <preface>
+      <p>
+        <docTitle>Convention Relating to the Distribution of Programme-Carrying Signals Transmitted by Satellite</docTitle>
+      </p>
+    </preface>
+    <preamble>
+      <p eId="preamble__p_1">The Contracting States,</p>
+      <p eId="preamble__p_2">Aware that the use of satellites for the distribution of programme-carrying signals is rapidly growing both in volume and geographical coverage;</p>
+      <p eId="preamble__p_3">Concerned that there is no world-wide system to prevent distributors from distributing programme-carrying signals transmitted by satellite which were not intended for those distributors, and that this lack is likely to hamper the use of satellite communications;</p>
+      <p eId="preamble__p_4">Recognizing, in this respect, the importance of the interests of authors, performers, producers of phonograms and broadcasting organizations;</p>
+      <p eId="preamble__p_5">Convinced that an international system should be established under which measures would be provided to prevent distributors from distributing programme-carrying signals transmitted by satellite which were not intended for those distributors;</p>
+      <p eId="preamble__p_6">Conscious of the need not to impair in any way international agreements already in force, including the International Telecommunication Convention and the Radio Regulations annexed to that Convention, and in particular in no way to prejudice wider acceptance of the Rome Convention of October 26, 1961, which affords protection to performers, producers of phonograms and broadcasting organizations,</p>
+      <p eId="preamble__p_7">Have agreed as follows:</p>
+    </preamble>
+    <body>
+      <article eId="art_1">
+        <num>Article 1</num>
+        <paragraph eId="art_1__para_1">
+          <intro>
+            <p>For the purposes of this Convention:</p>
+          </intro>
+          <list eId="art_1__para_1__list_1">
+            <point eId="art_1__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>“signal” is an electronically-generated carrier capable of transmitting programmes;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>“programme” is a body of live or recorded material consisting of images, sounds or both, embodied in signals emitted for the purpose of ultimate distribution;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>“satellite” is any device in extraterrestrial space capable of transmitting signals;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>“emitted signal” or “signal emitted” is any programme-carrying signal that goes to or passes through a satellite;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_v">
+              <num>(v)</num>
+              <content>
+                <p>“derived signal” is a signal obtained by modifying the technical characteristics of the emitted signal, whether or not there have been one or more intervening fixations;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_vi">
+              <num>(vi)</num>
+              <content>
+                <p>“originating organization” is the person or legal entity that decides what programme the emitted signals will carry;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_vii">
+              <num>(vii)</num>
+              <content>
+                <p>“distributor” is the person or legal entity that decides that the transmission of the derived signals to the general public or any section thereof should take place;</p>
+              </content>
+            </point>
+            <point eId="art_1__para_1__list_1__point_viii">
+              <num>(viii)</num>
+              <content>
+                <p>“distribution” is the operation by which a distributor transmits derived signals to the general public or any section thereof.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+      </article>
+      <article eId="art_2">
+        <num>Article 2</num>
+        <paragraph eId="art_2__para_1">
+          <num>(1)</num>
+          <content>
+            <p>Each Contracting State undertakes to take adequate measures to prevent the distribution on or from its territory of any programme-carrying signal by any distributor for whom the signal emitted to or passing through the satellite is not intended. This obligation shall apply where the originating organization is a national of another Contracting State and where the signal distributed is a derived signal.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_2__para_2">
+          <num>(2)</num>
+          <content>
+            <p>In any Contracting State in which the application of the measures referred to in paragraph (1) is limited in time, the duration thereof shall be fixed by its domestic law. The Secretary-General of the United Nations shall be notified in writing of such duration at the time of ratification, acceptance or accession, or if the domestic law comes into force or is changed thereafter, within six months of the coming into force of that law or of its modification.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_2__para_3">
+          <num>(3)</num>
+          <content>
+            <p>The obligation provided for in paragraph (1) shall not apply to the distribution of derived signals taken from signals which have already been distributed by a distributor for whom the emitted signals were intended.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_3">
+        <num>Article 3</num>
+        <paragraph eId="art_3__para_1">
+          <content>
+            <p>This Convention shall not apply where the signals emitted by or on behalf of the originating organization are intended for direct reception from the satellite by the general public.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_4">
+        <num>Article 4</num>
+        <paragraph eId="art_4__para_1">
+          <intro>
+            <p>No Contracting State shall be required to apply the measures referred to in Article 2(1) where the signal distributed on its territory by a distributor for whom the emitted signal is not intended</p>
+          </intro>
+          <list eId="art_4__para_1__list_1">
+            <point eId="art_4__para_1__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>carries short excerpts of the programme carried by the emitted signal, consisting of reports of current events, but only to the extent justified by the informatory purpose of such excerpts, or</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>carries, as quotations, short excerpts of the programme carried by the emitted signal, provided that such quotations are compatible with fair practice and are justified by the informatory purpose of such quotations, or</p>
+              </content>
+            </point>
+            <point eId="art_4__para_1__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>carries, where the said territory is that of a Contracting State regarded as a developing country in conformity with the established practice of the General Assembly of the United Nations, a programme carried by the emitted signal, provided that the distribution is solely for the purpose of teaching, including teaching in the framework of adult education, or scientific research.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+      </article>
+      <article eId="art_5">
+        <num>Article 5</num>
+        <paragraph eId="art_5__para_1">
+          <content>
+            <p>No Contracting State shall be required to apply this Convention with respect to any signal emitted before this Convention entered into force for that State.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_6">
+        <num>Article 6</num>
+        <paragraph eId="art_6__para_1">
+          <content>
+            <p>This Convention shall in no way be interpreted to limit or prejudice the protection secured to authors, performers, producers of phonograms, or broadcasting organizations, under any domestic law or international agreement.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_7">
+        <num>Article 7</num>
+        <paragraph eId="art_7__para_1">
+          <content>
+            <p>This Convention shall in no way be interpreted as limiting the right of any Contracting State to apply its domestic law in order to prevent abuses of monopoly.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_8">
+        <num>Article 8</num>
+        <paragraph eId="art_8__para_1">
+          <num>(1)</num>
+          <content>
+            <p>Subject to paragraphs (2) and (3) , no reservation to this Convention shall be permitted.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_8__para_2">
+          <num>(2)</num>
+          <content>
+            <p>Any Contracting State whose domestic law, on May 21, 1974, so provides may, by a written notification deposited with the Secretary-General of the United Nations, declare that, for its purposes, the words “where the originating organization is a national of another Contracting State” appearing in Article 2(1) shall be considered as if they were replaced by the words “where the signal is emitted from the territory of another Contracting State.”</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_8__para_3">
+          <num>(3)</num>
+          <list eId="art_8__para_3__list_1">
+            <point eId="art_8__para_3__list_1__point_a">
+              <num>(a)</num>
+              <content>
+                <p>Any Contracting State which, on May 21, 1974, limits or denies protection with respect to the distribution of programme-carrying signals by means of wires, cable or other similar communications channels to subscribing members of the public may, by a written notification deposited with the Secretary-General of the United Nations, declare that, to the extent that and as long as its domestic law limits or denies protection, it will not apply this Convention to such distributions.</p>
+              </content>
+            </point>
+            <point eId="art_8__para_3__list_1__point_b">
+              <num>(b)</num>
+              <content>
+                <p>Any State that has deposited a notification in accordance with subparagraph (a) shall notify the Secretary-General of the United Nations in writing, within six months of their coming into force, of any changes in its domestic law whereby the reservation under that subparagraph becomes inapplicable or more limited in scope.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+      </article>
+      <article eId="art_9">
+        <num>Article 9</num>
+        <paragraph eId="art_9__para_1">
+          <num>(1)</num>
+          <content>
+            <p>This Convention shall be deposited with the Secretary-General of the United Nations. It shall be open until March 31, 1975, for signature by any State that is a member of the United Nations, any of the Specialized Agencies brought into relationship with the United Nations, or the International Atomic Energy Agency, or is a party to the Statute of the International Court of Justice.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_9__para_2">
+          <num>(2)</num>
+          <content>
+            <p>This Convention shall be subject to ratification or acceptance by the signatory States. It shall be open for accession by any State referred to in paragraph (1) .</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_9__para_3">
+          <num>(3)</num>
+          <content>
+            <p>Instruments of ratification, acceptance or accession shall be deposited with the Secretary-General of the United Nations.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_9__para_4">
+          <num>(4)</num>
+          <content>
+            <p>It is understood that, at the time a State becomes bound by this Convention, it will be in a position in accordance with its domestic law to give effect to the provisions of the Convention.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_10">
+        <num>Article 10</num>
+        <paragraph eId="art_10__para_1">
+          <num>(1)</num>
+          <content>
+            <p>This Convention shall enter into force three months after the deposit of the fifth instrument of ratification, acceptance or accession.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_10__para_2">
+          <num>(2)</num>
+          <content>
+            <p>For each State ratifying, accepting or acceding to this Convention after the deposit of the fifth instrument of ratification, acceptance or accession, this Convention shall enter into force three months after the deposit of its instrument.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_11">
+        <num>Article 11</num>
+        <paragraph eId="art_11__para_1">
+          <num>(1)</num>
+          <content>
+            <p>Any Contracting State may denounce this Convention by written notification deposited with the Secretary-General of the United Nations.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_11__para_2">
+          <num>(2)</num>
+          <content>
+            <p>Denunciation shall take effect twelve months after the date on which the notification referred to in paragraph (1) is received.</p>
+          </content>
+        </paragraph>
+      </article>
+      <article eId="art_12">
+        <num>Article 12</num>
+        <paragraph eId="art_12__para_1">
+          <num>(1)</num>
+          <content>
+            <p>This Convention shall be signed in a single copy in English, French, Russian and Spanish, the four texts being equally authentic.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_12__para_2">
+          <num>(2)</num>
+          <content>
+            <p>Official texts shall be established by the Director-General of the United Nations Educational, Scientific and Cultural Organization and the Director General of the World Intellectual Property Organization, after consultation with the interested Governments, in the Arabic, Dutch, German, Italian and Portuguese languages.</p>
+          </content>
+        </paragraph>
+        <paragraph eId="art_12__para_3">
+          <num>(3)</num>
+          <intro>
+            <p>The Secretary-General of the United Nations shall notify the States referred to in Article 9(1) , as well as the Director-General of the United Nations Educational, Scientific and Cultural Organization, the Director General of the World Intellectual Property Organization, the Director-General of the International Labour Office and the Secretary-General of the International Telecommunication Union, of</p>
+          </intro>
+          <list eId="art_12__para_3__list_1">
+            <point eId="art_12__para_3__list_1__point_i">
+              <num>(i)</num>
+              <content>
+                <p>signatures to this Convention;</p>
+              </content>
+            </point>
+            <point eId="art_12__para_3__list_1__point_ii">
+              <num>(ii)</num>
+              <content>
+                <p>the deposit of instruments of ratification, acceptance or accession;</p>
+              </content>
+            </point>
+            <point eId="art_12__para_3__list_1__point_iii">
+              <num>(iii)</num>
+              <content>
+                <p>the date of entry into force of this Convention under Article 10(1) ;</p>
+              </content>
+            </point>
+            <point eId="art_12__para_3__list_1__point_iv">
+              <num>(iv)</num>
+              <content>
+                <p>the deposit of any notification relating to Article 2(2) or Article 8(2) or (3) , together with its text;</p>
+              </content>
+            </point>
+            <point eId="art_12__para_3__list_1__point_v">
+              <num>(v)</num>
+              <content>
+                <p>the receipt of notifications of denunciation.</p>
+              </content>
+            </point>
+          </list>
+        </paragraph>
+        <paragraph eId="art_12__para_4">
+          <num>(4)</num>
+          <content>
+            <p>The Secretary-General of the United Nations shall transmit two certified copies of this Convention to all States referred to in Article 9(1) .</p>
+          </content>
+        </paragraph>
+      </article>
+    </body>
+  </act>
+</akomaNtoso>

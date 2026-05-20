@@ -1,0 +1,609 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:fmx="http://formex.publications.europa.eu/schema/formex-05.56-20160701.xd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <act name="DIR">
+  <meta>
+   <identification source="#cirsfid">
+    <FRBRWork>
+     <FRBRthis value="/akn/eu/act/directive/2006-12-12/116/!main"/>
+     <FRBRuri value="/akn/eu/act/directive/2006-12-12/116/"/>
+     <FRBRalias value="32006L0116" name="CELEX"/>
+     <FRBRdate date="2006-12-12" name="Act Date"/>
+     <FRBRauthor href="#EP"/>
+     <FRBRcountry value="eu"/>
+     <FRBRnumber value="116"/>
+    </FRBRWork>
+    <FRBRExpression>
+     <FRBRthis value="/akn/eu/act/directive/2006-12-12/116/eng@2011-10-31/!main"/>
+     <FRBRuri value="/akn/eu/act/directive/2006-12-12/116/eng@2011-10-31/"/>
+     <FRBRalias value="02006L0116-20111031" name="CELEX"/>
+     <FRBRdate date="2011-10-31" name="Act Date"/>
+     <FRBRauthor href="#EP"/>
+     <FRBRlanguage language="eng"/>
+    </FRBRExpression>
+    <FRBRManifestation>
+     <FRBRthis value="/akn/eu/act/directive/2006-12-12/116/eng@2011-10-31/!main.xml"/>
+     <FRBRuri value="/akn/eu/act/directive/2006-12-12/116/eng@2011-10-31.xml"/>
+     <FRBRdate date="2011-10-31" name="Act Date"/>
+     <FRBRauthor href="#EP"/>
+    </FRBRManifestation>
+   </identification>
+   <classification source="#oasis">
+    <keyword dictionary="EuroVOC" eId="k_approximationOfLaws" href="/Eurovoc/Law/approximationOfLaws" showAs="approximation of laws" value="approximationOfLaws"/>
+    <keyword dictionary="EuroVOC" eId="k_copyright" href="/Eurovoc/Law/copyright" showAs="copyright" value="copyright"/>
+    <keyword dictionary="EuroVOC" eId="k_codificationOfEuLaw" href="/Eurovoc/Law/codificationOfEuLaw" showAs="codification of EU law" value="codificationOfEuLaw"/>
+   </classification>
+   <analysis source="cirsfid"/>
+   <references source="#cirsfid">
+    <TLCOrganization eId="cirsfid" xml:id="cirsfid" href="/akn/ontology/organizations/it/cirsfid" showAs="CIRSFID"/>
+    <TLCOrganization eId="EP" xml:id="EP" href="/akn/ontology/organizations/eu/europeanParliament" showAs="European Parliament"/>
+    <TLCReference xml:id="_DIR" eId="_DIR" href="http://publications.europa.eu/resource/authority/resource-type/DIR" showAs="Directive" name="docType"/>
+   </references>
+   <proprietary source="cirsfid">
+    <fmx:DOCUMENT.REF FILE="CL2006L0116EN0010010.0001.doc.xml">
+     <fmx:LG.OJ>EN</fmx:LG.OJ>
+     <fmx:PAGE.FIRST>1</fmx:PAGE.FIRST>
+    </fmx:DOCUMENT.REF>
+    <fmx:DATE ISO="20111031">20111031</fmx:DATE>
+    <fmx:LG.DOC>EN</fmx:LG.DOC>
+    <fmx:PAGE.FIRST>1</fmx:PAGE.FIRST>
+    <fmx:PAGE.SEQ>1</fmx:PAGE.SEQ>
+    <fmx:PAGE.LAST>14</fmx:PAGE.LAST>
+    <fmx:PAGE.TOTAL>14</fmx:PAGE.TOTAL>
+   </proprietary>
+  </meta>
+  <preface>
+   <longTitle>
+    <p>
+     <docType refersTo="~_DIR">Directive</docType>
+     <docNumber>2006/116/EC</docNumber>
+     <span class="UC">of the European Parliament and of the Council</span>of <date date="2006-12-12">12 December 2006</date>
+     <docPurpose>on the term of protection of copyright and certain related rights</docPurpose>(codified version)</p>
+   </longTitle>
+  </preface>
+  <preamble>
+   <formula name="actingEntity">
+    <p>THE EUROPEAN PARLIAMENT AND THE COUNCIL OF THE EUROPEAN UNION,</p>
+   </formula>
+   <citations xml:id="cits_1">
+    <citation eId="cit_1" xml:id="cit_1">
+     <p>Having regard to the <ref href="/akn/eu/act/treaty/1957/TCEE/eng@2006-12-12/!main">
+       <ref href="/akn/eu/act/treaty/1957/TCEE/eng@2006-12-12/!main">Treaty establishing the European Community</ref>
+      </ref>, and in particular Articles <ref href="/akn/eu/act/treaty/1957/TCEE/eng@2006-12-12/!main~art_47__para_2">47(2)</ref>, <ref href="/akn/eu/act/treaty/1957/TCEE/eng@2006-12-12/!main~art_55">55</ref> and <ref href="/akn/eu/act/treaty/1957/TCEE/eng@2006-12-12/!main~art_95">95</ref>
+     </p>
+    </citation>
+    <citation eId="cit_2" xml:id="cit_2">
+     <p>Having regard to the proposal from the Commission,</p>
+    </citation>
+    <citation eId="cit_3" xml:id="cit_3">
+     <p>Having regard to the opinion of the European Economic and Social Committee<authorialNote placement="bottom">
+       <p>Opinion of <date date="2006-10-26">26 October 2006</date> (not yet published in the Official Journal).</p>
+      </authorialNote>,</p>
+    </citation>
+    <citation eId="cit_4" xml:id="cit_4">
+     <p>Acting in accordance with the procedure laid down in Article 251 of the Treaty<authorialNote placement="bottom">
+       <p>Opinion of the European Parliament of <date date="2006-10-12">12 October 2006</date> (not yet published in the Official Journal) and Council Decision of <date date="2006-11-30">30 November 2006</date>.</p>
+      </authorialNote>,</p>
+    </citation>
+   </citations>
+   <recitals eId="recs_1" xml:id="recs_1">
+    <intro eId="intro_1" xml:id="intro_1">
+     <p>Whereas:</p>
+    </intro>
+    <recital eId="rec_1" xml:id="rec_1">
+     <num>(1)</num>
+     <p>Council <ref href="/akn/eu/act/directive/1993/98/eng@2006-12-12/!main">
+       <ref href="/akn/eu/act/directive/1993/98/eng@2006-12-12/!main">Directive 93/98/EEC</ref>
+      </ref> of <date date="1993-10-29">29 October 1993</date> harmonising the term of protection of copyright and certain related rights<authorialNote placement="bottom">
+       <p>
+        <ref href="/akn/eu/documentCollection/L/gu/1993-11-24/290/!main#page_9">OJ L 290, 24.11.1993, p. 9</ref>. Directive as amended by <ref href="/akn/eu/act/directive/2001/29/eng@2006-12-12/!main">
+         <ref href="/akn/eu/act/directive/2001/29/eng@2006-12-12/!main">Directive 2001/29/EC</ref>
+        </ref> of the European Parliament and of the Council (<ref href="/akn/eu/documentCollection/L/gu/2001-06-22/167/!main#page_10">OJ L 167, 22.6.2001, p. 10</ref>).</p>
+      </authorialNote> has been substantially amended<authorialNote placement="bottom">
+       <p>See Annex I, Part A.</p>
+      </authorialNote>. In the interests of clarity and rationality the said Directive should be codified.</p>
+    </recital>
+    <recital eId="rec_2" xml:id="rec_2">
+     <num>(2)</num>
+     <p>The Berne Convention for the protection of literary and artistic works and the International Convention for the protection of performers, producers of phonograms and broadcasting organisations (Rome Convention) lay down only minimum terms of protection of the rights they refer to, leaving the Contracting States free to grant longer terms. Certain Member States have exercised this entitlement. In addition, some Member States have not yet become party to the Rome Convention.</p>
+    </recital>
+    <recital eId="rec_3" xml:id="rec_3">
+     <num>(3)</num>
+     <p>There are consequently differences between the national laws governing the terms of protection of copyright and related rights, which are liable to impede the free movement of goods and freedom to provide services and to distort competition in the common market. Therefore, with a view to the smooth operation of the internal market, the laws of the Member States should be harmonised so as to make terms of protection identical throughout the Community.</p>
+    </recital>
+    <recital eId="rec_4" xml:id="rec_4">
+     <num>(4)</num>
+     <p>It is important to lay down not only the terms of protection as such, but also certain implementing arrangements, such as the date from which each term of protection is calculated.</p>
+    </recital>
+    <recital eId="rec_5" xml:id="rec_5">
+     <num>(5)</num>
+     <p>The provisions of this Directive should not affect the application by the Member States of the provisions of Article 14 bis (2)(b), (c) and (d) and (3) of the Berne Convention.</p>
+    </recital>
+    <recital eId="rec_6" xml:id="rec_6">
+     <num>(6)</num>
+     <p>The minimum term of protection laid down by the Berne Convention, namely the life of the author and 50 years after his death, was intended to provide protection for the author and the first two generations of his descendants. The average lifespan in the Community has grown longer, to the point where this term is no longer sufficient to cover two generations.</p>
+    </recital>
+    <recital eId="rec_7" xml:id="rec_7">
+     <num>(7)</num>
+     <p>Certain Member States have granted a term longer than 50 years after the death of the author in order to offset the effects of the world wars on the exploitation of authors' works.</p>
+    </recital>
+    <recital eId="rec_8" xml:id="rec_8">
+     <num>(8)</num>
+     <p>For the protection of related rights certain Member States have introduced a term of 50 years after lawful publication or lawful communication to the public.</p>
+    </recital>
+    <recital eId="rec_9" xml:id="rec_9">
+     <num>(9)</num>
+     <p>The Diplomatic Conference held in December 1996, under the auspices of the World Intellectual Property Organization (WIPO), led to the adoption of the WIPO Performances and Phonograms Treaty, which deals with the protection of performers and producers of phonograms. This Treaty took the form of a substantial up-date of the international protection of related rights.</p>
+    </recital>
+    <recital eId="rec_10" xml:id="rec_10">
+     <num>(10)</num>
+     <p>Due regard for established rights is one of the general principles of law protected by the Community legal order. Therefore, the terms of protection of copyright and related rights established by Community law cannot have the effect of reducing the protection enjoyed by rightholders in the Community before the entry into force of <ref href="/akn/eu/act/directive/1993/98/eng@2006-12-12/!main">
+       <ref href="/akn/eu/act/directive/1993/98/eng@2006-12-12/!main">Directive 93/98/EEC</ref>
+      </ref>. In order to keep the effects of transitional measures to a minimum and to allow the internal market to function smoothly, those terms of protection should be applied for long periods.</p>
+    </recital>
+    <recital eId="rec_11" xml:id="rec_11">
+     <num>(11)</num>
+     <p>The level of protection of copyright and related rights should be high, since those rights are fundamental to intellectual creation. Their protection ensures the maintenance and development of creativity in the interest of authors, cultural industries, consumers and society as a whole.</p>
+    </recital>
+    <recital eId="rec_12" xml:id="rec_12">
+     <num>(12)</num>
+     <p>In order to establish a high level of protection which at the same time meets the requirements of the internal market and the need to establish a legal environment conducive to the harmonious development of literary and artistic creation in the Community, the term of protection for copyright should be harmonised at 70 years after the death of the author or 70 years after the work is lawfully made available to the public, and for related rights at 50 years after the event which sets the term running.</p>
+    </recital>
+    <recital eId="rec_13" xml:id="rec_13">
+     <num>(13)</num>
+     <p>Collections are protected according to Article 2(5) of the Berne Convention when, by reason of the selection and arrangement of their content, they constitute intellectual creations. Those works are protected as such, without prejudice to the copyright in each of the works forming part of such collections. Consequently, specific terms of protection may apply to works included in collections.</p>
+    </recital>
+    <recital eId="rec_14" xml:id="rec_14">
+     <num>(14)</num>
+     <p>In all cases where one or more physical persons are identified as authors, the term of protection should be calculated after their death. The question of authorship of the whole or a part of a work is a question of fact which the national courts may have to decide.</p>
+    </recital>
+    <recital eId="rec_15" xml:id="rec_15">
+     <num>(15)</num>
+     <p>Terms of protection should be calculated from the first day of January of the year following the relevant event, as they are in the Berne and Rome Conventions.</p>
+    </recital>
+    <recital eId="rec_16" xml:id="rec_16">
+     <num>(16)</num>
+     <p>The protection of photographs in the Member States is the subject of varying regimes. A photographic work within the meaning of the Berne Convention is to be considered original if it is the author's own intellectual creation reflecting his personality, no other criteria such as merit or purpose being taken into account. The protection of other photographs should be left to national law.</p>
+    </recital>
+    <recital eId="rec_17" xml:id="rec_17">
+     <num>(17)</num>
+     <p>In order to avoid differences in the term of protection as regards related rights it is necessary to provide the same starting point for the calculation of the term throughout the Community. The performance, fixation, transmission, lawful publication, and lawful communication to the public, that is to say the means of making a subject of a related right perceptible in all appropriate ways to persons in general, should be taken into account for the calculation of the term of protection regardless of the country where this performance, fixation, transmission, lawful publication, or lawful communication to the public takes place.</p>
+    </recital>
+    <recital eId="rec_18" xml:id="rec_18">
+     <num>(18)</num>
+     <p>The rights of broadcasting organisations in their broadcasts, whether these broadcasts are transmitted by wire or over the air, including by cable or satellite, should not be perpetual. It is therefore necessary to have the term of protection running from the first transmission of a particular broadcast only. This provision is understood to avoid a new term running in cases where a broadcast is identical to a previous one.</p>
+    </recital>
+    <recital eId="rec_19" xml:id="rec_19">
+     <num>(19)</num>
+     <p>The Member States should remain free to maintain or introduce other rights related to copyright in particular in relation to the protection of critical and scientific publications. In order to ensure transparency at Community level, it is however necessary for Member States which introduce new related rights to notify the Commission.</p>
+    </recital>
+    <recital eId="rec_20" xml:id="rec_20">
+     <num>(20)</num>
+     <p>It should be made clear that this Directive does not apply to moral rights.</p>
+    </recital>
+    <recital eId="rec_21" xml:id="rec_21">
+     <num>(21)</num>
+     <p>For works whose country of origin within the meaning of the Berne Convention is a third country and whose author is not a Community national, comparison of terms of protection should be applied, provided that the term accorded in the Community does not exceed the term laid down in this Directive.</p>
+    </recital>
+    <recital eId="rec_22" xml:id="rec_22">
+     <num>(22)</num>
+     <p>Where a rightholder who is not a Community national qualifies for protection under an international agreement, the term of protection of related rights should be the same as that laid down in this Directive. However, this term should not exceed that fixed in the third country of which the rightholder is a national.</p>
+    </recital>
+    <recital eId="rec_23" xml:id="rec_23">
+     <num>(23)</num>
+     <p>Comparison of terms should not result in Member States being brought into conflict with their international obligations.</p>
+    </recital>
+    <recital eId="rec_24" xml:id="rec_24">
+     <num>(24)</num>
+     <p>Member States should remain free to adopt provisions on the interpretation, adaptation and further execution of contracts on the exploitation of protected works and other subject matter which were concluded before the extension of the term of protection resulting from this Directive.</p>
+    </recital>
+    <recital eId="rec_25" xml:id="rec_25">
+     <num>(25)</num>
+     <p>Respect of acquired rights and legitimate expectations is part of the Community legal order. Member States may provide in particular that in certain circumstances the copyright and related rights which are revived pursuant to this Directive may not give rise to payments by persons who undertook in good faith the exploitation of the works at the time when such works lay within the public domain.</p>
+    </recital>
+    <recital eId="rec_26" xml:id="rec_26">
+     <num>(26)</num>
+     <p>This Directive should be without prejudice to the obligations of the Member States relating to the time-limits for transposition into national law and application of the Directives, as set out in Part B of Annex I,</p>
+    </recital>
+   </recitals>
+   <formula name="enactingFormula">
+    <p>HAVE ADOPTED THIS DIRECTIVE:</p>
+   </formula>
+  </preamble>
+  <body eId="body" xml:id="body">
+   <article eId="art_1" xml:id="art_1">
+    <num>Article 1</num>
+    <heading>Duration of authors' rights</heading>
+    <paragraph eId="art_1__para_1" xml:id="art_1__para_1">
+     <num>1.</num>
+     <subparagraph eId="art_1__para_1__subpara_1" xml:id="art_1__para_1__subpara_1">
+      <content>
+       <p>The rights of an author of a literary or artistic work within the meaning of Article 2 of the Berne Convention shall run for the life of the author and for 70 years after his death, irrespective of the date when the work is lawfully made available to the public.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_1__para_2" xml:id="art_1__para_2">
+     <num>2.</num>
+     <subparagraph eId="art_1__para_2__subpara_1" xml:id="art_1__para_2__subpara_1">
+      <content>
+       <p>In the case of a work of joint authorship, the term referred to in paragraph 1 shall be calculated from the death of the last surviving author.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_1__para_3" xml:id="art_1__para_3">
+     <num>3.</num>
+     <subparagraph eId="art_1__para_3__subpara_1" xml:id="art_1__para_3__subpara_1">
+      <content>
+       <p>In the case of anonymous or pseudonymous works, the term of protection shall run for 70 years after the work is lawfully made available to the public. However, when the pseudonym adopted by the author leaves no doubt as to his identity, or if the author discloses his identity during the period referred to in the first sentence, the term of protection applicable shall be that laid down in paragraph 1.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_1__para_4" xml:id="art_1__para_4">
+     <num>4.</num>
+     <subparagraph eId="art_1__para_4__subpara_1" xml:id="art_1__para_4__subpara_1">
+      <content>
+       <p>Where a Member State provides for particular provisions on copyright in respect of collective works or for a legal person to be designated as the rightholder, the term of protection shall be calculated according to the provisions of paragraph 3, except if the natural persons who have created the work are identified as such in the versions of the work which are made available to the public. This paragraph is without prejudice to the rights of identified authors whose identifiable contributions are included in such works, to which contributions paragraph 1 or 2 shall apply.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_1__para_5" xml:id="art_1__para_5">
+     <num>5.</num>
+     <subparagraph eId="art_1__para_5__subpara_1" xml:id="art_1__para_5__subpara_1">
+      <content>
+       <p>Where a work is published in volumes, parts, instalments, issues or episodes and the term of protection runs from the time when the work was lawfully made available to the public, the term of protection shall run for each such item separately.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_1__para_6" xml:id="art_1__para_6">
+     <num>6.</num>
+     <subparagraph eId="art_1__para_6__subpara_1" xml:id="art_1__para_6__subpara_1">
+      <content>
+       <p>In the case of works for which the term of protection is not calculated from the death of the author or authors and which have not been lawfully made available to the public within 70 years from their creation, the protection shall terminate.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_1__para_7" xml:id="art_1__para_7">
+     <num>7.</num>
+     <subparagraph eId="art_1__para_7__subpara_1" xml:id="art_1__para_7__subpara_1">
+      <content>
+       <p>The term of protection of a musical composition with words shall expire 70 years after the death of the last of the following persons to survive, whether or not those persons are designated as co-authors: the author of the lyrics and the composer of the musical composition, provided that both contributions were specifically created for the respective musical composition with words.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+   </article>
+   <article eId="art_2" xml:id="art_2">
+    <num>Article 2</num>
+    <heading>Cinematographic or audiovisual works</heading>
+    <paragraph eId="art_2__para_1" xml:id="art_2__para_1">
+     <num>1.</num>
+     <subparagraph eId="art_2__para_1__subpara_1" xml:id="art_2__para_1__subpara_1">
+      <content>
+       <p>The principal director of a cinematographic or audiovisual work shall be considered as its author or one of its authors. Member States shall be free to designate other co-authors.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_2__para_2" xml:id="art_2__para_2">
+     <num>2.</num>
+     <subparagraph eId="art_2__para_2__subpara_1" xml:id="art_2__para_2__subpara_1">
+      <content>
+       <p>The term of protection of cinematographic or audiovisual works shall expire 70 years after the death of the last of the following persons to survive, whether or not these persons are designated as co-authors: the principal director, the author of the screenplay, the author of the dialogue and the composer of music specifically created for use in the cinematographic or audiovisual work.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+   </article>
+   <article eId="art_3" xml:id="art_3">
+    <num>Article 3</num>
+    <heading>Duration of related rights</heading>
+    <paragraph eId="art_3__para_1" xml:id="art_3__para_1">
+     <num>1.</num>
+     <subparagraph eId="art_3__para_1__subpara_1" xml:id="art_3__para_1__subpara_1">
+      <content>
+       <p>The rights of performers shall expire 50 years after the date of the performance. However, if a fixation of the performance is lawfully published or lawfully communicated to the public within this period, the rights shall expire 50 years from the date of the first such publication or the first such communication to the public, whichever is the earlier.</p>
+      </content>
+     </subparagraph>
+     <list eId="art_3__para_1__list_1" xml:id="art_3__para_1__list_1">
+      <intro eId="art_3__para_1__list_1__intro_1" xml:id="art_3__para_1__list_1__intro_1">
+       <p>However,</p>
+      </intro>
+      <point eId="art_3__para_1__list_1__point_1" xml:id="art_3__para_1__list_1__point_1">
+       <content>
+        <p>if a fixation of the performance otherwise than in a phonogram is lawfully published or lawfully communicated to the public within this period, the rights shall expire 50 years from the date of the first such publication or the first such communication to the public, whichever is the earlier,</p>
+       </content>
+      </point>
+      <point eId="art_3__para_1__list_1__point_2" xml:id="art_3__para_1__list_1__point_2">
+       <content>
+        <p>if a fixation of the performance in a phonogram is lawfully published or lawfully communicated to the public within this period, the rights shall expire 70 years from the date of the first such publication or the first such communication to the public, whichever is the earlier.</p>
+       </content>
+      </point>
+     </list>
+    </paragraph>
+    <paragraph eId="art_3__para_2" xml:id="art_3__para_2">
+     <num>2.</num>
+     <content>
+      <p>The rights of producers of phonograms shall expire 50 years after the fixation is made. However, if the phonogram has been lawfully published within this period, the said rights shall expire 70 years from the date of the first lawful publication. If no lawful publication has taken place within the period mentioned in the first sentence, and if the phonogram has been lawfully communicated to the public within this period, the said rights shall expire 70 years from the date of the first lawful communication to the public.</p>
+      <p>However, this paragraph shall not have the effect of protecting anew the rights of producers of phonograms where, through the expiry of the term of protection granted them pursuant to <ref href="/akn/eu/act/directive/1993/98/!main~art_3__para_2">Article 3(2)</ref> of <ref href="/akn/eu/act/directive/1993/98/!main">
+        <ref href="/akn/eu/act/directive/1993/98/!main">Directive 93/98/EEC</ref>
+       </ref> in its version before amendment by <ref href="/akn/eu/act/directive/2002/29/!main">
+        <ref href="/akn/eu/act/directive/2001/29/!main">Directive 2001/29/EEC</ref>
+       </ref>, they were no longer protected on <date date="2002-12-22">22 December 2002</date>
+      </p>
+     </content>
+    </paragraph>
+    <paragraph eId="art_3__para_2a" xml:id="art_3__para_2a">
+     <num>2a.</num>
+     <subparagraph eId="art_3__para_2a__subpara_1" xml:id="art_3__para_2a__subpara_1">
+      <content>
+       <p>If, 50 years after the phonogram was lawfully published or, failing such publication, 50 years after it was lawfully communicated to the public, the phonogram producer does not offer copies of the phonogram for sale in sufficient quantity or does not make it available to the public, by wire or wireless means, in such a way that members of the public may access it from a place and at a time individually chosen by them, the performer may terminate the contract by which the performer has transferred or assigned his rights in the fixation of his performance to a phonogram producer (hereinafter a "contract on transfer or assignment"). The right to terminate the contract on transfer or assignment may be exercised if the producer, within a year from the notification by the performer of his intention to terminate the contract on transfer or assignment pursuant to the previous sentence, fails to carry out both of the acts of exploitation referred to in that sentence. This right to terminate may not be waived by the performer. Where a phonogram contains the fixation of the performances of a plurality of performers, they may terminate their contracts on transfer or assignment in accordance with applicable national law. If the contract on transfer or assignment is terminated pursuant to this paragraph, the rights of the phonogram producer in the phonogram shall expire.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_3__para_2b" xml:id="art_3__para_2b">
+     <num>2b.</num>
+     <subparagraph eId="art_3__para_2b__subpara_1" xml:id="art_3__para_2b__subpara_1">
+      <content>
+       <p>Where a contract on transfer or assignment gives the performer a right to claim a non-recurring remuneration, the performer shall have the right to obtain an annual supplementary remuneration from the phonogram producer for each full year immediately following the 50th year after the phonogram was lawfully published or, failing such publication, the 50th year after it was lawfully communicated to the public. The right to obtain such annual supplementary remuneration may not be waived by the performer.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_3__para_2c" xml:id="art_3__para_2c">
+     <num>2c.</num>
+     <subparagraph eId="art_3__para_2c__subpara_1" xml:id="art_3__para_2c__subpara_1">
+      <content>
+       <p>The overall amount to be set aside by a phonogram producer for payment of the annual supplementary remuneration referred to in paragraph 2b shall correspond to 20 % of the revenue which the phonogram producer has derived, during the year preceding that for which the said remuneration is paid, from the reproduction, distribution and making available of the phonogram in question, following the 50th year after it was lawfully published or, failing such publication, the 50th year after it was lawfully communicated to the public.</p>
+      </content>
+     </subparagraph>
+     <subparagraph eId="art_3__para_2c__subpara_2" xml:id="art_3__para_2c__subpara_2">
+      <content>
+       <p>Member States shall ensure that phonogram producers are required on request to provide to performers who are entitled to the annual supplementary remuneration referred to in paragraph 2b any information which may be necessary in order to secure payment of that remuneration.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_3__para_2d" xml:id="art_3__para_2d">
+     <num>2d.</num>
+     <subparagraph eId="art_3__para_2d__subpara_1" xml:id="art_3__para_2d__subpara_1">
+      <content>
+       <p>Member States shall ensure that the right to obtain an annual supplementary remuneration as referred to in paragraph 2b is administered by collecting societies.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_3__para_2e" xml:id="art_3__para_2e">
+     <num>2e.</num>
+     <subparagraph eId="art_3__para_2e__subpara_1" xml:id="art_3__para_2e__subpara_1">
+      <content>
+       <p>Where a performer is entitled to recurring payments, neither advance payments nor any contractually defined deductions shall be deducted from the payments made to the performer following the 50th year after the phonogram was lawfully published or, failing such publication, the 50th year after it was lawfully communicated to the public.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_3__para_3" xml:id="art_3__para_3">
+     <num>3.</num>
+     <subparagraph eId="art_3__para_3__subpara_1" xml:id="art_3__para_3__subpara_1">
+      <content>
+       <p>The rights of producers of the first fixation of a film shall expire 50 years after the fixation is made. However, if the film is lawfully published or lawfully communicated to the public during this period, the rights shall expire 50 years from the date of the first such publication or the first such communication to the public, whichever is the earlier. The term "film" shall designate a cinematographic or audiovisual work or moving images, whether or not accompanied by sound.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_3__para_4" xml:id="art_3__para_4">
+     <num>4.</num>
+     <subparagraph eId="art_3__para_4__subpara_1" xml:id="art_3__para_4__subpara_1">
+      <content>
+       <p>The rights of broadcasting organisations shall expire 50 years after the first transmission of a broadcast, whether this broadcast is transmitted by wire or over the air, including by cable or satellite.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+   </article>
+   <article eId="art_4" xml:id="art_4">
+    <num>Article 4</num>
+    <heading>Protection of previously unpublished works</heading>
+    <paragraph eId="art_4__para_1" xml:id="art_4__para_1">
+     <content>
+      <p>Any person who, after the expiry of copyright protection, for the first time lawfully publishes or lawfully communicates to the public a previously unpublished work, shall benefit from a protection equivalent to the economic rights of the author. The term of protection of such rights shall be 25 years from the time when the work was first lawfully published or lawfully communicated to the public.</p>
+     </content>
+    </paragraph>
+   </article>
+   <article eId="art_5" xml:id="art_5">
+    <num>Article 5</num>
+    <heading>Critical and scientific publications</heading>
+    <paragraph eId="art_5__para_1" xml:id="art_5__para_1">
+     <content>
+      <p>Member States may protect critical and scientific publications of works which have come into the public domain. The maximum term of protection of such rights shall be 30 years from the time when the publication was first lawfully published.</p>
+     </content>
+    </paragraph>
+   </article>
+   <article eId="art_6" xml:id="art_6">
+    <num>Article 6</num>
+    <heading>Protection of photographs</heading>
+    <paragraph eId="art_6__para_1" xml:id="art_6__para_1">
+     <content>
+      <p>Photographs which are original in the sense that they are the author's own intellectual creation shall be protected in accordance with Article 1. No other criteria shall be applied to determine their eligibility for protection. Member States may provide for the protection of other photographs.</p>
+     </content>
+    </paragraph>
+   </article>
+   <article eId="art_7" xml:id="art_7">
+    <num>Article 7</num>
+    <heading>Protection vis-à-vis third countries</heading>
+    <paragraph eId="art_7__para_1" xml:id="art_7__para_1">
+     <num>1.</num>
+     <subparagraph eId="art_7__para_1__subpara_1" xml:id="art_7__para_1__subpara_1">
+      <content>
+       <p>Where the country of origin of a work, within the meaning of the Berne Convention, is a third country, and the author of the work is not a Community national, the term of protection granted by the Member States shall expire on the date of expiry of the protection granted in the country of origin of the work, but may not exceed the term laid down in Article 1.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_7__para_2" xml:id="art_7__para_2">
+     <num>2.</num>
+     <subparagraph eId="art_7__para_2__subpara_1" xml:id="art_7__para_2__subpara_1">
+      <content>
+       <p>The terms of protection laid down in Article 3 shall also apply in the case of rightholders who are not Community nationals, provided Member States grant them protection. However, without prejudice to the international obligations of the Member States, the term of protection granted by Member States shall expire no later than the date of expiry of the protection granted in the country of which the rightholder is a national and may not exceed the term laid down in Article 3.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_7__para_3" xml:id="art_7__para_3">
+     <num>3.</num>
+     <subparagraph eId="art_7__para_3__subpara_1" xml:id="art_7__para_3__subpara_1">
+      <content>
+       <p>Member States which, on <date date="1993-10-29">29 October 1993</date>, in particular pursuant to their international obligations, granted a longer term of protection than that which would result from the provisions of paragraphs 1 and 2 may maintain this protection until the conclusion of international agreements on the term of protection of copyright or related rights.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+   </article>
+   <article eId="art_8" xml:id="art_8">
+    <num>Article 8</num>
+    <heading>Calculation of terms</heading>
+    <paragraph eId="art_8__para_1" xml:id="art_8__para_1">
+     <content>
+      <p>The terms laid down in this Directive shall be calculated from the first day of January of the year following the event which gives rise to them.</p>
+     </content>
+    </paragraph>
+   </article>
+   <article eId="art_9" xml:id="art_9">
+    <num>Article 9</num>
+    <heading>Moral rights</heading>
+    <paragraph eId="art_9__para_1" xml:id="art_9__para_1">
+     <content>
+      <p>This Directive shall be without prejudice to the provisions of the Member States regulating moral rights.</p>
+     </content>
+    </paragraph>
+   </article>
+   <article eId="art_10" xml:id="art_10">
+    <num>Article 10</num>
+    <heading>Application in time</heading>
+    <paragraph eId="art_10__para_1" xml:id="art_10__para_1">
+     <num>1.</num>
+     <subparagraph eId="art_10__para_1__subpara_1" xml:id="art_10__para_1__subpara_1">
+      <content>
+       <p>Where a term of protection which is longer than the corresponding term provided for by this Directive was already running in a Member State on <date date="1995-07-01">1 July 1995</date>, this Directive shall not have the effect of shortening that term of protection in that Member State.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_10__para_2" xml:id="art_10__para_2">
+     <num>2.</num>
+     <subparagraph eId="art_10__para_2__subpara_1" xml:id="art_10__para_2__subpara_1">
+      <content>
+       <p>The terms of protection provided for in this Directive shall apply to all works and subject matter which were protected in at least one Member State on the date referred to in paragraph 1, pursuant to national provisions on copyright or related rights, or which meet the criteria for protection under [Council <ref href="/akn/eu/act/directive/1992/100/!main">
+         <ref href="/akn/eu/act/directive/1992/100/!main">Directive 92/100/EEC</ref>
+        </ref> of <date date="1992-11-19">19 November 1992</date> on rental right and lending right and on certain rights related to copyright in the field of intellectual property]<authorialNote placement="bottom">
+         <p>
+          <ref href="/akn/eu/documentCollection/L/gu/1992-11-27/346/!main#page_61">OJ L 346, 27.11.1992, p. 61</ref>. Directive as last amended by <ref href="/akn/eu/act/directive/2001/29/!main">
+           <ref href="/akn/eu/act/directive/2001/29/!main">Directive 2001/29/EC</ref>
+          </ref>
+         </p>
+        </authorialNote>
+       </p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_10__para_3" xml:id="art_10__para_3">
+     <num>3.</num>
+     <subparagraph eId="art_10__para_3__subpara_1" xml:id="art_10__para_3__subpara_1">
+      <content>
+       <p>This Directive shall be without prejudice to any acts of exploitation performed before the date referred to in paragraph 1. Member States shall adopt the necessary provisions to protect in particular acquired rights of third parties.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_10__para_4" xml:id="art_10__para_4">
+     <num>4.</num>
+     <subparagraph eId="art_10__para_4__subpara_1" xml:id="art_10__para_4__subpara_1">
+      <content>
+       <p>Member States need not apply the provisions of Article 2(1) to cinematographic or audiovisual works created before <date date="1994-07-01">1 July 1994</date>.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_10__para_5" xml:id="art_10__para_5">
+     <num>5.</num>
+     <subparagraph eId="art_10__para_5__subpara_1" xml:id="art_10__para_5__subpara_1">
+      <content>
+       <p>Article 3(1) to (2e) in the version thereof in force on <date date="2011-10-31">31 October 2011</date> shall apply to fixations of performances and phonograms in regard to which the performer and the phonogram producer are still protected, by virtue of those provisions in the version thereof in force on <date date="2011-10-30">30 October 2011</date>, as at <date date="2013-11-01">1 November 2013</date> and to fixations of performances and phonograms which come into being after that date.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_10__para_6" xml:id="art_10__para_6">
+     <num>6.</num>
+     <subparagraph eId="art_10__para_6__subpara_1" xml:id="art_10__para_6__subpara_1">
+      <content>
+       <p>Article 1(7) shall apply to musical compositions with words of which at least the musical composition or the lyrics are protected in at least one Member State on <date date="2013-11-01">1 November 2013</date>, and to musical compositions with words which come into being after that date.</p>
+      </content>
+     </subparagraph>
+     <subparagraph eId="art_10__para_6__subpara_2" xml:id="art_10__para_6__subpara_2">
+      <content>
+       <p>The first subparagraph of this paragraph shall be without prejudice to any acts of exploitation performed before <date date="2013-11-01">1 November 2013</date>. Member States shall adopt the necessary provisions to protect, in particular, acquired rights of third parties.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+   </article>
+   <article eId="art_10a" xml:id="art_10a">
+    <num>Article 10a</num>
+    <heading>Transitional measures</heading>
+    <paragraph eId="art_10a__para_1" xml:id="art_10a__para_1">
+     <num>1.</num>
+     <subparagraph eId="art_10a__para_1__subpara_1" xml:id="art_10a__para_1__subpara_1">
+      <content>
+       <p>In the absence of clear contractual indications to the contrary, a contract on transfer or assignment concluded before <date date="2013-11-01">1 November 2013</date> shall be deemed to continue to produce its effects beyond the moment at which, by virtue of Article 3(1) in the version thereof in force on <date date="2011-10-30">30 October 2011</date>, the performer would no longer be protected.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_10a__para_2" xml:id="art_10a__para_2">
+     <num>2.</num>
+     <subparagraph eId="art_10a__para_2__subpara_1" xml:id="art_10a__para_2__subpara_1">
+      <content>
+       <p>Member States may provide that contracts on transfer or assignment which entitle a performer to recurring payments and which are concluded before <date date="2013-11-01">1 November 2013</date> can be modified following the 50th year after the phonogram was lawfully published or, failing such publication, the 50th year after it was lawfully communicated to the public.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+   </article>
+   <article eId="art_11" xml:id="art_11">
+    <num>Article 11</num>
+    <heading>Notification and communication</heading>
+    <paragraph eId="art_11__para_1" xml:id="art_11__para_1">
+     <num>1.</num>
+     <subparagraph eId="art_11__para_1__subpara_1" xml:id="art_11__para_1__subpara_1">
+      <content>
+       <p>Member States shall immediately notify the Commission of any governmental plan to grant new related rights, including the basic reasons for their introduction and the term of protection envisaged.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+    <paragraph eId="art_11__para_2" xml:id="art_11__para_2">
+     <num>2.</num>
+     <subparagraph eId="art_11__para_2__subpara_1" xml:id="art_11__para_2__subpara_1">
+      <content>
+       <p>Member States shall communicate to the Commission the texts of the provisions of internal law which they adopt in the field governed by this Directive.</p>
+      </content>
+     </subparagraph>
+    </paragraph>
+   </article>
+   <article eId="art_12" xml:id="art_12">
+    <num>Article 12</num>
+    <heading>Repeal</heading>
+    <paragraph eId="art_12__para_1" xml:id="art_12__para_1">
+     <content>
+      <p>
+       <ref href="/akn/eu/act/directive/1993/98/!main">
+        <ref href="/akn/eu/act/directive/1993/98/!main">Directive 93/98/EEC</ref>
+       </ref>
+      </p>
+     </content>
+    </paragraph>
+    <paragraph eId="art_12__para_2" xml:id="art_12__para_2">
+     <content>
+      <p>References made to the repealed Directive shall be construed as being made to this Directive and should be read in accordance with the correlation table in Annex II.</p>
+     </content>
+    </paragraph>
+   </article>
+   <article eId="art_13" xml:id="art_13">
+    <num>Article 13</num>
+    <heading>Entry into force</heading>
+    <paragraph eId="art_13__para_1" xml:id="art_13__para_1">
+     <content>
+      <p>This Directive shall enter into force on the twentieth day following that of its publication in the <i>Official Journal of the European Union</i>.</p>
+     </content>
+    </paragraph>
+   </article>
+   <article eId="art_14" xml:id="art_14">
+    <num>Article 14</num>
+    <heading>Addressees</heading>
+    <paragraph eId="art_14__para_1" xml:id="art_14__para_1">
+     <content>
+      <p>This Directive is addressed to the Member States.</p>
+     </content>
+    </paragraph>
+   </article>
+  </body>
+ </act>
+</akomaNtoso>

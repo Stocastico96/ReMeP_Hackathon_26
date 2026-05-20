@@ -53,9 +53,9 @@ The user's natural-language question — in any language — is passed to a larg
 
 This step is entirely neural and handles multilingual input natively (e.g., Italian "quando scade il diritto d'autore in Francia?" is correctly mapped to Jurisdiction=France, Legal_Topic=copyright duration).
 
-### 3.2 Task 2 — Symbolic KG Retrieval (SPARQL)
+### 3.2 KG Retrieval (Symbolic — SPARQL)
 
-The enriched context is passed to a Pydantic model (`SPARQLParams`) that normalises jurisdiction codes and rule types, then used to generate one of three SPARQL SELECT templates (duration, economic rights, exception). The query executes against an in-memory rdflib graph, built on startup from a curated CSV dataset and serialised as RDF/Turtle.
+The enriched context is passed to a Pydantic model (`SPARQLParams`) that normalises jurisdiction codes and rule types, then used to generate one of three SPARQL SELECT templates (duration, economic rights, exception). The query executes against an in-memory rdflib graph, loaded lazily on first request from a serialised RDF/Turtle file and cached for subsequent calls. When the jurisdiction is unknown or maps to WIPO, the system falls back to a pre-populated evidence record derived from Berne Convention reference data.
 
 The KG triples follow the pattern:
 
@@ -78,11 +78,11 @@ ex:WIPO_berne_art7 a ipronto:ExploitationRight ;
 
 The `legal:durationYears` integer property enables numeric compliance comparison without string parsing at query time.
 
-### 3.3 Task 3 — AKN Passage Extraction (Symbolic)
+### 3.3 AKN Passage Extraction (Symbolic)
 
-The article reference retrieved from the KG (e.g., "Art. 29 URG") is resolved to an AKN `eId` (e.g., `art_29`) by the ArticleLocator module, which walks the parsed XML tree looking for `<num>` elements whose normalised text matches the reference. The corresponding AKN element is then rendered as HTML with yellow highlighting of the supporting span. The user sees the original legal text in context, not a paraphrase.
+The article reference retrieved from the KG (e.g., "Art. 29 URG") is resolved to an AKN `eId` (e.g., `art_29`) by the ArticleLocator module, which walks the parsed XML tree looking for `<num>` elements whose normalised text matches the reference. This step runs at query time against the AKN XML files, which are accessed directly and are not part of the KG build. The corresponding AKN element is then rendered as HTML with yellow highlighting of the supporting span. The user sees the original legal text in context, not a paraphrase.
 
-### 3.4 Task 4 — Answer Generation (Neural)
+### 3.4 Answer Generation (Neural)
 
 The KG evidence (answer candidate, passage, article reference, document title) and the enriched context are serialised as JSON and passed to the same LLM with a grounding-focused system prompt: "Give a 2–4 sentence answer strictly grounded in the evidence; cite the article at the end; if no evidence is found, say so." This produces answers that are traceable back to the source provision.
 
@@ -108,7 +108,7 @@ Key technology choices:
 | Legal documents | AKN XML (9 jurisdictions) |
 | Ontology | IPROnto OWL namespace |
 
-The KG is built at startup from a curated CSV dataset (9 rows, one per jurisdiction) and the AKN files. Total triples: ~450. The KG is cached in memory across requests.
+The KG is built from a curated CSV dataset (9 rows, one per jurisdiction) on first request and cached in memory for subsequent calls. The AKN XML files are accessed separately at query time and are not ingested into the KG. Total triples: 446.
 
 ---
 

@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReMeP — IP Law Assistant</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ─── Header ─── */
+    header {
+      background: #1e3a5f;
+      color: #fff;
+      padding: .65rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-shrink: 0;
+    }
+    header h1 { font-size: 1rem; font-weight: 600; letter-spacing: .02em; }
+    header span { font-size: .73rem; color: #94a3b8; }
+
+    /* ─── Main split ─── */
+    main { display: flex; flex: 1; overflow: hidden; }
+
+    /* ─── Left panel ─── */
+    #left {
+      width: 38%;
+      min-width: 320px;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #e2e8f0;
+      background: #fff;
+    }
+    #chat-history {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: .9rem;
+    }
+    .empty-state {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: .75rem;
+      color: #94a3b8;
+      font-size: .85rem;
+      text-align: center;
+      padding: 2rem;
+    }
+    .suggestions { display: flex; flex-wrap: wrap; gap: .45rem; justify-content: center; margin-top: .25rem; }
+    .sug-btn {
+      background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 999px;
+      padding: .3rem .8rem; font-size: .75rem; cursor: pointer; color: #1e3a5f;
+    }
+    .sug-btn:hover { background: #e2e8f0; }
+
+    .q-bubble {
+      align-self: flex-end;
+      background: #1e3a5f; color: #fff;
+      padding: .55rem .95rem;
+      border-radius: 16px 16px 4px 16px;
+      max-width: 86%; font-size: .85rem; line-height: 1.5;
+      word-break: break-word;
+    }
+
+    /* ─── Answer card ─── */
+    .answer-card {
+      background: #f8fafc; border: 1px solid #e2e8f0;
+      border-radius: 10px; padding: .9rem 1rem;
+      font-size: .83rem; line-height: 1.65; max-width: 97%;
+      word-break: break-word;
+    }
+    .card-label {
+      font-size: .67rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .08em; color: #64748b; margin-bottom: .45rem;
+    }
+    .viz-chip {
+      display: inline-flex; align-items: center; gap: .3rem;
+      padding: .22rem .65rem; border-radius: 999px;
+      font-size: .73rem; font-weight: 600; margin-bottom: .5rem;
+    }
+    .chip-duration  { background: #dbeafe; color: #1d4ed8; }
+    .chip-rights    { background: #dcfce7; color: #15803d; }
+    .chip-exception { background: #fef9c3; color: #a16207; }
+
+    .big-value {
+      font-size: 1.45rem; font-weight: 700; color: #1d4ed8;
+      margin-bottom: .45rem; line-height: 1.2;
+    }
+    .badge-yes {
+      display: inline-block; background: #dcfce7; color: #16a34a;
+      font-size: 1rem; font-weight: 700;
+      padding: .2rem .85rem; border-radius: 6px; margin-bottom: .45rem;
+    }
+    .badge-no {
+      display: inline-block; background: #fee2e2; color: #dc2626;
+      font-size: 1rem; font-weight: 700;
+      padding: .2rem .85rem; border-radius: 6px; margin-bottom: .45rem;
+    }
+    .rights-list { list-style: none; margin-bottom: .5rem; }
+    .rights-list li {
+      padding: .2rem 0; border-bottom: 1px solid #f1f5f9;
+      display: flex; align-items: baseline; gap: .35rem; font-size: .81rem;
+    }
+    .rights-list li::before { content: "⚖️"; font-size: .78rem; }
+
+    .answer-text { color: #334155; margin-bottom: .55rem; }
+    .doc-ref-line {
+      font-size: .73rem; color: #64748b;
+      display: flex; align-items: center; gap: .5rem; flex-wrap: wrap;
+    }
+    .doc-ref-line a { color: #2563eb; text-decoration: none; font-weight: 500; }
+    .doc-ref-line a:hover { text-decoration: underline; }
+    .ref-badge {
+      background: #f1f5f9; border: 1px solid #e2e8f0;
+      border-radius: 4px; padding: .1rem .38rem;
+      font-size: .7rem; color: #475569; font-family: monospace;
+    }
+    .pdf-link {
+      display: inline-flex; align-items: center; gap: .25rem;
+      font-size: .73rem; color: #dc2626; font-weight: 500; text-decoration: none;
+    }
+    .pdf-link:hover { text-decoration: underline; }
+
+    /* ─── Input bar ─── */
+    #input-bar {
+      padding: .7rem .9rem; border-top: 1px solid #e2e8f0;
+      display: flex; gap: .45rem; background: #fff; flex-shrink: 0;
+    }
+    #question-input {
+      flex: 1; border: 1px solid #cbd5e1; border-radius: 8px;
+      padding: .5rem .85rem; font-size: .85rem; outline: none;
+      resize: none; height: 40px; font-family: inherit;
+      word-break: break-word;
+    }
+    #question-input:focus { border-color: #1e3a5f; }
+    #ask-btn {
+      background: #1e3a5f; color: #fff; border: none;
+      border-radius: 8px; padding: 0 1rem;
+      font-size: .85rem; font-weight: 600; cursor: pointer; white-space: nowrap;
+    }
+    #ask-btn:disabled { opacity: .4; cursor: default; }
+    #ask-btn:hover:not(:disabled) { background: #1e4d80; }
+
+    /* ─── Right panel ─── */
+    #right {
+      flex: 1; display: flex; flex-direction: column;
+      background: #fafafa; overflow: hidden; min-width: 0;
+    }
+    #doc-header {
+      padding: .6rem 1.1rem; border-bottom: 1px solid #e2e8f0;
+      background: #fff; flex-shrink: 0;
+      display: flex; align-items: center; gap: .75rem; flex-wrap: wrap;
+    }
+    #doc-title-wrap { flex: 1; min-width: 0; }
+    #doc-title {
+      font-size: .83rem; font-weight: 600; color: #94a3b8;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    #doc-ref-line { font-size: .72rem; color: #94a3b8; margin-top: .1rem; }
+    #doc-ref-line a { color: #dc2626; text-decoration: none; font-weight: 500; }
+    #doc-ref-line a:hover { text-decoration: underline; }
+
+    /* view toggle */
+    .view-toggle {
+      display: flex; gap: 0; flex-shrink: 0;
+      border: 1px solid #e2e8f0; border-radius: 6px; overflow: hidden;
+    }
+    .view-toggle button {
+      background: #fff; border: none; padding: .3rem .75rem;
+      font-size: .73rem; cursor: pointer; color: #64748b; white-space: nowrap;
+    }
+    .view-toggle button.active { background: #1e3a5f; color: #fff; font-weight: 600; }
+    .view-toggle button:hover:not(.active) { background: #f1f5f9; }
+
+    /* doc body */
+    #doc-body {
+      flex: 1; overflow-y: auto;
+      padding: 1.5rem 2rem;
+      font-size: .88rem; line-height: 1.8; color: #374151;
+      word-wrap: break-word; overflow-wrap: break-word; min-width: 0;
+    }
+
+    /* ─── AKN rendering ─── */
+    .doc-preface {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 1rem; margin-bottom: 1.25rem;
+      font-weight: 600; font-size: .95rem; color: #1e293b;
+    }
+    .doc-preamble {
+      margin-bottom: 1.25rem;
+      padding: .75rem 1rem;
+      background: #f8fafc; border-radius: 6px;
+      border-left: 3px solid #cbd5e1;
+    }
+    .preamble-label {
+      font-size: .7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .07em; color: #94a3b8; margin-bottom: .5rem;
+    }
+    .doc-preamble p { color: #475569; font-style: italic; margin-bottom: .4rem; }
+
+    /* section hierarchy */
+    .section-block { margin-bottom: .25rem; }
+    .section-header {
+      display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap;
+      padding: .5rem 0; margin-bottom: .25rem;
+    }
+    .section-header.depth-1 {
+      border-bottom: 2px solid #e2e8f0; margin-top: 1.5rem; margin-bottom: .75rem;
+    }
+    .section-header.depth-2 {
+      border-bottom: 1px solid #e2e8f0; margin-top: 1rem; margin-bottom: .5rem;
+    }
+    .section-header.depth-3 { margin-top: .75rem; margin-bottom: .35rem; }
+    .section-num {
+      font-weight: 700; color: #1e3a5f; white-space: nowrap;
+    }
+    .section-header.depth-1 .section-num { font-size: .95rem; }
+    .section-header.depth-2 .section-num { font-size: .88rem; }
+    .section-header.depth-3 .section-num { font-size: .83rem; }
+    .section-heading { color: #475569; font-style: italic; }
+    .section-header.depth-1 .section-heading { font-size: .88rem; }
+    .section-header.depth-2 .section-heading { font-size: .83rem; }
+
+    .section-block.depth-1 { padding-left: 0; }
+    .section-block.depth-2 { padding-left: 0; }
+    .section-block.depth-3 { padding-left: .5rem; }
+
+    /* article */
+    .article-block {
+      margin-bottom: .75rem;
+      padding: .6rem .75rem;
+      border-radius: 6px;
+      border-left: 3px solid transparent;
+    }
+    .article-block:hover { background: #f8fafc; }
+    .target-article {
+      border-left-color: #f59e0b !important;
+      background: #fffbeb !important;
+      border-radius: 6px;
+      scroll-margin-top: 1rem;
+    }
+    .article-header {
+      display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap;
+      margin-bottom: .5rem;
+    }
+    .article-num { font-weight: 700; color: #1e3a5f; white-space: nowrap; }
+    .article-heading { color: #475569; font-size: .83rem; font-style: italic; }
+
+    /* paragraphs */
+    .para-row {
+      display: flex; gap: .75rem; margin-bottom: .4rem;
+      padding: .35rem .4rem; border-radius: 4px;
+      align-items: flex-start;
+    }
+    .span-row { background: #fef3c7; border-left: 2px solid #f59e0b; }
+    .para-num {
+      min-width: 1.5rem; font-weight: 600; color: #94a3b8;
+      font-size: .78rem; flex-shrink: 0; padding-top: .1rem;
+    }
+    .para-content {
+      flex: 1; min-width: 0;
+      word-wrap: break-word; overflow-wrap: break-word;
+    }
+    .para-content p { margin-bottom: .3rem; }
+    .para-content p:last-child { margin-bottom: 0; }
+
+    /* lists */
+    .item-list { list-style: none; padding-left: .25rem; margin: .3rem 0; }
+    .item-list li {
+      display: flex; gap: .5rem; margin-bottom: .3rem;
+      word-break: break-word; overflow-wrap: break-word;
+    }
+    .item-num {
+      min-width: 1.8rem; font-weight: 600; color: #94a3b8;
+      font-size: .78rem; flex-shrink: 0; padding-top: .05rem;
+    }
+
+    mark.highlight {
+      background: #fde68a; color: #1e293b;
+      border-radius: 3px; padding: 1px 3px; font-weight: 600;
+    }
+
+    /* spinner */
+    .spinner {
+      display: inline-block; width: 12px; height: 12px;
+      border: 2px solid #cbd5e1; border-top-color: #1e3a5f;
+      border-radius: 50%; animation: spin .7s linear infinite;
+      vertical-align: middle; margin-right: .4rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .doc-error { color: #94a3b8; font-style: italic; }
+
+    /* ─── Mode tabs ─── */
+    .mode-tabs {
+      display: flex; border-bottom: 2px solid #e2e8f0;
+      flex-shrink: 0; background: #fff;
+    }
+    .mode-tab {
+      flex: 1; padding: .55rem .5rem; font-size: .8rem; font-weight: 600;
+      border: none; background: transparent; cursor: pointer; color: #64748b;
+      border-bottom: 2px solid transparent; margin-bottom: -2px;
+      transition: color .15s, border-color .15s;
+    }
+    .mode-tab.active { color: #1e3a5f; border-bottom-color: #1e3a5f; }
+    .mode-tab:hover:not(.active) { color: #334155; background: #f8fafc; }
+
+    /* ─── Compliance panel ─── */
+    #compliance-panel {
+      display: none; flex-direction: column; flex: 1; overflow: hidden;
+    }
+    #compliance-panel.active { display: flex; }
+    #chat-panel { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+    #chat-panel.hidden { display: none; }
+
+    .compliance-form {
+      padding: 1rem; border-bottom: 1px solid #e2e8f0; background: #fff;
+      flex-shrink: 0;
+    }
+    .compliance-form label {
+      font-size: .73rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .07em; color: #64748b; display: block; margin-bottom: .3rem;
+    }
+    .compliance-form select {
+      width: 100%; border: 1px solid #cbd5e1; border-radius: 8px;
+      padding: .45rem .75rem; font-size: .85rem; color: #1e293b;
+      background: #fff; outline: none; margin-bottom: .6rem; cursor: pointer;
+    }
+    .compliance-form select:focus { border-color: #1e3a5f; }
+    #compliance-check-btn {
+      width: 100%; background: #1e3a5f; color: #fff; border: none;
+      border-radius: 8px; padding: .5rem; font-size: .85rem; font-weight: 600;
+      cursor: pointer;
+    }
+    #compliance-check-btn:hover { background: #1e4d80; }
+    #compliance-check-btn:disabled { opacity: .4; cursor: default; }
+
+    #compliance-results {
+      flex: 1; overflow-y: auto; padding: 1rem;
+    }
+
+    .compliance-card {
+      border-radius: 10px; border: 1px solid #e2e8f0;
+      overflow: hidden; margin-bottom: .9rem;
+    }
+    .compliance-card-header {
+      padding: .65rem 1rem; display: flex; align-items: center;
+      gap: .6rem; font-size: .78rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .07em;
+    }
+    .card-header-compliant    { background: #dcfce7; color: #166534; }
+    .card-header-noncompliant { background: #fee2e2; color: #991b1b; }
+    .compliance-card-body { padding: .8rem 1rem; background: #fff; font-size: .83rem; }
+    .compare-row {
+      display: flex; gap: .75rem; margin-bottom: .65rem;
+    }
+    .compare-col {
+      flex: 1; background: #f8fafc; border-radius: 8px;
+      padding: .65rem .8rem; min-width: 0;
+    }
+    .compare-col-label {
+      font-size: .67rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .07em; color: #64748b; margin-bottom: .4rem;
+    }
+    .compare-col-value {
+      font-size: 1.25rem; font-weight: 700; color: #1e3a5f; line-height: 1.1;
+      margin-bottom: .2rem;
+    }
+    .compare-col-value.treaty { color: #7c3aed; }
+    .compare-col-detail { font-size: .73rem; color: #64748b; }
+    .compliance-verdict {
+      display: flex; align-items: center; gap: .5rem;
+      padding: .5rem .75rem; border-radius: 6px;
+      font-size: .83rem; font-weight: 600; margin-bottom: .65rem;
+    }
+    .verdict-compliant    { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+    .verdict-noncompliant { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+    .compliance-doc-ref {
+      font-size: .72rem; color: #64748b; display: flex; gap: .5rem;
+      flex-wrap: wrap; align-items: center;
+    }
+    .compliance-doc-ref a { color: #2563eb; text-decoration: none; font-weight: 500; }
+
+    /* compliance country grid */
+    .country-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: .45rem;
+      padding: 1rem; padding-bottom: 0;
+    }
+    .country-chip {
+      background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 8px;
+      padding: .45rem .65rem; font-size: .78rem; cursor: pointer;
+      color: #334155; font-weight: 500; text-align: left;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .country-chip:hover { background: #e2e8f0; }
+    .country-chip .chip-code {
+      font-size: .67rem; color: #94a3b8; font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ReMeP — IP Law Assistant</h1>
+  <span>Neuro-Symbolic KG · AKN Documents · WIPO Compliance</span>
+</header>
+
+<main>
+  <!-- ─── Left ─── -->
+  <div id="left">
+
+    <!-- Mode tabs -->
+    <div class="mode-tabs">
+      <button class="mode-tab active" id="tab-qa"         onclick="switchMode('qa')">💬 Q&amp;A</button>
+      <button class="mode-tab"        id="tab-compliance" onclick="switchMode('compliance')">✅ Compliance Check</button>
+    </div>
+
+    <!-- ── Q&A panel ── -->
+    <div id="chat-panel">
+      <div id="chat-history">
+        <div class="empty-state">
+          <div style="font-size:2rem">⚖️</div>
+          <div>Ask a question about intellectual property law</div>
+          <div class="suggestions">
+            <button class="sug-btn" onclick="fillQ(this)">Copyright duration in Switzerland?</button>
+            <button class="sug-btn" onclick="fillQ(this)">Which economic rights does Germany recognize?</button>
+            <button class="sug-btn" onclick="fillQ(this)">Does Italy provide a personal-use exception?</button>
+            <button class="sug-btn" onclick="fillQ(this)">What is the copyright term under the Berne Convention?</button>
+          </div>
+        </div>
+      </div>
+      <div id="input-bar">
+        <textarea id="question-input" placeholder="Ask an IP law question…"
+                  onkeydown="handleKey(event)"></textarea>
+        <button id="ask-btn" onclick="ask()">Ask</button>
+      </div>
+    </div>
+
+    <!-- ── Compliance panel ── -->
+    <div id="compliance-panel">
+      <div class="compliance-form">
+        <label>Country</label>
+        <select id="compliance-country">
+          <option value="">— select a country —</option>
+        </select>
+        <label>Treaty</label>
+        <select id="compliance-treaty" disabled>
+          <option value="berne">Berne Convention (Art. 7) — copyright duration</option>
+        </select>
+        <button id="compliance-check-btn" onclick="checkCompliance()" disabled>Check Compliance</button>
+      </div>
+
+      <!-- Quick-pick grid (populated by JS) -->
+      <div class="country-grid" id="country-grid"></div>
+
+      <div id="compliance-results">
+        <div style="color:#94a3b8;font-size:.83rem;text-align:center;margin-top:2.5rem;font-style:italic;">
+          Select a country to check its compliance with the Berne Convention minimum copyright duration.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ─── Right: document viewer ─── -->
+  <div id="right">
+    <div id="doc-header">
+      <div id="doc-title-wrap">
+        <div id="doc-title">No document loaded</div>
+        <div id="doc-ref-line"></div>
+      </div>
+      <div class="view-toggle" id="view-toggle" style="display:none">
+        <button id="btn-article" class="active" onclick="switchView('article')">Article</button>
+        <button id="btn-full"    onclick="switchView('full')">Full Document</button>
+      </div>
+    </div>
+    <div id="doc-body">
+      <p style="color:#94a3b8;font-style:italic;margin-top:3rem;text-align:center;">
+        The source document will appear here once you ask a question.
+      </p>
+    </div>
+  </div>
+</main>
+
+<script>
+  let _articleHtml = '';
+  let _fullDocHtml = '';
+  let _currentMode = 'qa';
+
+  // ─── Mode switching ───────────────────────────────────────────────────────
+  function switchMode(mode) {
+    _currentMode = mode;
+    document.getElementById('tab-qa').classList.toggle('active', mode === 'qa');
+    document.getElementById('tab-compliance').classList.toggle('active', mode === 'compliance');
+    document.getElementById('chat-panel').classList.toggle('hidden', mode !== 'qa');
+    document.getElementById('compliance-panel').classList.toggle('active', mode === 'compliance');
+  }
+
+  // ─── Q&A mode ─────────────────────────────────────────────────────────────
+  function fillQ(btn) {
+    document.getElementById('question-input').value = btn.textContent;
+    ask();
+  }
+
+  function handleKey(e) {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); ask(); }
+  }
+
+  async function ask() {
+    const input    = document.getElementById('question-input');
+    const question = input.value.trim();
+    if (!question) return;
+
+    const btn = document.getElementById('ask-btn');
+    btn.disabled = true;
+    input.value  = '';
+
+    const history = document.getElementById('chat-history');
+    const empty   = history.querySelector('.empty-state');
+    if (empty) empty.remove();
+
+    const qBubble = document.createElement('div');
+    qBubble.className   = 'q-bubble';
+    qBubble.textContent = question;
+    history.appendChild(qBubble);
+
+    const loading = document.createElement('div');
+    loading.className = 'answer-card';
+    loading.innerHTML = '<span class="spinner"></span>Retrieving from Knowledge Graph…';
+    history.appendChild(loading);
+    history.scrollTop = history.scrollHeight;
+
+    try {
+      const res  = await fetch('/api/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question }),
+      });
+      const data = await res.json();
+      loading.remove();
+
+      if (data.error) {
+        const err = document.createElement('div');
+        err.className   = 'answer-card';
+        err.textContent = data.error;
+        history.appendChild(err);
+      } else {
+        history.appendChild(buildAnswerCard(data));
+        updateDocPanel(data.doc_html, data.full_doc_html, data.evidence, data.pdf_url);
+      }
+    } catch {
+      loading.innerHTML = '⚠️ Request failed.';
+    }
+
+    btn.disabled = false;
+    history.scrollTop = history.scrollHeight;
+  }
+
+  function buildAnswerCard(data) {
+    const spec  = data.viz_spec;
+    const ev    = data.evidence;
+    const vtype = spec.visualization_type;
+
+    let chipHtml = '', valueHtml = '';
+    if (vtype === 'rule_card') {
+      chipHtml  = `<div class="viz-chip chip-duration">⏱ Copyright Duration</div>`;
+      valueHtml = `<div class="big-value">${spec.rule.display_value}</div>`;
+    } else if (vtype === 'rights_list') {
+      chipHtml  = `<div class="viz-chip chip-rights">📋 Economic Rights</div>`;
+      const items = ev.passage
+        .split(/[,;]|\band\b/)
+        .map(s => s.trim().replace(/[.\s]+$/, ''))
+        .filter(Boolean);
+      valueHtml = `<ul class="rights-list">${items.map(i => `<li>${i}</li>`).join('')}</ul>`;
+    } else if (vtype === 'yes_no_exception') {
+      chipHtml  = `<div class="viz-chip chip-exception">🔍 Private Copy Exception</div>`;
+      const yes = spec.rule.normalized_value === 'yes';
+      valueHtml = `<div class="${yes ? 'badge-yes' : 'badge-no'}">${yes ? 'Yes — exception provided' : 'No — exception not provided'}</div>`;
+    }
+
+    const answerText = data.answer.replace(/Answer:\s*/, '').split('\n\nDocument:')[0].trim();
+    const ref        = ev.reference;
+    let   refLabel   = ref.article || '';
+    if (ref.paragraph) refLabel += `(${ref.paragraph})`;
+
+    const doc     = ev.document;
+    const docPath = doc.local_path || doc.uri || '';
+    const pdfHtml = data.pdf_url
+      ? `<a class="pdf-link" href="${data.pdf_url}" target="_blank">📄 PDF</a>`
+      : '';
+
+    const card = document.createElement('div');
+    card.className = 'answer-card';
+    card.innerHTML = `
+      <div class="card-label">Answer</div>
+      ${chipHtml}
+      ${valueHtml}
+      <div class="answer-text">${answerText}</div>
+      <div class="doc-ref-line">
+        <a href="${docPath ? '/files/' + docPath : '#'}" target="_blank">${doc.title || 'Document'}</a>
+        ${refLabel ? `<span class="ref-badge">${refLabel}</span>` : ''}
+        ${pdfHtml}
+      </div>`;
+    return card;
+  }
+
+  // ─── Compliance mode ──────────────────────────────────────────────────────
+  async function loadCountries() {
+    try {
+      const res       = await fetch('/api/countries');
+      const countries = await res.json();
+      const sel       = document.getElementById('compliance-country');
+      const grid      = document.getElementById('country-grid');
+
+      countries.forEach(c => {
+        const opt       = document.createElement('option');
+        opt.value       = c.code;
+        opt.textContent = c.name;
+        sel.appendChild(opt);
+
+        const chip = document.createElement('button');
+        chip.className   = 'country-chip';
+        chip.innerHTML   = `${c.name} <span class="chip-code">${c.code}</span>`;
+        chip.onclick     = () => {
+          sel.value = c.code;
+          document.getElementById('compliance-check-btn').disabled = false;
+          checkCompliance();
+        };
+        grid.appendChild(chip);
+      });
+
+      sel.onchange = () => {
+        document.getElementById('compliance-check-btn').disabled = !sel.value;
+      };
+    } catch(e) {
+      console.error('Failed to load countries', e);
+    }
+  }
+
+  async function checkCompliance() {
+    const code = document.getElementById('compliance-country').value;
+    if (!code) return;
+
+    const btn     = document.getElementById('compliance-check-btn');
+    btn.disabled  = true;
+    btn.textContent = 'Checking…';
+
+    const results = document.getElementById('compliance-results');
+    results.innerHTML = '<div style="color:#94a3b8;font-size:.83rem;text-align:center;margin-top:2rem;"><span class="spinner"></span> Querying Knowledge Graph…</div>';
+
+    try {
+      const res  = await fetch('/api/compliance', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ country_code: code }),
+      });
+      const data = await res.json();
+
+      if (data.error) {
+        results.innerHTML = `<div class="doc-error" style="padding:1rem">${data.error}</div>`;
+      } else {
+        results.innerHTML = '';
+        results.appendChild(buildComplianceCard(data));
+        updateDocPanel(data.doc_html, data.full_doc_html, null, data.pdf_url, data);
+      }
+    } catch(e) {
+      results.innerHTML = '<div class="doc-error" style="padding:1rem">⚠️ Request failed.</div>';
+    }
+
+    btn.disabled = false;
+    btn.textContent = 'Check Compliance';
+  }
+
+  function buildComplianceCard(data) {
+    const compliant   = data.compliant;
+    const margin      = data.margin_years;
+    const marginText  = margin > 0 ? `+${margin} years above minimum` : 'exactly at minimum';
+    const verdictIcon = compliant ? '✅' : '❌';
+    const verdictWord = compliant ? 'COMPLIANT' : 'NON-COMPLIANT';
+
+    const pdfHtml = data.pdf_url
+      ? `<a href="${data.pdf_url}" target="_blank" style="color:#dc2626">📄 PDF</a>`
+      : '';
+
+    const card = document.createElement('div');
+    card.className = 'compliance-card';
+    card.innerHTML = `
+      <div class="compliance-card-header ${compliant ? 'card-header-compliant' : 'card-header-noncompliant'}">
+        ${verdictIcon} ${data.country_name} — Berne Convention Compliance
+      </div>
+      <div class="compliance-card-body">
+        <div class="compare-row">
+          <div class="compare-col">
+            <div class="compare-col-label">🏛 ${data.country_name}</div>
+            <div class="compare-col-value">${data.country_duration_years} years</div>
+            <div class="compare-col-detail">${data.country_duration_text}</div>
+            <div class="compare-col-detail" style="margin-top:.25rem;color:#475569">Triggered by: death of author</div>
+            ${data.country_article ? `<div class="compare-col-detail" style="margin-top:.3rem"><span class="ref-badge">${data.country_article}</span></div>` : ''}
+          </div>
+          <div class="compare-col">
+            <div class="compare-col-label">🌍 Berne Convention</div>
+            <div class="compare-col-value treaty">${data.treaty_duration_years} years</div>
+            <div class="compare-col-detail">minimum required</div>
+            <div class="compare-col-detail" style="margin-top:.25rem;color:#475569">Triggered by: death of author</div>
+            ${data.treaty_article ? `<div class="compare-col-detail" style="margin-top:.3rem"><span class="ref-badge">${data.treaty_article}</span></div>` : ''}
+          </div>
+        </div>
+        <div class="compliance-verdict ${compliant ? 'verdict-compliant' : 'verdict-noncompliant'}">
+          ${verdictIcon} ${verdictWord} &mdash; ${marginText}
+        </div>
+        <div class="compliance-doc-ref">
+          <span>${data.doc_title || ''}</span>
+          ${pdfHtml}
+        </div>
+      </div>`;
+    return card;
+  }
+
+  // ─── Document panel (shared) ──────────────────────────────────────────────
+  function switchView(view) {
+    document.getElementById('btn-article').classList.toggle('active', view === 'article');
+    document.getElementById('btn-full').classList.toggle('active', view === 'full');
+    document.getElementById('doc-body').innerHTML =
+      view === 'article' ? _articleHtml : _fullDocHtml;
+    scrollToTarget();
+  }
+
+  function scrollToTarget() {
+    const target = document.getElementById('target-article');
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    else {
+      const mark = document.querySelector('#doc-body mark.highlight');
+      if (mark) mark.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  function updateDocPanel(articleHtml, fullHtml, evidence, pdfUrl, complianceData) {
+    _articleHtml = articleHtml || '';
+    _fullDocHtml = fullHtml    || '';
+
+    let title = '', refLabel = '', pdfLink = '';
+
+    if (complianceData) {
+      title    = complianceData.doc_title    || complianceData.country_name || '';
+      refLabel = complianceData.country_article || '';
+      pdfLink  = pdfUrl ? `<a href="${pdfUrl}" target="_blank">📄 Open PDF</a>` : '';
+    } else if (evidence) {
+      const doc = evidence.document;
+      const ref = evidence.reference;
+      title    = doc.title || 'Document';
+      refLabel = ref.article || '';
+      if (ref.paragraph) refLabel += `, para. ${ref.paragraph}`;
+      pdfLink  = pdfUrl ? `<a href="${pdfUrl}" target="_blank">📄 Open PDF</a>` : '';
+    }
+
+    const titleEl = document.getElementById('doc-title');
+    titleEl.textContent = title;
+    titleEl.style.color = '#1e293b';
+
+    document.getElementById('doc-ref-line').innerHTML =
+      [refLabel, pdfLink].filter(Boolean).join(' · ');
+
+    document.getElementById('view-toggle').style.display = 'flex';
+    document.getElementById('btn-article').classList.add('active');
+    document.getElementById('btn-full').classList.remove('active');
+
+    document.getElementById('doc-body').innerHTML = _articleHtml;
+    scrollToTarget();
+  }
+
+  // ─── Init ─────────────────────────────────────────────────────────────────
+  loadCountries();
+</script>
+
+</body>
+</html>

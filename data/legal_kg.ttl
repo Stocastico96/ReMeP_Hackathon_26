@@ -1,0 +1,523 @@
+@prefix ex: <http://legal-kg.org/data/> .
+@prefix ipronto: <http://rhizomik.net/ontologies/2005/03/ipronto.owl#> .
+@prefix legal: <http://legal-kg.org/schema/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:CA_duration a ipronto:ExploitationRight ;
+    legal:articleRef "s. 6 Copyright Act" ;
+    legal:compliesWith ex:WIPO_berne_art7 ;
+    legal:docTitle "Canadian Copyright Act" ;
+    legal:durationLiterary "70 years pma" ;
+    legal:durationSoftware "70 years pma" ;
+    legal:durationYears 70 ;
+    legal:jurisdiction "CA" ;
+    legal:jurisdictionName "Canada" ;
+    legal:localPath "data/countries/ca/copyright/C-42.xml" ;
+    legal:ruleType "copyright duration" ;
+    ipronto:triggeredBy "death of author" .
+
+ex:CA_exception a ipronto:ExceptionsRight ;
+    legal:articleRef "s. 29.22" ;
+    legal:docTitle "Canadian Copyright Act" ;
+    legal:exceptionText "Yes (s. 29.22)" ;
+    legal:hasException true ;
+    legal:jurisdiction "CA" ;
+    legal:jurisdictionName "Canada" ;
+    legal:localPath "data/countries/ca/copyright/C-42.xml" ;
+    legal:ruleType "personal-use exception" .
+
+ex:CA_rights a ipronto:ExploitationRight ;
+    legal:articleRef "s. 3 Copyright Act" ;
+    legal:docTitle "Canadian Copyright Act" ;
+    legal:hasRight "communication",
+        "distribution",
+        "rental",
+        "reproduction",
+        "translation" ;
+    legal:hasRightDetail ex:CA_right_communication,
+        ex:CA_right_distribution,
+        ex:CA_right_rental,
+        ex:CA_right_reproduction,
+        ex:CA_right_translation ;
+    legal:jurisdiction "CA" ;
+    legal:jurisdictionName "Canada" ;
+    legal:localPath "data/countries/ca/copyright/C-42.xml" ;
+    legal:rightsNote "Canadian copyright rights are collapsed into the five prototype exploitation-right columns." ;
+    legal:ruleType "economic rights" .
+
+ex:CH_duration a ipronto:ExploitationRight ;
+    legal:articleRef "Art. 29 URG" ;
+    legal:compliesWith ex:WIPO_berne_art7 ;
+    legal:docTitle "Swiss Copyright Act (URG)" ;
+    legal:durationLiterary "70 years pma" ;
+    legal:durationSoftware "50 years pma" ;
+    legal:durationYears 70 ;
+    legal:jurisdiction "CH" ;
+    legal:jurisdictionName "Switzerland" ;
+    legal:localPath "data/countries/switzerland/copyright/urg_copyright_act.xml" ;
+    legal:ruleType "copyright duration" ;
+    ipronto:triggeredBy "death of author" .
+
+ex:CH_exception a ipronto:ExceptionsRight ;
+    legal:articleRef "Art. 19 URG" ;
+    legal:docTitle "Swiss Copyright Act (URG)" ;
+    legal:exceptionText "Yes (Art. 19 URG)" ;
+    legal:hasException true ;
+    legal:jurisdiction "CH" ;
+    legal:jurisdictionName "Switzerland" ;
+    legal:localPath "data/countries/switzerland/copyright/urg_copyright_act.xml" ;
+    legal:ruleType "personal-use exception" .
+
+ex:CH_rights a ipronto:ExploitationRight ;
+    legal:articleRef "Art. 10 URG" ;
+    legal:docTitle "Swiss Copyright Act (URG)" ;
+    legal:hasRight "communication",
+        "distribution",
+        "rental",
+        "reproduction",
+        "translation" ;
+    legal:hasRightDetail ex:CH_right_communication,
+        ex:CH_right_distribution,
+        ex:CH_right_rental,
+        ex:CH_right_reproduction,
+        ex:CH_right_translation ;
+    legal:jurisdiction "CH" ;
+    legal:jurisdictionName "Switzerland" ;
+    legal:localPath "data/countries/switzerland/copyright/urg_copyright_act.xml" ;
+    legal:rightsNote "Swiss use rights are mapped to the five canonical prototype rights; rental mainly concerns software in the simplified model." ;
+    legal:ruleType "economic rights" .
+
+ex:DE_duration a ipronto:ExploitationRight ;
+    legal:articleRef "§ 64 UrhG" ;
+    legal:compliesWith ex:WIPO_berne_art7 ;
+    legal:docTitle "German Urheberrechtsgesetz (UrhG)" ;
+    legal:durationLiterary "70 years pma" ;
+    legal:durationSoftware "70 years pma" ;
+    legal:durationYears 70 ;
+    legal:jurisdiction "DE" ;
+    legal:jurisdictionName "Germany" ;
+    legal:localPath "data/countries/germany/copyright/urhg_copyright_act.xml" ;
+    legal:ruleType "copyright duration" ;
+    ipronto:triggeredBy "death of author" .
+
+ex:DE_exception a ipronto:ExceptionsRight ;
+    legal:articleRef "§ 53 UrhG" ;
+    legal:docTitle "German Urheberrechtsgesetz (UrhG)" ;
+    legal:exceptionText "Yes (§ 53 UrhG)" ;
+    legal:hasException true ;
+    legal:jurisdiction "DE" ;
+    legal:jurisdictionName "Germany" ;
+    legal:localPath "data/countries/germany/copyright/urhg_copyright_act.xml" ;
+    legal:ruleType "personal-use exception" .
+
+ex:DE_rights a ipronto:ExploitationRight ;
+    legal:articleRef "§ 15 UrhG" ;
+    legal:docTitle "German Urheberrechtsgesetz (UrhG)" ;
+    legal:hasRight "communication",
+        "distribution",
+        "rental",
+        "reproduction",
+        "translation" ;
+    legal:hasRightDetail ex:DE_right_communication,
+        ex:DE_right_distribution,
+        ex:DE_right_rental,
+        ex:DE_right_reproduction,
+        ex:DE_right_translation ;
+    legal:jurisdiction "DE" ;
+    legal:jurisdictionName "Germany" ;
+    legal:localPath "data/countries/germany/copyright/urhg_copyright_act.xml" ;
+    legal:rightsNote "Five rights are collapsed from UrhG exploitation rights; communication includes public performance and making available." ;
+    legal:ruleType "economic rights" .
+
+ex:EU_duration a ipronto:ExploitationRight ;
+    legal:articleRef "Art. 1 Directive 2006/116" ;
+    legal:compliesWith ex:WIPO_berne_art7 ;
+    legal:docTitle "EU Directive 2006/116/EC" ;
+    legal:durationLiterary "70 years pma" ;
+    legal:durationSoftware "70 years pma" ;
+    legal:durationYears 70 ;
+    legal:jurisdiction "EU" ;
+    legal:jurisdictionName "European Union" ;
+    legal:localPath "data/countries/eu/copyright/02006L0116-20111031.xml" ;
+    legal:ruleType "copyright duration" ;
+    ipronto:triggeredBy "death of author" .
+
+ex:EU_exception a ipronto:ExceptionsRight ;
+    legal:articleRef "Art. 5(2" ;
+    legal:docTitle "EU Directive 2006/116/EC" ;
+    legal:exceptionText "Yes (Art. 5(2)(b) InfoSoc)" ;
+    legal:hasException true ;
+    legal:jurisdiction "EU" ;
+    legal:jurisdictionName "European Union" ;
+    legal:localPath "data/countries/eu/copyright/02006L0116-20111031.xml" ;
+    legal:ruleType "personal-use exception" .
+
+ex:EU_rights a ipronto:ExploitationRight ;
+    legal:articleRef "Art. 2 InfoSoc Directive" ;
+    legal:docTitle "EU Directive 2006/116/EC" ;
+    legal:hasRight "communication",
+        "distribution",
+        "rental",
+        "reproduction",
+        "translation" ;
+    legal:hasRightDetail ex:EU_right_communication,
+        ex:EU_right_distribution,
+        ex:EU_right_rental,
+        ex:EU_right_reproduction,
+        ex:EU_right_translation ;
+    legal:jurisdiction "EU" ;
+    legal:jurisdictionName "European Union" ;
+    legal:localPath "data/countries/eu/copyright/02006L0116-20111031.xml" ;
+    legal:rightsNote "EU row represents harmonized directive-level concepts, not a single national copyright statute." ;
+    legal:ruleType "economic rights" .
+
+ex:FR_duration a ipronto:ExploitationRight ;
+    legal:articleRef "L123-1 CPI" ;
+    legal:compliesWith ex:WIPO_berne_art7 ;
+    legal:docTitle "French Code de la propriété intellectuelle" ;
+    legal:durationLiterary "70 years pma" ;
+    legal:durationSoftware "70 years pma" ;
+    legal:durationYears 70 ;
+    legal:jurisdiction "FR" ;
+    legal:jurisdictionName "France" ;
+    legal:localPath "data/countries/france/copyright/cpi_copyright_act.xml" ;
+    legal:ruleType "copyright duration" ;
+    ipronto:triggeredBy "death of author" .
+
+ex:FR_exception a ipronto:ExceptionsRight ;
+    legal:articleRef "L122-5" ;
+    legal:docTitle "French Code de la propriété intellectuelle" ;
+    legal:exceptionText "Yes (L122-5)" ;
+    legal:hasException true ;
+    legal:jurisdiction "FR" ;
+    legal:jurisdictionName "France" ;
+    legal:localPath "data/countries/france/copyright/cpi_copyright_act.xml" ;
+    legal:ruleType "personal-use exception" .
+
+ex:FR_rights a ipronto:ExploitationRight ;
+    legal:articleRef "L122-1 CPI" ;
+    legal:docTitle "French Code de la propriété intellectuelle" ;
+    legal:hasRight "communication",
+        "distribution",
+        "rental",
+        "reproduction",
+        "translation" ;
+    legal:hasRightDetail ex:FR_right_communication,
+        ex:FR_right_distribution,
+        ex:FR_right_rental,
+        ex:FR_right_reproduction,
+        ex:FR_right_translation ;
+    legal:jurisdiction "FR" ;
+    legal:jurisdictionName "France" ;
+    legal:localPath "data/countries/france/copyright/cpi_copyright_act.xml" ;
+    legal:rightsNote "French representation and reproduction rights are mapped into the five canonical prototype rights." ;
+    legal:ruleType "economic rights" .
+
+ex:IT_duration a ipronto:ExploitationRight ;
+    legal:articleRef "Art. 25 LDA" ;
+    legal:compliesWith ex:WIPO_berne_art7 ;
+    legal:docTitle "Italian Copyright Act (Law 633/1941)" ;
+    legal:durationLiterary "70 years pma" ;
+    legal:durationSoftware "70 years pma" ;
+    legal:durationYears 70 ;
+    legal:jurisdiction "IT" ;
+    legal:jurisdictionName "Italy" ;
+    legal:localPath "data/countries/italy/copyright/19410716_041U0633_VIGENZA_20251218.xml" ;
+    legal:ruleType "copyright duration" ;
+    ipronto:triggeredBy "death of author" .
+
+ex:IT_exception a ipronto:ExceptionsRight ;
+    legal:articleRef "Art. 71-sexies" ;
+    legal:docTitle "Italian Copyright Act (Law 633/1941)" ;
+    legal:exceptionText "Yes (Art. 71-sexies)" ;
+    legal:hasException true ;
+    legal:jurisdiction "IT" ;
+    legal:jurisdictionName "Italy" ;
+    legal:localPath "data/countries/italy/copyright/19410716_041U0633_VIGENZA_20251218.xml" ;
+    legal:ruleType "personal-use exception" .
+
+ex:IT_rights a ipronto:ExploitationRight ;
+    legal:articleRef "Art. 12 LDA" ;
+    legal:docTitle "Italian Copyright Act (Law 633/1941)" ;
+    legal:hasRight "communication",
+        "distribution",
+        "rental",
+        "reproduction",
+        "translation" ;
+    legal:hasRightDetail ex:IT_right_communication,
+        ex:IT_right_distribution,
+        ex:IT_right_rental,
+        ex:IT_right_reproduction,
+        ex:IT_right_translation ;
+    legal:jurisdiction "IT" ;
+    legal:jurisdictionName "Italy" ;
+    legal:localPath "data/countries/italy/copyright/19410716_041U0633_VIGENZA_20251218.xml" ;
+    legal:rightsNote "Italian economic-use rights are collapsed into reproduction, distribution, communication, rental, and translation/adaptation." ;
+    legal:ruleType "economic rights" .
+
+ex:NZ_duration a ipronto:ExploitationRight ;
+    legal:articleRef "s. 22 Copyright Act 1994" ;
+    legal:compliesWith ex:WIPO_berne_art7 ;
+    legal:docTitle "New Zealand Copyright Act 1994" ;
+    legal:durationLiterary "50 years pma" ;
+    legal:durationSoftware "50 years pma" ;
+    legal:durationYears 50 ;
+    legal:jurisdiction "NZ" ;
+    legal:jurisdictionName "New Zealand" ;
+    legal:localPath "data/countries/nz/copyright/096be8ed81fe312e.xml" ;
+    legal:ruleType "copyright duration" ;
+    ipronto:triggeredBy "death of author" .
+
+ex:NZ_exception a ipronto:ExceptionsRight ;
+    legal:articleRef "s. 81A" ;
+    legal:docTitle "New Zealand Copyright Act 1994" ;
+    legal:exceptionText "Yes (s. 81A)" ;
+    legal:hasException true ;
+    legal:jurisdiction "NZ" ;
+    legal:jurisdictionName "New Zealand" ;
+    legal:localPath "data/countries/nz/copyright/096be8ed81fe312e.xml" ;
+    legal:ruleType "personal-use exception" .
+
+ex:NZ_rights a ipronto:ExploitationRight ;
+    legal:articleRef "s. 16 Copyright Act 1994" ;
+    legal:docTitle "New Zealand Copyright Act 1994" ;
+    legal:hasRight "communication",
+        "distribution",
+        "rental",
+        "reproduction",
+        "translation" ;
+    legal:hasRightDetail ex:NZ_right_communication,
+        ex:NZ_right_distribution,
+        ex:NZ_right_rental,
+        ex:NZ_right_reproduction,
+        ex:NZ_right_translation ;
+    legal:jurisdiction "NZ" ;
+    legal:jurisdictionName "New Zealand" ;
+    legal:localPath "data/countries/nz/copyright/096be8ed81fe312e.xml" ;
+    legal:rightsNote "New Zealand restricted acts are mapped into the five canonical prototype rights." ;
+    legal:ruleType "economic rights" .
+
+ex:UK_duration a ipronto:ExploitationRight ;
+    legal:articleRef "s. 12 CDPA" ;
+    legal:compliesWith ex:WIPO_berne_art7 ;
+    legal:docTitle "Copyright, Designs and Patents Act 1988 (CDPA)" ;
+    legal:durationLiterary "70 years pma" ;
+    legal:durationSoftware "70 years pma" ;
+    legal:durationYears 70 ;
+    legal:jurisdiction "UK" ;
+    legal:jurisdictionName "United Kingdom" ;
+    legal:localPath "data/countries/uk/copyright/cdpa_1988.xml" ;
+    legal:ruleType "copyright duration" ;
+    ipronto:triggeredBy "death of author" .
+
+ex:UK_exception a ipronto:ExceptionsRight ;
+    legal:articleRef "s. 29" ;
+    legal:docTitle "Copyright, Designs and Patents Act 1988 (CDPA)" ;
+    legal:exceptionText "No; private study/fair dealing only (s. 29)" ;
+    legal:hasException false ;
+    legal:jurisdiction "UK" ;
+    legal:jurisdictionName "United Kingdom" ;
+    legal:localPath "data/countries/uk/copyright/cdpa_1988.xml" ;
+    legal:ruleType "personal-use exception" .
+
+ex:UK_rights a ipronto:ExploitationRight ;
+    legal:articleRef "s. 16 CDPA" ;
+    legal:docTitle "Copyright, Designs and Patents Act 1988 (CDPA)" ;
+    legal:hasRight "communication",
+        "distribution",
+        "rental",
+        "reproduction",
+        "translation" ;
+    legal:hasRightDetail ex:UK_right_communication,
+        ex:UK_right_distribution,
+        ex:UK_right_rental,
+        ex:UK_right_reproduction,
+        ex:UK_right_translation ;
+    legal:jurisdiction "UK" ;
+    legal:jurisdictionName "United Kingdom" ;
+    legal:localPath "data/countries/uk/copyright/cdpa_1988.xml" ;
+    legal:rightsNote "Communication includes performance, showing, playing, and communication to the public; translation is folded into adaptation." ;
+    legal:ruleType "economic rights" .
+
+ex:US_duration a ipronto:ExploitationRight ;
+    legal:articleRef "§ 302 17 U.S.C." ;
+    legal:compliesWith ex:WIPO_berne_art7 ;
+    legal:docTitle "US Copyright Act (17 U.S.C.)" ;
+    legal:durationLiterary "70 years pma" ;
+    legal:durationSoftware "70 years pma" ;
+    legal:durationYears 70 ;
+    legal:jurisdiction "US" ;
+    legal:jurisdictionName "United States" ;
+    legal:localPath "data/countries/us/copyright/title17_copyright_act.xml" ;
+    legal:ruleType "copyright duration" ;
+    ipronto:triggeredBy "death of author" .
+
+ex:US_exception a ipronto:ExceptionsRight ;
+    legal:articleRef "§ 107" ;
+    legal:docTitle "US Copyright Act (17 U.S.C.)" ;
+    legal:exceptionText "Fair use (§ 107)" ;
+    legal:hasException false ;
+    legal:jurisdiction "US" ;
+    legal:jurisdictionName "United States" ;
+    legal:localPath "data/countries/us/copyright/title17_copyright_act.xml" ;
+    legal:ruleType "personal-use exception" .
+
+ex:US_rights a ipronto:ExploitationRight ;
+    legal:articleRef "§ 106 17 U.S.C." ;
+    legal:docTitle "US Copyright Act (17 U.S.C.)" ;
+    legal:hasRight "communication",
+        "distribution",
+        "reproduction",
+        "translation" ;
+    legal:hasRightDetail ex:US_right_communication,
+        ex:US_right_distribution,
+        ex:US_right_reproduction,
+        ex:US_right_translation ;
+    legal:jurisdiction "US" ;
+    legal:jurisdictionName "United States" ;
+    legal:localPath "data/countries/us/copyright/title17_copyright_act.xml" ;
+    legal:rightsNote "Rental is not modeled as a general exclusive right; derivative works are folded into translation/adaptation." ;
+    legal:ruleType "economic rights" .
+
+ex:CA_right_communication legal:articleRef "s. 3(1)(f)" ;
+    legal:rightName "communication" .
+
+ex:CA_right_distribution legal:articleRef "s. 3(1)(j)" ;
+    legal:rightName "distribution" .
+
+ex:CA_right_rental legal:articleRef "s. 3(1)(i)" ;
+    legal:rightName "rental" .
+
+ex:CA_right_reproduction legal:articleRef "s. 3(1)" ;
+    legal:rightName "reproduction" .
+
+ex:CA_right_translation legal:articleRef "s. 3(1)(a)" ;
+    legal:rightName "translation" .
+
+ex:CH_right_communication legal:articleRef "Art. 10(2)(c)-(f)" ;
+    legal:rightName "communication" .
+
+ex:CH_right_distribution legal:articleRef "Art. 10(2)(b)" ;
+    legal:rightName "distribution" .
+
+ex:CH_right_rental legal:articleRef "Art. 13" ;
+    legal:rightName "rental" .
+
+ex:CH_right_reproduction legal:articleRef "Art. 10(2)(a)" ;
+    legal:rightName "reproduction" .
+
+ex:CH_right_translation legal:articleRef "Art. 11" ;
+    legal:rightName "translation" .
+
+ex:DE_right_communication legal:articleRef "§§ 19-22 UrhG" ;
+    legal:rightName "communication" .
+
+ex:DE_right_distribution legal:articleRef "§ 17 UrhG" ;
+    legal:rightName "distribution" .
+
+ex:DE_right_rental legal:articleRef "§ 27 UrhG" ;
+    legal:rightName "rental" .
+
+ex:DE_right_reproduction legal:articleRef "§ 16 UrhG" ;
+    legal:rightName "reproduction" .
+
+ex:DE_right_translation legal:articleRef "§ 23 UrhG" ;
+    legal:rightName "translation" .
+
+ex:EU_right_communication legal:articleRef "Art. 3 InfoSoc" ;
+    legal:rightName "communication" .
+
+ex:EU_right_distribution legal:articleRef "Art. 4 InfoSoc" ;
+    legal:rightName "distribution" .
+
+ex:EU_right_rental legal:articleRef "Art. 3 Rental Directive" ;
+    legal:rightName "rental" .
+
+ex:EU_right_reproduction legal:articleRef "Art. 2 InfoSoc" ;
+    legal:rightName "reproduction" .
+
+ex:EU_right_translation legal:articleRef "Art. 4 Software Directive" ;
+    legal:rightName "translation" .
+
+ex:FR_right_communication legal:articleRef "L122-2" ;
+    legal:rightName "communication" .
+
+ex:FR_right_distribution legal:articleRef "L122-3-1" ;
+    legal:rightName "distribution" .
+
+ex:FR_right_rental legal:articleRef "L122-6" ;
+    legal:rightName "rental" .
+
+ex:FR_right_reproduction legal:articleRef "L122-3" ;
+    legal:rightName "reproduction" .
+
+ex:FR_right_translation legal:articleRef "L122-4" ;
+    legal:rightName "translation" .
+
+ex:IT_right_communication legal:articleRef "Art. 15" ;
+    legal:rightName "communication" .
+
+ex:IT_right_distribution legal:articleRef "Art. 17" ;
+    legal:rightName "distribution" .
+
+ex:IT_right_rental legal:articleRef "Art. 18-bis" ;
+    legal:rightName "rental" .
+
+ex:IT_right_reproduction legal:articleRef "Art. 13" ;
+    legal:rightName "reproduction" .
+
+ex:IT_right_translation legal:articleRef "Art. 18" ;
+    legal:rightName "translation" .
+
+ex:NZ_right_communication legal:articleRef "s. 32-33" ;
+    legal:rightName "communication" .
+
+ex:NZ_right_distribution legal:articleRef "s. 31" ;
+    legal:rightName "distribution" .
+
+ex:NZ_right_rental legal:articleRef "s. 9 and s. 16" ;
+    legal:rightName "rental" .
+
+ex:NZ_right_reproduction legal:articleRef "s. 30" ;
+    legal:rightName "reproduction" .
+
+ex:NZ_right_translation legal:articleRef "s. 34" ;
+    legal:rightName "translation" .
+
+ex:UK_right_communication legal:articleRef "s. 19-20" ;
+    legal:rightName "communication" .
+
+ex:UK_right_distribution legal:articleRef "s. 18" ;
+    legal:rightName "distribution" .
+
+ex:UK_right_rental legal:articleRef "s. 18A" ;
+    legal:rightName "rental" .
+
+ex:UK_right_reproduction legal:articleRef "s. 17" ;
+    legal:rightName "reproduction" .
+
+ex:UK_right_translation legal:articleRef "s. 21" ;
+    legal:rightName "translation" .
+
+ex:US_right_communication legal:articleRef "§ 106(4)-(6)" ;
+    legal:rightName "communication" .
+
+ex:US_right_distribution legal:articleRef "§ 106(3)" ;
+    legal:rightName "distribution" .
+
+ex:US_right_reproduction legal:articleRef "§ 106(1)" ;
+    legal:rightName "reproduction" .
+
+ex:US_right_translation legal:articleRef "§ 106(2)" ;
+    legal:rightName "translation" .
+
+ex:WIPO_berne_art7 a ipronto:ExploitationRight ;
+    legal:articleRef "Art. 7 Berne Convention" ;
+    legal:docTitle "Berne Convention for the Protection of Literary and Artistic Works" ;
+    legal:durationLiterary "50 years pma (minimum)" ;
+    legal:durationYears 50 ;
+    legal:jurisdiction "WIPO" ;
+    legal:jurisdictionName "WIPO (Berne Convention)" ;
+    legal:ruleType "copyright duration" ;
+    ipronto:triggeredBy "death of author" .
+

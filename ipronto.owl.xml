@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rss="http://purl.org/rss/1.0/" xmlns:jms="http://jena.hpl.hp.com/2003/08/jms#" xmlns:xsd="http://www.w3.org/2000/10/XMLSchema#" xmlns="http://dmag.ac.upc.edu/ontologies/ipronto.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="http://dmag.ac.upc.edu/ontologies/ipronto.owl">
+  <owl:Ontology rdf:about="">
+    <dc:creator>Distributed Multimedia Applications Group (http://dmag.ac.upc.edu)</dc:creator>
+    <dc:title>Intellectual Property Rights Ontology</dc:title>
+    <dc:description>An ontology to model Intellectual Property Rights suited for Digital Rights Management</dc:description>
+    <dc:date>2001-12-08</dc:date>
+    <dc:subject>Intellectual Property Rights, Digital Rights, IPR, DRM, Ontology</dc:subject>
+  </owl:Ontology>
+  <owl:Class rdf:ID="LegalEntity">
+    <rdfs:comment>An entity possessing the capacity in law to exercise or enjoy an intellectual property right.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LegalConcept"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#NaturalLegalEntity"/>
+          <owl:Class rdf:about="#CorporateLegalEntity"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label>Person</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Abstraction">
+    <rdfs:comment>A creation which is a concept; an abstract creation whose existence and nature are inferred from one or more expressions or manifestations.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Abstract"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Abstraction</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="CiteRight">
+    <rdfs:label>CiteRight</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ExceptionsRight"/>
+    </rdfs:subClassOf>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="Reproduce">
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Use"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Reproduce</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="IPRLicense">
+    <rdfs:label>IPRLicense</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Agreement"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CorporateLegalEntity">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#NaturalLegalEntity"/>
+    </owl:disjointWith>
+    <rdfs:comment/>
+    <rdfs:label>CorporatePerson</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#LegalEntity"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GeographicArea">
+    <rdfs:comment>A geographic location, generally having definite boundaries.  Note that this differs from its immediate superclass Place in that a GeographicArea is a Place of significant size.</rdfs:comment>
+    <rdfs:label>GeographicArea</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Place"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Creator">
+    <rdfs:label>Creator</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#RightsHolder"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="DistributionLicense">
+    <rdfs:comment/>
+    <rdfs:label>DistributionLicense</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#IPRLicense"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Offer">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Transaction"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Offer</rdfs:label>
+    <rdfs:comment>An event in which a party makes known the terms on which an agreement may be made.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Tune">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Access"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Tune</rdfs:label>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="Event">
+    <rdfs:comment>A dynamic relation involving two or more entities [derived]; something that happens; a relation through which an attribute of an entity is changed, added or removed.</rdfs:comment>
+    <rdfs:label>Event</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Process"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Label">
+    <rdfs:label>Label</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Abstract"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Expression">
+    <rdfs:comment>A creation which is an event.</rdfs:comment>
+    <rdfs:label>Expression</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Event"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Relation">
+    <rdfs:comment>A Class of ordered tuples.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Abstract"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Relation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ProductionIPRTransfer">
+    <rdfs:label>ProductionIPRTransfer</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ExploitationIPRTransfer"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Create">
+    <rdfs:comment/>
+    <rdfs:subClassOf rdf:resource="#Event"/>
+    <rdfs:label>Create</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="EditionContract">
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#AuthorContract"/>
+    </rdfs:subClassOf>
+    <rdfs:label>EditionContract</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Customer">
+    <owl:disjointWith>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#RightsHolder"/>
+          <owl:Class rdf:about="#MediaDistributor"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#CorporateLegalEntity"/>
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NaturalLegalEntity"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Customer</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Association">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Situation"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Association</rdfs:label>
+    <rdfs:comment>A situation in which two or more entities are passively.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Address">
+    <rdfs:comment>A GeographicArea with definite boundaries and of relatively small size.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Place"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Address</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="BroadcastRight">
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CommunicationRight"/>
+    </rdfs:subClassOf>
+    <rdfs:label>BroadcastRight</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ComputerProgram">
+    <rdfs:label>ComputerProgram</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Abstract"/>
+    </rdfs:subClassOf>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="TimeInterval">
+    <rdfs:comment>An interval of time. TimeIntervals have both an extent and a location on the universal timeline.</rdfs:comment>
+    <rdfs:label>TimeInterval</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#TimeMeasure"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Copy">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Transform"/>
+    </rdfs:subClassOf>
+    <rdfs:comment/>
+    <rdfs:label>Copy</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Physical">
+    <rdfs:label>Physical</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Abstract"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Entity"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>An entity that has a location in space-time. Note that points of space and time are themselves understood to have a location in space-time. Something is Physical just in case it exists at some location at some time.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ProductionContract">
+    <rdfs:comment/>
+    <rdfs:label>ProductionContract</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#AuthorContract"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="DistributionRight">
+    <rdfs:label>DistributionRight</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ExploitationRight"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>Exclusive right to authorize the making available to the public of the original or copies of the work by sale or other transfer of ownership. Relevant only to tangible objects.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="LegalConcept">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Abstract"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>A concept defined by law, statute or international convention</rdfs:comment>
+    <rdfs:label>LegalConcept</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Tuner">
+    <rdfs:comment/>
+    <rdfs:label>Tuner</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Device"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Assert">
+    <rdfs:comment/>
+    <rdfs:label>Assert</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Event"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ExploitationRight">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Copyright"/>
+    </rdfs:subClassOf>
+    <rdfs:comment/>
+    <rdfs:label>ExploitationRight</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Country">
+    <rdfs:subClassOf rdf:resource="#GeographicArea"/>
+    <rdfs:comment/>
+    <rdfs:label>Country</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="TranslationRight">
+    <rdfs:label>TranslationRight</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#TransformationRight"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Id">
+    <rdfs:label>Id</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf rdf:resource="#Label"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Manifestation">
+    <rdfs:label>Manifestation</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Replica"/>
+    </owl:disjointWith>
+    <rdfs:comment>An artefact containing the original infixion of an expression or abstraction.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Item"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Transaction">
+    <rdfs:subClassOf rdf:resource="#Event"/>
+    <rdfs:label>Transaction</rdfs:label>
+    <rdfs:comment>An event determining or recording the use or possible use of an entity.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="RentalRight">
+    <rdfs:label>RentalRight</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#DistributionRight"/>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="TimePoint">
+    <rdfs:label>TimePoint</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#TimeMeasure"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>An extensionless point on the universal timeline. It doesn't make sense to talk about what happens during a TimePoint, or how long the TimePoint lasts.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ExclusiveRight">
+    <rdfs:comment/>
+    <rdfs:label>ExclusiveRight</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#LegalConcept"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ContentProvider">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#RightsHolder"/>
+    </rdfs:subClassOf>
+    <rdfs:label>ContentProvider</rdfs:label>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="Agreement">
+    <rdfs:subClassOf rdf:resource="#Transaction"/>
+    <rdfs:comment>An event in which a written or unwritten accord is made between two or more parties.</rdfs:comment>
+    <rdfs:label>Agreement</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Attribute">
+    <rdfs:label>Attribute</rdfs:label>
+    <rdfs:comment>Qualities which we cannot or choose not to reify into subclasses of Object.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Abstract"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="NetDomain">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Place"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>Set of machines serving a collection of network addresses.</rdfs:comment>
+    <rdfs:label>NetDomain</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Creation">
+    <rdfs:comment>The output of creative activity.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Entity"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Creation</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Abstraction"/>
+          <owl:Class rdf:about="#Expression"/>
+          <owl:Class rdf:about="#Manifestation"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Process">
+    <rdfs:label>Process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Physical"/>
+    <rdfs:comment>Intuitively, the class of things that happen rather than endure. A Process is thought of as having temporal parts or stages, and so it cannot have all these parts together at one time (contrast Object).  Examples include extended 'events' such as a football match or a race, events and actions of various kinds, states of motion and lifespans of Objects, which occupy the same space and time but are thought of as having stages instead of parts. The formal definition is: anything that lasts for a time but is not an Object.  Note that a Process may have participants 'inside' it which are Objects, such as the players in a football match.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Abstract">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Entity"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Physical"/>
+    <rdfs:label>Abstract</rdfs:label>
+    <rdfs:comment>Properties or qualities as distinguished from any particular embodiment of the properties/qualities in a physical medium. Instances of Abstract can be said to exist in the same sense as mathematical objects such as sets and relations, but they cannot exist at a particular place and time without some physical encoding or embodiment. Something is Abstract just in case it has neither a spatial nor temporal location.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Object">
+    <rdfs:comment>Corresponds roughly to the class of ordinary physical objects. An Object is thought of as continuing through time, but at any particular time is all there is at that time, in contrast to something that is thought of as being divided into stages (contrast Process). Examples include normal physical objects, geographical regions, and locations of Processes.  The formal definition is that all the parts of an Object are present at the same time that the Object is; in other words, an Object cannot have 'parts' which are separated in time, such as the first and second halves of a football game.  Note that the parts of an Object may change from time to time, and that every Object occupies exactly the same space and time as a Process (its lifespan).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Physical"/>
+    <rdfs:label>Object</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Copyright">
+    <rdfs:label>Copyright</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#IntellectualPropertyRight"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Use">
+    <rdfs:label>Use</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf rdf:resource="#Event"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Editor">
+    <rdfs:label>Editor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ContentProvider"/>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="SuiGenerisRight">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#IntellectualPropertyRight"/>
+    </rdfs:subClassOf>
+    <rdfs:comment/>
+    <rdfs:label>SuiGenerisRight</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="CaseRole">
+    <rdfs:comment/>
+    <rdfs:label>CaseRole</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Relation"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PublicPerformanceRight">
+    <rdfs:label>PublicPerformanceRight</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CommunicationRight"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="NaturalLegalEntity">
+    <rdfs:label>NaturalPerson</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#LegalEntity"/>
+    <owl:disjointWith rdf:resource="#CorporateLegalEntity"/>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="ExploitationIPRTransfer">
+    <rdfs:label>ExploitationIPRTransfer</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#IPRTransfer"/>
+    </rdfs:subClassOf>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="IntellectualPropertyRight">
+    <rdfs:subClassOf rdf:resource="#LegalConcept"/>
+    <rdfs:label>IntellectualPropertyRight</rdfs:label>
+    <rdfs:comment>The authority granted by law or international convention to do or to authorise another person to do a defined act to intellectual property.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="RightsHolder">
+    <rdfs:label>RightsHolder</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf rdf:resource="#CorporateLegalEntity"/>
+    <rdfs:subClassOf rdf:resource="#NaturalLegalEntity"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PaternityRight">
+    <rdfs:label>PaternityRight</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#MoralRight"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Compensation">
+    <rdfs:comment>The countepart that a party gives to another party in order to return a received value.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Transaction"/>
+    <rdfs:label>Compensation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="AgeGroup">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Party"/>
+    </rdfs:subClassOf>
+    <rdfs:label>AgeGroup</rdfs:label>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="IntellectualProperty">
+    <rdfs:label>IntellectualProperty</rdfs:label>
+    <rdfs:comment>An entity defined by law or international convention to be intellectual property.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#LegalConcept"/>
+  </owl:Class>
+  <owl:Class rdf:ID="AdaptationRight">
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#TransformationRight"/>
+    </rdfs:subClassOf>
+    <rdfs:label>AdaptationRight</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="PurchaseContract">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#IPRContract"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="TimeMeasure">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Quantity"/>
+    </rdfs:subClassOf>
+    <rdfs:label>TimeMeasure</rdfs:label>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="CurrencyMeasure">
+    <rdfs:label>CurrencyMeasure</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Quantity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PurchaseLicense">
+    <rdfs:label>PurchaseLicense</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf rdf:resource="#IPRLicense"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Royalty">
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Quantity"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Royalty</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="NeighbouringRight">
+    <rdfs:comment/>
+    <rdfs:label>NeighbouringRight</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#IntellectualPropertyRight"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Organization">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Party"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Organization</rdfs:label>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="DisseminationRight">
+    <rdfs:label>DisseminationRight</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#MoralRight"/>
+    </rdfs:subClassOf>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="LibrariesRight">
+    <rdfs:label>LibrariesRight</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ExceptionsRight"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ReproductionRight">
+    <rdfs:subClassOf rdf:resource="#ExploitationRight"/>
+    <rdfs:comment/>
+    <rdfs:label>ReproductionRight</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Entity">
+    <rdfs:comment>Something which is identified. The universal class of individuals. This is the root node of the ontology. Everything is an entity.</rdfs:comment>
+    <rdfs:label>Entity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="IPRTransfer">
+    <rdfs:label>IPRTransfer</rdfs:label>
+    <rdfs:comment>A situation in which an ipr is transferred by an agreement.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Transaction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PrivateCopyRight">
+    <rdfs:label>PrivateCopyRight</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ExceptionsRight"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Continent">
+    <rdfs:comment/>
+    <rdfs:subClassOf rdf:resource="#GeographicArea"/>
+    <rdfs:label>Continent</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Party">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Group"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>An agent undertaking an activity or task in a creative or commercial event.</rdfs:comment>
+    <rdfs:label>Party</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="CommunicationRight">
+    <rdfs:subClassOf rdf:resource="#ExploitationRight"/>
+    <rdfs:comment/>
+    <rdfs:label>CommunicationRight</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Possessing">
+    <rdfs:label>Possessing</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Situation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="IPRStatement">
+    <rdfs:subClassOf rdf:resource="#Possessing"/>
+    <rdfs:comment/>
+    <rdfs:label>IPRStatement</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ExceptionsRight">
+    <rdfs:label>ExceptionsRight</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf rdf:resource="#IntellectualPropertyRight"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MoralRight">
+    <rdfs:subClassOf rdf:resource="#Copyright"/>
+    <rdfs:label>MoralRight</rdfs:label>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="SubtitlingRight">
+    <rdfs:label>SubtitlingRight</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#TranslationRight"/>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="Item">
+    <rdfs:label>Item</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Artefact"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>An artefact containing an infixion of an expression or abstraction.</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Replica"/>
+          <owl:Class rdf:about="#Manifestation"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Replica">
+    <owl:disjointWith rdf:resource="#Manifestation"/>
+    <rdfs:comment>An item made by copying another item.</rdfs:comment>
+    <rdfs:label>Replica</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Item"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Access">
+    <rdfs:subClassOf rdf:resource="#Use"/>
+    <rdfs:comment/>
+    <rdfs:label>Access</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="State">
+    <rdfs:label>State</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf rdf:resource="#GeographicArea"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Artefact">
+    <rdfs:label>Artefact</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Object"/>
+    <rdfs:comment>An Object with separable parts that is the product of an intentionally caused process.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Situation">
+    <rdfs:subClassOf rdf:resource="#Process"/>
+    <rdfs:label>Situation</rdfs:label>
+    <rdfs:comment>A dynamic relation involving two or more entities (derived); something that happens; a relation through which an attribute of an entity is changed, added or removed.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Producer">
+    <rdfs:subClassOf rdf:resource="#ContentProvider"/>
+    <rdfs:comment>A contributor responsible for the realisation of a creation.</rdfs:comment>
+    <rdfs:label>Producer</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Place">
+    <rdfs:label>Place</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Object"/>
+    <rdfs:comment>A location, generally having definite boundaries.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="CounterOffer">
+    <rdfs:label>CounterOffer</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf rdf:resource="#Transaction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Device">
+    <rdfs:comment>An Artifact whose purpose is to serve as an instrument in a specific type of task.</rdfs:comment>
+    <rdfs:label>Device</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Artefact"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Family">
+    <rdfs:label>Family</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf rdf:resource="#Party"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Disseminate">
+    <rdfs:label>Disseminate</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Event"/>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="Collection">
+    <rdfs:comment/>
+    <rdfs:subClassOf rdf:resource="#Object"/>
+    <rdfs:label>Collection</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="AgentObject">
+    <rdfs:label>Agent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Object"/>
+    <rdfs:comment>An entity acting in an event or sustaining a situation; a characteristic active role undertaken by an entity. Something or someone that can act on its own and produce changes in the world.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="MediaDistributor">
+    <rdfs:label>MediaDistributor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#CorporateLegalEntity"/>
+    <rdfs:comment/>
+    <rdfs:subClassOf rdf:resource="#NaturalLegalEntity"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DistributionIPRTransfer">
+    <rdfs:subClassOf rdf:resource="#IPRTransfer"/>
+    <rdfs:label>DistributionIPRTransfer</rdfs:label>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="DistributionContract">
+    <rdfs:comment/>
+    <rdfs:label>DistributionContract</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#IPRContract"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="IPRContract">
+    <rdfs:label>IPRAgreement</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Agreement"/>
+    <rdfs:comment>A situation in which an ipr is transferred by an agreement.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Transform">
+    <rdfs:label>Transform</rdfs:label>
+    <rdfs:comment>An event which results in the making of a new.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Event"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PostAgreement">
+    <rdfs:comment/>
+    <rdfs:label>PostAgreement</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Transaction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="TransformationRight">
+    <rdfs:label>TransformationRight</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ExploitationRight"/>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="AuthorContract">
+    <rdfs:subClassOf rdf:resource="#IPRContract"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Area">
+    <rdfs:comment/>
+    <rdfs:subClassOf rdf:resource="#GeographicArea"/>
+    <rdfs:label>Area</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="CreationIPRTransfer">
+    <rdfs:subClassOf rdf:resource="#IPRTransfer"/>
+    <rdfs:comment/>
+    <rdfs:label>CreationIPRTransfer</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="RespectRight">
+    <rdfs:label>RespectRight</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#MoralRight"/>
+    <rdfs:comment/>
+  </owl:Class>
+  <owl:Class rdf:ID="OccasionalGroup">
+    <rdfs:label>OccasionalGroup</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subClassOf rdf:resource="#Party"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Group">
+    <rdfs:comment/>
+    <rdfs:label>Group</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Collection"/>
+  </owl:Class>
+  <owl:Class rdf:ID="WithdrawalRight">
+    <rdfs:comment/>
+    <rdfs:subClassOf rdf:resource="#MoralRight"/>
+    <rdfs:label>WithdrawalRight</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Quantity">
+    <rdfs:comment>Any specification of how many or how much of something there is.</rdfs:comment>
+    <rdfs:label>Quantity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Abstract"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="user">
+    <rdfs:range rdf:resource="#LegalEntity"/>
+    <rdfs:label>user</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#agent"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#Event"/>
+    <rdfs:comment/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="consenterCreator">
+    <rdfs:range rdf:resource="#Creator"/>
+    <rdfs:domain rdf:resource="#AuthorContract"/>
+    <rdfs:comment/>
+    <rdfs:label>consenterCreator</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#consenter"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="consenterProducer">
+    <rdfs:domain rdf:resource="#ProductionContract"/>
+    <rdfs:comment/>
+    <rdfs:range rdf:resource="#Producer"/>
+    <rdfs:label>consenterProducer</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#consenter"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="locationFrom">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#location"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label>locationFrom</rdfs:label>
+    <rdfs:comment/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="licenser">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#MediaDistributor"/>
+          <owl:Class rdf:about="#RightsHolder"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:comment/>
+    <rdfs:label>licenser</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#consenter"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#IPRLicense"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="consenter">
+    <rdfs:domain rdf:resource="#Transaction"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#agent"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment/>
+    <rdfs:range rdf:resource="#LegalEntity"/>
+    <rdfs:label>consenter</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasCopy">
+    <rdfs:domain rdf:resource="#Manifestation"/>
+    <rdfs:range rdf:resource="#Replica"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="#isCopyOf"/>
+    </owl:inverseOf>
+    <rdfs:comment/>
+    <rdfs:label>hasCopy</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="owner">
+    <rdfs:domain rdf:resource="#IPRStatement"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#agent"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment/>
+    <rdfs:label>owner</rdfs:label>
+    <rdfs:range rdf:resource="#LegalEntity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="locationTo">
+    <rdfs:label>locationTo</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#location"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="recipient">
+    <rdfs:subPropertyOf rdf:resource="#user"/>
+    <rdfs:comment/>
+    <rdfs:domain rdf:resource="#Event"/>
+    <rdfs:label>recipient</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="grantee">
+    <rdfs:range rdf:resource="#RightsHolder"/>
+    <rdfs:comment/>
+    <rdfs:label>grantee</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#consenter"/>
+    <rdfs:domain rdf:resource="#IPRTransfer"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="transferredRight">
+    <rdfs:comment/>
+    <rdfs:domain rdf:resource="#IPRTransfer"/>
+    <rdfs:label>transferredRight</rdfs:label>
+    <rdfs:range rdf:resource="#IntellectualPropertyRight"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#input"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="payer">
+    <rdfs:comment/>
+    <rdfs:range rdf:resource="#LegalEntity"/>
+    <rdfs:label>payer</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#agent"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#Compensation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="payee">
+    <rdfs:label>payee</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#agent"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#Compensation"/>
+    <rdfs:comment/>
+    <rdfs:range rdf:resource="#LegalEntity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="timeTo">
+    <rdfs:comment/>
+    <rdfs:range rdf:resource="#TimePoint"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#time"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label>timeTo</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="asserter">
+    <rdfs:comment/>
+    <rdfs:domain rdf:resource="#Assert"/>
+    <rdfs:range rdf:resource="#LegalEntity"/>
+    <rdfs:label>asserter</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#agent"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasRealization">
+    <rdfs:domain rdf:resource="#Abstraction"/>
+    <rdfs:label>hasRealization</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:range rdf:resource="#Manifestation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="promoter">
+    <rdfs:label>promoter</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#contributor"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#Create"/>
+    <rdfs:comment/>
+    <rdfs:range rdf:resource="#RightsHolder"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="input">
+    <rdfs:comment/>
+    <rdfs:label>input</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#patient"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="permission">
+    <rdfs:domain rdf:resource="#Agreement"/>
+    <rdfs:comment/>
+    <rdfs:range rdf:resource="#Event"/>
+    <rdfs:label>permission</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#output"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="originator">
+    <rdfs:comment/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#contributor"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label>originator</rdfs:label>
+    <rdfs:domain rdf:resource="#Create"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Creator"/>
+          <owl:Class rdf:about="#RightsHolder"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="obligation">
+    <rdfs:comment/>
+    <rdfs:domain rdf:resource="#Agreement"/>
+    <rdfs:label>obligation</rdfs:label>
+    <rdfs:range rdf:resource="#Compensation"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#output"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="transfer">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#output"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label>transfer</rdfs:label>
+    <rdfs:domain rdf:resource="#Event"/>
+    <rdfs:comment/>
+    <rdfs:range rdf:resource="#IPRTransfer"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="timePeriod">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#time"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label>periodicity</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:range rdf:resource="#TimeInterval"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="output">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#patient"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label>output</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:domain rdf:resource="#Event"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="prohibition">
+    <rdfs:subPropertyOf rdf:resource="#output"/>
+    <rdfs:comment/>
+    <rdfs:range rdf:resource="#Event"/>
+    <rdfs:label>prohibition</rdfs:label>
+    <rdfs:domain rdf:resource="#IPRContract"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="replicator">
+    <rdfs:comment/>
+    <rdfs:domain rdf:resource="#Copy"/>
+    <rdfs:subPropertyOf rdf:resource="#user"/>
+    <rdfs:label>replicator</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasExpression">
+    <rdfs:comment/>
+    <rdfs:label>hasExpression</rdfs:label>
+    <rdfs:range rdf:resource="#Expression"/>
+    <rdfs:domain rdf:resource="#Abstraction"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isCopyOf">
+    <rdfs:comment/>
+    <owl:inverseOf rdf:resource="#hasCopy"/>
+    <rdfs:domain rdf:resource="#Replica"/>
+    <rdfs:range rdf:resource="#Manifestation"/>
+    <rdfs:label>isCopyOf</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="resultItem">
+    <rdfs:range rdf:resource="#Item"/>
+    <rdfs:comment/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#result"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label>resultItem</rdfs:label>
+    <rdfs:domain rdf:resource="#Event"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="resultCreation">
+    <rdfs:comment/>
+    <rdfs:domain rdf:resource="#Event"/>
+    <rdfs:label>resultCreation</rdfs:label>
+    <rdfs:range rdf:resource="#Creation"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#result"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="licensee">
+    <rdfs:domain rdf:resource="#IPRLicense"/>
+    <rdfs:comment/>
+    <rdfs:label>licensee</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#consenter"/>
+    <rdfs:range rdf:resource="#LegalEntity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="periodicity">
+    <rdfs:comment/>
+    <rdfs:label>periodicity</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#time"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#TimeInterval"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="timeFrom">
+    <rdfs:range rdf:resource="#TimePoint"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#time"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label>timeFrom</rdfs:label>
+    <rdfs:comment/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="time">
+    <rdfs:label>time</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#context"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#TimeMeasure"/>
+    <rdfs:comment/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="consenterEditor">
+    <rdfs:label>consenterEditor</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#consenter"/>
+    <rdfs:comment/>
+    <rdfs:range rdf:resource="#RightsHolder"/>
+    <rdfs:domain rdf:resource="#EditionContract"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="tool">
+    <rdfs:comment/>
+    <rdfs:subPropertyOf rdf:resource="#input"/>
+    <rdfs:label>tool</rdfs:label>
+    <rdfs:domain rdf:resource="#Event"/>
+    <rdfs:range rdf:resource="#Artefact"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="granter">
+    <rdfs:label>granter</rdfs:label>
+    <rdfs:domain rdf:resource="#IPRTransfer"/>
+    <rdfs:comment/>
+    <rdfs:subPropertyOf rdf:resource="#consenter"/>
+    <rdfs:range rdf:resource="#RightsHolder"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="run">
+    <rdfs:domain rdf:resource="#Device"/>
+    <rdfs:range rdf:resource="#ComputerProgram"/>
+    <rdfs:comment/>
+    <rdfs:label>run</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="asserted">
+    <rdfs:subPropertyOf rdf:resource="#input"/>
+    <rdfs:domain rdf:resource="#Assert"/>
+    <rdfs:range rdf:resource="#Process"/>
+    <rdfs:comment/>
+    <rdfs:label>asserted</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="responsible">
+    <rdfs:label>responsible</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#contributor"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#LegalEntity"/>
+    <rdfs:comment/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="location">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#context"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment/>
+    <rdfs:label>location</rdfs:label>
+    <rdfs:range rdf:resource="#Place"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="contributor">
+    <rdfs:comment/>
+    <rdfs:range rdf:resource="#LegalEntity"/>
+    <rdfs:label>contributor</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#agent"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#Event"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="controlledCreation">
+    <rdfs:domain rdf:resource="#IPRTransfer"/>
+    <rdfs:label>controlledCreation</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#input"/>
+    <rdfs:range rdf:resource="#Creation"/>
+    <rdfs:comment/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="patient">
+    <rdfs:domain rdf:resource="#Process"/>
+    <rdfs:label>patient</rdfs:label>
+    <rdfs:comment/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="result">
+    <rdfs:label>result</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#patient"/>
+    <rdfs:comment/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="modifier">
+    <rdfs:comment/>
+    <rdfs:label>modifier</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#user"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasFixation">
+    <rdfs:label>hasFixation</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:range rdf:resource="#Manifestation"/>
+    <rdfs:domain rdf:resource="#Expression"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="context">
+    <rdfs:label>context</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:domain rdf:resource="#Process"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#TimeMeasure"/>
+          <owl:Class rdf:about="#Place"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="disseminator">
+    <rdfs:subPropertyOf rdf:resource="#user"/>
+    <rdfs:range rdf:resource="#MediaDistributor"/>
+    <rdfs:comment/>
+    <rdfs:domain rdf:resource="#Disseminate"/>
+    <rdfs:label>disseminator</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="agent">
+    <rdfs:comment/>
+    <rdfs:domain rdf:resource="#Process"/>
+    <rdfs:label>agent</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="sourceCreation">
+    <rdfs:subPropertyOf rdf:resource="#input"/>
+    <rdfs:range rdf:resource="#Creation"/>
+    <rdfs:domain rdf:resource="#Event"/>
+    <rdfs:label>sourceCreation</rdfs:label>
+    <rdfs:comment/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="beneficiary">
+    <rdfs:subPropertyOf rdf:resource="#recipient"/>
+    <rdfs:comment/>
+    <rdfs:label>beneficiary</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="possession">
+    <rdfs:label>possession</rdfs:label>
+    <rdfs:comment/>
+    <rdfs:range rdf:resource="#IntellectualPropertyRight"/>
+    <rdfs:subPropertyOf rdf:resource="#input"/>
+    <rdfs:domain rdf:resource="#IPRStatement"/>
+  </owl:ObjectProperty>
+</rdf:RDF>

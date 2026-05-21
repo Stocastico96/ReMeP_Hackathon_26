@@ -18,11 +18,11 @@ The system combines a neural layer (LLM-based multilingual query enrichment and 
 
 **Q&A mode** — ask a question in any language, get a grounded answer with the source article highlighted in the AKN document viewer.
 
-![Q&A mode screenshot](screenshot_qa.png)
+<img width="818" height="683" alt="Q&A mode" src="https://github.com/user-attachments/assets/bd69ca29-72ce-4193-af89-a93dcb7425a2" />
 
 **Compliance Check mode** — select a country to verify compliance with the Berne Convention Art. 7 minimum copyright duration. Pure symbolic reasoning, no LLM involved.
 
-![Compliance Check mode screenshot](screenshot_compliance.png)
+<img width="822" height="685" alt="Compliance Check mode" src="https://github.com/user-attachments/assets/7cf5c1e0-31df-49c9-8d45-14a72ad98a72" />
 
 ---
 
@@ -74,14 +74,4 @@ Germany · France · Italy · Switzerland · United Kingdom · United States · 
 ## Paper
 
 See [`paper_draft.md`](paper_draft.md) for the full system description, architecture details, and discussion of limitations and future work.
-
-## User interface overview
-
-### Q&A
-
-<img width="818" height="683" alt="ui1" src="https://github.com/user-attachments/assets/bd69ca29-72ce-4193-af89-a93dcb7425a2" />
-
-### Compliance check
-
-<img width="822" height="685" alt="u2" src="https://github.com/user-attachments/assets/7cf5c1e0-31df-49c9-8d45-14a72ad98a72" />
 

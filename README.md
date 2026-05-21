@@ -62,3 +62,14 @@ Germany · France · Italy · Switzerland · United Kingdom · United States · 
 ## Paper
 
 See [`paper_draft.md`](paper_draft.md) for the full system description, architecture details, and discussion of limitations and future work.
+
+## User interface overview
+
+### Q&A
+
+<img width="818" height="683" alt="ui1" src="https://github.com/user-attachments/assets/bd69ca29-72ce-4193-af89-a93dcb7425a2" />
+
+### Compliance check
+
+<img width="822" height="685" alt="u2" src="https://github.com/user-attachments/assets/7cf5c1e0-31df-49c9-8d45-14a72ad98a72" />
+

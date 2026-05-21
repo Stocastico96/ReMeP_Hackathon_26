@@ -30,7 +30,7 @@ Akoma Ntoso (AKN) is an OASIS standard for the XML representation of legal and p
 
 ### 2.2 IPROnto
 
-IPROnto is an OWL ontology for the intellectual property domain (Delgado et al., 2003). It defines classes such as `ExploitationRight`, `ExceptionsRight`, and properties for jurisdiction, duration, and rights grants. We use the IPROnto namespace as the backbone of our RDF Knowledge Graph, extending it with `legal:` properties for SPARQL querying.
+IPROnto is an OWL ontology for the intellectual property domain, developed by the Distributed Multimedia Applications Group (DMAG) at the Universitat Politècnica de Catalunya (Delgado et al., 2003). It defines classes such as `ExploitationRight`, `ExceptionsRight`, and properties for jurisdiction, duration, and rights grants. We use the IPROnto namespace (`http://rhizomik.net/ontologies/2005/03/ipronto.owl#`) as the backbone of our RDF Knowledge Graph, extending it with `legal:` properties for SPARQL querying.
 
 ### 2.3 Neuro-Symbolic Legal AI
 
@@ -161,6 +161,10 @@ This MVP demonstrates that a neuro-symbolic pipeline — LLM for query understan
 - Palmirani, M. et al. LegalRuleML: Making XML Smart for Legal Rule Markup. In *Legal Knowledge and Information Systems*, IOS Press.
 - Nardi, D. et al. (2026). An Analysis of Ontologies for the Intellectual Property Domain. *(in this volume)*
 - OASIS. Akoma Ntoso Version 1.0. OASIS Standard, 2018.
+<<<<<<< HEAD
 - Delgado, J. et al. (2003). IPROnto: Intellectual Property Rights Ontology. https://dmag.ac.upc.edu/ontologies/ipronto/ipronto.owl .
+=======
+- García, R. et al. IPROnto: An Ontology for Digital Rights Management. Distributed Multimedia Applications Group (DMAG), Universitat Politècnica de Catalunya, 2001. http://dmag.ac.upc.edu/ontologies/ipronto.owl
+>>>>>>> 3c64e16 (Update architecture diagram and fix paper inaccuracies)
 - Berne Convention for the Protection of Literary and Artistic Works, Art. 7. WIPO, 1886 (as amended 1979).
 - OpenRouter. Unified LLM API. https://openrouter.ai (2024).

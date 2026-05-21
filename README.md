@@ -14,6 +14,18 @@ The system combines a neural layer (LLM-based multilingual query enrichment and 
 
 ---
 
+## Screenshots
+
+**Q&A mode** — ask a question in any language, get a grounded answer with the source article highlighted in the AKN document viewer.
+
+![Q&A mode screenshot](screenshot_qa.png)
+
+**Compliance Check mode** — select a country to verify compliance with the Berne Convention Art. 7 minimum copyright duration. Pure symbolic reasoning, no LLM involved.
+
+![Compliance Check mode screenshot](screenshot_compliance.png)
+
+---
+
 ## Two modes
 
 **Q&A** — Ask a question in any language about intellectual property law. The system enriches the query, retrieves the relevant provision from the KG via SPARQL, extracts the passage from the AKN XML source document, and generates a grounded answer citing the article.

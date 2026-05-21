@@ -15,6 +15,7 @@ from flask import Flask, jsonify, render_template, request, send_from_directory
 from scripts.doc_extractor import extract_article_html, extract_full_doc_html, find_pdf_path
 from scripts.kg_query import check_compliance, list_countries
 from scripts.orchestrator import orchestrate
+from scripts.point_in_time import get_version_at, list_versions
 
 app = Flask(__name__)
 BASE_DIR = Path(__file__).parent
@@ -53,12 +54,18 @@ def ask():
     pdf_path = find_pdf_path(local_path)
     pdf_url  = f"/files/{pdf_path}" if pdf_path else ""
 
+    from scripts.akn_metadata import extract_frbr
+    meta = extract_frbr(local_path)
+
     return jsonify({
         "answer": result["answer"],
         "viz_spec": result["viz_spec"],
         "doc_html": doc_html,
         "full_doc_html": full_doc_html,
         "pdf_url": pdf_url,
+        "frbr_work_uri":   meta["frbr_work_uri"],
+        "point_in_time":   meta["point_in_time"],
+        "is_authoritative": meta["is_authoritative"],
         "evidence": {
             "document": doc,
             "reference": ref,
@@ -71,6 +78,52 @@ def ask():
 @app.get("/api/countries")
 def get_countries():
     return jsonify(list_countries())
+
+
+@app.get("/api/versions/<country_code>")
+def get_versions(country_code: str):
+    return jsonify(list_versions(country_code.upper()))
+
+
+@app.post("/api/document")
+def get_document_at():
+    """Retrieve an AKN article at a specific point in time."""
+    data        = request.get_json(force=True)
+    country     = (data.get("country_code") or "").strip().upper()
+    eid         = (data.get("eid")          or "").strip()
+    target_date = (data.get("date")         or "").strip()
+    span        = (data.get("span")         or "").strip()
+
+    if not country or not eid:
+        return jsonify({"error": "Missing country_code or eid"}), 400
+
+    # Resolve file path: versioned if date given, else current canonical
+    versioned = get_version_at(country, target_date) if target_date else None
+    if versioned:
+        local_path = str(versioned)
+    else:
+        from scripts.kg_builder import _JURISDICTION_FILES
+        local_path = _JURISDICTION_FILES.get(country, {}).get("local_path", "")
+
+    if not local_path:
+        return jsonify({"error": f"No document for {country}"}), 404
+
+    doc_html      = extract_article_html(local_path=local_path, eid=eid, supporting_span=span)
+    full_doc_html = extract_full_doc_html(local_path=local_path, eid=eid, supporting_span=span)
+    pdf_path      = find_pdf_path(local_path)
+
+    from scripts.akn_metadata import extract_frbr
+    meta = extract_frbr(local_path)
+
+    return jsonify({
+        "local_path":     local_path,
+        "doc_html":       doc_html,
+        "full_doc_html":  full_doc_html,
+        "pdf_url":        f"/files/{pdf_path}" if pdf_path else "",
+        "point_in_time":  meta["point_in_time"] or target_date,
+        "frbr_work_uri":  meta["frbr_work_uri"],
+        "is_authoritative": meta["is_authoritative"],
+    })
 
 
 @app.post("/api/compliance")
@@ -92,7 +145,18 @@ def compliance():
     pdf_path      = find_pdf_path(local_path)
     pdf_url       = f"/files/{pdf_path}" if pdf_path else ""
 
-    return jsonify({**result, "doc_html": doc_html, "full_doc_html": full_doc_html, "pdf_url": pdf_url})
+    from scripts.akn_metadata import extract_frbr
+    meta = extract_frbr(local_path)
+
+    return jsonify({
+        **result,
+        "doc_html":        doc_html,
+        "full_doc_html":   full_doc_html,
+        "pdf_url":         pdf_url,
+        "frbr_work_uri":   meta["frbr_work_uri"],
+        "point_in_time":   meta["point_in_time"],
+        "is_authoritative": meta["is_authoritative"],
+    })
 
 
 if __name__ == "__main__":

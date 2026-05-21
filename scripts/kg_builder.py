@@ -12,6 +12,8 @@ from pathlib import Path
 
 from rdflib import Graph, Literal, Namespace, RDF, URIRef, XSD
 
+from scripts.akn_metadata import extract_frbr
+
 EX      = Namespace("http://legal-kg.org/data/")
 IPRONTO = Namespace("http://rhizomik.net/ontologies/2005/03/ipronto.owl#")
 LEGAL   = Namespace("http://legal-kg.org/schema/")
@@ -91,6 +93,22 @@ def _file_info(code: str) -> dict[str, str]:
     return _JURISDICTION_FILES.get(code, {"local_path": "", "doc_title": ""})
 
 
+def _add_frbr_triples(g: Graph, node: URIRef, local_path: str) -> None:
+    """Add authentic-source and point-in-time triples extracted from the AKN document."""
+    meta = extract_frbr(local_path)
+    if meta["frbr_work_uri"]:
+        g.add((node, LEGAL.frbrWorkUri,    Literal(meta["frbr_work_uri"])))
+    if meta["frbr_this"]:
+        g.add((node, LEGAL.frbrThis,       Literal(meta["frbr_this"])))
+    if meta["eli_uri"]:
+        g.add((node, LEGAL.eliUri,         Literal(meta["eli_uri"])))
+    if meta["point_in_time"]:
+        g.add((node, LEGAL.pointInTime,    Literal(meta["point_in_time"], datatype=XSD.date)))
+    if meta["date_in_force"]:
+        g.add((node, LEGAL.dateInForce,    Literal(meta["date_in_force"], datatype=XSD.date)))
+    g.add((node, LEGAL.isAuthoritative,    Literal(meta["is_authoritative"], datatype=XSD.boolean)))
+
+
 def _add_duration_node(g: Graph, code: str, row: dict) -> None:
     node = EX[f"{code}_duration"]
     fi   = _file_info(code)
@@ -115,6 +133,7 @@ def _add_duration_node(g: Graph, code: str, row: dict) -> None:
     dur_text = row.get("duration_literary", "").lower()
     if "pma" in dur_text or "death" in dur_text or "post mortem" in dur_text:
         g.add((node, IPRONTO.triggeredBy, Literal("death of author")))
+    _add_frbr_triples(g, node, fi["local_path"])
 
 
 def _add_rights_node(g: Graph, code: str, row: dict) -> None:
@@ -128,6 +147,7 @@ def _add_rights_node(g: Graph, code: str, row: dict) -> None:
     g.add((node, LEGAL.localPath,        Literal(fi["local_path"])))
     g.add((node, LEGAL.docTitle,         Literal(fi["doc_title"])))
     g.add((node, LEGAL.rightsNote,       Literal(row.get("rights_note", ""))))
+    _add_frbr_triples(g, node, fi["local_path"])
 
     main_art = _RIGHTS_ARTICLES.get(code, "")
     if main_art:
@@ -166,6 +186,8 @@ def _add_exception_node(g: Graph, code: str, row: dict) -> None:
 
     has_exc = exc.lower().startswith("yes")
     g.add((node, LEGAL.hasException, Literal(has_exc, datatype=XSD.boolean)))
+
+    _add_frbr_triples(g, node, fi["local_path"])
 
     # Extract article ref from "Yes (§ 53 UrhG)" style strings
     art_ref = _extract_article_from_exception(exc)

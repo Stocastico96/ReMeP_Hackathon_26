@@ -175,6 +175,38 @@
     #doc-ref-line a { color: #dc2626; text-decoration: none; font-weight: 500; }
     #doc-ref-line a:hover { text-decoration: underline; }
 
+    /* ─── Authentic source + point-in-time bar ─── */
+    #doc-meta-bar {
+      display: none; padding: .35rem 1.1rem;
+      background: #f8fafc; border-bottom: 1px solid #e2e8f0;
+      font-size: .71rem; color: #64748b;
+      display: flex; align-items: center; gap: .75rem; flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+    .auth-badge {
+      background: #dcfce7; color: #166534; border-radius: 4px;
+      padding: .1rem .45rem; font-weight: 700; font-size: .67rem;
+    }
+    .pit-badge {
+      background: #dbeafe; color: #1e40af; border-radius: 4px;
+      padding: .1rem .45rem; font-weight: 600; font-size: .67rem;
+    }
+    #doc-meta-bar a { color: #2563eb; text-decoration: none; font-size: .71rem; }
+    #doc-meta-bar a:hover { text-decoration: underline; }
+    #pit-picker {
+      display: none; align-items: center; gap: .35rem; flex-shrink: 0;
+    }
+    #pit-picker label { font-size: .71rem; color: #64748b; }
+    #pit-date {
+      border: 1px solid #cbd5e1; border-radius: 4px; font-size: .71rem;
+      padding: .15rem .4rem; color: #1e293b; cursor: pointer;
+    }
+    #pit-go {
+      background: #1e3a5f; color: #fff; border: none; border-radius: 4px;
+      font-size: .68rem; padding: .18rem .55rem; cursor: pointer;
+    }
+    #pit-go:hover { background: #1e4d80; }
+
     /* view toggle */
     .view-toggle {
       display: flex; gap: 0; flex-shrink: 0;
@@ -489,6 +521,17 @@
         <button id="btn-full"    onclick="switchView('full')">Full Document</button>
       </div>
     </div>
+    <!-- Authentic source + point-in-time bar -->
+    <div id="doc-meta-bar" style="display:none">
+      <span id="auth-badge-wrap"></span>
+      <span id="pit-badge-wrap"></span>
+      <a id="frbr-source-link" href="#" target="_blank" style="display:none">🔗 Official Source</a>
+      <div id="pit-picker">
+        <label for="pit-date">Version at date:</label>
+        <input type="date" id="pit-date" min="1941-07-16" max="2025-12-31">
+        <button id="pit-go" onclick="loadVersionAt()">Go</button>
+      </div>
+    </div>
     <div id="doc-body">
       <p style="color:#94a3b8;font-style:italic;margin-top:3rem;text-align:center;">
         The source document will appear here once you ask a question.
@@ -498,9 +541,18 @@
 </main>
 
 <script>
-  let _articleHtml = '';
-  let _fullDocHtml = '';
-  let _currentMode = 'qa';
+  let _articleHtml    = '';
+  let _fullDocHtml    = '';
+  let _currentMode    = 'qa';
+  let _currentCountry = '';
+  let _currentEid     = '';
+
+  function countryFromPath(path) {
+    const m = path ? path.match(/countries\/(\w+)\//) : null;
+    const map = { italy:'IT', germany:'DE', france:'FR', uk:'UK', us:'US',
+                  switzerland:'CH', nz:'NZ', ca:'CA', eu:'EU' };
+    return m ? (map[m[1]] || '') : '';
+  }
 
   // ─── Mode switching ───────────────────────────────────────────────────────
   function switchMode(mode) {
@@ -561,7 +613,13 @@
         history.appendChild(err);
       } else {
         history.appendChild(buildAnswerCard(data));
-        updateDocPanel(data.doc_html, data.full_doc_html, data.evidence, data.pdf_url);
+        updateDocPanel(data.doc_html, data.full_doc_html, data.evidence, data.pdf_url, null, {
+          frbr_work_uri:   data.frbr_work_uri   || '',
+          point_in_time:   data.point_in_time   || '',
+          is_authoritative: data.is_authoritative || false,
+          country: countryFromPath(data.evidence?.document?.local_path || ''),
+          eid:     data.evidence?.reference?.eid || '',
+        });
       }
     } catch {
       loading.innerHTML = '⚠️ Request failed.';
@@ -676,7 +734,13 @@
       } else {
         results.innerHTML = '';
         results.appendChild(buildComplianceCard(data));
-        updateDocPanel(data.doc_html, data.full_doc_html, null, data.pdf_url, data);
+        updateDocPanel(data.doc_html, data.full_doc_html, null, data.pdf_url, data, {
+          frbr_work_uri:   data.frbr_work_uri   || '',
+          point_in_time:   data.point_in_time   || '',
+          is_authoritative: data.is_authoritative || false,
+          country: data.country_code || '',
+          eid:     data.eid          || '',
+        });
       }
     } catch(e) {
       results.innerHTML = '<div class="doc-error" style="padding:1rem">⚠️ Request failed.</div>';
@@ -749,7 +813,7 @@
     }
   }
 
-  function updateDocPanel(articleHtml, fullHtml, evidence, pdfUrl, complianceData) {
+  function updateDocPanel(articleHtml, fullHtml, evidence, pdfUrl, complianceData, meta) {
     _articleHtml = articleHtml || '';
     _fullDocHtml = fullHtml    || '';
 
@@ -768,6 +832,11 @@
       pdfLink  = pdfUrl ? `<a href="${pdfUrl}" target="_blank">📄 Open PDF</a>` : '';
     }
 
+    if (meta) {
+      _currentCountry = meta.country || '';
+      _currentEid     = meta.eid     || '';
+    }
+
     const titleEl = document.getElementById('doc-title');
     titleEl.textContent = title;
     titleEl.style.color = '#1e293b';
@@ -780,7 +849,79 @@
     document.getElementById('btn-full').classList.remove('active');
 
     document.getElementById('doc-body').innerHTML = _articleHtml;
+    updateMetaBar(meta);
     scrollToTarget();
+  }
+
+  function updateMetaBar(meta) {
+    const bar = document.getElementById('doc-meta-bar');
+    if (!meta || (!meta.frbr_work_uri && !meta.point_in_time)) {
+      bar.style.display = 'none';
+      return;
+    }
+    bar.style.display = '';
+
+    document.getElementById('auth-badge-wrap').innerHTML = meta.is_authoritative
+      ? '<span class="auth-badge">✓ Authoritative Source</span>'
+      : '';
+
+    document.getElementById('pit-badge-wrap').innerHTML = meta.point_in_time
+      ? `<span class="pit-badge">📅 ${meta.point_in_time}</span>`
+      : '';
+
+    const frbrLink = document.getElementById('frbr-source-link');
+    if (meta.frbr_work_uri) {
+      frbrLink.href          = meta.frbr_work_uri;
+      frbrLink.style.display = '';
+    } else {
+      frbrLink.style.display = 'none';
+    }
+
+    document.getElementById('pit-picker').style.display =
+      meta.country === 'IT' ? 'flex' : 'none';
+  }
+
+  async function loadVersionAt() {
+    const dateVal = document.getElementById('pit-date').value;
+    if (!dateVal || !_currentEid) return;
+
+    const btn = document.getElementById('pit-go');
+    btn.disabled    = true;
+    btn.textContent = '…';
+
+    try {
+      const res  = await fetch('/api/document', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          country_code: _currentCountry,
+          eid:          _currentEid,
+          date:         dateVal,
+          span:         '',
+        }),
+      });
+      const data = await res.json();
+      if (data.error) {
+        alert(data.error);
+      } else {
+        _articleHtml = data.doc_html      || '';
+        _fullDocHtml = data.full_doc_html || '';
+        document.getElementById('doc-body').innerHTML = _articleHtml;
+        updateMetaBar({
+          frbr_work_uri:   data.frbr_work_uri   || '',
+          point_in_time:   data.point_in_time   || dateVal,
+          is_authoritative: data.is_authoritative || false,
+          country: _currentCountry,
+          eid:     _currentEid,
+        });
+        scrollToTarget();
+      }
+    } catch(e) {
+      alert('Request failed.');
+    }
+
+    btn.disabled    = false;
+    btn.textContent = 'Go';
   }
 
   // ─── Init ─────────────────────────────────────────────────────────────────

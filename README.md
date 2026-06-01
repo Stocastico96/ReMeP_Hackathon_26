@@ -1,77 +1,45 @@
 # Bidirectional Monitoring of WIPO Regulation and National Legislation: A Neuro-Symbolic Approach
 
-**IRIS 2026 Hackathon**  
-Brüne · Corazza · Longo · Sapienza · Vagnoni  
-Supervisor: Prof. Monica Palmirani
+Built for the IRIS 2026 Hackathon by Brüne, Corazza, Longo, Sapienza, and Vagnoni, supervised by Prof. Monica Palmirani.
 
----
+Checking whether a country's copyright law actually lines up with its WIPO treaty obligations is still mostly manual work. A lawyer has to track down the right provision, read off the number of years, and hold it against the treaty floor. Doing that for one country is tedious; doing it for nine is slow and easy to get wrong. We wanted to see how far we could automate it without letting a language model anywhere near the numbers a verdict depends on.
 
-## Architecture
+## How it works
+
+The system has two halves that play to their respective strengths. A neural layer (an LLM) handles the messy, multilingual side: understanding a question phrased in German or French and writing the final answer in plain language. A symbolic layer does the part that has to be exact, running SPARQL queries over an RDF knowledge graph built from Akoma Ntoso legal documents and the IPROnto ontology. The compliance decision itself never touches the LLM.
 
 ![System architecture diagram](MVP_proposal_diagram.png)
 
-The system combines a neural layer (LLM-based multilingual query enrichment and answer generation) with a symbolic layer (SPARQL queries over an RDF Knowledge Graph grounded in Akoma Ntoso legal documents and the IPROnto ontology).
+## What you can do with it
 
----
+There are two modes.
 
-## Screenshots
-
-**Q&A mode** — ask a question in any language, get a grounded answer with the source article highlighted in the AKN document viewer.
+In **Q&A mode** you ask a question in any language about intellectual property law. The system enriches the query, pulls the relevant provision out of the knowledge graph, extracts the actual passage from the source AKN XML, and gives you a grounded answer that cites the article. The source document is shown alongside, with the relevant article highlighted.
 
 <img width="818" height="683" alt="Q&A mode" src="https://github.com/user-attachments/assets/bd69ca29-72ce-4193-af89-a93dcb7425a2" />
 
-**Compliance Check mode** — select a country to verify compliance with the Berne Convention Art. 7 minimum copyright duration. Pure symbolic reasoning, no LLM involved.
+In **Compliance Check mode** you pick a country and the system verifies whether its copyright duration meets the Berne Convention minimum (Article 7, 50 years post mortem). This part is purely symbolic, no LLM in the loop, so the answer is reproducible and traceable straight back to the encoded facts.
 
 <img width="822" height="685" alt="Compliance Check mode" src="https://github.com/user-attachments/assets/7cf5c1e0-31df-49c9-8d45-14a72ad98a72" />
 
----
+We covered nine jurisdictions: Germany, France, Italy, Switzerland, the United Kingdom, the United States, Canada, New Zealand, and the European Union.
 
-## Two modes
+## Running it locally
 
-**Q&A** — Ask a question in any language about intellectual property law. The system enriches the query, retrieves the relevant provision from the KG via SPARQL, extracts the passage from the AKN XML source document, and generates a grounded answer citing the article.
-
-**Compliance Check** — Select a country to verify whether its national copyright duration meets the WIPO Berne Convention minimum (Art. 7, 50 years post-mortem). The check is purely symbolic: no LLM is involved.
-
----
-
-## Stack
-
-| Component | Technology |
-|---|---|
-| Web framework | Flask (Python) |
-| Knowledge Graph | rdflib · RDF/Turtle · SPARQL |
-| Legal documents | Akoma Ntoso XML (9 jurisdictions) |
-| Ontology | IPROnto |
-| LLM | Gemini 2.0 Flash via OpenRouter |
-| Schema validation | Pydantic v2 |
-| XML parsing | lxml |
-
----
-
-## Setup
+You'll need an OpenRouter API key. Then:
 
 ```bash
-# install dependencies
 uv sync
-
-# add your OpenRouter API key
 echo "OPENROUTER_API_KEY=your_key_here" > .env
-
-# run
 uv run python app.py
 ```
 
-Open [http://localhost:5050](http://localhost:5050).
+Once it's up, open http://localhost:5050.
 
----
+## What it's built on
 
-## Jurisdictions covered
-
-Germany · France · Italy · Switzerland · United Kingdom · United States · Canada · New Zealand · European Union
-
----
+The web app is Flask. The knowledge graph is handled with rdflib (RDF/Turtle, queried with SPARQL), the legal texts are stored as Akoma Ntoso XML, and the domain vocabulary comes from the IPROnto ontology. XML parsing is done with lxml and we use Pydantic v2 for schema validation. The LLM is Gemini 2.0 Flash, accessed through OpenRouter.
 
 ## Paper
 
-See [`paper_draft.md`](paper_draft.md) for the full system description, architecture details, and discussion of limitations and future work.
-
+The full write-up, with the architecture details and a discussion of limitations and future work, is in [`paper/ReMeP_Hackathon_IP_Law_knitted.pdf`](paper/ReMeP_Hackathon_IP_Law_knitted.pdf). The LaTeX source lives in [`paper/main.tex`](paper/main.tex).

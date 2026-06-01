@@ -18,7 +18,7 @@ EX      = Namespace("http://legal-kg.org/data/")
 IPRONTO = Namespace("http://rhizomik.net/ontologies/2005/03/ipronto.owl#")
 LEGAL   = Namespace("http://legal-kg.org/schema/")
 
-CSV_PATH = Path("simplified_cq1_cq2_mock_dataset.csv")
+CSV_PATH = Path("simplified_cq1_cq2_dataset.csv")
 TTL_PATH = Path("data/legal_kg.ttl")
 
 # Map jurisdiction id (CSV column "id") → AKN local paths and display titles

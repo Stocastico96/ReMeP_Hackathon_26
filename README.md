@@ -1,4 +1,4 @@
-# Bidirectional Monitoring of WIPO Regulation and National Legislation: A Neuro-Symbolic Approach
+# A Neuro-Symbolic System for Querying and Monitoring Copyright Compliance Across National Legislations
 
 Built for the IRIS 2026 Hackathon by Brüne, Corazza, Longo, Sapienza, and Vagnoni, supervised by Prof. Monica Palmirani.
 

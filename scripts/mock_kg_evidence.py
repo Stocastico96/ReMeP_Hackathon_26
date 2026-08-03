@@ -19,6 +19,7 @@ class DocumentRef(TypedDict, total=False):
     title: str
     uri: str
     local_path: str
+    source_url: str      # publisher's web page — a locator, unlike the FRBR URIs
 
 
 class AKNReference(TypedDict, total=False):

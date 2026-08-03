@@ -23,8 +23,11 @@ TTL_PATH = Path("data/legal_kg.ttl")
 
 # Map jurisdiction id (CSV column "id") → AKN local paths and display titles
 _JURISDICTION_FILES: dict[str, dict[str, str]] = {
+    # CA and NZ point at the AKN conversions produced by
+    # scripts/04_convert_national_xml_to_akn.py — the native Justice Laws and PCO
+    # XML next to them carries no eIds, so provisions cannot be located in it.
     "CA": {
-        "local_path": "data/countries/ca/copyright/C-42.xml",
+        "local_path": "data/countries/ca/copyright/akn/C-42_akn.xml",
         "doc_title":  "Canadian Copyright Act",
     },
     "EU": {
@@ -44,7 +47,7 @@ _JURISDICTION_FILES: dict[str, dict[str, str]] = {
         "doc_title":  "Italian Copyright Act (Law 633/1941)",
     },
     "NZ": {
-        "local_path": "data/countries/nz/copyright/096be8ed81fe312e.xml",
+        "local_path": "data/countries/nz/copyright/akn/copyright_act_1994_akn.xml",
         "doc_title":  "New Zealand Copyright Act 1994",
     },
     "CH": {
@@ -59,6 +62,20 @@ _JURISDICTION_FILES: dict[str, dict[str, str]] = {
         "local_path": "data/countries/us/copyright/title17_copyright_act.xml",
         "doc_title":  "US Copyright Act (17 U.S.C.)",
     },
+}
+
+
+# A jurisdiction's rules do not always live in one document: the EU harmonises
+# the term of protection in Directive 2006/116 but economic rights and the
+# private-copy exception in the InfoSoc Directive 2001/29. Keyed by
+# (jurisdiction, ruleType); anything not listed falls back to _JURISDICTION_FILES.
+_INFOSOC = {
+    "local_path": "data/countries/eu/copyright/02001L0029-20190606.xml",
+    "doc_title":  "EU InfoSoc Directive 2001/29/EC",
+}
+_RULE_FILES: dict[tuple[str, str], dict[str, str]] = {
+    ("EU", "economic rights"):         _INFOSOC,
+    ("EU", "personal-use exception"):  _INFOSOC,
 }
 
 
@@ -89,13 +106,23 @@ def build_kg(csv_path: Path = CSV_PATH) -> Graph:
     return g
 
 
-def _file_info(code: str) -> dict[str, str]:
+def _file_info(code: str, rule_type: str = "") -> dict[str, str]:
+    if (code, rule_type) in _RULE_FILES:
+        return _RULE_FILES[(code, rule_type)]
     return _JURISDICTION_FILES.get(code, {"local_path": "", "doc_title": ""})
 
 
-def _add_frbr_triples(g: Graph, node: URIRef, local_path: str) -> None:
+def _add_frbr_triples(g: Graph, node: URIRef, local_path: str, source_url: str = "") -> None:
     """Add authentic-source and point-in-time triples extracted from the AKN document."""
     meta = extract_frbr(local_path)
+
+    # The official publisher URL. The FRBR Work URI is an identifier, not a
+    # locator, so it must never be offered to a browser as a link. A document that
+    # carries its own sourceUri wins over the per-jurisdiction URL from the CSV:
+    # the EU rules live in two different directives with two different pages.
+    locator = meta["source_uri"] or source_url.strip()
+    if locator:
+        g.add((node, LEGAL.sourceUrl, Literal(locator)))
     if meta["frbr_work_uri"]:
         g.add((node, LEGAL.frbrWorkUri,    Literal(meta["frbr_work_uri"])))
     if meta["frbr_this"]:
@@ -111,7 +138,7 @@ def _add_frbr_triples(g: Graph, node: URIRef, local_path: str) -> None:
 
 def _add_duration_node(g: Graph, code: str, row: dict) -> None:
     node = EX[f"{code}_duration"]
-    fi   = _file_info(code)
+    fi   = _file_info(code, "copyright duration")
 
     g.add((node, RDF.type,                IPRONTO.ExploitationRight))
     g.add((node, LEGAL.jurisdiction,      Literal(code)))
@@ -133,12 +160,12 @@ def _add_duration_node(g: Graph, code: str, row: dict) -> None:
     dur_text = row.get("duration_literary", "").lower()
     if "pma" in dur_text or "death" in dur_text or "post mortem" in dur_text:
         g.add((node, IPRONTO.triggeredBy, Literal("death of author")))
-    _add_frbr_triples(g, node, fi["local_path"])
+    _add_frbr_triples(g, node, fi["local_path"], row.get("source_url", ""))
 
 
 def _add_rights_node(g: Graph, code: str, row: dict) -> None:
     node = EX[f"{code}_rights"]
-    fi   = _file_info(code)
+    fi   = _file_info(code, "economic rights")
 
     g.add((node, RDF.type,               IPRONTO.ExploitationRight))
     g.add((node, LEGAL.jurisdiction,     Literal(code)))
@@ -147,7 +174,7 @@ def _add_rights_node(g: Graph, code: str, row: dict) -> None:
     g.add((node, LEGAL.localPath,        Literal(fi["local_path"])))
     g.add((node, LEGAL.docTitle,         Literal(fi["doc_title"])))
     g.add((node, LEGAL.rightsNote,       Literal(row.get("rights_note", ""))))
-    _add_frbr_triples(g, node, fi["local_path"])
+    _add_frbr_triples(g, node, fi["local_path"], row.get("source_url", ""))
 
     main_art = _RIGHTS_ARTICLES.get(code, "")
     if main_art:
@@ -173,7 +200,7 @@ def _add_rights_node(g: Graph, code: str, row: dict) -> None:
 
 def _add_exception_node(g: Graph, code: str, row: dict) -> None:
     node = EX[f"{code}_exception"]
-    fi   = _file_info(code)
+    fi   = _file_info(code, "personal-use exception")
     exc  = row.get("private_copy_exception", "").strip()
 
     g.add((node, RDF.type,               IPRONTO.ExceptionsRight))
@@ -187,7 +214,7 @@ def _add_exception_node(g: Graph, code: str, row: dict) -> None:
     has_exc = exc.lower().startswith("yes")
     g.add((node, LEGAL.hasException, Literal(has_exc, datatype=XSD.boolean)))
 
-    _add_frbr_triples(g, node, fi["local_path"])
+    _add_frbr_triples(g, node, fi["local_path"], row.get("source_url", ""))
 
     # Extract article ref from "Yes (§ 53 UrhG)" style strings
     art_ref = _extract_article_from_exception(exc)
@@ -250,9 +277,13 @@ def _add_wipo_berne_node(g: Graph) -> URIRef:
 
 
 def _extract_article_from_exception(exc_text: str) -> str:
-    """Extract '§ 53 UrhG' from 'Yes (§ 53 UrhG)'."""
+    """Extract '§ 53 UrhG' from 'Yes (§ 53 UrhG)'.
+
+    Greedy on purpose: the reference itself may contain parentheses, as in
+    'Yes (Art. 5(2)(b) InfoSoc)', where a lazy match would stop at 'Art. 5(2'.
+    """
     import re
-    m = re.search(r"\((.+?)\)", exc_text)
+    m = re.search(r"\((.*)\)", exc_text)
     return m.group(1).strip() if m else ""
 
 

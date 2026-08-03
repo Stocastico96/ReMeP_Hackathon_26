@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ReMeP — IP Law Assistant</title>
+  <title>A Neuro-Symbolic System for Querying and Monitoring Copyright Compliance Across National Legislations</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -26,8 +26,10 @@
       gap: 1rem;
       flex-shrink: 0;
     }
-    header h1 { font-size: 1rem; font-weight: 600; letter-spacing: .02em; }
-    header span { font-size: .73rem; color: #94a3b8; }
+    header h1 {
+      font-size: .95rem; font-weight: 600; letter-spacing: .01em;
+      line-height: 1.35;
+    }
 
     /* ─── Main split ─── */
     main { display: flex; flex: 1; overflow: hidden; }
@@ -348,8 +350,14 @@
       border: none; background: transparent; cursor: pointer; color: #64748b;
       border-bottom: 2px solid transparent; margin-bottom: -2px;
       transition: color .15s, border-color .15s;
+      --accent: #1e3a5f;
     }
-    .mode-tab.active { color: #1e3a5f; border-bottom-color: #1e3a5f; }
+    /* one accent per mode: navy for retrieval, teal for the symbolic verdict,
+       violet for the graph — same violet the treaty edge uses */
+    #tab-qa         { --accent: #1e3a5f; }
+    #tab-compliance { --accent: #0f766e; }
+    #tab-graph      { --accent: #6d28d9; }
+    .mode-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
     .mode-tab:hover:not(.active) { color: #334155; background: #f8fafc; }
 
     /* ─── Compliance panel ─── */
@@ -357,6 +365,58 @@
       display: none; flex-direction: column; flex: 1; overflow: hidden;
     }
     #compliance-panel.active { display: flex; }
+
+    /* ─── Knowledge-graph panel ─── */
+    #graph-panel { display: none; flex-direction: column; flex: 1; overflow: hidden; }
+    #graph-panel.active { display: flex; }
+    #graph-sidebar { padding: 1rem; overflow-y: auto; }
+    .kg-legend { display: flex; flex-wrap: wrap; gap: .35rem .8rem; margin: .1rem 0 1rem; }
+    .kg-legend span {
+      font-size: .72rem; color: #475569; display: flex; align-items: center; gap: .3rem;
+    }
+    .kg-legend i {
+      width: .7rem; height: .7rem; border-radius: 50%; display: inline-block;
+    }
+    .kg-stat {
+      font-size: .74rem; color: #64748b; margin-bottom: .8rem; font-family: monospace;
+    }
+    .kg-sparql {
+      background: #0f172a; color: #cbd5e1; border-radius: 8px; padding: .6rem .7rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: .68rem; line-height: 1.45; white-space: pre-wrap;
+      overflow-x: auto; margin-bottom: 1rem;
+    }
+    .kg-sparql .kw { color: #7dd3fc; }
+    .kg-triples { border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; }
+    .kg-triples-head {
+      background: #f1f5f9; padding: .4rem .6rem; font-size: .72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .06em; color: #475569;
+    }
+    .kg-triples table { width: 100%; border-collapse: collapse; font-size: .71rem; }
+    .kg-triples td {
+      padding: .3rem .5rem; border-top: 1px solid #eef2f7;
+      font-family: ui-monospace, Menlo, monospace; vertical-align: top;
+      word-break: break-word;
+    }
+    .kg-triples td.pred { color: #7c3aed; white-space: nowrap; }
+    .kg-triples td.subj { color: #64748b; white-space: nowrap; }
+
+    /* graph canvas lives in the right pane so it gets the space */
+    #graph-canvas-wrap { flex: 1; overflow: auto; background:
+      radial-gradient(circle at 1px 1px, #e2e8f0 1px, transparent 0) 0 0 / 22px 22px; }
+    #kg-svg { display: block; }
+    #kg-svg .node-box {
+      cursor: pointer; transition: filter .12s;
+    }
+    #kg-svg .node-box:hover { filter: brightness(1.08); }
+    #kg-svg .node-box.selected rect, #kg-svg .node-box.selected ellipse {
+      stroke: #0f172a; stroke-width: 3;
+    }
+    #kg-svg text { font-family: inherit; pointer-events: none; }
+    #kg-hint {
+      padding: .5rem .9rem; font-size: .76rem; color: #64748b;
+      border-bottom: 1px solid #e2e8f0; background: #fff;
+    }
     #chat-panel { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
     #chat-panel.hidden { display: none; }
 
@@ -448,8 +508,7 @@
 <body>
 
 <header>
-  <h1>ReMeP — IP Law Assistant</h1>
-  <span>Neuro-Symbolic KG · AKN Documents · WIPO Compliance</span>
+  <h1>A Neuro-Symbolic System for Querying and Monitoring Copyright Compliance Across National Legislations</h1>
 </header>
 
 <main>
@@ -458,8 +517,9 @@
 
     <!-- Mode tabs -->
     <div class="mode-tabs">
-      <button class="mode-tab active" id="tab-qa"         onclick="switchMode('qa')">💬 Q&amp;A</button>
-      <button class="mode-tab"        id="tab-compliance" onclick="switchMode('compliance')">✅ Compliance Check</button>
+      <button class="mode-tab active" id="tab-qa"         onclick="switchMode('qa')">Q&amp;A</button>
+      <button class="mode-tab"        id="tab-compliance" onclick="switchMode('compliance')">Compliance Check</button>
+      <button class="mode-tab"        id="tab-graph"      onclick="switchMode('graph')">Knowledge Graph</button>
     </div>
 
     <!-- ── Q&A panel ── -->
@@ -469,10 +529,10 @@
           <div style="font-size:2rem">⚖️</div>
           <div>Ask a question about intellectual property law</div>
           <div class="suggestions">
-            <button class="sug-btn" onclick="fillQ(this)">Copyright duration in Switzerland?</button>
-            <button class="sug-btn" onclick="fillQ(this)">Which economic rights does Germany recognize?</button>
-            <button class="sug-btn" onclick="fillQ(this)">Does Italy provide a personal-use exception?</button>
-            <button class="sug-btn" onclick="fillQ(this)">What is the copyright term under the Berne Convention?</button>
+            <button class="sug-btn" onclick="fillQ(this)">Wie lange gilt das Urheberrecht in Frankreich?</button>
+            <button class="sug-btn" onclick="fillQ(this)">How long does copyright last in New Zealand?</button>
+            <button class="sug-btn" onclick="fillQ(this)">Darf ich in der EU eine Privatkopie machen?</button>
+            <button class="sug-btn" onclick="fillQ(this)">Which economic rights does Canada recognize?</button>
           </div>
         </div>
       </div>
@@ -507,6 +567,33 @@
       </div>
     </div>
 
+    <!-- ── Knowledge-graph panel ── -->
+    <div id="graph-panel">
+      <div class="compliance-form">
+        <label>Jurisdiction</label>
+        <select id="graph-country" onchange="loadGraph(this.value)">
+          <option value="">— select a jurisdiction —</option>
+        </select>
+      </div>
+      <div id="graph-sidebar">
+        <div class="kg-legend">
+          <span><i style="background:#f97316"></i>Country</span>
+          <span><i style="background:#db2777"></i>Law</span>
+          <span><i style="background:#0891b2"></i>Rule</span>
+          <span><i style="background:#16a34a"></i>Article</span>
+          <span><i style="background:#3b82f6"></i>Duration</span>
+          <span><i style="background:#84cc16"></i>Right</span>
+          <span><i style="background:#7c3aed"></i>Treaty</span>
+        </div>
+        <div class="kg-stat" id="kg-stat"></div>
+        <div class="kg-sparql" id="kg-sparql" style="display:none"></div>
+        <div class="kg-triples" id="kg-triples" style="display:none">
+          <div class="kg-triples-head" id="kg-triples-head">Triples</div>
+          <table><tbody id="kg-triples-body"></tbody></table>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- ─── Right: document viewer ─── -->
@@ -525,9 +612,14 @@
     <div id="doc-meta-bar" style="display:none">
       <span id="auth-badge-wrap"></span>
       <span id="pit-badge-wrap"></span>
-      <a id="frbr-source-link" href="#" target="_blank" style="display:none">🔗 Official Source</a>
+      <a id="frbr-source-link" href="#" target="_blank" rel="noopener" style="display:none">🔗 Official Source</a>
+      <code id="frbr-id-badge" style="display:none;font-size:.66rem;color:#94a3b8"></code>
       <div id="pit-picker">
-        <label for="pit-date">Version at date:</label>
+        <label for="pit-version">Version:</label>
+        <select id="pit-version" onchange="pickVersion(this.value)">
+          <option value="">— in force on date —</option>
+        </select>
+        <label for="pit-date">or date:</label>
         <input type="date" id="pit-date" min="1941-07-16" max="2025-12-31">
         <button id="pit-go" onclick="loadVersionAt()">Go</button>
       </div>
@@ -536,6 +628,12 @@
       <p style="color:#94a3b8;font-style:italic;margin-top:3rem;text-align:center;">
         The source document will appear here once you ask a question.
       </p>
+    </div>
+
+    <!-- Knowledge-graph canvas (shares the right pane with the document view) -->
+    <div id="graph-view" style="display:none;flex-direction:column;flex:1;overflow:hidden">
+      <div id="kg-hint">Select a jurisdiction to load its subgraph, then click any node to see the triples behind it.</div>
+      <div id="graph-canvas-wrap"><svg id="kg-svg" width="100" height="100"></svg></div>
     </div>
   </div>
 </main>
@@ -559,8 +657,169 @@
     _currentMode = mode;
     document.getElementById('tab-qa').classList.toggle('active', mode === 'qa');
     document.getElementById('tab-compliance').classList.toggle('active', mode === 'compliance');
+    document.getElementById('tab-graph').classList.toggle('active', mode === 'graph');
     document.getElementById('chat-panel').classList.toggle('hidden', mode !== 'qa');
     document.getElementById('compliance-panel').classList.toggle('active', mode === 'compliance');
+    document.getElementById('graph-panel').classList.toggle('active', mode === 'graph');
+
+    // the graph takes over the right pane from the document viewer
+    const isGraph = mode === 'graph';
+    document.getElementById('graph-view').style.display = isGraph ? 'flex' : 'none';
+    document.getElementById('doc-body').style.display   = isGraph ? 'none' : 'block';
+    document.getElementById('doc-header').style.display = isGraph ? 'none' : 'flex';
+    if (isGraph) document.getElementById('doc-meta-bar').style.display = 'none';
+  }
+
+  // ─── Knowledge-graph mode ─────────────────────────────────────────────────
+  const KG_COLORS = {
+    country: '#f97316', law: '#db2777', rule: '#0891b2', article: '#16a34a',
+    duration: '#3b82f6', right: '#84cc16', treaty: '#7c3aed',
+  };
+  const KG_BOX = { w: 208, h: 44, gapY: 12, gapX: 96 };
+
+  async function loadGraph(code) {
+    if (!code) return;
+    const stat = document.getElementById('kg-stat');
+    stat.textContent = 'Querying the graph…';
+    try {
+      const r = await fetch(`/api/graph/${code}`);
+      const d = await r.json();
+      if (!r.ok) { stat.textContent = d.error || 'No graph available'; return; }
+      stat.textContent = `${d.node_count} nodes · ${d.edge_count} edges`;
+      const sp = document.getElementById('kg-sparql');
+      sp.style.display = 'block';
+      sp.innerHTML = highlightSparql(d.sparql);
+      showTriples(`${code} — copyright duration`, d.triples);
+      drawGraph(d);
+      document.getElementById('kg-hint').textContent =
+        'Click any node to see the triples behind it. Dashed edge = treaty comparison.';
+    } catch (e) {
+      stat.textContent = 'Could not load the graph: ' + e.message;
+    }
+  }
+
+  function highlightSparql(text) {
+    const esc = text.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+    return esc.replace(/\b(PREFIX|SELECT|WHERE|UNION|ORDER BY|FILTER|OPTIONAL)\b/g,
+                       '<span class="kw">$1</span>');
+  }
+
+  function showTriples(title, triples) {
+    const box = document.getElementById('kg-triples');
+    if (!triples || !triples.length) { box.style.display = 'none'; return; }
+    box.style.display = 'block';
+    document.getElementById('kg-triples-head').textContent = `Triples · ${title}`;
+    document.getElementById('kg-triples-body').innerHTML = triples.map(t =>
+      `<tr><td class="pred">${t.predicate}</td><td>${t.object}</td></tr>`
+    ).join('');
+  }
+
+  function drawGraph(data) {
+    const nodes = new Map(data.nodes.map(n => [n.id, Object.assign({}, n)]));
+
+    // depth = distance from the country node, so the layout mirrors the ontology
+    const children = {};
+    data.edges.forEach(e => (children[e.source] = children[e.source] || []).push(e.target));
+    const depth = { country: 0 };
+    const queue = ['country'];
+    while (queue.length) {
+      const id = queue.shift();
+      (children[id] || []).forEach(kid => {
+        if (depth[kid] === undefined) { depth[kid] = depth[id] + 1; queue.push(kid); }
+      });
+    }
+
+    const columns = [];
+    data.nodes.forEach(n => {
+      const d = depth[n.id] === undefined ? 1 : depth[n.id];
+      (columns[d] = columns[d] || []).push(n.id);
+    });
+
+    const rowsMax = Math.max(...columns.map(c => (c ? c.length : 0)));
+    const height  = rowsMax * (KG_BOX.h + KG_BOX.gapY) + 60;
+    const width   = columns.length * (KG_BOX.w + KG_BOX.gapX) + 40;
+
+    columns.forEach((ids, col) => {
+      const blockH = ids.length * (KG_BOX.h + KG_BOX.gapY) - KG_BOX.gapY;
+      let y = (height - blockH) / 2;
+      ids.forEach(id => {
+        const n = nodes.get(id);
+        n.x = 20 + col * (KG_BOX.w + KG_BOX.gapX);
+        n.y = y;
+        y += KG_BOX.h + KG_BOX.gapY;
+      });
+    });
+
+    const svg = document.getElementById('kg-svg');
+    svg.setAttribute('width', width);
+    svg.setAttribute('height', height);
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+
+    let out = `<defs><marker id="arw" viewBox="0 0 10 10" refX="9" refY="5"
+        markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker></defs>`;
+
+    // A relation is labelled once per source: five hasRight edges leaving the
+    // same node would otherwise print five overlapping labels.
+    const labelled = new Set();
+    data.edges.forEach(e => {
+      const a = nodes.get(e.source), b = nodes.get(e.target);
+      if (!a || !b) return;
+      const x1 = a.x + KG_BOX.w, y1 = a.y + KG_BOX.h / 2;
+      const x2 = b.x,            y2 = b.y + KG_BOX.h / 2;
+      const mx = (x1 + x2) / 2;
+      const treaty = e.label === 'compliesWith';
+      const stroke = treaty ? '#7c3aed' : '#94a3b8';
+      out += `<path d="M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}"
+               fill="none" stroke="${stroke}" stroke-width="1.6"
+               ${treaty ? 'stroke-dasharray="5 4"' : ''} marker-end="url(#arw)"/>`;
+
+      const key = e.source + '|' + e.label;
+      if (labelled.has(key)) return;
+      labelled.add(key);
+      const lx = x1 + (x2 - x1) * 0.5;
+      const ly = y1 + (y2 - y1) * 0.5 - 6;
+      out += `<text x="${lx}" y="${ly}" text-anchor="middle" font-size="10"
+               fill="${treaty ? '#7c3aed' : '#94a3b8'}">${e.label}</text>`;
+    });
+
+    data.nodes.forEach(n => {
+      const p = nodes.get(n.id);
+      const color = KG_COLORS[n.type] || '#64748b';
+      const label = clip(n.label, 24);
+      const sub   = clip(n.sublabel || '', 30);
+      out += `<g class="node-box" data-id="${n.id}" onclick="selectNode('${n.id}')">
+        <rect x="${p.x}" y="${p.y}" width="${KG_BOX.w}" height="${KG_BOX.h}" rx="9"
+              fill="${color}" fill-opacity=".14" stroke="${color}" stroke-width="1.8"/>
+        <circle cx="${p.x + 13}" cy="${p.y + KG_BOX.h / 2}" r="5" fill="${color}"/>
+        <text x="${p.x + 26}" y="${p.y + (sub ? 19 : 27)}" font-size="12.5"
+              font-weight="600" fill="#0f172a">${escapeXml(label)}</text>
+        ${sub ? `<text x="${p.x + 26}" y="${p.y + 33}" font-size="10.5"
+              fill="#64748b">${escapeXml(sub)}</text>` : ''}
+      </g>`;
+    });
+
+    svg.innerHTML = out;
+    _kgNodes = data.nodes;
+  }
+
+  let _kgNodes = [];
+
+  function selectNode(id) {
+    const n = _kgNodes.find(x => x.id === id);
+    document.querySelectorAll('#kg-svg .node-box').forEach(g =>
+      g.classList.toggle('selected', g.getAttribute('data-id') === id));
+    if (!n) return;
+    if (n.triples && n.triples.length) {
+      showTriples(`${n.label}`, n.triples);
+    } else {
+      showTriples(n.label, [{ predicate: 'note', object: 'literal node, no outgoing triples' }]);
+    }
+  }
+
+  function clip(s, n) { return s && s.length > n ? s.slice(0, n - 1) + '…' : (s || ''); }
+  function escapeXml(s) {
+    return (s || '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
   }
 
   // ─── Q&A mode ─────────────────────────────────────────────────────────────
@@ -617,6 +876,7 @@
           frbr_work_uri:   data.frbr_work_uri   || '',
           point_in_time:   data.point_in_time   || '',
           is_authoritative: data.is_authoritative || false,
+          source_url:      data.evidence?.document?.source_url || '',
           country: countryFromPath(data.evidence?.document?.local_path || ''),
           eid:     data.evidence?.reference?.eid || '',
         });
@@ -685,11 +945,18 @@
       const sel       = document.getElementById('compliance-country');
       const grid      = document.getElementById('country-grid');
 
+      const graphSel  = document.getElementById('graph-country');
+
       countries.forEach(c => {
         const opt       = document.createElement('option');
         opt.value       = c.code;
         opt.textContent = c.name;
         sel.appendChild(opt);
+
+        const gopt       = document.createElement('option');
+        gopt.value       = c.code;
+        gopt.textContent = c.name;
+        graphSel.appendChild(gopt);
 
         const chip = document.createElement('button');
         chip.className   = 'country-chip';
@@ -738,6 +1005,7 @@
           frbr_work_uri:   data.frbr_work_uri   || '',
           point_in_time:   data.point_in_time   || '',
           is_authoritative: data.is_authoritative || false,
+          source_url:      data.source_url || '',
           country: data.country_code || '',
           eid:     data.eid          || '',
         });
@@ -869,16 +1137,57 @@
       ? `<span class="pit-badge">📅 ${meta.point_in_time}</span>`
       : '';
 
+    // Only a real http(s) address may become a link. FRBR Work URIs like
+    // /akn/de/act/1965-09-09/urhg are identifiers; the browser would resolve them
+    // against localhost and 404.
     const frbrLink = document.getElementById('frbr-source-link');
-    if (meta.frbr_work_uri) {
-      frbrLink.href          = meta.frbr_work_uri;
+    const frbrId   = document.getElementById('frbr-id-badge');
+    const locator  = (meta.source_url || '').trim();
+    if (/^https?:\/\//i.test(locator)) {
+      frbrLink.href          = locator;
       frbrLink.style.display = '';
     } else {
       frbrLink.style.display = 'none';
     }
+    if (frbrId) {
+      frbrId.textContent   = meta.frbr_work_uri || '';
+      frbrId.style.display = meta.frbr_work_uri ? '' : 'none';
+      frbrId.title         = 'FRBR Work URI — identifier, not a web address';
+    }
 
-    document.getElementById('pit-picker').style.display =
-      meta.country === 'IT' ? 'flex' : 'none';
+    const picker = document.getElementById('pit-picker');
+    const versioned = meta.country === 'IT';
+    picker.style.display = versioned ? 'flex' : 'none';
+    if (versioned) fillVersionList(meta.country);
+  }
+
+  // Populate the version dropdown so nobody has to guess which dates exist.
+  let _versionsLoadedFor = '';
+  async function fillVersionList(code) {
+    if (_versionsLoadedFor === code) return;
+    try {
+      const res  = await fetch(`/api/versions/${code}`);
+      const list = await res.json();
+      if (!Array.isArray(list) || !list.length) return;
+      const sel = document.getElementById('pit-version');
+      sel.innerHTML = `<option value="">— ${list.length} versions, pick one —</option>` +
+        list.slice().reverse().map(v => {
+          const m = v.file.match(/_V(\d+)\.xml$/);
+          const tag = m ? `V${m[1]}` : '';
+          return `<option value="${v.date}">${v.date}${tag ? '  ·  ' + tag : ''}</option>`;
+        }).join('');
+      const dateInput = document.getElementById('pit-date');
+      dateInput.min = list[0].date;
+      dateInput.max = list[list.length - 1].date;
+      dateInput.title = `Available: ${list[0].date} to ${list[list.length - 1].date}`;
+      _versionsLoadedFor = code;
+    } catch { /* the picker still works with a free date */ }
+  }
+
+  function pickVersion(date) {
+    if (!date) return;
+    document.getElementById('pit-date').value = date;
+    loadVersionAt();
   }
 
   async function loadVersionAt() {
@@ -902,15 +1211,17 @@
       });
       const data = await res.json();
       if (data.error) {
-        alert(data.error);
+        document.getElementById('doc-body').innerHTML =
+          `<p class="doc-error">${data.error}</p>`;
       } else {
         _articleHtml = data.doc_html      || '';
         _fullDocHtml = data.full_doc_html || '';
         document.getElementById('doc-body').innerHTML = _articleHtml;
         updateMetaBar({
           frbr_work_uri:   data.frbr_work_uri   || '',
-          point_in_time:   data.point_in_time   || dateVal,
+          point_in_time:   data.version_date    || data.point_in_time || dateVal,
           is_authoritative: data.is_authoritative || false,
+          source_url:      data.source_url || '',
           country: _currentCountry,
           eid:     _currentEid,
         });

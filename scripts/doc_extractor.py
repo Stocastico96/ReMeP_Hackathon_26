@@ -17,7 +17,11 @@ AKN_NS = "http://docs.oasis-open.org/legaldocml/ns/akn/3.0"
 # Tags whose subtrees are skipped during text extraction (footnotes, metadata…)
 _SKIP_TAGS = {"authorialNote", "meta", "identification", "references", "publication"}
 # Tags that create section headings
-_SECTION_TAGS = {"title", "chapter", "section", "subchapter", "division", "part", "tome"}
+_SECTION_TAGS = {
+    "title", "chapter", "section", "subchapter", "division", "part", "tome",
+    # Canadian/New Zealand crossheadings group provisions without numbering
+    "hcontainer",
+}
 
 
 # ---------------------------------------------------------------------------
@@ -90,7 +94,7 @@ def _is_leaf_provision(el: etree._Element) -> bool:
     has_content = False
     for child in el:
         local = etree.QName(child.tag).localname
-        if local in ("paragraph", "content", "blockList", "list"):
+        if local in ("paragraph", "content", "blockList", "list", "subsection"):
             has_content = True
         if local in ("article", "section", "prov"):
             return False
@@ -213,7 +217,10 @@ def _render_article(article_el: etree._Element, span: str, is_target: bool) -> s
         parts.append(f'<span class="article-heading">{_e(heading_text)}</span>')
     parts.append("</div>")
 
-    paragraphs = article_el.findall(f"{{{AKN_NS}}}paragraph")
+    # UK AKN uses <subsection> where continental drafting uses <paragraph>
+    paragraphs = article_el.findall(f"{{{AKN_NS}}}paragraph") or article_el.findall(
+        f"{{{AKN_NS}}}subsection"
+    )
     if paragraphs:
         for para_el in paragraphs:
             parts.append(_render_paragraph(para_el, span))
@@ -230,17 +237,21 @@ def _render_paragraph(para_el: etree._Element, span: str) -> str:
     num_el   = para_el.find(f"{{{AKN_NS}}}num")
     num_text = _collect(num_el).strip() if num_el is not None else ""
 
-    content_el = para_el.find(f"{{{AKN_NS}}}content")
-    if content_el is None:
+    # EU AKN nests the text one level deeper: <paragraph><subparagraph><content>
+    content_els = para_el.findall(f"{{{AKN_NS}}}content") or para_el.findall(
+        f".//{{{AKN_NS}}}content"
+    )
+    if not content_els:
         return ""
 
-    has_span  = bool(span and span in _collect(content_el))
+    has_span  = bool(span) and any(span in _collect(c) for c in content_els)
     row_class = "para-row span-row" if has_span else "para-row"
+    body      = "".join(_render_content(c, span) for c in content_els)
 
     return (
         f'<div class="{row_class}">'
         f'<span class="para-num">{_e(num_text)}</span>'
-        f'<div class="para-content">{_render_content(content_el, span)}</div>'
+        f'<div class="para-content">{body}</div>'
         f"</div>"
     )
 
@@ -279,6 +290,15 @@ def _render_blocklist(bl_el: etree._Element, span: str) -> str:
             f'</li>'
         )
     parts.append("</ul>")
+
+    # The sentence that closes a list ("… shall be exempted from …") is normative
+    # text and must not be dropped.
+    wrap_up = bl_el.find(f"{{{AKN_NS}}}listWrapUp")
+    if wrap_up is not None:
+        text = _collect(wrap_up).strip()
+        if text:
+            parts.append(f'<p>{_highlight(_e(text), span)}</p>')
+
     return "".join(parts)
 
 

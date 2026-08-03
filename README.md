@@ -36,9 +36,11 @@ uv run python app.py
 
 Once it's up, open http://localhost:5050.
 
+The knowledge graph is cached in `data/legal_kg.ttl` and is not invalidated automatically, so rerun `uv run python -m scripts.kg_builder` after changing `scripts/kg_builder.py` or the CSV. The Canadian and New Zealand corpora are published in their national XML formats rather than AKN; `uv run python scripts/04_convert_national_xml_to_akn.py` regenerates the AKN versions the pipeline reads.
+
 ## What it's built on
 
-The web app is Flask. The knowledge graph is handled with rdflib (RDF/Turtle, queried with SPARQL), the legal texts are stored as Akoma Ntoso XML, and the domain vocabulary comes from the IPROnto ontology. XML parsing is done with lxml and we use Pydantic v2 for schema validation. The LLM is Gemini 2.0 Flash, accessed through OpenRouter.
+The web app is Flask. The knowledge graph is handled with rdflib (RDF/Turtle, queried with SPARQL), the legal texts are stored as Akoma Ntoso XML, and the domain vocabulary comes from the IPROnto ontology. XML parsing is done with lxml and we use Pydantic v2 for schema validation. The LLM is accessed through OpenRouter; `scripts/llm_agent.py` tries a list of models in order, defaulting to free-tier Gemma 4 with Gemini 2.5 Flash as a paid fallback, and drops to a deterministic implementation if none answers.
 
 ## Paper
 

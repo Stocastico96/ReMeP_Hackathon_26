@@ -74,6 +74,13 @@ def query_kg(params: SPARQLParams) -> KGEvidence:
     return get_mock_evidence(params.rule_type, params.jurisdiction_name)
 
 
+def _source_url(node) -> str:
+    """The publisher URL stored on a KG node, empty when the node is unknown."""
+    if node is None:
+        return ""
+    return str(next(iter(_get_graph().objects(node, LEGAL.sourceUrl)), ""))
+
+
 # ---------------------------------------------------------------------------
 # Result mappers
 # ---------------------------------------------------------------------------
@@ -103,7 +110,8 @@ def _map_duration(row, params: SPARQLParams) -> KGEvidence:
         answer_candidate=f"Copyright protection in {jname} lasts {duration_literary}.",
         rule_type="copyright duration",
         normalized_rule=NormalizedRule(value=_normalize_duration(duration_literary), unit="years"),
-        document=DocumentRef(title=doc_title, uri=local_path, local_path=local_path),
+        document=DocumentRef(title=doc_title, uri=local_path, local_path=local_path,
+                             source_url=_source_url(getattr(row, "node", None))),
         reference=AKNReference(article=article_ref, eid=eid),
         passage=passage,
         supporting_span=span,
@@ -147,7 +155,8 @@ def _map_rights(rows, params: SPARQLParams) -> KGEvidence:
         answer_candidate=f"{jname} grants: {rights_list}.",
         rule_type="economic rights",
         normalized_rule=NormalizedRule(value="list"),
-        document=DocumentRef(title=doc_title, uri=local_path, local_path=local_path),
+        document=DocumentRef(title=doc_title, uri=local_path, local_path=local_path,
+                             source_url=_source_url(getattr(row, "node", None))),
         reference=AKNReference(article=article_ref, eid=eid),
         passage=passage,
         supporting_span=span,
@@ -175,7 +184,8 @@ def _map_exception(row, params: SPARQLParams) -> KGEvidence:
         answer_candidate=f"{yn}, {jname} {'has' if has_exc else 'does not have'} a private-copy exception. {exc_text}",
         rule_type="personal-use exception",
         normalized_rule=NormalizedRule(value="yes" if has_exc else "no"),
-        document=DocumentRef(title=doc_title, uri=local_path, local_path=local_path),
+        document=DocumentRef(title=doc_title, uri=local_path, local_path=local_path,
+                             source_url=_source_url(getattr(row, "node", None))),
         reference=AKNReference(article=article_ref, eid=eid),
         passage=passage,
         supporting_span=span,
@@ -268,6 +278,8 @@ def check_compliance(country_code: str) -> dict:
     eid     = find_eid(local_path, country_article) if country_article else ""
     passage = extract_passage(local_path, eid) if eid else ""
 
+    source_url = str(next(iter(g.objects(country_node, LEGAL.sourceUrl)), ""))
+
     return {
         "country_code":          country_code,
         "country_name":          country_name,
@@ -282,6 +294,7 @@ def check_compliance(country_code: str) -> dict:
         "margin_years":          margin,
         "local_path":            local_path,
         "doc_title":             doc_title,
+        "source_url":            source_url,
         "eid":                   eid,
         "passage":               passage,
     }

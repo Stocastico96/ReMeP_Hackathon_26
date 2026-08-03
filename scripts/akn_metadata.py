@@ -62,16 +62,31 @@ def _parse(path: Path) -> dict:
             pit = val
         if name in _FORCE_NAMES and not eif:
             eif = val
+    # AKN puts the version date on the Expression, not the Work (the Work date is
+    # the original enactment), so prefer an applicability date found there.
+    expr = root.find(".//akn:FRBRExpression", _NS)
+    if expr is not None:
+        for date_el in expr.findall("akn:FRBRdate", _NS):
+            name = date_el.get("name", "").lower().replace("jolux:", "").replace(":", "")
+            if name in _APPLICABILITY_NAMES:
+                pit = date_el.get("date", "") or pit
+                break
+
     # If no applicability date found, use entry-in-force as best proxy
     if not pit:
         pit = eif
 
-    # ELI alias (Italian NormeInRete, etc.)
+    # ELI alias (Italian NormeInRete, etc.) and the publisher's own web address.
+    # The latter is a locator, unlike the FRBR URIs, so it is the only value that
+    # may be handed to a browser as a link.
     eli = ""
+    source_uri = ""
     for alias in work.findall("akn:FRBRalias", _NS):
-        if alias.get("name", "").lower() in ("eli", "urn:eli"):
+        name = alias.get("name", "").lower()
+        if name in ("eli", "urn:eli") and not eli:
             eli = alias.get("value", "")
-            break
+        if name in ("sourceuri", "sourceurl") and not source_uri:
+            source_uri = alias.get("value", "")
 
     # Authenticity markers
     auth_el = work.find("akn:FRBRauthoritative", _NS)
@@ -85,6 +100,7 @@ def _parse(path: Path) -> dict:
         "frbr_work_uri":   frbr_uri,
         "frbr_this":       frbr_this,
         "eli_uri":         eli,
+        "source_uri":      source_uri,
         "point_in_time":   pit,
         "date_in_force":   eif,
         "is_authoritative": is_auth,
@@ -102,6 +118,7 @@ def _empty() -> dict:
         "frbr_work_uri":   "",
         "frbr_this":       "",
         "eli_uri":         "",
+        "source_uri":      "",
         "point_in_time":   "",
         "date_in_force":   "",
         "is_authoritative": False,

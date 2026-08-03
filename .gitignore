@@ -1,5 +1,14 @@
 .env
 __pycache__/
+
+# Generated from simplified_cq1_cq2_dataset.csv by scripts/kg_builder.py and
+# rebuilt on first start when missing. Committing it invites stale-cache bugs.
+data/legal_kg.ttl
+
+# EUR-Lex Cellar metadata notice: titles in 24 languages, no legal text.
+# The directive itself is data/countries/eu/copyright/02001L0029-20190606.xml
+data/countries/eu/copyright/source/
+
 *.pyc
 *.pyo
 .venv/

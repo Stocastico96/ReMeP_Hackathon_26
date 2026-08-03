@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Convert cleaned WIPO HTML treaties to Akoma Ntoso 3.0 (AKN4UN profile)."""
+"""Convert cleaned WIPO HTML treaties to Akoma Ntoso 3.0 (AKN4UN profile).
+
+Needs beautifulsoup4, which is deliberately not a project dependency: it is only
+used for this one-off corpus preparation, not by the web app. Install it on the
+side before running, e.g. `uv run --with beautifulsoup4 python scripts/01_convert_html_to_akn.py`.
+"""
 
 from __future__ import annotations
 
